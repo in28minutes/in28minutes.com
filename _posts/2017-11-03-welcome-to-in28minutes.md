@@ -4,7 +4,7 @@ title:      Welcome to in28Minutes
 date:       2019-05-30 12:31:19
 summary:    One Stop for all your Java Spring Courses!
 categories: Udemy, Courses, Spring Boot, Spring Framework
-permalink:  /index.html
+permalink:  /welcome-to-in28minutes
 ---
 Join 100,000 Learners having awesome learning experiences with in28Minutes
 
