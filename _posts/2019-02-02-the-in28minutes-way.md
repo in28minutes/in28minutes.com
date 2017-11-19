@@ -7,17 +7,11 @@ categories: in28Minutes, Spring Boot
 permalink:  /the-in28minutes-way
 ---
 
-#### Question
-
 > How did in28Minutes get to 100,000 learners across the world? 
 
 ![](/images/udemy-total-students.png)
 
-#### Answer
-
-
 > We are focused on creating the awesome course (learning) experiences. Period.
-
 
 #### An awesome learning experience? What's that?
 
@@ -33,7 +27,7 @@ To find out more about our courses visit http://www.in28minutes.com
 
 Let's get started on "The in28Minutes Way"!
 
-#### Important Components of "The in28Minutes Way"
+## Important Components of "The in28Minutes Way"
 
 * [Continuous Learning](#continuous-learning)
 * [Hands-on](#hands-on)
@@ -61,28 +55,27 @@ Trends change. Period.
 
 Yesterday it was REST, Spring, Spring MVC. Today it is Spring Boot, Microservices and Full Stack Development. Tomorrow it will be AI, Machine Learning and Big Data. 
 
-Irrespective of the direction technology is heading, we think there are two characteristics that seperate the frontrunners from others
-- You are an expert at what you do.
-- You are a continuous learner. 
+Irrespective of the direction technology is heading, two characteristics seperate frontrunners
+- You are an expert at what you do
+- You are a continuous learner
 
 > You know what is happening. You keep learning every day. You know how to adapt when things go in a direction different from your expectations.
 
 We believe that while you should work hard at your job and achieve great success with it, you should always have an eye towards 
-- Getting better at what you do.
-- Expanding your horizons.
+- Getting better at what you do
+- Expanding your horizons
 
 Infact, this belief in continuous learning is what made me choose the name - in28Minutes.
 
+> I'm a great believer that if you spend 30 minutes every day taking a small step towards your dream, you will reach the top 5% of any path you choose. And that where the name in28Minutes comes from. Atleast 28 minutes of learning every day!
 
-> I'm a great believer that if you spend 30 minutes every day taking a small step towards your dream, you will reach the top 5% of whichever career path you choose. And that where in28Minutes comes from.
+At in28Minutes we believe in Continous Learning. 
 
-At in28Minutes we believe in Continous Learning. We are learning with you and identifying things you would want to learn. 
+> We are learning with you and identifying things that you would want to learn. 
 
-We started with Spring and Spring MVC. We have expanded to Spring Boot and Spring Cloud. We now have the best courses on building web applications, SOAP and RESTful web services, APIs and Microservices. We also teach the finer aspects of programming - unit testing, mocking and modern development practices - TDD, 4 Principles of Simple Design and Refactoring.
+We started with Spring and Spring MVC. We have expanded into Spring Boot and Spring Cloud and now have the best courses on building web applications, SOAP and RESTful web services, APIs and Microservices. 
 
-Today, we have courses to help a Java beginner to become an expert on APIs, Web Services and Microservices with Spring, Spring Boot and Spring Cloud. Almost all these courses are
-- Best sellers on Udemy
-- Have Great Reviews
+We also teach the finer aspects of programming - unit testing, mocking and modern development practices - TDD, 4 Principles of Simple Design and Refactoring.
 
 ![](/images/in28Minutes-Java-Course-Roadmap.png)
 

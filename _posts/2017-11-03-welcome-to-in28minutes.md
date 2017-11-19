@@ -6,6 +6,7 @@ summary:    One Stop for all your Java Spring Courses!
 categories: Udemy, Courses, Spring Boot, Spring Framework
 permalink:  /welcome-to-in28minutes
 ---
+
 Join 100,000 Learners having awesome learning experiences with in28Minutes
 
 > Get Amazing Offers on All Our Courses - http://eepurl.com/bOJulL

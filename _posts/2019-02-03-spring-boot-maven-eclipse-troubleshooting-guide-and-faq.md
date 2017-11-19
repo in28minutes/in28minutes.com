@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Spring Boot, Maven and Eclipse TroubleShooting Guide
+title:      Spring Boot, Maven and Eclipse TroubleShooting Guide and FAQ
 date:       2017-11-17 12:31:19
 summary:    Troubleshoot your Spring, Spring Boot, Maven and Eclipse issues using this guide from in28Minutes. 
 categories: Spring Boot, Troubleshooting, Maven, Eclipse, Java
@@ -13,10 +13,56 @@ We do not want you to get stuck because of a simple error.
 
 This 50 page troubleshooting guide and faq is our way of thanking you for choosing to learn from in28Minutes.
 
-- [How to use this guide?](#how-to-use-this-guide)
-	- [1. Ensure You Have The Recommended Versions of Tools/Versions](#1-ensure-you-have-the-recommended-versions-of-toolsversions)
-	- [2. Highly Probable Errors](#2-highly-probable-errors)
-	- [3. Go for the complete list](#3-go-for-the-complete-list)
+## How to use this guide?
+
+### 1. Ensure You Have The Recommended Versions of Tools/Versions
+
+First of all - Make sure you are using the right versions. Here is the recommended versions and errors if you don't use them:
+
+| Recommended Version  | Errors with other versions | More Details |
+| -------------------- |:-----------------------------------------------:|--------------|
+| Java 8  | Unsupported major.minor version 52.0 |[Basics](#basics)|
+| Eclipse Java EE Oxygen | org.codehaus.plexus.archiver.jar.Manifest.write (java.io.PrintWriter)      |[Basics](#basics)|
+| Spring Boot 2.0.0.M3    | Maven download issues. Hal Browser and Spring Boot Actuator are not working!|[Configure 2.0.0.M3](#error---hal-browser-and-spring-boot-actuator-are-not-working)|
+
+
+### 2. Highly Probable Errors
+
+Problems a high proportionate of our learners face.
+
+| Error                | Solution Reference |
+| -------------------- |:-------------:|
+| Compilation failure [ERROR] No compiler is provided in this environment. Perhaps you are running on a JRE rather than a JDK?  |[Configure Eclipse to use JDK](#error---you-are-not-using-a-jdk) | 
+| Could not transfer artifact           |[Check Maven Configuration](#error--you-are-not-connected-to-internet-or-you-are-behind-a-proxy) |
+|Hal Browser and Spring Boot Actuator are not working   |[Configure Spring Boot Version 2.0.0.M3](#error---hal-browser-and-spring-boot-actuator-are-not-working)|
+|H2 Embedded Database - Cannot find tables |[Use the right database name](#error---table-is-not-created-automatically-in-h2-embedded-db-or-im-unable-to-see-the-tables) |
+| Failed to load class (or)Could not find or load main class or Failed to read Class-Path attribute from manifest    |[Redownload artifacts with Maven](#error--files-downloaded-by-maven-are-corrupt) |
+|java.net.BindException: Address already in use: JVM_Bind   |[Stop 8080 or Use Other Port](#q---what-should-i-do-when-some-other-application-is-using-default-port-8080) |
+|No mapping found for HTTP request   |[Check your component scan configuration](#q---how-do-i-solve-errors-related-to-component-scan) |
+|No qualifying bean of type   |[Check your component scan configuration](#q---how-do-i-solve-errors-related-to-component-scan) |
+|java.lang.NoClassDefFoundError: org/springframework/web/cors/CorsConfigurationSource|[Solution](#error---spring-security---javalangnoclassdeffounderror-orgspringframeworkwebcorscorsconfigurationsource) |
+|Unable to find setter method for attribute commandName   |[Use modelAttribute](#error---unable-to-find-setter-method-for-attribute-commandname) |
+
+### 3. Go for the complete list
+
+If you are facing a exception or an error
+ - Try searching with complete exception text
+ - Try searching with a substring
+ - Try searching with name of exception
+ - Try searching with the direct cause of exception
+ - Try searching for the framework and browse through the FAQ
+
+> If the troubleshooting guide does not help you solve your specific problem, raise a pull request with the problem and solution to improve the troubleshooting guide.
+
+> If you see a bug in the troubleshooting guide, raise a pull request to improve the troubleshooting guide.
+
+If you are here for fun, continue reading. 
+
+This will be the best 20 minute investment you made in your programming career. You get an understanding of how you can troubleshoot a wide variety of issues.
+
+Happy Troubleshooting.
+
+
 - [Basics](#basics)
 	- [Tip :  Ensure you have the right version of Java Installed](#tip---ensure-you-have-the-right-version-of-java-installed)
 	- [Tip : Ensure you have the right version of Eclipse Installed](#tip--ensure-you-have-the-right-version-of-eclipse-installed)
@@ -234,55 +280,6 @@ This 50 page troubleshooting guide and faq is our way of thanking you for choosi
 	- [Q :  What is the focus of each of your courses?](#q---what-is-the-focus-of-each-of-your-courses)
 	- [Q :  How to improve Logical Skills?](#q---how-to-improve-logical-skills)
 
-
-## How to use this guide?
-
-### 1. Ensure You Have The Recommended Versions of Tools/Versions
-
-First of all - Make sure you are using the right versions. Here is the recommended versions and errors if you don't use them:
-
-| Recommended Version  | Possible Errors if you are using other versions | More Details |
-| -------------------- |:-----------------------------------------------:|--------------|
-| Java 8  | Unsupported major.minor version 52.0 |[Basics](#basics)|
-| Eclipse Java EE Oxygen | org.codehaus.plexus.archiver.jar.Manifest.write(java.io.PrintWriter)      |[Basics](#basics)|
-| Spring Boot 2.0.0.M3    | Maven download issues. Hal Browser and Spring Boot Actuator are not working!|[Configure 2.0.0.M3](#error---hal-browser-and-spring-boot-actuator-are-not-working)|
-
-
-### 2. Highly Probable Errors
-
-Problems a high proportionate of our learners face.
-
-| Error                | Solution Reference |
-| -------------------- |:-------------:|
-| Compilation failure [ERROR] No compiler is provided in this environment. Perhaps you are running on a JRE rather than a JDK?  |[Configure Eclipse to use JDK](#error---you-are-not-using-a-jdk) | 
-| Could not transfer artifact           |[Check Maven Configuration](#error--you-are-not-connected-to-internet-or-you-are-behind-a-proxy) |
-|Hal Browser and Spring Boot Actuator are not working   |[Configure Spring Boot Version 2.0.0.M3](#error---hal-browser-and-spring-boot-actuator-are-not-working)|
-|H2 Embedded Database - Cannot find tables |[Use the right database name](#error---table-is-not-created-automatically-in-h2-embedded-db-or-im-unable-to-see-the-tables) |
-| Failed to load class (or)Could not find or load main class or Failed to read Class-Path attribute from manifest    |[Redownload artifacts with Maven](#error--files-downloaded-by-maven-are-corrupt) |
-|java.net.BindException: Address already in use: JVM_Bind   |[Stop 8080 or Use Other Port](#q---what-should-i-do-when-some-other-application-is-using-default-port-8080) |
-|No mapping found for HTTP request   |[Check your component scan configuration](#q---how-do-i-solve-errors-related-to-component-scan) |
-|No qualifying bean of type   |[Check your component scan configuration](#q---how-do-i-solve-errors-related-to-component-scan) |
-|java.lang.NoClassDefFoundError: org/springframework/web/cors/CorsConfigurationSource|[Solution](#error---spring-security---javalangnoclassdeffounderror-orgspringframeworkwebcorscorsconfigurationsource) |
-|Unable to find setter method for attribute commandName   |[Use modelAttribute](#error---unable-to-find-setter-method-for-attribute-commandname) |
-
-### 3. Go for the complete list
-
-If you are facing a exception or an error
- - Try searching with complete exception text
- - Try searching with a substring
- - Try searching with name of exception
- - Try searching with the direct cause of exception
- - Try searching for the framework and browse through the FAQ
-
-> If the troubleshooting guide does not help you solve your specific problem, raise a pull request with the problem and solution to improve the troubleshooting guide.
-
-> If you see a bug in the troubleshooting guide, raise a pull request to improve the troubleshooting guide.
-
-If you are here for fun, continue reading. 
-
-This will be the best 20 minute investment you made in your programming career. You get an understanding of how you can troubleshoot a wide variety of issues.
-
-Happy Troubleshooting.
 
 
 ## Basics
