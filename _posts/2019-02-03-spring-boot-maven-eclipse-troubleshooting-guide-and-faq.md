@@ -104,7 +104,7 @@ Happy Troubleshooting.
 	- [Q :  What is a SNAPSHOT as in 0.0.1-SNAPSHOT?](#q---what-is-a-snapshot-as-in-001-snapshot)
 	- [Q :  What is difference between runtime and provided scopes?](#q---what-is-difference-between-runtime-and-provided-scopes)
 	- [Q :  How can you always exclude a specific jar using Maven Exclusions?](#q---how-can-you-always-exclude-a-specific-jar-using-maven-exclusions)
-- [Tip : Example of a multi layered maven project](#tip--example-of-a-multi-layered-maven-project)
+	- [Tip : Example of a multi layered maven project](#tip--example-of-a-multi-layered-maven-project)
 	- [Error : java.lang.ClassNotFoundException](#error--javalangclassnotfoundexception)
 	- [Q :  Why are we not using Gradle?](#q---why-are-we-not-using-gradle)
 - [Eclipse](#eclipse)
@@ -785,7 +785,7 @@ Dependency exclusion is specific to the dependency where it is declared.
 
 You have to exclude a jar in all the dependencies where it is declared as a dependency.
 
-## Tip : Example of a multi layered maven project
+### Tip : Example of a multi layered maven project
 
 https://github.com/in28minutes/MavenIn28Minutes/tree/
 master/4.web-application-with-maven
@@ -2914,7 +2914,7 @@ Annotation Changes in JUnit 5
 What is the use of all these numbers?
 - 99000+ - Students!
 - 7000+ - 5 Star Reviews on our Courses
-- >100 - Hours of Course Content
+- More than 100 Hours of Course Content
 
 Not useful unless you make the best use of these.
 
