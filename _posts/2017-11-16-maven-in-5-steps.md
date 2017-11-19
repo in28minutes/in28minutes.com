@@ -1,3 +1,11 @@
+---
+layout:     post
+title:      Maven Tutorial for Beginners in 5 Steps
+date:       2017-11-16 12:31:19
+summary:    Setting up a basic maven example with Spring Initializr and understand the basics of Maven. 
+categories: Spring Boot, Maven
+permalink:  /maven-tutorial-for-beginners
+---
 
 ## Complete Code Example
 

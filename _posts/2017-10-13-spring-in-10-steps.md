@@ -1,10 +1,11 @@
-
-## Complete Code Example
-
-# spring-in-10-steps
-
-### readme.md
-
+---
+layout:     post
+title:      First 10 Steps in Spring Framework
+date:       2017-01-30 12:31:19
+summary:    Learn the basics of Spring Framework setting up a very simple example.
+categories: Spring Framework, Spring Boot
+permalink:  /spring-tutorial-for-beginners
+---
 
 ##  First 10 Steps in Spring
 

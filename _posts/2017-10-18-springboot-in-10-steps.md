@@ -1,12 +1,13 @@
+---
+layout:     post
+title:      Introduction to Spring Boot in 10 Steps
+date:       2017-01-30 12:31:19
+summary:    Introduction to Spring Boot in 10 Steps. Setting up a basic example with Spring Boot. Its a cake walk. 
+categories: Spring Boot, REST Service
+permalink:  /spring-boot-introduction-in-10-steps
+---
 
-## Complete Code Example
-
-# springboot-in-10-steps
-
-### notes.txt
-
-
-Goals
+## Spring Boot Goals
 Enable building production ready applications quickly
 Provide common non-functional features 
 - embedded servers
@@ -14,28 +15,23 @@ Provide common non-functional features
 - health checks
 - externalized configuration
 
-What Spring Boot is NOT!
-ZERO code generation
-Neither an application server nor a web server
+## What Spring Boot is NOT!
+- ZERO code generation
+- Neither an application server nor a web server
 
-Features
-Quick Starter Projects with Auto Configuration
- - Web
- - JPA
-Embedded Servers - Tomcat, Jetty or Undertow
-Production-ready features
- - metrics and health checks 
- - externalized configuration
+## Features
+- Quick Starter Projects with Auto Configuration
+	- Web
+	- JPA
+- Embedded Servers - Tomcat, Jetty or Undertow
+- Production-ready features
+	- metrics and health checks 
+	- externalized configuration
  
+## URLs
+- http://localhost:8080/books => Few hardcoded books
  
-http://localhost:8080/books => Few hardcoded books
- 
-
-### readme.md
-
-
-##  First 10 Steps in Spring Boot
-
+## Step By Step Details
 - Step 1 : Introduction to Spring Boot - Goals and Important Features
 - Step 2 : Developing Spring Applications before Spring Boot
 - Step 3 : Using Spring Initializr to create a Spring Boot Application
@@ -49,36 +45,6 @@ http://localhost:8080/books => Few hardcoded books
 - Spring Boot - Conclusion
 
 ## Complete Code Example
-
-### /notes.txt
-
-```
-Goals
-Enable building production ready applications quickly
-Provide common non-functional features 
-- embedded servers
-- metrics
-- health checks
-- externalized configuration
-
-What Spring Boot is NOT!
-ZERO code generation
-Neither an application server nor a web server
-
-Features
-Quick Starter Projects with Auto Configuration
- - Web
- - JPA
-Embedded Servers - Tomcat, Jetty or Undertow
-Production-ready features
- - metrics and health checks 
- - externalized configuration
- 
- 
-http://localhost:8080/books => Few hardcoded books
- 
-```
----
 
 ### /pom.xml
 

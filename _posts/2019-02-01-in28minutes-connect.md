@@ -1,14 +1,22 @@
+---
+layout:     post
+title:      in28Minutes Connect - connecting experts with the learners
+date:       2019-02-01 12:31:19
+summary:    in28Minutes Connect - connecting experts with the learners. 
+categories: in28Minutes, in28Minutes Connect
+permalink:  /in28minutes-connect
+---
+
 ## Aim
 
-- Give you a platform to share your expertise
-	- We are requesting you to be part of this because we think you are an expert and have a passion towards what you do!
-	- With this platform, you get the opportunity to (possibly) share your vision, passion and knowledge with  43,000 Subscribers on YouTube (https://www.youtube.com/rithustutorials) and 100,000 Students on Udemy (https://www.udemy.com/user/in28minutes/)
+- Give Experts a platform to share their expertise
+	- With this platform, experts get the opportunity to (possibly) share your vision, passion and knowledge with our  43,000 subscribers on YouTube (https://www.youtube.com/rithustutorials) and 100,000 learners on Udemy (https://www.udemy.com/user/in28minutes/)
 - Create Great Programmers from India
 	- There are awesome programmers from India doing great work across the world. However, as a percentage of IT professionals, the number of awesome programmers remains miniscule.
 - Promote Online Learning in India
 	- We think Online Learning is a great socio economic leveller. Online learning has come a long way in the last few years around the world. However, adoption in India remains slow and we want to increase adoption by bringing online learning at an early stage - college and industry entry level. We belive once you start learning online, it will remain your No 1 choice of learning.
 - Give Learners exposure to 
-	- Behind the scenes look at you - stories, lessons, beliefs and vision!
+	- Behind the scenes look at experts - stories, lessons, beliefs and vision!
 	- What's happening in the industry?
 	- How can they adapt?
 
@@ -28,9 +36,10 @@
 		- Calendly provides flexibility of rescheduling if needed
 
 ## Before We Meet
+
 - This would be a video interview. Ensure that you have a good background (preferably light color - white) and a good internet connection for the video.
-- We would establish initial contact on Skype.  After that we can 
-      - Go live on facebook - https://www.facebook.com/in28Minutes/. using belive.tv.
+- We would establish initial contact on Skype.  After that we will 
+      - go live on facebook - https://www.facebook.com/in28Minutes/. using belive.tv.
       	- I will share you a link before the meeting. 
       	- You would need Google Chrome browser. 
       	- ~~We can record video using Zoom~~

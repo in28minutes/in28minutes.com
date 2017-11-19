@@ -1,11 +1,17 @@
-# The in28Minutes Way
-
+---
+layout:     post
+title:      The in28Minutes Way
+date:       2019-02-02 12:31:19
+summary:    Understand what, why and the how about in28Minutes. Hear what our learners say about our courses. Understand how we design them. 
+categories: in28Minutes, Spring Boot
+permalink:  /the-in28minutes-way
+---
 
 #### Question
 
 > How did in28Minutes get to 100,000 learners across the world? 
 
-![](images/udemy-total-students.png)
+![](/images/udemy-total-students.png)
 
 #### Answer
 
@@ -78,7 +84,7 @@ Today, we have courses to help a Java beginner to become an expert on APIs, Web 
 - Best sellers on Udemy
 - Have Great Reviews
 
-![](images/in28Minutes-Java-Course-Roadmap.png)
+![](/images/in28Minutes-Java-Course-Roadmap.png)
 
 In the next few months, we are expanding into 
 - Front End
@@ -401,13 +407,13 @@ We have step by step details, step by step code and individual folder for each o
 Lets take a quick look at a few screenshots from our Github repository.
 
 #### Step by Step Details
-![](images/step-wise-details.png)
+![](/images/step-wise-details.png)
 
 #### Step by Step Code Backup
-![](images/step-wise-backups.png)
+![](/images/step-wise-backups.png)
 
 #### Complete Code Examples
-![](images/complete-code-examples.png)
+![](/images/complete-code-examples.png)
 
 ## Design and Architecture
 
@@ -623,4 +629,4 @@ Good Luck and Keep Learning in28Minutes
 - Twitter   : https://twitter.com/in28Minutes​
 - YouTube   : https://www.youtube.com/rithustutorials​
 ​
-![](images/udemy-courses.png)
+![](/images/udemy-courses.png)

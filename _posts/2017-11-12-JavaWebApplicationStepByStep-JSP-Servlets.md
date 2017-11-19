@@ -1,4 +1,11 @@
-## Java Web Application in 25 Easy Steps
+---
+layout:     post
+title:      Java Web Application with JSP and Servlets in 25 Steps
+date:       2017-01-30 12:31:19
+summary:    In this course, you will learn the basics developing a Basic Todo Management Application using Java Servlets and JSP with Login and Logout functionalities.
+categories: Java EE, JSP, Servlets, Web Application
+permalink:  /java-web-application-with-jsp-and-servlets
+---
 
 Developing your first Java Web Application using JSP and Servlets is fun.
 
@@ -12,7 +19,7 @@ Read about what we love, why we create courses and our beliefs - [The in28Minute
 - 15 Courses
 - 100,000 Students
 
-![](images/udemy-total-students.png)
+![](/images/udemy-total-students.png)
 
 ## Github Repository
 
@@ -1197,7 +1204,7 @@ We would love to hear your thoughts.
 
 Share on Twitter - https://twitter.com/home?status=Having%20a%20great%20time!%20%0A%20%23in28Minutes%20%23ImLearningIn28Minutes
 
-![](images/in28Minutes-Java-Course-Roadmap.png)
+![](/images/in28Minutes-Java-Course-Roadmap.png)
 
 Good Luck and Keep Learning in28Minutes
 - Linked In : https://www.linkedin.com/in/rangakaranam/​

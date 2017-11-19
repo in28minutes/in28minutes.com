@@ -1,8 +1,17 @@
+---
+layout:     post
+title:      Spring Boot, Maven and Eclipse TroubleShooting Guide
+date:       2019-02-03 12:31:19
+summary:    Troubleshoot your Spring, Spring Boot, Maven and Eclipse issues using this guide from in28Minutes. 
+categories: Spring Boot, Troubleshooting, Maven, Eclipse, Java
+permalink:  /spring-boot-maven-eclipse-troubleshooting-guide-and-faq
+---
+
 We love all our 100,000 learners. We want to help you in every way possible.
 
 We do not want you to get stuck because of a simple error.
 
-This 50 page troubleshooting guide and faq is our way of thanking you for choosing to learn from in28Minutes. 
+This 50 page troubleshooting guide and faq is our way of thanking you for choosing to learn from in28Minutes.
 
 - [How to use this guide?](#how-to-use-this-guide)
 	- [1. Ensure You Have The Recommended Versions of Tools/Versions](#1-ensure-you-have-the-recommended-versions-of-toolsversions)
@@ -2644,7 +2653,7 @@ Usually, the table's are created but the url used in H2 GUI Console is wrong.
 
 In the browser, change the database url to jdbc:h2:mem:testdb (Shown in the screen below).
 
-![](images/h2-solution-image.png)
+![](/images/h2-solution-image.png)
 
 You should be good to go!
 
