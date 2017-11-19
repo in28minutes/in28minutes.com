@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      The in28Minutes Way
-date:       2017-11-15 12:31:19
+date:       2019-11-15 12:31:19
 summary:    Understand what, why and the how about in28Minutes. Hear what our learners say about our courses. Understand how we design them. 
 categories: in28Minutes, Spring Boot
 permalink:  /the-in28minutes-way

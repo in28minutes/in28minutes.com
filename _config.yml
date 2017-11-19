@@ -1,6 +1,6 @@
 # Site settings
 title:       Best Video Courses
-email:       ranga@in28minutes.com
+email:       
 author:      Ranga Karanam
 description: "Best Video Courses from a Udemy Top Instructor. Courses on Spring, Spring Boot, Spring Cloud, Web Services and Microservices."
 baseurl:     ""
@@ -18,7 +18,7 @@ bing_verification:
 
 # Optional features
 animated:             false
-show_related_posts:   false
+show_related_posts:   true
 show_post_footers:    true
 show_social_icons:    true
 ajaxify_contact_form: false
@@ -48,7 +48,7 @@ stackoverflow_id:
 twitter_username: in28Minutes
 skype_username:
 steam_nickname:
-google_plus_id: in28Minutes
+google_plus_id:
 linkedin_username: rangakaranam
 angellist_username:
 medium_id:
