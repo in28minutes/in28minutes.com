@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      in28Minutes Connect - connecting experts with the learners
-date:       2019-02-01 12:31:19
+date:       2017-11-12 12:31:19
 summary:    in28Minutes Connect - connecting experts with the learners. 
 categories: in28Minutes, in28Minutes Connect
 permalink:  /in28minutes-connect
