@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Spring Boot, Maven and Eclipse TroubleShooting Guide
-date:       2019-02-03 12:31:19
+date:       2017-11-17 12:31:19
 summary:    Troubleshoot your Spring, Spring Boot, Maven and Eclipse issues using this guide from in28Minutes. 
 categories: Spring Boot, Troubleshooting, Maven, Eclipse, Java
 permalink:  /spring-boot-maven-eclipse-troubleshooting-guide-and-faq
