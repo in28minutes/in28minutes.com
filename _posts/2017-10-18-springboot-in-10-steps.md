@@ -8,12 +8,13 @@ permalink:  /spring-boot-introduction-in-10-steps
 ---
 
 ## Spring Boot Goals
-Enable building production ready applications quickly
-Provide common non-functional features 
-- embedded servers
-- metrics
-- health checks
-- externalized configuration
+
+- Enable building production ready applications quickly
+- Provide common non-functional features 
+	- embedded servers
+	- metrics
+	- health checks
+	- externalized configuration
 
 ## What Spring Boot is NOT!
 - ZERO code generation
@@ -23,7 +24,8 @@ Provide common non-functional features
 - Quick Starter Projects with Auto Configuration
 	- Web
 	- JPA
-- Embedded Servers - Tomcat, Jetty or Undertow
+- Embedded Servers 
+	- Tomcat, Jetty or Undertow
 - Production-ready features
 	- metrics and health checks 
 	- externalized configuration
@@ -37,11 +39,40 @@ Provide common non-functional features
 - Step 3 : Using Spring Initializr to create a Spring Boot Application
 - Step 4 : Creating a Simple REST Controller
 - Step 5 : What is Spring Boot Auto Configuration?
+	- Recommended Reading - http://www.springboottutorial.com/spring-boot-auto-configuration
+	- Spring based applications have a lot of configuration. When we use Spring MVC, we need to configure component scan, dispatcher servlet, a view resolver, web jars(for delivering static content) among other things. When we use Hibernate/JPA, we would need to configure a datasource, an entity manager factory, a transaction manager among a host of other things. Spring Boot brings in new thought process around this - Can we bring more intelligence into this? When a spring mvc jar is added into an application, can we auto configure some beans automatically?
 - Step 6 : Spring Boot vs Spring vs Spring MVC
+	- Recommended Reading - http://www.springboottutorial.com/spring-boot-vs-spring-mvc-vs-spring
+	- Spring is about Dependency Injection. It makes it easy to develop loosely coupled applications. It makes applications testable.
+	- Spring MVC brings loose coupling to web mvc application development with features like Dispatcher Servlet, View Resolver etc
+	- Spring Boot eliminates the need for manual configuration with Spring and Spring MVC. You can use Spring and Spring MVC without needing a lot of configuration. 
+	- Spring Boot aims to enable production ready applications in quick time.
+		- Actuator : Enables Advanced Monitoring and Tracing of applications.
+		- Embedded Server Integrations - Since server is integrated into the application, I would NOT need to have a separate application server installed on the server.
+		- Default Error Handling
 - Step 7 : Spring Boot Starter Projects - Starter Web and Starter JPA
+	- Recommended Reading - http://www.springboottutorial.com/spring-boot-starter-projects
+	- Starters are a set of convenient dependency descriptors that you can include in your application. You get a one-stop-shop for all the Spring and related technology that you need, without having to hunt through sample code and copy paste loads of dependency descriptors. For example, if you want to get started using Spring and JPA for database access, just include the spring-boot-starter-data-jpa dependency in your project, and you are good to go.
 - Step 8 : Overview of different Spring Boot Starter Projects
+	- As we see from Spring Boot Starter Web, starter projects help us in quickly getting started with developing specific types of applications.
+	- spring-boot-starter-web-services - SOAP Web Services
+	- spring-boot-starter-web - Web & RESTful applications
+	- spring-boot-starter-test - Unit testing and Integration Testing
+	- spring-boot-starter-jdbc - Traditional JDBC
+	- spring-boot-starter-hateoas - Add HATEOAS features to your services
+	- spring-boot-starter-security - Authentication and Authorization using Spring Security
+	- spring-boot-starter-data-jpa - Spring Data JPA with Hibernate
+	- spring-boot-starter-cache - Enabling Spring Framework’s caching support
+	- spring-boot-starter-data-rest - Expose Simple REST Services using Spring Data REST
+	- spring-boot-starter-actuator - To use advanced features like monitoring & tracing to your application out of the box
+	- spring-boot-starter-undertow, spring-boot-starter-jetty, spring-boot-starter-tomcat - To pick your specific choice of Embedded Servlet Container
+	- spring-boot-starter-logging - For Logging using logback
+	- spring-boot-starter-log4j2 - Logging using Log4j2
 - Step 9 : Spring Boot Actuator
+	- Spring Boot starter actuator actually exposes a lot of REST services and these services are compliant with the standard called HAL standard. And we would use a hal browser so that we can browse through the data which is provided by these services.Spring Boot Actuator exposes a lot of data -  application info, metrics, dump, beans, env, config properties, audit events, heap dump, loggers, trace, health mappings and auto config.  Actuator provides more metadata about your application. 
 - Step 10 : Spring Boot Developer Tools
+	- Why do you need to restart your server for every java and jsp change?
+	- Spring Boot Developer Tools enables dynamic reloading of modified changes.
 - Spring Boot - Conclusion
 
 ## Complete Code Example
