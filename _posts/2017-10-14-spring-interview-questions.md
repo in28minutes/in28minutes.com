@@ -20,7 +20,7 @@ This course helps you prepare for Spring Interview with code examples covering 2
 - https://github.com/in28minutes/spring-interview-guide/raw/master/spring-interview-questions.pdf
 
 ## Get this course
-> 	[Subscribe](http://eepurl.com/bOJulL) to get amazing offers on this and all in28minutes courses.
+> 	(Subscribe)[http://eepurl.com/bOJulL] to get amazing offers on all in28minutes courses.
 
 ## What Will I Learn?
 
