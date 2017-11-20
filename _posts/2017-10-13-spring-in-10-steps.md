@@ -54,7 +54,11 @@ Set up an example of tight coupling with Binary Search and Bubble Sort Algorithm
 
 ![Image](/images/SpringIn10Steps-BinarySearchTightlyCoupleWithBubbleSort.png "Spring In 10 Steps - Tight Coupling") 
 
-I would want to be able to switch between quicksort and bubble sort algorithms. We want to make the binary search algorithm loosely coupled so that I can pass in the sort algorithm.
+However, we have a problem with above implementation. If we want to use binary search with a different sort algorithm, I would need to change the code. 
+
+We want to make the binary search algorithm loosely coupled so that it can work with any sort algorithm. 
+
+> Think about the solution before moving to next step!
 
 #### Step 3 : Making the Binary Search Algorithm Example Loosely Coupled
 
