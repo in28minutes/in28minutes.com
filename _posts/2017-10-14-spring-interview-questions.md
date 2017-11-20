@@ -21,7 +21,7 @@ This course helps you prepare for Spring Interview with code examples covering 2
 
 ## Get this course
 
-> (Subscribe)[http://eepurl.com/bOJulL] to get amazing offers on all in28minutes courses.
+[Subscribe](http://eepurl.com/bOJulL){:target="_blank"} to get amazing offers on all in28minutes courses.
 
 ## What Will I Learn?
 
