@@ -81,7 +81,7 @@ public class BinarySearchImpl {
 
 #### Step 4 : Using Spring to Manage Dependencies - @Component, @Autowired
 
-> In the previous steps - we are creating objects of the bubble sort algorithm. We’re creating an object of the binary search and we are actually wiring them together and then we are invoking the binary search. It would be great actually if some framework can take control of creation of the beans and autowiring the dependencies.
+> In the previous steps - we wrote code to create objects of the bubble sort algorithm and binary search. We also managed the dependencies. It would be great actually if some framework can take control of creation of the beans and autowiring the dependencies.
 
 That's where Spring Framework comes in!
 
@@ -102,7 +102,6 @@ public class BinarySearchImpl {
 
 ```java
 @Component
-@Primary
 public class BubbleSortAlgorithm implements SortAlgorithm {
 	public int[] sort(int[] numbers) {
 		// Logic for Bubble Sort

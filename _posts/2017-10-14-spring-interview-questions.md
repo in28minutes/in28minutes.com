@@ -9,9 +9,18 @@ permalink:  /spring-and-spring-boot-interview-guide
 
 Spring Framework is the most popular Java Framework ever. It continues to evolve with changing architectures. Spring Boot is one of the most popular Spring projects. Spring Boot is the most used Java framework to develop RESTful Services and Microservices.
 
-Preparing for Spring Interview is tricky. There are wide variety of Spring Modules and Spring Projects you would need to recollect and be prepared to answer questions on.You would need to get a good understanding of the new features of Spring and have firm grasp of the  concepts you implemented in your projects. 
+Preparing for Spring and Spring Boot Interviews is tricky. There are wide variety of Spring Modules and Spring Projects you would need to recollect and be prepared to answer questions on.You would need to get a good understanding of the new features of Spring and have firm grasp of the  concepts you implemented in your projects. 
 
 This course helps you prepare for Spring Interview with code examples covering 200+ Spring Interview Questions and Answers on Spring, Spring Boot, Spring MVC, Spring JDBC, JPA, AOP, RESTful Services and SOAP Web Services. 
+
+## Github Repository
+> https://github.com/in28minutes/spring-interview-guide
+
+## Presentation
+- https://github.com/in28minutes/spring-interview-guide/raw/master/spring-interview-questions.pdf
+
+## Get this course
+> 	[Subscribe](http://eepurl.com/bOJulL) to get amazing offers on this and all in28minutes courses.
 
 ## What Will I Learn?
 
@@ -262,9 +271,6 @@ List of questions discussed about each topic is listed below.
 - Installation Video : https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
 - GIT Repository For Installation : https://github.com/in28minutes/getting-started-in-5-steps
 - PDF : https://github.com/in28minutes/SpringIn28Minutes/blob/master/InstallationGuide-JavaEclipseAndMaven_v2.pdf
-
-## Git Repository
-- http://github.com/in28minutes/spring-interview-guide
 
 ## Presentation
 - Downlad the zip or clone the git
