@@ -8,11 +8,11 @@ permalink:  /p/in28minutes-udemy-courses-discount-codes.html
 ---
 Join 100,000 Learners having awesome learning experiences with in28Minutes
 
-> Get Amazing Offers on All Our Courses - http://eepurl.com/bOJulL
+> [Get Amazing Offers on All Our Courses](http://eepurl.com/bOJulL)
 
 ![Image](/images/in28Minutes-Java-Course-Roadmap.png "in28Minutes Java Course Roadmap") 
 
-> The in28Minutes Way - Learn how we create our “Awesome Learning Experiences” - http://www.in28minutes.com/the-in28minutes-way
+> [The in28Minutes Way](http://www.in28minutes.com/the-in28minutes-way) - Learn how we create our “Awesome Learning Experiences”
 
 Here are some of our courses and their focus areas:
 

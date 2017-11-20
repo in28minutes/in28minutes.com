@@ -13,4 +13,4 @@ Join 100,000 Learners having awesome learning experiences with in28Minutes
 
 ![Image](/images/in28Minutes-Java-Course-Roadmap.png "in28Minutes Java Course Roadmap") 
 
-> [The in28Minutes Way](http://www.in28minutes.com/the-in28minutes-way) - Learn how we create our “Awesome Learning Experiences” - 
+> [The in28Minutes Way](http://www.in28minutes.com/the-in28minutes-way) - Learn how we create our “Awesome Learning Experiences”
