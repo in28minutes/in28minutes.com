@@ -100,3 +100,141 @@ Read about what we love, why we create courses and our beliefs - [The in28Minute
 
 - [A 50 page troubleshooting guide with more than 200 Errors and Questions answered](https://github.com/in28minutes/in28minutes-initiatives/blob/master/The-in28Minutes-TroubleshootingGuide-And-FAQ)
 
+## Step By Step Details
+
+### Step 01 : Up and running with a Web Application in Tomcat
+
+In this step, we will quickly setup a running web application.
+
+> Tip : This is one of the few steps where you copy code in! We would want to ensure that you have a running web application without any mistakes.
+
+You can run the project using Run as > Maven build > tomcat7:run.
+
+You can copy code from 
+- [Step 01 on Github Repository](https://github.com/in28minutes/JavaWebApplicationStepByStep/blob/master/Step01.md)
+
+\pom.xml
+
+```
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.in28minutes</groupId>
+	<artifactId>in28Minutes-first-webapp</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-web-api</artifactId>
+			<version>6.0</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.2</version>
+					<configuration>
+						<verbose>true</verbose>
+						<source>1.7</source>
+						<target>1.7</target>
+						<showWarnings>true</showWarnings>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.tomcat.maven</groupId>
+					<artifactId>tomcat7-maven-plugin</artifactId>
+					<version>2.2</version>
+					<configuration>
+						<path>/</path>
+						<contextReloadable>true</contextReloadable>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>
+```
+
+\src\main\java\webapp\LoginServlet.java
+
+```
+package webapp;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/*
+ * Browser sends Http Request to Web Server
+ * 
+ * Code in Web Server => Input:HttpRequest, Output: HttpResponse
+ * JEE with Servlets
+ * 
+ * Web Server responds with Http Response
+ */
+
+
+@WebServlet(urlPatterns = "/login.do")
+public class LoginServlet extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		PrintWriter out = response.getWriter();
+		out.println("<html>");
+		out.println("<head>");
+		out.println("<title>Yahoo!!!!!!!!</title>");
+		out.println("</head>");
+		out.println("<body>");
+		out.println("My First Servlet");
+		out.println("</body>");
+		out.println("</html>");
+
+	}
+
+}
+```
+
+\src\main\webapp\WEB-INF\web.xml
+```
+<!-- webapp/WEB-INF/web.xml -->
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+
+	<display-name>To do List</display-name>
+
+	<welcome-file-list>
+		<welcome-file>login.do</welcome-file>
+	</welcome-file-list>
+
+</web-app>
+```
+
+Java Platform, Enterprise Edition (Java EE) JEE6
+
+Servlet is a Java programming language class used to extend the capabilities of servers  that host applications accessed by means of a request-response programming model.
+
+Notes
+- ```extends javax.servlet.http.HttpServlet``` - All servlets should extend HttpServlet class
+- ```@WebServlet(urlPatterns = "/login.do")``` - Provide the url pattern to access the servlet
+- ```doGet(HttpServletRequest request, HttpServletResponse response)``` - To handle the RequestMethod GET we need to implement doGet method.
+
+Configuring welcome-file-list in web.xml will ensure that url http://localhost:8080/ redirects to http://localhost:8080/login.do
+
+```xml
+<welcome-file-list>
+	<welcome-file>login.do</welcome-file>
+</welcome-file-list>
+```
+
