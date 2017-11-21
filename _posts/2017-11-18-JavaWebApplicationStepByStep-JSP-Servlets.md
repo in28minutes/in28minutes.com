@@ -123,7 +123,6 @@ You can copy code from
 	<artifactId>in28Minutes-first-webapp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-
 	<dependencies>
 		<dependency>
 			<groupId>javax</groupId>
@@ -132,7 +131,6 @@ You can copy code from
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
-
 	<build>
 		<pluginManagement>
 			<plugins>
@@ -164,7 +162,7 @@ You can copy code from
 
 \src\main\java\webapp\LoginServlet.java
 
-```
+```java
 package webapp;
 
 import java.io.IOException;
