@@ -408,11 +408,138 @@ public class SpringIn5StepsComponentScanApplication {
 }
 ```
 
-
 #### Step 17 - Lifecycle of a Bean - @PostConstruct and @PreDestroy
+
+BinarySearchImpl.java
+```
+	@PostConstruct
+	public void postConstruct() {
+		logger.info("postConstruct");
+	}
+
+	@PreDestroy
+	public void preDestroy() {
+		logger.info("preDestroy");
+	}
+
+```
 #### Step 18 - Container and Dependency Injection (CDI) - @Named, @Inject
+
+/pom.xml
+```
+<dependency>		
+	<groupId>javax.inject</groupId>
+	<artifactId>javax.inject</artifactId>
+	<version>1</version>
+</dependency>
+```
+
+```java
+package com.in28minutes.spring.basics.springin5steps;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+import com.in28minutes.spring.basics.springin5steps.cdi.SomeCdiBusiness;
+
+@SpringBootApplication
+public class SpringIn5StepsCdiApplication {
+	
+	private static Logger LOGGER = 
+			LoggerFactory.getLogger(SpringIn5StepsCdiApplication.class); 
+	
+	public static void main(String[] args) {
+
+		ApplicationContext applicationContext = 
+				SpringApplication.run(SpringIn5StepsCdiApplication.class, args);
+		
+		SomeCdiBusiness business = 
+				applicationContext.getBean(SomeCdiBusiness.class);
+		
+		LOGGER.info("{} dao-{}", business, business.getSomeCDIDAO());
+	}
+}
+```
+
+```java
+package com.in28minutes.spring.basics.springin5steps.cdi;
+
+import javax.inject.Inject;
+import javax.inject.Named;
+
+@Named
+public class SomeCdiBusiness {
+	
+	@Inject
+	SomeCdiDao someCdiDao;
+
+	public SomeCdiDao getSomeCDIDAO() {
+		return someCdiDao;
+	}
+
+	public void setSomeCDIDAO(SomeCdiDao someCdiDao) {
+		this.someCdiDao = someCdiDao;
+	}
+}
+```
+
+```java
+package com.in28minutes.spring.basics.springin5steps.cdi;
+
+import javax.inject.Named;
+
+@Named
+public class SomeCdiDao {
+
+}
+```
+
 #### Step 19 - Removing Spring Boot in Basic Application
+
+pom.xml
+```xml
+<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-core</artifactId>
+</dependency>
+<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-context</artifactId>
+</dependency>
+<dependency>
+	<groupId>org.slf4j</groupId>
+	<artifactId>slf4j-api</artifactId>
+</dependency>
+```
+
+```java
+package com.in28minutes.spring.basics.springin5steps;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+import com.in28minutes.spring.basics.springin5steps.basic.BinarySearchImpl;
+
+@Configuration
+@ComponentScan
+public class SpringIn5StepsBasicApplication {
+
+	public static void main(String[] args) {
+
+		ApplicationContext applicationContext =
+				new AnnotationConfigApplicationContext(SpringIn5StepsBasicApplication.class);
+
+```
+
 #### Step 20 - Fixing minor stuff - Add Logback and Close Application Context
+
+
+
 #### Step 21 - Defining Spring Application Context using XML - Part 1
 #### Step 22 - Defining Spring Application Context using XML - Part 2
 #### Step 23 - Mixing XML Context with Component Scan for Beans defined with Annotations
