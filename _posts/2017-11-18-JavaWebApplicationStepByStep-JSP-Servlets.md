@@ -102,7 +102,7 @@ Read about what we love, why we create courses and our beliefs - [The in28Minute
 
 ## Step By Step Details
 
-### Step 01 : Up and running with a Web Application in Tomcat
+### Step 01 - Up and running with a Web Application in Tomcat
 
 In this step, we will quickly setup a running web application.
 
@@ -164,7 +164,7 @@ You can copy code from
 
 \src\main\java\webapp\LoginServlet.java
 
-```
+```java
 package webapp;
 
 import java.io.IOException;
@@ -237,4 +237,3 @@ Configuring welcome-file-list in web.xml will ensure that url http://localhost:8
 	<welcome-file>login.do</welcome-file>
 </welcome-file-list>
 ```
-
