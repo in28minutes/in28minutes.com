@@ -203,7 +203,7 @@ public class LoginServlet extends HttpServlet {
 }
 ```
 \src\main\webapp\WEB-INF\web.xml
-```
+```xml
 <!-- webapp/WEB-INF/web.xml -->
 <web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
