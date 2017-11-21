@@ -487,7 +487,7 @@ public class DemoApplication implements CommandLineRunner{
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -557,7 +557,7 @@ public class Course {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
   @Override
   public String toString() {
@@ -597,7 +597,7 @@ public class CourseRepository {
 ---
 
 /src/main/resources/application.properties Modified
-#### Modified Lines
+Modified Lines
 ```
 # Enabling H2 Console
 spring.h2.console.enabled=true
@@ -641,7 +641,7 @@ public class DemoApplicationTests {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 ```
 /src/test/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepositoryTest.java New
@@ -723,7 +723,7 @@ public class DemoApplication implements CommandLineRunner{
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
     repository.deleteById(10001L);
 ```
@@ -763,7 +763,7 @@ public class CourseRepository {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import org.springframework.transaction.annotation.Transactional;
 @Transactional
@@ -772,7 +772,7 @@ import org.springframework.transaction.annotation.Transactional;
     em.remove(course);
 ```
 /src/main/resources/data.sql Modified
-#### Modified Lines
+Modified Lines
 ```
 insert into course(id, name) values(10002,'Spring in 50 Steps');
 insert into course(id, name) values(10003,'Spring Boot in 100 Steps');
@@ -816,7 +816,7 @@ public class DemoApplication implements CommandLineRunner{
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 ```
 /src/test/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepositoryTest.java Modified
@@ -866,7 +866,7 @@ public class CourseRepositoryTest {
 }
 ```
 ---
-#### Modified Lines
+Modified Lines
 ```
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
@@ -921,7 +921,7 @@ public class DemoApplication implements CommandLineRunner{
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
     repository.save(new Course("Microservices in 100 Steps"));
   } 
@@ -972,7 +972,7 @@ public class Course {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 ```
 /src/main/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepository.java Modified
@@ -1020,7 +1020,7 @@ public class CourseRepository {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 public class CourseRepository {
   public Course findById(Long id) {
@@ -1100,7 +1100,7 @@ public class CourseRepositoryTest {
 }
 ```
 ---
-#### Modified Lines
+Modified Lines
 ```
 @SpringBootTest(classes = DemoApplication.class)
   public void save_basic() {
@@ -1153,7 +1153,7 @@ public class DemoApplication implements CommandLineRunner{
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
     repository.playWithEntityManager();
 ```
@@ -1211,7 +1211,7 @@ public class CourseRepository {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -1291,7 +1291,7 @@ public class CourseRepositoryTest {
 }
 ```
 ---
-#### Modified Lines
+Modified Lines
 ```
   public void playWithEntityManager() {
     repository.playWithEntityManager();
@@ -1368,7 +1368,7 @@ public class CourseRepository {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
     
     Course course1 = new Course("Web Services in 100 Steps");
@@ -1456,7 +1456,7 @@ public class CourseRepository {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 ```
 /src/test/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepositoryTest.java Modified
@@ -1529,7 +1529,7 @@ public class CourseRepositoryTest {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 ```
 /src/test/java/com/in28minutes/jpa/hibernate/demo/repository/JPQLTest.java New
@@ -1648,7 +1648,7 @@ public class Course {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import javax.persistence.Column;
   @Column(nullable = false)
@@ -1708,7 +1708,7 @@ public class CourseRepository {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
     em.persist(course1);
     course1.setName(null);
@@ -1758,7 +1758,7 @@ public class DemoApplication implements CommandLineRunner{
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
     //repository.playWithEntityManager();
 ```
@@ -1829,7 +1829,7 @@ public class Course {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import java.time.LocalDateTime;
 import javax.persistence.NamedQueries;
@@ -2059,7 +2059,7 @@ public class CourseRepository {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
     
     Course course2 = findById(10001L);
@@ -2068,7 +2068,7 @@ public class CourseRepository {
     
 ```
 /src/main/resources/data.sql Modified
-#### Modified Lines
+Modified Lines
 ```
 insert into course(id, name, created_date, last_updated_date) 
 values(10001,'JPA in 50 Steps', sysdate(), sysdate());
@@ -2157,7 +2157,7 @@ public class JPQLTest {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
     Query query = em.createNamedQuery("query_get_all_courses");
     logger.info("Select  c  From Course c -> {}", resultList);
@@ -2285,7 +2285,7 @@ public class DemoApplication implements CommandLineRunner{
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import com.in28minutes.jpa.hibernate.demo.repository.StudentRepository;
   private CourseRepository courseRepository;
@@ -2353,7 +2353,7 @@ public class Student {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import javax.persistence.FetchType;
   @OneToOne(fetch=FetchType.LAZY)
@@ -2513,7 +2513,7 @@ public class NativeQueriesTest {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 ```
 /src/test/java/com/in28minutes/jpa/hibernate/demo/repository/StudentRepositoryTest.java New
@@ -2630,7 +2630,7 @@ public class StudentRepository {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 ```
 /src/test/java/com/in28minutes/jpa/hibernate/demo/repository/StudentRepositoryTest.java Modified
@@ -2687,7 +2687,7 @@ public class StudentRepositoryTest {
 }
 ```
 ---
-#### Modified Lines
+Modified Lines
 ```
     //Database Operation 1 - Retrieve student
     //Database Operation 2 - Retrieve passport
@@ -2759,7 +2759,7 @@ public class Passport {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import javax.persistence.FetchType;
 import javax.persistence.OneToOne;
@@ -2850,7 +2850,7 @@ public class StudentRepository {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
   public void someOperationToUnderstandPersistenceContext() {
     //Database Operation 1 - Retrieve student
@@ -2930,7 +2930,7 @@ public class StudentRepositoryTest {
 }
 ```
 ---
-#### Modified Lines
+Modified Lines
 ```
 import com.in28minutes.jpa.hibernate.demo.entity.Passport;
   // Session & Session Factory
@@ -2991,7 +2991,7 @@ public class DemoApplication implements CommandLineRunner{
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
     //studentRepository.saveStudentWithPassport();
     courseRepository.addReviewsForCourse();
@@ -3083,7 +3083,7 @@ public class Course {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import java.util.ArrayList;
 import java.util.List;
@@ -3169,7 +3169,7 @@ public class Review {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import javax.persistence.ManyToOne;
   @ManyToOne
@@ -3259,7 +3259,7 @@ public class CourseRepository {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import com.in28minutes.jpa.hibernate.demo.entity.Review;
   public void addReviewsForCourse() {
@@ -3279,7 +3279,7 @@ import com.in28minutes.jpa.hibernate.demo.entity.Review;
     em.persist(review2);
 ```
 /src/main/resources/data.sql Modified
-#### Modified Lines
+Modified Lines
 ```
 insert into review(id,rating,description,course_id)
 values(50001,'5', 'Great Course',10001);
@@ -3342,7 +3342,7 @@ public class DemoApplication implements CommandLineRunner{
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import java.util.ArrayList;
 import java.util.List;
@@ -3447,7 +3447,7 @@ public class CourseRepository {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import java.util.List;
   public void addHardcodedReviewsForCourse() {
@@ -3529,7 +3529,7 @@ public class CourseRepositoryTest {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
   
 ```
@@ -3623,7 +3623,7 @@ public class Course {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import javax.persistence.FetchType;
 ```
@@ -3726,7 +3726,7 @@ public class CourseRepositoryTest {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import javax.persistence.EntityManager;
 import org.springframework.transaction.annotation.Transactional;
@@ -3842,7 +3842,7 @@ public class Course {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import javax.persistence.ManyToMany;
   @ManyToMany
@@ -3928,7 +3928,7 @@ public class Student {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import java.util.ArrayList;
 import java.util.List;
@@ -4042,7 +4042,7 @@ public class Course {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
   @ManyToMany(mappedBy="courses")
 ```
@@ -4130,7 +4130,7 @@ public class Student {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
@@ -4145,7 +4145,7 @@ import javax.persistence.JoinTable;
 
 
 /src/main/resources/data.sql Modified
-#### Modified Lines
+Modified Lines
 ```
 insert into student_course(student_id,course_id)
 values(20001,10001);
@@ -4227,7 +4227,7 @@ public class StudentRepositoryTest {
 }
 ```
 ---
-#### Modified Lines
+Modified Lines
 ```
   public void retrieveStudentAndCourses() {
     
@@ -4289,7 +4289,7 @@ public class DemoApplication implements CommandLineRunner{
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import com.in28minutes.jpa.hibernate.demo.entity.Course;
 import com.in28minutes.jpa.hibernate.demo.entity.Student;
@@ -4402,7 +4402,7 @@ public class StudentRepository {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import com.in28minutes.jpa.hibernate.demo.entity.Course;
   public void insertHardcodedStudentAndCourse(){
@@ -4492,7 +4492,7 @@ public class DemoApplication implements CommandLineRunner {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import java.math.BigDecimal;
 import com.in28minutes.jpa.hibernate.demo.entity.FullTimeEmployee;
@@ -4706,7 +4706,7 @@ public abstract class Employee {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Inheritance;
@@ -4768,7 +4768,7 @@ public abstract class Employee {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 @Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
 ```
@@ -4828,7 +4828,7 @@ public abstract class Employee {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import javax.persistence.MappedSuperclass;
 //@MappedSuperclass
@@ -4908,7 +4908,7 @@ public class DemoApplication implements CommandLineRunner {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
     logger.info("Full Time Employees -> {}", 
         employeeRepository.retrieveAllFullTimeEmployees());
@@ -4966,7 +4966,7 @@ public abstract class Employee {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 @MappedSuperclass
 //@Inheritance(strategy=InheritanceType.JOINED)
@@ -5016,7 +5016,7 @@ public class EmployeeRepository {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import com.in28minutes.jpa.hibernate.demo.entity.FullTimeEmployee;
 import com.in28minutes.jpa.hibernate.demo.entity.PartTimeEmployee;
@@ -5098,7 +5098,7 @@ public class DemoApplication implements CommandLineRunner {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
     /*
         employeeRepository.retrieveAllPartTimeEmployees());*/
@@ -5189,7 +5189,7 @@ public class JPQLTest {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
   public void jpql_courses_without_students() {
     TypedQuery<Course> query = em.createQuery("Select c from Course c where c.students is empty", Course.class);
@@ -5527,7 +5527,7 @@ public class JPQLTest {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import com.in28minutes.jpa.hibernate.demo.entity.Student;
   public void jpql_students_with_passports_in_a_certain_pattern() {
@@ -5591,14 +5591,14 @@ public interface CourseSpringDataRepository extends JpaRepository<Course, Long> 
 ---
 
 /src/main/resources/application.properties Modified
-#### Modified Lines
+Modified Lines
 ```
 spring.jpa.properties.hibernate.connection.isolation=2
 # Performance
 spring.jpa.properties.hibernate.jdbc.batch_size=10
 ```
 /src/main/resources/data.sql Modified
-#### Modified Lines
+Modified Lines
 ```
 values(10004,'Dummy1', sysdate(), sysdate());
 values(10005,'Dummy2', sysdate(), sysdate());
@@ -5734,7 +5734,7 @@ public class CourseRepositoryTest {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import java.util.List;
 import javax.persistence.EntityGraph;
@@ -5846,7 +5846,7 @@ public class CourseSpringDataRepositoryTest {
 
 
 ### /pom.xml Modified
-#### Modified Lines
+Modified Lines
 ```
       <artifactId>spring-boot-starter-data-rest</artifactId>
 ```
@@ -5951,7 +5951,7 @@ public class Course {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import com.fasterxml.jackson.annotation.JsonIgnore;
   @JsonIgnore
@@ -5994,7 +5994,7 @@ public interface CourseSpringDataRepository extends JpaRepository<Course, Long> 
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import java.util.List;
 import org.springframework.data.jpa.repository.Query;
@@ -6013,7 +6013,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
   List<Course> courseWith100StepsInNameUsingNamedQuery();
 ```
 /src/main/resources/data.sql Modified
-#### Modified Lines
+Modified Lines
 ```
 ```
 /src/test/java/com/in28minutes/jpa/hibernate/demo/repository/CourseSpringDataRepositoryTest.java Modified
@@ -6106,7 +6106,7 @@ public class CourseSpringDataRepositoryTest {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import org.springframework.data.domain.Pageable;
     logger.info("First Page -> {} ", firstPage.getContent());
@@ -6127,7 +6127,7 @@ import org.springframework.data.domain.Pageable;
 
 
 ### /pom.xml Modified
-#### Modified Lines
+Modified Lines
 ```
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-ehcache</artifactId>
@@ -6234,13 +6234,13 @@ public class Course {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import javax.persistence.Cacheable;
 @Cacheable
 ```
 /src/main/resources/application.properties Modified
-#### Modified Lines
+Modified Lines
 ```
 # Second Level Cache - Ehcache
 #1. enable second level cache
@@ -6395,7 +6395,7 @@ public class CourseRepositoryTest {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
   
   public void findById_firstLevelCacheDemo() {
@@ -6515,7 +6515,7 @@ public class Course {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
@@ -6524,7 +6524,7 @@ import org.hibernate.annotations.Where;
   private boolean isDeleted;
 ```
 /src/main/resources/data.sql Modified
-#### Modified Lines
+Modified Lines
 ```
 insert into course(id, name, created_date, last_updated_date,is_deleted) 
 values(10001,'JPA in 50 Steps', sysdate(), sysdate(),false);
@@ -6655,7 +6655,7 @@ public class Course {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import javax.persistence.PreRemove;
 import org.slf4j.Logger;
@@ -6788,7 +6788,7 @@ public class Student {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import javax.persistence.Embedded;
   @Embedded
@@ -6879,7 +6879,7 @@ public class StudentRepositoryTest {
 }
 ```
 ---
-#### Modified Lines
+Modified Lines
 ```
 import com.in28minutes.jpa.hibernate.demo.entity.Address;
   public void setAddressDetails() {
@@ -6962,7 +6962,7 @@ public class Review {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -7078,14 +7078,14 @@ public class CourseRepository {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
 import com.in28minutes.jpa.hibernate.demo.entity.ReviewRating;
     Review review1 = new Review(ReviewRating.FIVE, "Great Hands-on Stuff.");  
     Review review2 = new Review(ReviewRating.FIVE, "Hatsoff.");
 ```
 /src/main/resources/data.sql Modified
-#### Modified Lines
+Modified Lines
 ```
 values(50001,'FIVE', 'Great Course',10001);
 values(50002,'FOUR', 'Wonderful Course',10001);
@@ -7222,7 +7222,7 @@ public class Course {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
         query = "Select  c  From Course c"),    
     @NamedQuery(name = "query_get_all_courses_join_fetch", 
@@ -7325,7 +7325,7 @@ public class CourseRepository {
 ```
 ---
 
-#### Modified Lines
+Modified Lines
 ```
     Course course = em.find(Course.class, id);
     logger.info("Course -> {}", course);
