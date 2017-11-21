@@ -155,8 +155,7 @@ Spring Framework remains as popular today as it was when I first used it 12 year
 - Step 19 - Introduction to Spring Data JPA
 - Step 20 - Connecting to Other Databases
 
-## Spring in depth
-
+### Spring in depth
 - Quick Review of Terminologies
  - Dependency
  - Autowiring
@@ -182,9 +181,7 @@ Spring Framework remains as popular today as it was when I first used it 12 year
 - What is CDI (Contexts and Dependency Injection)? 
 	- Does Spring Support CDI?
 	- Would you recommed to use CDI or Spring Annotations?
-
 - Remove Spring Boot 
-
 - How do you create an application context with Spring?
 	- What are the different options available to create Application Contexts for Spring?
 	- What is the difference between XML and Java Configurations for Spring?
@@ -195,13 +192,13 @@ Spring Framework remains as popular today as it was when I first used it 12 year
 - Spring Profiles
 - Spring Properties
 
-## Spring & Unit Testing
+### Spring & Unit Testing
 - How does Spring Framework Make Unit Testing Easy?
 - What is Mockito?
 - What is your favorite mocking framework?
 - How do you do mock data with Mockito?
 
-## Spring & AOP
+### Spring & AOP
 - What are cross cutting concerns?
 - How do you implement cross cutting concerns in a web application?
 - If you would want to log every request to a web application, what are the options you can think of?
@@ -211,15 +208,35 @@ Spring Framework remains as popular today as it was when I first used it 12 year
 - What is weaving?
 - Compare Spring AOP vs AspectJ?
 
-## Spring & JDBC & JPA
+### Spring & JDBC & JPA
 - Introduction to Spring JDBC
 - Converting it to JPA
 
-
-## Other Notes
+### Other Notes
 - LEARN key Spring features: Core, Annotations, Java Config, AOP, MVC, Hibernate CRUD, Hibernate Query
 - Injecting Values from a Properties File - Overview
 - An Assignment
+
+## Step By Step Notes and Code
+
+### Spring in Depth
+#### Step 11 - Dependency Injection - A few more examples
+#### Step 12 - Autowiring in Depth - by Name and @Primary
+#### Step 13 - Autowiring in Depth - @Qualifier annotation
+#### Step 14 - Scope of a Bean - Prototype and Singleton
+#### Step 15 - Complex scenarios with Scope of a Spring Bean - Mix of Prototype and Singleton
+#### Step 15B -  Difference Between Spring Singleton and GOF Singleton
+#### Step 16 - Using Component Scan to scan for beans
+#### Step 17 - Lifecycle of a Bean - @PostConstruct and @PreDestroy
+#### Step 18 - Container and Dependency Injection (CDI) - @Named, @Inject
+#### Step 19 - Removing Spring Boot in Basic Application
+#### Step 20 - Fixing minor stuff - Add Logback and Close Application Context
+#### Step 21 - Defining Spring Application Context using XML - Part 1
+#### Step 22 - Defining Spring Application Context using XML - Part 2
+#### Step 23 - Mixing XML Context with Component Scan for Beans defined with Annotations
+#### Step 24 - IOC Container vs Application Context vs Bean Factory
+#### Step 25 - @Component vs @Service vs @Repository vs @Controller
+#### Step 26 - Read values from external properties file
 
 
 ## Complete Code Example
