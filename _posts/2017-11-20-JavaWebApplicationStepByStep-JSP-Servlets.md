@@ -19,7 +19,7 @@ Read about what we love, why we create courses and our beliefs - [The in28Minute
   - 15 Courses
   - 100,000 Students
 
-![](/images/udemy-total-students.png)
+![Image](/images/udemy-total-students.png)
 
 ## Github Repository
 
@@ -160,6 +160,7 @@ You can copy code from
 	</build>
 </project>
 ```
+
 \src\main\java\webapp\LoginServlet.java
 ```
 package webapp;
@@ -201,6 +202,7 @@ public class LoginServlet extends HttpServlet {
 
 }
 ```
+
 \src\main\webapp\WEB-INF\web.xml
 ```
 <!-- webapp/WEB-INF/web.xml -->
@@ -320,6 +322,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response)
 		.forward(request, response);
 }
 ```
+
 \\src\main\webapp\WEB-INF\views\login.jsp
 ```jsp
 <html>
@@ -333,6 +336,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response)
 </body>
 </html>
 ```
+
 \src\main\webapp\WEB-INF\views\welcome.jsp
 ```
 <html>
@@ -358,6 +362,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
 	request.getRequestDispatcher("/WEB-INF/views/welcome.jsp").forward(request, response);
 }
 ```
+
 \src\main\webapp\WEB-INF\views\welcome.jsp
 ```
 <html>
@@ -385,6 +390,7 @@ public class LoginService {
 
 }
 ```
+
 \src\main\java\webapp\LoginServlet.java
 ```
 @Override
@@ -406,6 +412,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
 	}
 }
 ```
+
 \\src\main\webapp\WEB-INF\views\login.jsp
 ```
 <html>
@@ -453,6 +460,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
 }
 
 ```
+
 \src\main\java\webapp\todo\Todo.java
 ```
 public class Todo {
@@ -478,6 +486,7 @@ public class Todo {
 	}
 }
 ```
+
 \src\main\java\webapp\todo\TodoService.java
 ```
 import java.util.ArrayList;
@@ -497,6 +506,7 @@ public class TodoService {
 	}
 }
 ```
+
 \src\main\webapp\WEB-INF\views\welcome.jsp
 ```
 <html>
@@ -562,6 +572,7 @@ public class TodoServlet extends HttpServlet {
 	}
 }
 ```
+
 src\main\webapp\WEB-INF\views\todo.jsp
 ```
 <html>
@@ -637,6 +648,7 @@ public void addTodo(String todo) {
 	todos.add(new Todo(todo));
 }
 ```
+
 src\main\java\in28minutes\todo\TodoServlet.java
 ```
 
@@ -654,6 +666,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
 }
 
 ```
+
 src\main\webapp\WEB-INF\views\todo.jsp
 ```
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -703,12 +716,14 @@ public class DeleteTodoServlet extends HttpServlet {
 	}
 }
 ```
+
 src\main\java\in28minutes\todo\TodoService.java
 ```
 public void deleteTodo(String todo) {
 	todos.remove(new Todo(todo));
 }
 ```
+
 src\main\webapp\WEB-INF\views\todo.jsp
 ```
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
