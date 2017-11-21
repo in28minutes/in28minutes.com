@@ -217,3 +217,19 @@ public class LoginServlet extends HttpServlet {
 
 </web-app>
 ```
+Java Platform, Enterprise Edition (Java EE) JEE6
+
+Servlet is a Java programming language class used to extend the capabilities of servers  that host applications accessed by means of a request-response programming model.
+
+Notes
+- ```extends javax.servlet.http.HttpServlet``` - All servlets should extend HttpServlet class
+- ```@WebServlet(urlPatterns = "/login.do")``` - Provide the url pattern to access the servlet
+- ```doGet(HttpServletRequest request, HttpServletResponse response)``` - To handle the RequestMethod GET we need to implement doGet method.
+
+Configuring welcome-file-list in web.xml will ensure that url http://localhost:8080/ redirects to http://localhost:8080/login.do
+
+```xml
+<welcome-file-list>
+	<welcome-file>login.do</welcome-file>
+</welcome-file-list>
+```
