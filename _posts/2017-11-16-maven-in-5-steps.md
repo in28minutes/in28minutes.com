@@ -10,14 +10,17 @@ permalink:  /maven-tutorial-for-beginners
 Defining what Maven does is very difficult.
 
 Every Day Developer does a lot of things
-   - Manages Dependencies - Web Layer (Spring MVC), Data Layer (JPA - Hibernate) etc..                  
-   - Build a jar or a war or an ear
-   - Run the application locally - Tomcat or Jetty
-   - Deploy to a T environment
-   - Add new dependencies to a project
-   - Run Unit Tests
-   - Generate Projects
-   - Create Eclipse Workspace
+- Manages Dependencies 
+	- Web Layer (Spring MVC)
+	- Data Layer (JPA - Hibernate) etc..                  
+- Build a jar or a war or an ear
+- Run the application locally 
+	- Tomcat or Jetty
+- Deploy to a T environment
+- Add new dependencies to a project
+- Run Unit Tests
+- Generate Projects
+- Create Eclipse Workspace
 
  > Maven helps us do all these and more...
 
@@ -75,6 +78,7 @@ Similar to Java Inheritance. We inherit a lot of things from starter parent.
 
 ```
 #### Declaring Dependencies
+
 Dependencies are frameworks that you would need to develop your project.
 
 In the example below we are adding two dependencies.
@@ -107,11 +111,11 @@ Build LifeCycle is a sequence of steps
 > Maven follows Convention over Configuration.
 
 Pre defined folder structure
-	- Source Code
-		- ${basedir}/src/main/java
-		- ${basedir}/src/main/resources
-	- Test Code
-		- ${basedir}/src/test
+- Source Code
+	- ${basedir}/src/main/java
+	- ${basedir}/src/main/resources
+- Test Code
+	- ${basedir}/src/test
 
 ### Step 4 : How does Maven Work?
 
