@@ -947,7 +947,136 @@ public class SomeCdiBusinessTest {
 </dependency>
 ```
 
+
+
+### Spring AOP
+
+#### Step 01 - Setting up AOP Example - Part 1 
+
+Creating a Spring AOP Project with Spring Initializr is a cake walk. 
+
+> Spring Initializr [http://start.spring.io/](http://start.spring.io/){:target="_blank"} is great tool to bootstrap your Spring Boot projects.
+
+Notes
+- Launch Spring Initializr and choose the following
+  - Choose `com.in28minutes.spring.aop` as Group
+  - Choose `spring-aop` as Artifact
+  - Choose the following Dependencies
+    - AOP
+- Click Generate Project.
+- Import the project into Eclipse.
+- If you want to understand all the files that are part of this project, you can go here.
+
+#### Step 02 - Setting up AOP Example - Part 2
+
+```java
+package com.in28minutes.spring.aop.springaop;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class Business1 {
+	
+	@Autowired
+	private Dao1 dao1;
+	
+	public String calculateSomething(){
+		//Business Logic
+		return dao1.retrieveSomething();
+	}
+}
+```
+---
+
+```java
+package com.in28minutes.spring.aop.springaop;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class Business2 {
+	
+	@Autowired
+	private Dao2 dao2;
+	
+	public String calculateSomething(){
+		//Business Logic
+		return dao2.retrieveSomething();
+	}
+}
+```
+---
+
+```java
+package com.in28minutes.spring.aop.springaop;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class Dao1 {
+
+	public String retrieveSomething(){
+		return "Dao1";
+	}
+
+}
+```
+---
+
+
+```java
+package com.in28minutes.spring.aop.springaop;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class Dao2 {
+
+	public String retrieveSomething(){
+		return "Dao2";
+	}
+
+}
+```
+
+#### Step 03 - Defining an @Before advice
+#### Step 04 - Understand AOP Terminology - Pointcut, Advice, Aspect, Join Point, Weaving and Weaver
+#### Step 05 - Using @After, @AfterReturning, @AfterThrowing advices
+#### Step 06 - Using @Around advice to implement performance tracing
+#### Step 07 - Best Practice : Use common Pointcut Configuration
+#### Step 08 - Quick summary of other Pointcuts
+#### Step 09 - Creating Custom Annotation and an Aspect for Tracking Time
+
+
+### Spring JDBC and JPA
+#### Step 01 - Setting up a project with JDBC, JPA, H2 and Web Dependencies
+#### Step 02 - Launching up H2 Console
+#### Step 03 - Creating a Database Table in H2
+#### Step 04 - Populate data into Person Table
+#### Step 05 - Implement findAll persons Spring JDBC Query Method
+#### Step 06 - Execute the findAll method using CommandLineRunner
+#### Step 07 - A Quick Review - JDBC vs Spring JDBC
+#### Step 08 - Whats in the background? Understanding Spring Boot Autoconfiguration
+#### Step 09 - Implementing findById Spring JDBC Query Method
+#### Step 10 - Implementing deleteById Spring JDBC Update Method
+#### Step 11 - Implementing insert and update Spring JDBC Update Methods
+#### Step 12 - Creating a custom Spring JDBC RowMapper
+#### Step 13 - Quick introduction to JPA
+#### Step 14 - Defining Person Entity
+#### Step 15 - Implementing findById JPA Repository Method
+#### Step 16 - Implementing insert and update JPA Repository Methods
+#### Step 17 - Implementing deleteById JPA Repository Method
+#### Step 18 - Implementing findAll using JPQL Named Query
+#### Step 19 - Introduction to Spring Data JPA
+#### Step 20 - Connecting to Other Databases
+
+
+
 ## Complete Code Example
+
+### Spring in Depth & Unit Testing with Spring
 
 
 ### /pom.xml
