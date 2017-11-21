@@ -1253,8 +1253,6 @@ We would love to hear your thoughts.
 
 ##### If you loved the course
 
-#in28Minutes #ImLearningIn28Minutes #ImLovingIn28Minutes 
-
 Share on Twitter - https://twitter.com/home?status=Having%20a%20great%20time!%20%0A%20%23in28Minutes%20%23ImLearningIn28Minutes
 
 ![](/images/in28Minutes-Java-Course-Roadmap.png)
