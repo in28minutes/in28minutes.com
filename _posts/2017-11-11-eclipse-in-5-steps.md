@@ -7,7 +7,7 @@ categories: Eclipse
 permalink:  /eclipse-tutorial-for-beginners
 ---
 
-- Git Repository - https://github.com/in28minutes/getting-started-in-5-steps
+- Git Repository - https://github.com/in28minutes/getting-started-in-5-steps/tree/master/eclipse-in-5-steps
 - Pre-requisites - Java & Eclipse - https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
 
 > If you are using mac, use Cmd instead of Ctrl. 
