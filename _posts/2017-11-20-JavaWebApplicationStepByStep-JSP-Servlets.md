@@ -279,6 +279,7 @@ My First JSP!!!
 We read the request parameter and set it as a request attribute. Request attributes can be accessed from the view (jsp).
 
 \src\main\java\webapp\LoginServlet.java
+
 ```java
 request.setAttribute("name", 
 		request.getParameter("name"));
@@ -323,7 +324,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response)
 }
 ```
 
-\\src\main\webapp\WEB-INF\views\login.jsp
+\src\main\webapp\WEB-INF\views\login.jsp
 ```jsp
 <html>
 <head>
@@ -413,7 +414,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
 }
 ```
 
-\\src\main\webapp\WEB-INF\views\login.jsp
+\src\main\webapp\WEB-INF\views\login.jsp
 ```
 <html>
 <head>
@@ -1027,6 +1028,7 @@ public class LoginRequiredFilter implements Filter {
 #### Code Snippets and Examples
 
 ### src/main/java/com/in28minutes/logout/LogoutServlet.java
+
 ```
 package com.in28minutes.logout;
 
@@ -1048,6 +1050,7 @@ public class LogoutServlet extends HttpServlet {
 	}
 }
 ```
+
 ### src/main/webapp/WEB-INF/views/todo.jsp
 
 ```
@@ -1079,13 +1082,13 @@ We download Tomcat server using a Maven plugin and deploy the application war to
 
 HttpServlet methods
 - init() method 
-	- called only once. 
+	* called only once. 
 - service() method
-	- called once per servlet invocation
-	- looks at the request method and call the appropriate method - doPost, doGet etc
+	* called once per servlet invocation
+	* looks at the request method and call the appropriate method - doPost, doGet etc
 - destroy() method
-	- called only once 
-	- when the application is brought down
+	* called only once 
+	* when the application is brought down
 
 JSPs are also servlets. They have all the 3 methods should above.
 
@@ -1138,6 +1141,7 @@ protected void doPost(HttpServletRequest request,
 	response.sendRedirect("/list-todos.do");
 }
 ```
+
 ### src/main/java/com/in28minutes/todo/DeleteTodoServlet.java
 ```
 protected void doGet(HttpServletRequest request,
@@ -1147,7 +1151,9 @@ protected void doGet(HttpServletRequest request,
 	response.sendRedirect("/list-todos.do");
 }
 ```
+
 ### src/main/java/com/in28minutes/todo/Todo.java
+
 ```
 package com.in28minutes.todo;
 
@@ -1186,7 +1192,9 @@ public class Todo {
 
 }
 ```
+
 ### src/main/java/com/in28minutes/todo/TodoService.java
+
 ```
 package com.in28minutes.todo;
 
@@ -1215,6 +1223,7 @@ public class TodoService {
 
 }
 ```
+
 ### src/main/webapp/WEB-INF/views/add-todo.jsp
 ```
 <div class="container">
@@ -1227,6 +1236,7 @@ public class TodoService {
 	</form>
 </div>
 ```
+
 ### src/main/webapp/WEB-INF/views/list-todos.jsp
 ```
 <ol>
