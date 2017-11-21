@@ -748,6 +748,205 @@ public class SomeExternalService {
 ```properties
 external.service.url=http://someserver.dev.com/service
 ```
+
+### Unit Testing with Spring Framework
+
+#### Step 27 - Spring Unit Testing with a Java Context
+
+```
+<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-test</artifactId>
+</dependency>
+<dependency>
+	<groupId>junit</groupId>
+	<artifactId>junit</artifactId>
+</dependency>
+```
+
+```
+@RunWith(SpringRunner.class)
+//@SpringBootTest
+public class SpringIn5StepsBasicApplicationTests {
+```
+
+```java
+package com.in28minutes.spring.basics.springin5steps.basic;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import com.in28minutes.spring.basics.springin5steps.SpringIn5StepsBasicApplication;
+
+//Load the context
+@RunWith(SpringRunner.class)
+@ContextConfiguration(classes = SpringIn5StepsBasicApplication.class)
+public class BinarySearchTest {
+
+	// Get this bean from the context
+	@Autowired
+	BinarySearchImpl binarySearch;
+
+	@Test
+	public void testBasicScenario() {
+		
+		// call method on binarySearch
+		int actualResult = binarySearch.binarySearch(new int[] {}, 5);
+
+		// check if the value is correct
+		assertEquals(3, actualResult);
+
+	}
+
+}
+```
+
+#### Step 28 - Spring Unit Testing with an XML Context
+
+/src/test/resources/testContext.xml
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<import resource="classpath:applicationContext.xml"/>
+	
+</beans>
+```
+
+```java
+package com.in28minutes.spring.basics.springin5steps.basic;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringRunner;
+
+//Load the context
+@RunWith(SpringRunner.class)
+@ContextConfiguration(locations="/testContext.xml")
+public class BinarySearchXMLConfigurationTest {
+
+	// Get this bean from the context
+	@Autowired
+	BinarySearchImpl binarySearch;
+
+	@Test
+	public void testBasicScenario() {
+		
+		// call method on binarySearch
+		int actualResult = binarySearch.binarySearch(new int[] {}, 5);
+
+		// check if the value is correct
+		assertEquals(3, actualResult);
+
+	}
+
+}
+```
+
+#### Step 29 - Spring Unit Testing with Mockito
+
+```
+public class SomeCdiBusiness {
+
+	// SAME OLD CODE
+
+	public int findGreatest() {
+		int greatest = Integer.MIN_VALUE;
+		int[] data = someCdiDao.getData();
+		for (int value : data) {
+			if (value > greatest) {
+				greatest = value;
+			}
+		}
+		return greatest;
+	}
+
+}
+```
+
+Add a new method
+```java
+package com.in28minutes.spring.basics.springin5steps.cdi;
+
+import javax.inject.Named;
+
+@Named
+public class SomeCdiDao {
+	
+	public int[] getData() {
+		return new int[] {5, 89,100};
+	}
+
+}
+```
+
+
+```java
+package com.in28minutes.spring.basics.springin5steps.cdi;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.junit.MockitoJUnitRunner;
+
+@RunWith(MockitoJUnitRunner.class)
+public class SomeCdiBusinessTest {
+
+	// Inject Mock
+	@InjectMocks
+	SomeCdiBusiness business;
+
+	// Create Mock
+	@Mock
+	SomeCdiDao daoMock;
+
+	@Test
+	public void testBasicScenario() {
+		Mockito.when(daoMock.getData()).thenReturn(new int[] { 2, 4 });
+		assertEquals(4, business.findGreatest());
+	}
+
+	@Test
+	public void testBasicScenario_NoElements() {
+		Mockito.when(daoMock.getData()).thenReturn(new int[] { });
+		assertEquals(Integer.MIN_VALUE, business.findGreatest());
+	}
+
+	@Test
+	public void testBasicScenario_EqualElements() {
+		Mockito.when(daoMock.getData()).thenReturn(new int[] { 2,2});
+		assertEquals(2, business.findGreatest());
+	}
+
+}
+```
+
+```
+<dependency>
+	<groupId>org.mockito</groupId>
+	<artifactId>mockito-core</artifactId>
+</dependency>
+```
+
 ## Complete Code Example
 
 
