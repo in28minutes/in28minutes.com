@@ -220,13 +220,195 @@ Spring Framework remains as popular today as it was when I first used it 12 year
 ## Step By Step Notes and Code
 
 ### Spring in Depth
+
 #### Step 11 - Dependency Injection - A few more examples
+
 #### Step 12 - Autowiring in Depth - by Name and @Primary
+
 #### Step 13 - Autowiring in Depth - @Qualifier annotation
+
+```
+@Component
+@Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
+public class BinarySearchImpl {
+
+	@Autowired
+	@Qualifier("bubble")
+	private SortAlgorithm sortAlgorithm;
+```
+
+```
+@Component
+@Qualifier("bubble")
+public class BubbleSortAlgorithm implements SortAlgorithm {
+```
+
+```
+@Component
+@Qualifier("quick")
+public class QuickSortAlgorithm implements SortAlgorithm {
+```
+
 #### Step 14 - Scope of a Bean - Prototype and Singleton
+
 #### Step 15 - Complex scenarios with Scope of a Spring Bean - Mix of Prototype and Singleton
+
+```java
+package com.in28minutes.spring.basics.springin5steps.scope;
+
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
+import org.springframework.stereotype.Component;
+
+@Component
+@Scope(value=ConfigurableBeanFactory.SCOPE_PROTOTYPE, 
+		proxyMode = ScopedProxyMode.TARGET_CLASS)
+public class JdbcConnection {
+	public JdbcConnection() {
+		System.out.println("JDBC Connection");
+	}
+}
+```
+
+```java
+package com.in28minutes.spring.basics.springin5steps.scope;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class PersonDAO {
+
+	@Autowired
+	JdbcConnection jdbcConnection;
+
+	public JdbcConnection getJdbcConnection() {
+		return jdbcConnection;
+	}
+
+	public void setJdbcConnection(JdbcConnection jdbcConnection) {
+		this.jdbcConnection = jdbcConnection;
+	}
+}
+```
+
+```java
+package com.in28minutes.spring.basics.springin5steps;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+import com.in28minutes.spring.basics.springin5steps.scope.PersonDAO;
+
+@SpringBootApplication
+public class SpringIn5StepsScopeApplication {
+	
+	private static Logger LOGGER = 
+			LoggerFactory.getLogger(SpringIn5StepsScopeApplication.class); 
+	
+	public static void main(String[] args) {
+
+		ApplicationContext applicationContext = 
+				SpringApplication.run(SpringIn5StepsScopeApplication.class, args);
+		
+		PersonDAO personDao = 
+				applicationContext.getBean(PersonDAO.class);
+		
+		PersonDAO personDao2 = 
+				applicationContext.getBean(PersonDAO.class);
+		
+		LOGGER.info("{}", personDao);
+		LOGGER.info("{}", personDao.getJdbcConnection());
+		
+		LOGGER.info("{}", personDao2);
+		LOGGER.info("{}", personDao.getJdbcConnection());
+		
+	}
+}
+```
+
 #### Step 15B -  Difference Between Spring Singleton and GOF Singleton
+
 #### Step 16 - Using Component Scan to scan for beans
+
+```java
+package com.in28minutes.spring.basics.componentscan;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class ComponentDAO {
+
+	@Autowired
+	ComponentJdbcConnection jdbcConnection;
+
+	public ComponentJdbcConnection getJdbcConnection() {
+		return jdbcConnection;
+	}
+
+	public void setComponentJdbcConnection(ComponentJdbcConnection jdbcConnection) {
+		this.jdbcConnection = jdbcConnection;
+	}
+}
+```
+
+```java
+package com.in28minutes.spring.basics.componentscan;
+
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
+import org.springframework.stereotype.Component;
+
+@Component
+@Scope(value=ConfigurableBeanFactory.SCOPE_PROTOTYPE, 
+		proxyMode = ScopedProxyMode.TARGET_CLASS)
+public class ComponentJdbcConnection {
+	public ComponentJdbcConnection() {
+		System.out.println("JDBC Connection");
+	}
+}
+```
+
+```java
+package com.in28minutes.spring.basics.springin5steps;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+
+import com.in28minutes.spring.basics.componentscan.ComponentDAO;
+
+@SpringBootApplication
+@ComponentScan("com.in28minutes.spring.basics.componentscan")
+public class SpringIn5StepsComponentScanApplication {
+	
+	private static Logger LOGGER = 
+			LoggerFactory.getLogger(SpringIn5StepsComponentScanApplication.class); 
+	
+	public static void main(String[] args) {
+
+		ApplicationContext applicationContext = 
+				SpringApplication.run(SpringIn5StepsComponentScanApplication.class, args);
+		
+		ComponentDAO componentDAO = 
+				applicationContext.getBean(ComponentDAO.class);
+		
+		LOGGER.info("{}", componentDAO);
+		
+	}
+}
+```
+
+
 #### Step 17 - Lifecycle of a Bean - @PostConstruct and @PreDestroy
 #### Step 18 - Container and Dependency Injection (CDI) - @Named, @Inject
 #### Step 19 - Removing Spring Boot in Basic Application
