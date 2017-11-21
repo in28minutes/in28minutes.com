@@ -513,6 +513,11 @@ pom.xml
 	<groupId>org.slf4j</groupId>
 	<artifactId>slf4j-api</artifactId>
 </dependency>
+<dependency>
+	<groupId>ch.qos.logback</groupId>
+	<artifactId>logback-classic</artifactId>
+</dependency>
+
 ```
 
 ```java
@@ -538,16 +543,211 @@ public class SpringIn5StepsBasicApplication {
 
 #### Step 20 - Fixing minor stuff - Add Logback and Close Application Context
 
+```
+<dependency>
+	<groupId>ch.qos.logback</groupId>
+	<artifactId>logback-classic</artifactId>
+</dependency>
+```
 
+```java
+@Configuration
+@ComponentScan
+public class SpringIn5StepsBasicApplication {
+
+	public static void main(String[] args) {
+
+		try (AnnotationConfigApplicationContext applicationContext = 
+				new AnnotationConfigApplicationContext(
+				SpringIn5StepsBasicApplication.class)) {
+			//No change in code
+		}
+	}
+}
+```
+Same changes in 
+- SpringIn5StepsCdiApplication
+- SpringIn5StepsComponentScanApplication
+- SpringIn5StepsScopeApplication
 
 #### Step 21 - Defining Spring Application Context using XML - Part 1
 #### Step 22 - Defining Spring Application Context using XML - Part 2
+```java
+package com.in28minutes.spring.basics.springin5steps;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.in28minutes.spring.basics.springin5steps.xml.XmlPersonDAO;
+
+@Configuration
+@ComponentScan
+public class SpringIn5StepsXMLContextApplication {
+
+	public static void main(String[] args) {
+
+		try (ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext(
+				"applicationContext.xml")) {
+
+			XmlPersonDAO personDao = applicationContext.getBean(XmlPersonDAO.class);
+			System.out.println(personDao);
+			System.out.println(personDao.getXmlJdbcConnection());
+		}
+	}
+}
+```
+
+```java
+package com.in28minutes.spring.basics.springin5steps.xml;
+
+public class XmlJdbcConnection {
+	public XmlJdbcConnection() {
+		System.out.println("JDBC Connection");
+	}
+}
+```
+
+```java
+package com.in28minutes.spring.basics.springin5steps.xml;
+
+public class XmlPersonDAO {
+
+	XmlJdbcConnection xmlJdbcConnection;
+
+	public XmlJdbcConnection getXmlJdbcConnection() {
+		return xmlJdbcConnection;
+	}
+
+	public void setXmlJdbcConnection(XmlJdbcConnection jdbcConnection) {
+		this.xmlJdbcConnection = jdbcConnection;
+	}
+}
+```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="xmlJdbcConnection" 
+    	class="com.in28minutes.spring.basics.springin5steps.xml.XmlJdbcConnection">
+    </bean>
+
+    <bean id="xmlPersonDAO" class="com.in28minutes.spring.basics.springin5steps.xml.XmlPersonDAO">
+    		<property name="xmlJdbcConnection" ref="xmlJdbcConnection"/>
+    </bean>
+
+</beans>
+```
+
 #### Step 23 - Mixing XML Context with Component Scan for Beans defined with Annotations
+
+```
+public class SpringIn5StepsXMLContextApplication {
+
+	private static Logger LOGGER = LoggerFactory.getLogger(SpringIn5StepsScopeApplication.class);
+
+	public static void main(String[] args) {
+
+		try (ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext(
+				"applicationContext.xml")) {
+
+			LOGGER.info("Beans Loaded -> {}", (Object) applicationContext.getBeanDefinitionNames());
+			// [xmlJdbcConnection, xmlPersonDAO]
+```
+
+```
+	<context:component-scan base-package="com.in28minutes.spring.basics"/>
+```
+
 #### Step 24 - IOC Container vs Application Context vs Bean Factory
 #### Step 25 - @Component vs @Service vs @Repository vs @Controller
+
+```
+@Repository
+public class ComponentDAO {
+
+```
+
+```
+@Service
+@Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
+public class BinarySearchImpl {
+```
+
+```
+@Service
+@Qualifier("bubble")
+public class BubbleSortAlgorithm implements SortAlgorithm {
+```
+
+```
+@Service
+@Qualifier("quick")
+public class QuickSortAlgorithm implements SortAlgorithm {
+```
+
+```
+@Repository
+public class PersonDAO {
+```
 #### Step 26 - Read values from external properties file
 
+```java
+package com.in28minutes.spring.basics.springin5steps;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+
+import com.in28minutes.spring.basics.springin5steps.properties.SomeExternalService;
+
+@Configuration
+@ComponentScan
+// 
+@PropertySource("classpath:app.properties")
+public class SpringIn5StepsPropertiesApplication {
+
+	public static void main(String[] args) {
+
+		try (AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(
+				SpringIn5StepsPropertiesApplication.class)) {
+
+			SomeExternalService service = applicationContext.getBean(SomeExternalService.class);
+			System.out.println(service.returnServiceURL());
+		}
+	}
+}
+```
+
+```java
+package com.in28minutes.spring.basics.springin5steps.properties;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class SomeExternalService {
+	
+	@Value("${external.service.url}")
+	private String url;
+	
+	public String returnServiceURL(){
+		return url;
+	}
+
+}
+```
+
+/src/main/resources/app.properties
+
+```properties
+external.service.url=http://someserver.dev.com/service
+```
 ## Complete Code Example
 
 
