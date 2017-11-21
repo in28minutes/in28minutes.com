@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Mockito for Beginner in 5 Steps
-date:       2017-01-30 12:31:19
+date:       2017-11-17 12:31:19
 summary:    Setting up a basic mockito example with Spring Initializer. 
 categories: Spring Boot, REST Service
 permalink:  /mockito-tutorial-for-beginners
