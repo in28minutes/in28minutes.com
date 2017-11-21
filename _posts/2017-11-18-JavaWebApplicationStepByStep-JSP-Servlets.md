@@ -60,33 +60,33 @@ Read about what we love, why we create courses and our beliefs - [The in28Minute
 
 ## Step By Step Overview
 
-- Step 01 - Up and running with a Web Application in Tomcat
-- Step 02 - First JSP
-- Step 03 - Adding a Get Parameter name
-- Step 04 - Adding another Get Parameter Password
-- Step 05 - Let's add a form
-- Step 06 - New Form and doPost
-- Step 07 - Adding Password and Validation of User Id / Password combination
-- Step 08 - Adding a TodoService and Todos to welcome page
-- Step 09 - Bit of Refactoring - Packages
-- Step 10 - Redirect from One Servlet to another - New TodoServlet.
-- Step 11 - First JSTL Tag - Using a Loop around todos
-- Step 12 - Difference between Session and Request Scopes
-- Step 13 - Add a New Todo
-- Step 14 - Delete Todo with equals and hashcode methods
-- Step 15 - Adding webjars for jquery and bootstrap
-- Step 16 - Missing Step :) We want you to take a break. Nothing in here..
-- Step 17 - Updating Bootstrap to 3.3.6
-- Step 18 - More Refactoring
-- Step 19 - Adding a Filter for More Security.
-- Step 20 - Logout
-- Step 21 - Theory - Understand Maven and Tomcat
-- Step 22 - Theory - Servlet LifeCycle
-- Step 23 - Theory - Model 1 and Model 2 MVC Architectures
-- Step 24 - Moving Add Functionality to a New Page.
-- Step 25 - Add Category Field
-- Step 26 - Format the JSPs better.
-- Step 27 - JSP Fragments
+- Step 01 : Up and running with a Web Application in Tomcat
+- Step 02 : First JSP
+- Step 03 : Adding a Get Parameter name
+- Step 04 : Adding another Get Parameter Password
+- Step 05 : Let's add a form
+- Step 06 : New Form and doPost
+- Step 07 : Adding Password and Validation of User Id / Password combination
+- Step 08 : Adding a TodoService and Todos to welcome page
+- Step 09 : Bit of Refactoring - Packages
+- Step 10 : Redirect from One Servlet to another - New TodoServlet.
+- Step 11 : First JSTL Tag : Using a Loop around todos
+- Step 12 : Difference between Session and Request Scopes
+- Step 13 : Add a New Todo
+- Step 14 : Delete Todo with equals and hashcode methods
+- Step 15 : Adding webjars for jquery and bootstrap
+- Step 16 : Missing Step :) We want you to take a break. Nothing in here..
+- Step 17 : Updating Bootstrap to 3.3.6
+- Step 18 : More Refactoring
+- Step 19 : Adding a Filter for More Security.
+- Step 20 : Logout
+- Step 21 : Theory : Understand Maven and Tomcat
+- Step 22 : Theory : Servlet LifeCycle
+- Step 23 : Theory : Model 1 and Model 2 MVC Architectures
+- Step 24 : Moving Add Functionality to a New Page.
+- Step 25 : Add Category Field
+- Step 26 : Format the JSPs better.
+- Step 27 : JSP Fragments
 
 ## Installation Guide
 
@@ -102,8 +102,14 @@ Read about what we love, why we create courses and our beliefs - [The in28Minute
 
 ## Step By Step Details
 
-### Step 01 - Up and running with a Web Application in Tomcat
+### Step 01 : Up and running with a Web Application in Tomcat
 
 In this step, we will quickly setup a running web application.
 
-> Tip - This is one of the few steps where you copy code in! We would want to ensure that you have a running web application without any mistakes.
+> Tip : This is one of the few steps where you copy code in! We would want to ensure that you have a running web application without any mistakes.
+
+You can run the project using Run as > Maven build > tomcat7:run.
+
+You can copy code from 
+- [Step 01 on Github Repository](https://github.com/in28minutes/JavaWebApplicationStepByStep/blob/master/Step01.md)
+
