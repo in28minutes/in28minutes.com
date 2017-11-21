@@ -7,8 +7,9 @@ categories: JUnit, Unit Testing
 permalink:  /junit-tutorial-for-beginners
 ---
 
-- Git Repository - https://github.com/in28minutes/getting-started-in-5-steps
-- Pre-requisites - Java & Eclipse - https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
+- Git Repository - https://github.com/in28minutes/getting-started-in-5-steps/tree/master/junit-in-5-steps
+- Pre-requisites 
+	- Java & Eclipse - https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
 - We will use embedded maven in Eclipse
 
 JUnit is the most popular Java Unit testing framework
@@ -115,10 +116,10 @@ public class AssertTest {
 ```
 
 ### Step 5 : Important annotations
-  - @Before @After annotations
-  	- Run before and after every test method in the class
-  - @BeforeClass @AfterClass annotations
-   - Static methods which are executed once before and after a test class
+- @Before @After annotations
+	- Run before and after every test method in the class
+- @BeforeClass @AfterClass annotations
+	- Static methods which are executed once before and after a test class
 
 
 ```java
