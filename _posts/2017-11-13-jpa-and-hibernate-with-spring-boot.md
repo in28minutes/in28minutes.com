@@ -596,7 +596,7 @@ public class CourseRepository {
 ```
 ---
 
-/src/main/resources/application.properties Modified
+/src/main/resources/application.properties 
 Modified Lines
 ```
 # Enabling H2 Console
@@ -771,7 +771,7 @@ import org.springframework.transaction.annotation.Transactional;
     Course course = findById(id);
     em.remove(course);
 ```
-/src/main/resources/data.sql Modified
+/src/main/resources/data.sql 
 Modified Lines
 ```
 insert into course(id, name) values(10002,'Spring in 50 Steps');
@@ -2067,7 +2067,7 @@ Modified Lines
     course2.setName("JPA in 50 Steps - Updated");
     
 ```
-/src/main/resources/data.sql Modified
+/src/main/resources/data.sql 
 Modified Lines
 ```
 insert into course(id, name, created_date, last_updated_date) 
@@ -3278,7 +3278,7 @@ import com.in28minutes.jpa.hibernate.demo.entity.Review;
     em.persist(review1);
     em.persist(review2);
 ```
-/src/main/resources/data.sql Modified
+/src/main/resources/data.sql 
 Modified Lines
 ```
 insert into review(id,rating,description,course_id)
@@ -4144,7 +4144,7 @@ import javax.persistence.JoinTable;
 ####  Step 39 - ManyToMany Mapping - Retrieve Data using JPA Relationships
 
 
-/src/main/resources/data.sql Modified
+/src/main/resources/data.sql 
 Modified Lines
 ```
 insert into student_course(student_id,course_id)
@@ -5590,14 +5590,14 @@ public interface CourseSpringDataRepository extends JpaRepository<Course, Long> 
 ```
 ---
 
-/src/main/resources/application.properties Modified
+/src/main/resources/application.properties 
 Modified Lines
 ```
 spring.jpa.properties.hibernate.connection.isolation=2
 # Performance
 spring.jpa.properties.hibernate.jdbc.batch_size=10
 ```
-/src/main/resources/data.sql Modified
+/src/main/resources/data.sql 
 Modified Lines
 ```
 values(10004,'Dummy1', sysdate(), sysdate());
@@ -5845,7 +5845,7 @@ public class CourseSpringDataRepositoryTest {
 ####  Step 70 - Spring Data REST
 
 
-### /pom.xml Modified
+### /pom.xml 
 Modified Lines
 ```
       <artifactId>spring-boot-starter-data-rest</artifactId>
@@ -6012,7 +6012,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
   @Query(name = "query_get_100_Step_courses")
   List<Course> courseWith100StepsInNameUsingNamedQuery();
 ```
-/src/main/resources/data.sql Modified
+/src/main/resources/data.sql 
 Modified Lines
 ```
 ```
@@ -6126,7 +6126,7 @@ import org.springframework.data.domain.Pageable;
 ####  Step 74 - Hibernate and JPA Caching - Second Level Cache Part 2
 
 
-### /pom.xml Modified
+### /pom.xml 
 Modified Lines
 ```
       <groupId>org.hibernate</groupId>
@@ -6239,7 +6239,7 @@ Modified Lines
 import javax.persistence.Cacheable;
 @Cacheable
 ```
-/src/main/resources/application.properties Modified
+/src/main/resources/application.properties 
 Modified Lines
 ```
 # Second Level Cache - Ehcache
@@ -6523,7 +6523,7 @@ import org.hibernate.annotations.Where;
 @Where(clause="is_deleted = false")
   private boolean isDeleted;
 ```
-/src/main/resources/data.sql Modified
+/src/main/resources/data.sql 
 Modified Lines
 ```
 insert into course(id, name, created_date, last_updated_date,is_deleted) 
@@ -7084,7 +7084,7 @@ import com.in28minutes.jpa.hibernate.demo.entity.ReviewRating;
     Review review1 = new Review(ReviewRating.FIVE, "Great Hands-on Stuff.");  
     Review review2 = new Review(ReviewRating.FIVE, "Hatsoff.");
 ```
-/src/main/resources/data.sql Modified
+/src/main/resources/data.sql 
 Modified Lines
 ```
 values(50001,'FIVE', 'Great Course',10001);
