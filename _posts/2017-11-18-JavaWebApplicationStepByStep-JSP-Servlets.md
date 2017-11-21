@@ -1256,3 +1256,21 @@ Let's follow the boy scout rule by refactoring a little bit.
 ### Step 27 : JSP Fragments
 
 [Complete code](https://github.com/in28minutes/JavaWebApplicationStepByStep/blob/master/Step27.md)
+
+#### More about in28Minutes
+
+We would love to hear your thoughts.  
+
+##### If you loved the course
+
+Share on Twitter - https://twitter.com/home?status=Having%20a%20great%20time!%20%0A%20%23in28Minutes%20%23ImLearningIn28Minutes
+
+![](/images/in28Minutes-Java-Course-Roadmap.png)
+
+Good Luck and Keep Learning in28Minutes
+- Linked In : https://www.linkedin.com/in/rangakaranam/​
+- Facebook  : https://www.facebook.com/in28Minutes​
+- Twitter   : https://twitter.com/in28Minutes​
+- YouTube   : https://www.youtube.com/rithustutorials​
+​
+To find out more about our courses and get special offers, visit http://www.in28minutes.com
