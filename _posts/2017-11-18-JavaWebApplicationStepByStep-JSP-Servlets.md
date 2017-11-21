@@ -233,3 +233,34 @@ Configuring welcome-file-list in web.xml will ensure that url http://localhost:8
 	<welcome-file>login.do</welcome-file>
 </welcome-file-list>
 ```
+
+### Step 02 : First JSP
+
+[Complete code](https://github.com/in28minutes/JavaWebApplicationStepByStep/blob/master/Step02.md)
+
+#### Notes
+- Create LoginServlet again
+- Redirect to a view - JSP
+
+#### Code Snippets and Examples
+
+Redirect to a view - JSP
+
+\src\main\java\webapp\LoginServlet.java
+```java
+request
+ .getRequestDispatcher("/WEB-INF/views/login.jsp")
+ .forward(request, response);
+```
+
+\src\main\webapp\WEB-INF\views\login.jsp
+```jsp
+<html>
+<head>
+<title>Yahoo!!</title>
+</head>
+<body>
+My First JSP!!!
+</body>
+</html>
+```
