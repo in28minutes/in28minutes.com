@@ -2,12 +2,10 @@
 layout:     post
 title:      Mockito for Beginner in 5 Steps
 date:       2017-11-17 12:31:19
-summary:    Setting up a basic mockito example with Spring Initializer. 
+summary:    Mockito tutorial for Beginner in 5 Steps. Understand the basics of mocking with the most popular Java mocking framework with a simple mock example in 5 easy steps. 
 categories: Spring Boot, REST Service
 permalink:  /mockito-tutorial-for-beginners
 ---
-
-## First 5 Steps in Mockito
 
 Mockito is the most popular mocking framework in Java.
 
@@ -29,7 +27,7 @@ Easier Static Imports
 	- org.hamcrest.CoreMatchers
 
 ### Reference
-- Visit Mockito Official Documentation - [Mockito Documentation] (http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html)
+- Visit Mockito Official Documentation - http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html
 
 ### Overview
 - Step 1 : Setting up an example using http://start.spring.io.

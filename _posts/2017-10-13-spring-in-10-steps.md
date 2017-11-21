@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      First 10 Steps in Spring Framework
+title:      First 10 Steps in Spring Framework for Beginners
 date:       2017-01-30 12:31:19
 summary:    Learn the basics of Spring Framework setting up a very simple example.
 categories: Spring Framework, Spring Boot
