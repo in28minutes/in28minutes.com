@@ -2355,69 +2355,8 @@ values(10003,'Spring Boot in 100 Steps', sysdate(), sysdate(),false);
 ####  Step 76 - Hibernate Soft Deletes - Part 2
 
 /src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Course.java Modified
-#### Full File
 
 ```java
-package com.in28minutes.jpa.hibernate.demo.entity;
-
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.persistence.Cacheable;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.PreRemove;
-
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.SQLDelete;
-import org.hibernate.annotations.UpdateTimestamp;
-import org.hibernate.annotations.Where;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
-@Entity
-@NamedQueries(value = { 
-    @NamedQuery(name = "query_get_all_courses", 
-        query = "Select  c  From Course c"),
-    @NamedQuery(name = "query_get_100_Step_courses", 
-    query = "Select  c  From Course c where name like '%100 Steps'") })
-@Cacheable
-@SQLDelete(sql="update course set is_deleted=true where id=?")
-@Where(clause="is_deleted = false")
-public class Course {
-
-  private static Logger LOGGER = LoggerFactory.getLogger(Course.class);
-  
-  @Id
-  @GeneratedValue
-  private Long id;
-
-  @Column(nullable = false)
-  private String name;
-
-  @OneToMany(mappedBy="course")
-  private List<Review> reviews = new ArrayList<>();
-  
-  @ManyToMany(mappedBy="courses")
-  @JsonIgnore
-  private List<Student> students = new ArrayList<>();
-  
-  @UpdateTimestamp
-  private LocalDateTime lastUpdatedDate;
-
-  @CreationTimestamp
-  private LocalDateTime createdDate;
-  
-  private boolean isDeleted;
   
   @PreRemove
   private void preRemove(){
@@ -2425,66 +2364,7 @@ public class Course {
     this.isDeleted = true;
   }
 
-  protected Course() {
-  }
-
-  public Course(String name) {
-    this.name = name;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  
-  public List<Review> getReviews() {
-    return reviews;
-  }
-
-  public void addReview(Review review) {
-    this.reviews.add(review);
-  }
-
-  public void removeReview(Review review) {
-    this.reviews.remove(review);
-  }
-
-  public List<Student> getStudents() {
-    return students;
-  }
-
-  public void addStudent(Student student) {
-    this.students.add(student);
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  @Override
-  public String toString() {
-    return String.format("Course[%s]", name);
-  }
-}
 ```
----
-
-Modified Lines
-```
-import javax.persistence.PreRemove;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-  private static Logger LOGGER = LoggerFactory.getLogger(Course.class);
-  @PreRemove
-  private void preRemove(){
-    LOGGER.info("Setting isDeleted to True");
-    this.isDeleted = true;
-```
-
 ####  Step 77 - JPA Entity Life Cycle Methods
 ####  Step 78 - Using Embedded and Embeddable with JPA
 
@@ -2516,158 +2396,20 @@ public class Address {
 ---
 
 /src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Student.java Modified
-#### Full File
 
 ```java
-package com.in28minutes.jpa.hibernate.demo.entity;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.persistence.Column;
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToOne;
-
-@Entity
-public class Student {
-
-  @Id
-  @GeneratedValue
-  private Long id;
-
-  @Column(nullable = false)
-  private String name;
 
   @Embedded
   private Address address;
-
-  @OneToOne(fetch = FetchType.LAZY)
-  private Passport passport;
 
   @ManyToMany
   @JoinTable(name = "STUDENT_COURSE", joinColumns = @JoinColumn(name = "STUDENT_ID"), inverseJoinColumns = @JoinColumn(name = "COURSE_ID"))
   private List<Course> courses = new ArrayList<>();
-
-  protected Student() {
-  }
-
-  public Student(String name) {
-    this.name = name;
-  }
-
-  public Address getAddress() {
-    return address;
-  }
-
-  public void setAddress(Address address) {
-    this.address = address;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public Passport getPassport() {
-    return passport;
-  }
-
-  public void setPassport(Passport passport) {
-    this.passport = passport;
-  }
-
-  public List<Course> getCourses() {
-    return courses;
-  }
-
-  public void addCourse(Course course) {
-    this.courses.add(course);
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  @Override
-  public String toString() {
-    return String.format("Student[%s]", name);
-  }
-}
 ```
----
 
-Modified Lines
-```
-import javax.persistence.Embedded;
-  @Embedded
-  private Address address;
-  @JoinTable(name = "STUDENT_COURSE", joinColumns = @JoinColumn(name = "STUDENT_ID"), inverseJoinColumns = @JoinColumn(name = "COURSE_ID"))
-  public Address getAddress() {
-    return address;
-  public void setAddress(Address address) {
-    this.address = address;
-```
 /src/test/java/com/in28minutes/jpa/hibernate/demo/repository/StudentRepositoryTest.java Modified
-#### Full File
 
 ```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import javax.persistence.EntityManager;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.DemoApplication;
-import com.in28minutes.jpa.hibernate.demo.entity.Address;
-import com.in28minutes.jpa.hibernate.demo.entity.Passport;
-import com.in28minutes.jpa.hibernate.demo.entity.Student;
-
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = DemoApplication.class)
-public class StudentRepositoryTest {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-
-  @Autowired
-  StudentRepository repository;
-
-  @Autowired
-  EntityManager em;
-
-  // Session & Session Factory
-
-  // EntityManager & Persistence Context
-  // Transaction
-
-  @Test
-  public void someTest() {
-    repository.someOperationToUnderstandPersistenceContext();
-  }
-
-  @Test
-  @Transactional
-  public void retrieveStudentAndPassportDetails() {
-    Student student = em.find(Student.class, 20001L);
-    logger.info("student -> {}", student);
-    logger.info("passport -> {}", student.getPassport());
-  }
 
   @Test
   @Transactional
@@ -2677,63 +2419,17 @@ public class StudentRepositoryTest {
     em.flush();
   }
 
-  @Test
-  @Transactional
-  public void retrievePassportAndAssociatedStudent() {
-    Passport passport = em.find(Passport.class, 40001L);
-    logger.info("passport -> {}", passport);
-    logger.info("student -> {}", passport.getStudent());
-  }
-  
-  @Test
-  @Transactional
-  public void retrieveStudentAndCourses() {
-    Student student = em.find(Student.class, 20001L);
-    
-    logger.info("student -> {}", student);
-    logger.info("courses -> {}", student.getCourses());
-  }
+```
 
-}
-```
----
-Modified Lines
-```
-import com.in28minutes.jpa.hibernate.demo.entity.Address;
-  public void setAddressDetails() {
-    student.setAddress(new Address("No 101", "Some Street", "Hyderabad"));
-    em.flush();
-```
 ####  Step 79 - Using Enums with JPA
 
 
 /src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Review.java Modified
-#### Full File
 
 ```java
-package com.in28minutes.jpa.hibernate.demo.entity;
-
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-
-@Entity
-public class Review {
-
-  @Id
-  @GeneratedValue
-  private Long id;
 
   @Enumerated(EnumType.STRING)
   private ReviewRating rating;
-
-  private String description;
-
-  @ManyToOne
-  private Course course;
 
   protected Review() {
   }
@@ -2743,54 +2439,7 @@ public class Review {
     this.description = description;
   }
 
-  public String getDescription() {
-    return description;
-  }
-
-  public void setDescription(String description) {
-    this.description = description;
-  }
-
-  public ReviewRating getRating() {
-    return rating;
-  }
-
-  public void setRating(ReviewRating rating) {
-    this.rating = rating;
-  }
-
-  public Course getCourse() {
-    return course;
-  }
-
-  public void setCourse(Course course) {
-    this.course = course;
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  @Override
-  public String toString() {
-    return String.format("Review[%s %s]", rating, description);
-  }
-
-}
-```
----
-
-Modified Lines
-```
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-  @Enumerated(EnumType.STRING)
-  private ReviewRating rating;
-  public Review(ReviewRating rating, String description) {
-  public ReviewRating getRating() {
-  public void setRating(ReviewRating rating) {
-```
-/src/main/java/com/in28minutes/jpa/hibernate/demo/entity/ReviewRating.java New
+/src/main/java/com/in28minutes/jpa/hibernate/demo/entity/ReviewRating.java
 
 ```java
 package com.in28minutes.jpa.hibernate.demo.entity;
@@ -2802,63 +2451,7 @@ public enum ReviewRating {
 ---
 
 /src/main/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepository.java Modified
-#### Full File
-
 ```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import java.util.List;
-
-import javax.persistence.EntityManager;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-import com.in28minutes.jpa.hibernate.demo.entity.Review;
-import com.in28minutes.jpa.hibernate.demo.entity.ReviewRating;
-
-@Repository
-@Transactional
-public class CourseRepository {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-  
-  @Autowired
-  EntityManager em;
-
-  public Course findById(Long id) {
-    return em.find(Course.class, id);
-  }
-
-  public Course save(Course course) {
-
-    if (course.getId() == null) {
-      em.persist(course);
-    } else {
-      em.merge(course);
-    }
-
-    return course;
-  }
-
-  public void deleteById(Long id) {
-    Course course = findById(id);
-    em.remove(course);
-  }
-
-  public void playWithEntityManager() {
-    Course course1 = new Course("Web Services in 100 Steps");
-    em.persist(course1);
-    
-    Course course2 = findById(10001L);
-    
-    course2.setName("JPA in 50 Steps - Updated");
-    
-  }
 
   public void addHardcodedReviewsForCourse() {
     //get the course 10003
@@ -2881,32 +2474,15 @@ public class CourseRepository {
     em.persist(review2);
   }
   
-  public void addReviewsForCourse(Long courseId, List<Review> reviews) {    
-    Course course = findById(courseId);
-    logger.info("course.getReviews() -> {}", course.getReviews());
-    for(Review review:reviews)
-    {     
-      //setting the relationship
-      course.addReview(review);
-      review.setCourse(course);
-      em.persist(review);
-    }
-  }
-}
-```
----
-
-Modified Lines
-```
-import com.in28minutes.jpa.hibernate.demo.entity.ReviewRating;
-    Review review1 = new Review(ReviewRating.FIVE, "Great Hands-on Stuff.");  
-    Review review2 = new Review(ReviewRating.FIVE, "Hatsoff.");
 ```
 /src/main/resources/data.sql 
 Modified Lines
 ```
+insert into review(id,rating,description,course_id)
 values(50001,'FIVE', 'Great Course',10001);
+insert into review(id,rating,description,course_id)
 values(50002,'FOUR', 'Wonderful Course',10001);
+insert into review(id,rating,description,course_id)
 values(50003,'FIVE', 'Awesome Course',10003);
 ```
 
@@ -2918,36 +2494,8 @@ values(50003,'FIVE', 'Awesome Course',10003);
 ####  Step 85 - Performance Tuning - Eager vs Lazy Fetch
 ####  Step 86 - Performance Tuning - Avoid N+1 Problems
 
-
 /src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Course.java Modified
-#### Full File
-
 ```java
-package com.in28minutes.jpa.hibernate.demo.entity;
-
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.persistence.Cacheable;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.PreRemove;
-
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.SQLDelete;
-import org.hibernate.annotations.UpdateTimestamp;
-import org.hibernate.annotations.Where;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @NamedQueries(value = { 
@@ -2961,193 +2509,9 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @SQLDelete(sql="update course set is_deleted=true where id=?")
 @Where(clause="is_deleted = false")
 public class Course {
-
-  private static Logger LOGGER = LoggerFactory.getLogger(Course.class);
-  
-  @Id
-  @GeneratedValue
-  private Long id;
-
-  @Column(nullable = false)
-  private String name;
-
-  @OneToMany(mappedBy="course")
-  private List<Review> reviews = new ArrayList<>();
-  
-  @ManyToMany(mappedBy="courses")
-  @JsonIgnore
-  private List<Student> students = new ArrayList<>();
-  
-  @UpdateTimestamp
-  private LocalDateTime lastUpdatedDate;
-
-  @CreationTimestamp
-  private LocalDateTime createdDate;
-  
-  private boolean isDeleted;
-  
-  @PreRemove
-  private void preRemove(){
-    LOGGER.info("Setting isDeleted to True");
-    this.isDeleted = true;
-  }
-
-  protected Course() {
-  }
-
-  public Course(String name) {
-    this.name = name;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  
-  public List<Review> getReviews() {
-    return reviews;
-  }
-
-  public void addReview(Review review) {
-    this.reviews.add(review);
-  }
-
-  public void removeReview(Review review) {
-    this.reviews.remove(review);
-  }
-
-  public List<Student> getStudents() {
-    return students;
-  }
-
-  public void addStudent(Student student) {
-    this.students.add(student);
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  @Override
-  public String toString() {
-    return String.format("Course[%s]", name);
-  }
-}
 ```
----
 
-Modified Lines
-```
-        query = "Select  c  From Course c"),    
-    @NamedQuery(name = "query_get_all_courses_join_fetch", 
-    query = "Select  c  From Course c JOIN FETCH c.students s"),    
-```
-/src/main/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepository.java Modified
-#### Full File
 
-```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import java.util.List;
-
-import javax.persistence.EntityManager;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-import com.in28minutes.jpa.hibernate.demo.entity.Review;
-import com.in28minutes.jpa.hibernate.demo.entity.ReviewRating;
-
-@Repository
-@Transactional
-public class CourseRepository {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-  
-  @Autowired
-  EntityManager em;
-
-  public Course findById(Long id) {
-    Course course = em.find(Course.class, id);
-    logger.info("Course -> {}", course);
-    return course;
-  }
-
-  public Course save(Course course) {
-
-    if (course.getId() == null) {
-      em.persist(course);
-    } else {
-      em.merge(course);
-    }
-
-    return course;
-  }
-
-  public void deleteById(Long id) {
-    Course course = findById(id);
-    em.remove(course);
-  }
-
-  public void playWithEntityManager() {
-    Course course1 = new Course("Web Services in 100 Steps");
-    em.persist(course1);
-    
-    Course course2 = findById(10001L);
-    
-    course2.setName("JPA in 50 Steps - Updated");
-    
-  }
-
-  public void addHardcodedReviewsForCourse() {
-    //get the course 10003
-    Course course = findById(10003L);
-    logger.info("course.getReviews() -> {}", course.getReviews());
-    
-    //add 2 reviews to it
-    Review review1 = new Review(ReviewRating.FIVE, "Great Hands-on Stuff.");  
-    Review review2 = new Review(ReviewRating.FIVE, "Hatsoff.");
-    
-    //setting the relationship
-    course.addReview(review1);
-    review1.setCourse(course);
-    
-    course.addReview(review2);
-    review2.setCourse(course);
-    
-    //save it to the database
-    em.persist(review1);
-    em.persist(review2);
-  }
-  
-  public void addReviewsForCourse(Long courseId, List<Review> reviews) {    
-    Course course = findById(courseId);
-    logger.info("course.getReviews() -> {}", course.getReviews());
-    for(Review review:reviews)
-    {     
-      //setting the relationship
-      course.addReview(review);
-      review.setCourse(course);
-      em.persist(review);
-    }
-  }
-}
-```
----
-
-Modified Lines
-```
-    Course course = em.find(Course.class, id);
-    logger.info("Course -> {}", course);
-```
 /src/test/java/com/in28minutes/jpa/hibernate/demo/repository/PerformanceTuningTest.java New
 
 ```java
@@ -3221,10 +2585,6 @@ public class PerformanceTuningTest {
 
 }
 ```
-
-
-
-
 
 ####  FAQ 1 - When does Hibernate send updates to the database?
 ####  FAQ 2 - When do we need @Transactional in an Unit Test?
