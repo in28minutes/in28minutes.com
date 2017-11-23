@@ -2210,15 +2210,6 @@ Modified Lines
 #### Full File
 
 ```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import java.util.List;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
-
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
 
 @RepositoryRestResource(path="courses")
 public interface CourseSpringDataRepository extends JpaRepository<Course, Long> {
@@ -2243,74 +2234,8 @@ public interface CourseSpringDataRepository extends JpaRepository<Course, Long> 
 }
 ```
 
-/src/main/resources/data.sql 
-Modified Lines
-```
-```
-/src/test/java/com/in28minutes/jpa/hibernate/demo/repository/CourseSpringDataRepositoryTest.java Modified
-#### Full File
-
+/src/test/java/com/in28minutes/jpa/hibernate/demo/repository/CourseSpringDataRepositoryTest.java
 ```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
-import java.util.Optional;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.test.context.junit4.SpringRunner;
-
-import com.in28minutes.jpa.hibernate.demo.DemoApplication;
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = DemoApplication.class)
-public class CourseSpringDataRepositoryTest {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-
-  @Autowired
-  CourseSpringDataRepository repository;
-
-  @Test
-  public void findById_CoursePresent() {
-    Optional<Course> courseOptional = repository.findById(10001L);
-    assertTrue(courseOptional.isPresent());
-  }
-
-  @Test
-  public void findById_CourseNotPresent() {
-    Optional<Course> courseOptional = repository.findById(20001L);
-    assertFalse(courseOptional.isPresent());
-  }
-
-  @Test
-  public void playingAroundWithSpringDataRepository() {
-    //Course course = new Course("Microservices in 100 Steps");
-    //repository.save(course);
-
-    //course.setName("Microservices in 100 Steps - Updated");
-    //repository.save(course);
-    logger.info("Courses -> {} ", repository.findAll());
-    logger.info("Count -> {} ", repository.count());
-  }
-
-  @Test
-  public void sort() {
-    Sort sort = new Sort(Sort.Direction.ASC, "name");
-    logger.info("Sorted Courses -> {} ", repository.findAll(sort));
-    //Courses -> [Course[JPA in 50 Steps], Course[Spring in 50 Steps], Course[Spring Boot in 100 Steps]] 
-  }
 
   @Test
   public void pagination() {
@@ -2333,22 +2258,6 @@ public class CourseSpringDataRepositoryTest {
     logger.info("findUsingStudentsName -> {} ", repository.findByName("Ranga"));
   }
 
-}
-```
----
-
-Modified Lines
-```
-import org.springframework.data.domain.Pageable;
-    logger.info("First Page -> {} ", firstPage.getContent());
-    Pageable secondPageable = firstPage.nextPageable();
-    Page<Course> secondPage = repository.findAll(secondPageable);
-    logger.info("Second Page -> {} ", secondPage.getContent());
-  
-  public void findUsingName() {
-    logger.info("FindByName -> {} ", repository.findByName("JPA in 50 Steps"));
-  public void findUsingStudentsName() {
-    logger.info("findUsingStudentsName -> {} ", repository.findByName("Ranga"));
 ```
 
 ####  Step 71 - Introduction to Caching
@@ -2363,30 +2272,10 @@ Modified Lines
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-ehcache</artifactId>
 ```
+
 /src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Course.java Modified
-#### Full File
 
 ```java
-package com.in28minutes.jpa.hibernate.demo.entity;
-
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.persistence.Cacheable;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @NamedQueries(value = { 
@@ -2396,80 +2285,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
     query = "Select  c  From Course c where name like '%100 Steps'") })
 @Cacheable
 public class Course {
-
-  @Id
-  @GeneratedValue
-  private Long id;
-
-  @Column(nullable = false)
-  private String name;
-
-  @OneToMany(mappedBy="course")
-  private List<Review> reviews = new ArrayList<>();
-  
-  @ManyToMany(mappedBy="courses")
-  @JsonIgnore
-  private List<Student> students = new ArrayList<>();
-  
-  @UpdateTimestamp
-  private LocalDateTime lastUpdatedDate;
-
-  @CreationTimestamp
-  private LocalDateTime createdDate;
-
-  protected Course() {
-  }
-
-  public Course(String name) {
-    this.name = name;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  
-  public List<Review> getReviews() {
-    return reviews;
-  }
-
-  public void addReview(Review review) {
-    this.reviews.add(review);
-  }
-
-  public void removeReview(Review review) {
-    this.reviews.remove(review);
-  }
-
-  public List<Student> getStudents() {
-    return students;
-  }
-
-  public void addStudent(Student student) {
-    this.students.add(student);
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  @Override
-  public String toString() {
-    return String.format("Course[%s]", name);
-  }
-}
 ```
----
 
-Modified Lines
-```
-import javax.persistence.Cacheable;
-@Cacheable
-```
 /src/main/resources/application.properties 
 Modified Lines
 ```
@@ -2484,53 +2301,7 @@ logging.level.net.sf.ehcache=debug
 #4. What data to cache?
 ```
 /src/test/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepositoryTest.java Modified
-#### Full File
-
 ```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-
-import java.util.List;
-
-import javax.persistence.EntityGraph;
-import javax.persistence.EntityManager;
-import javax.persistence.Subgraph;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.DemoApplication;
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-import com.in28minutes.jpa.hibernate.demo.entity.Review;
-import com.in28minutes.jpa.hibernate.demo.entity.Student;
-
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = DemoApplication.class)
-public class CourseRepositoryTest {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-
-  @Autowired
-  CourseRepository repository;
-
-  @Autowired
-  EntityManager em;
-
-  @Test
-  public void findById_basic() {
-    Course course = repository.findById(10001L);
-    assertEquals("JPA in 50 Steps", course.getName());
-  }
-  
   @Test
   public void findById_firstLevelCacheDemo() {
     
@@ -2545,125 +2316,13 @@ public class CourseRepositoryTest {
     assertEquals("JPA in 50 Steps", course1.getName());
   }
 
-
-  @Test
-  @DirtiesContext
-  public void deleteById_basic() {
-    repository.deleteById(10002L);
-    assertNull(repository.findById(10002L));
-  }
-
-  @Test
-  @DirtiesContext
-  public void save_basic() {
-    // get a course
-    Course course = repository.findById(10001L);
-    assertEquals("JPA in 50 Steps", course.getName());
-
-    // update details
-    course.setName("JPA in 50 Steps - Updated");
-    repository.save(course);
-
-    // check the value
-    Course course1 = repository.findById(10001L);
-    assertEquals("JPA in 50 Steps - Updated", course1.getName());
-  }
-
-  @Test
-  @DirtiesContext
-  public void playWithEntityManager() {
-    repository.playWithEntityManager();
-  }
-
-  @Test
-  @Transactional
-  public void retrieveReviewsForCourse() {
-    Course course = repository.findById(10001L);
-    logger.info("{}", course.getReviews());
-  }
-
-  @Test
-  @Transactional
-  public void retrieveCourseForReview() {
-    Review review = em.find(Review.class, 50001L);
-    logger.info("{}", review.getCourse());
-  }
-
-  @Test
-  @Transactional
-  @DirtiesContext
-  public void performance() {
-    //for (int i = 0; i < 20; i++)
-      //em.persist(new Course("Something" + i));
-    //em.flush();
-    
-    //EntityGraph graph = em.getEntityGraph("graph.CourseAndStudents");
-    
-    EntityGraph<Course> graph = em.createEntityGraph(Course.class);
-      Subgraph<List<Student>> bookSubGraph = graph.addSubgraph("students");
-      
-      List<Course> courses = em.createQuery("Select c from Course c", Course.class)
-          .setHint("javax.persistence.loadgraph", graph)
-          .getResultList();
-      for (Course course : courses) {
-        System.out.println(course + " " + course.getStudents());
-      }
-  }
-
-  @Test
-  @Transactional
-  @DirtiesContext
-  public void performance_without_hint() {      
-      List<Course> courses = em.createQuery("Select c from Course c", Course.class)
-          //.setHint("javax.persistence.loadgraph", graph)
-          .getResultList();
-      for (Course course : courses) {
-        System.out.println(course + " " + course.getStudents());
-      }
-  }
-
-}
-```
----
-
-Modified Lines
-```
-  
-  public void findById_firstLevelCacheDemo() {
-    logger.info("First Course Retrieved {}", course);
-    logger.info("First Course Retrieved again {}", course1);
-    assertEquals("JPA in 50 Steps", course1.getName());
 ```
 
 ####  Step 75 - Hibernate Tips - Hibernate Soft Deletes - @SQLDelete and @Where
 
 
 /src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Course.java Modified
-#### Full File
-
 ```java
-package com.in28minutes.jpa.hibernate.demo.entity;
-
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.persistence.Cacheable;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.SQLDelete;
-import org.hibernate.annotations.UpdateTimestamp;
-import org.hibernate.annotations.Where;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @NamedQueries(value = { 
@@ -2676,84 +2335,12 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Where(clause="is_deleted = false")
 public class Course {
 
-  @Id
-  @GeneratedValue
-  private Long id;
-
-  @Column(nullable = false)
-  private String name;
-
-  @OneToMany(mappedBy="course")
-  private List<Review> reviews = new ArrayList<>();
-  
-  @ManyToMany(mappedBy="courses")
-  @JsonIgnore
-  private List<Student> students = new ArrayList<>();
-  
-  @UpdateTimestamp
-  private LocalDateTime lastUpdatedDate;
-
-  @CreationTimestamp
-  private LocalDateTime createdDate;
+  //Other Fields  
   
   private boolean isDeleted;
 
-  protected Course() {
-  }
-
-  public Course(String name) {
-    this.name = name;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  
-  public List<Review> getReviews() {
-    return reviews;
-  }
-
-  public void addReview(Review review) {
-    this.reviews.add(review);
-  }
-
-  public void removeReview(Review review) {
-    this.reviews.remove(review);
-  }
-
-  public List<Student> getStudents() {
-    return students;
-  }
-
-  public void addStudent(Student student) {
-    this.students.add(student);
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  @Override
-  public String toString() {
-    return String.format("Course[%s]", name);
-  }
-}
 ```
----
 
-Modified Lines
-```
-import org.hibernate.annotations.SQLDelete;
-import org.hibernate.annotations.Where;
-@SQLDelete(sql="update course set is_deleted=true where id=?")
-@Where(clause="is_deleted = false")
-  private boolean isDeleted;
-```
 /src/main/resources/data.sql 
 Modified Lines
 ```
