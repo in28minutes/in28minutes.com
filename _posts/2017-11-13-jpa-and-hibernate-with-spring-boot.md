@@ -1386,125 +1386,17 @@ values(50003,'5', 'Awesome Course',10003);
 ####  Step 32 - ManyToOne Mapping - Generalizing Insert Reviews
 
 /src/main/java/com/in28minutes/jpa/hibernate/demo/DemoApplication.java Modified
-
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import com.in28minutes.jpa.hibernate.demo.entity.Review;
-import com.in28minutes.jpa.hibernate.demo.repository.CourseRepository;
-import com.in28minutes.jpa.hibernate.demo.repository.StudentRepository;
-
-@SpringBootApplication
-public class DemoApplication implements CommandLineRunner{
-  
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-  
-  @Autowired
-  private CourseRepository courseRepository;
-
-  @Autowired
-  private StudentRepository studentRepository;
-
-  public static void main(String[] args) {
-    SpringApplication.run(DemoApplication.class, args);
-  }
-
-  @Override
-  public void run(String... arg0) throws Exception {
-    //studentRepository.saveStudentWithPassport();
-    //repository.playWithEntityManager();
-    //courseRepository.addHardcodedReviewsForCourse();
-    List<Review> reviews = new ArrayList<>();
-    
-    reviews.add(new Review("5", "Great Hands-on Stuff."));  
-    reviews.add(new Review("5", "Hatsoff."));
-
-    courseRepository.addReviewsForCourse(10003L, reviews );   
-  } 
-}
-```
----
-
 Modified Lines
 ```
-import java.util.ArrayList;
-import java.util.List;
-import com.in28minutes.jpa.hibernate.demo.entity.Review;
-    //courseRepository.addHardcodedReviewsForCourse();
     List<Review> reviews = new ArrayList<>();
     reviews.add(new Review("5", "Great Hands-on Stuff."));  
     reviews.add(new Review("5", "Hatsoff."));
     courseRepository.addReviewsForCourse(10003L, reviews );   
 ```
+
 /src/main/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepository.java Modified
-#### Full File
 
 ```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import java.util.List;
-
-import javax.persistence.EntityManager;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-import com.in28minutes.jpa.hibernate.demo.entity.Review;
-
-@Repository
-@Transactional
-public class CourseRepository {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-  
-  @Autowired
-  EntityManager em;
-
-  public Course findById(Long id) {
-    return em.find(Course.class, id);
-  }
-
-  public Course save(Course course) {
-
-    if (course.getId() == null) {
-      em.persist(course);
-    } else {
-      em.merge(course);
-    }
-
-    return course;
-  }
-
-  public void deleteById(Long id) {
-    Course course = findById(id);
-    em.remove(course);
-  }
-
-  public void playWithEntityManager() {
-    Course course1 = new Course("Web Services in 100 Steps");
-    em.persist(course1);
-    
-    Course course2 = findById(10001L);
-    
-    course2.setName("JPA in 50 Steps - Updated");
-    
-  }
 
   public void addHardcodedReviewsForCourse() {
     //get the course 10003
@@ -1538,262 +1430,12 @@ public class CourseRepository {
       em.persist(review);
     }
   }
-}
 ```
----
 
-Modified Lines
-```
-import java.util.List;
-  public void addHardcodedReviewsForCourse() {
-  public void addReviewsForCourse(Long courseId, List<Review> reviews) {    
-    Course course = findById(courseId);
-    for(Review review:reviews)
-    {     
-      //setting the relationship
-      course.addReview(review);
-      review.setCourse(course);
-      em.persist(review);
-```
-/src/test/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepositoryTest.java Modified
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.junit4.SpringRunner;
-
-import com.in28minutes.jpa.hibernate.demo.DemoApplication;
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = DemoApplication.class)
-public class CourseRepositoryTest {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-
-  @Autowired
-  CourseRepository repository;
-
-  @Test
-  public void findById_basic() {
-    Course course = repository.findById(10001L);
-    assertEquals("JPA in 50 Steps", course.getName());
-  }
-
-  @Test
-  @DirtiesContext
-  public void deleteById_basic() {
-    repository.deleteById(10002L);
-    assertNull(repository.findById(10002L));
-  }
-
-  @Test
-  @DirtiesContext
-  public void save_basic() {
-    // get a course
-    Course course = repository.findById(10001L);
-    assertEquals("JPA in 50 Steps", course.getName());
-
-    // update details
-    course.setName("JPA in 50 Steps - Updated");
-    repository.save(course);
-
-    // check the value
-    Course course1 = repository.findById(10001L);
-    assertEquals("JPA in 50 Steps - Updated", course1.getName());
-  }
-
-  @Test
-  @DirtiesContext
-  public void playWithEntityManager() {
-    repository.playWithEntityManager();
-  }
-  
-}
-```
----
-
-Modified Lines
-```
-  
-```
 ####  Step 33 - ManyToOne Mapping - Wrapping up
 
-
-/src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Course.java Modified
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo.entity;
-
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
-@Entity
-@NamedQueries(value = { 
-    @NamedQuery(name = "query_get_all_courses", 
-        query = "Select  c  From Course c"),
-    @NamedQuery(name = "query_get_100_Step_courses", 
-    query = "Select  c  From Course c where name like '%100 Steps'") })
-
-public class Course {
-
-  @Id
-  @GeneratedValue
-  private Long id;
-
-  @Column(nullable = false)
-  private String name;
-
-  @OneToMany(mappedBy="course")
-  private List<Review> reviews = new ArrayList<>();
-  
-  @UpdateTimestamp
-  private LocalDateTime lastUpdatedDate;
-
-  @CreationTimestamp
-  private LocalDateTime createdDate;
-
-  protected Course() {
-  }
-
-  public Course(String name) {
-    this.name = name;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  
-  public List<Review> getReviews() {
-    return reviews;
-  }
-
-  public void addReview(Review review) {
-    this.reviews.add(review);
-  }
-
-  public void removeReview(Review review) {
-    this.reviews.remove(review);
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  @Override
-  public String toString() {
-    return String.format("Course[%s]", name);
-  }
-}
-```
----
-
-Modified Lines
-```
-import javax.persistence.FetchType;
-```
 /src/test/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepositoryTest.java Modified
-#### Full File
-
 ```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-
-import javax.persistence.EntityManager;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.DemoApplication;
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-import com.in28minutes.jpa.hibernate.demo.entity.Review;
-
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = DemoApplication.class)
-public class CourseRepositoryTest {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-
-  @Autowired
-  CourseRepository repository;
-  
-  @Autowired
-  EntityManager em;
-  
-
-  @Test
-  public void findById_basic() {
-    Course course = repository.findById(10001L);
-    assertEquals("JPA in 50 Steps", course.getName());
-  }
-
-  @Test
-  @DirtiesContext
-  public void deleteById_basic() {
-    repository.deleteById(10002L);
-    assertNull(repository.findById(10002L));
-  }
-
-  @Test
-  @DirtiesContext
-  public void save_basic() {
-    // get a course
-    Course course = repository.findById(10001L);
-    assertEquals("JPA in 50 Steps", course.getName());
-
-    // update details
-    course.setName("JPA in 50 Steps - Updated");
-    repository.save(course);
-
-    // check the value
-    Course course1 = repository.findById(10001L);
-    assertEquals("JPA in 50 Steps - Updated", course1.getName());
-  }
-
-  @Test
-  @DirtiesContext
-  public void playWithEntityManager() {
-    repository.playWithEntityManager();
-  }
   
   @Test
   @Transactional
@@ -1809,372 +1451,40 @@ public class CourseRepositoryTest {
     logger.info("{}",review.getCourse());
   }
 
-}
-
-
-
-
-
-
-
-
-```
----
-
-Modified Lines
-```
-import javax.persistence.EntityManager;
-import org.springframework.transaction.annotation.Transactional;
-import com.in28minutes.jpa.hibernate.demo.entity.Review;
-  EntityManager em;
-  @Transactional
-  public void retrieveReviewsForCourse() {
-    logger.info("{}",course.getReviews());
-  @Transactional
-  public void retrieveCourseForReview() {
-    Review review = em.find(Review.class, 50001L);
-    logger.info("{}",review.getCourse());
 ```
 ####  Step 34 - ManyToMany Mapping - Table Design
 ####  Step 35 - ManyToMany Mapping - Adding Annotations on Entities
 
 
-/src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Course.java Modified
-#### Full File
+/src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Course.java
 
-```java
-package com.in28minutes.jpa.hibernate.demo.entity;
-
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
-@Entity
-@NamedQueries(value = { 
-    @NamedQuery(name = "query_get_all_courses", 
-        query = "Select  c  From Course c"),
-    @NamedQuery(name = "query_get_100_Step_courses", 
-    query = "Select  c  From Course c where name like '%100 Steps'") })
-
-public class Course {
-
-  @Id
-  @GeneratedValue
-  private Long id;
-
-  @Column(nullable = false)
-  private String name;
-
-  @OneToMany(mappedBy="course")
-  private List<Review> reviews = new ArrayList<>();
-  
+```java  
   @ManyToMany
   private List<Student> students = new ArrayList<>();
-  
-  @UpdateTimestamp
-  private LocalDateTime lastUpdatedDate;
-
-  @CreationTimestamp
-  private LocalDateTime createdDate;
-
-  protected Course() {
-  }
-
-  public Course(String name) {
-    this.name = name;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  
-  public List<Review> getReviews() {
-    return reviews;
-  }
-
-  public void addReview(Review review) {
-    this.reviews.add(review);
-  }
-
-  public void removeReview(Review review) {
-    this.reviews.remove(review);
-  }
-
-  public List<Student> getStudents() {
-    return students;
-  }
-
-  public void addStudent(Student student) {
-    this.students.add(student);
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  @Override
-  public String toString() {
-    return String.format("Course[%s]", name);
-  }
-}
 ```
----
 
-Modified Lines
-```
-import javax.persistence.ManyToMany;
-  @ManyToMany
-  private List<Student> students = new ArrayList<>();
-  public List<Student> getStudents() {
-    return students;
-  public void addStudent(Student student) {
-    this.students.add(student);
-```
-/src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Student.java Modified
-#### Full File
+/src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Student.java
 
 ```java
-package com.in28minutes.jpa.hibernate.demo.entity;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToOne;
-
-@Entity
-public class Student {
-
-  @Id
-  @GeneratedValue
-  private Long id;
-
-  @Column(nullable = false)
-  private String name;
-  
-  @OneToOne(fetch=FetchType.LAZY)
-  private Passport passport;
   
   @ManyToMany
   private List<Course> courses = new ArrayList<>();
-
-  protected Student() {
-  }
-
-  public Student(String name) {
-    this.name = name;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public Passport getPassport() {
-    return passport;
-  }
-
-  public void setPassport(Passport passport) {
-    this.passport = passport;
-  }
-  
-  public List<Course> getCourses() {
-    return courses;
-  }
-
-  public void addCourse(Course course) {
-    this.courses.add(course);
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  @Override
-  public String toString() {
-    return String.format("Student[%s]", name);
-  }
-}
-```
----
-
-Modified Lines
-```
-import java.util.ArrayList;
-import java.util.List;
-import javax.persistence.ManyToMany;
-  @ManyToMany
-  private List<Course> courses = new ArrayList<>();
-  public List<Course> getCourses() {
-    return courses;
-  public void addCourse(Course course) {
-    this.courses.add(course);
 ```
 
 ####  Step 36 - ManyToMany Mapping - Fixing two join tables problem
 
 
 /src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Course.java Modified
-#### Full File
 
 ```java
-package com.in28minutes.jpa.hibernate.demo.entity;
-
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
-@Entity
-@NamedQueries(value = { 
-    @NamedQuery(name = "query_get_all_courses", 
-        query = "Select  c  From Course c"),
-    @NamedQuery(name = "query_get_100_Step_courses", 
-    query = "Select  c  From Course c where name like '%100 Steps'") })
-
-public class Course {
-
-  @Id
-  @GeneratedValue
-  private Long id;
-
-  @Column(nullable = false)
-  private String name;
-
-  @OneToMany(mappedBy="course")
-  private List<Review> reviews = new ArrayList<>();
   
   @ManyToMany(mappedBy="courses")
   private List<Student> students = new ArrayList<>();
-  
-  @UpdateTimestamp
-  private LocalDateTime lastUpdatedDate;
-
-  @CreationTimestamp
-  private LocalDateTime createdDate;
-
-  protected Course() {
-  }
-
-  public Course(String name) {
-    this.name = name;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  
-  public List<Review> getReviews() {
-    return reviews;
-  }
-
-  public void addReview(Review review) {
-    this.reviews.add(review);
-  }
-
-  public void removeReview(Review review) {
-    this.reviews.remove(review);
-  }
-
-  public List<Student> getStudents() {
-    return students;
-  }
-
-  public void addStudent(Student student) {
-    this.students.add(student);
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  @Override
-  public String toString() {
-    return String.format("Course[%s]", name);
-  }
-}
 ```
----
-
-Modified Lines
-```
-  @ManyToMany(mappedBy="courses")
-```
-
 ####  Step 37 - ManyToMany Mapping - Customizing the Join Table
 
 /src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Student.java Modified
-#### Full File
-
 ```java
-package com.in28minutes.jpa.hibernate.demo.entity;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToOne;
-
-@Entity
-public class Student {
-
-  @Id
-  @GeneratedValue
-  private Long id;
-
-  @Column(nullable = false)
-  private String name;
-
-  @OneToOne(fetch = FetchType.LAZY)
-  private Passport passport;
 
   @ManyToMany
   @JoinTable(name = "STUDENT_COURSE", 
@@ -2182,57 +1492,6 @@ public class Student {
   inverseJoinColumns = @JoinColumn(name = "COURSE_ID"))
   private List<Course> courses = new ArrayList<>();
 
-  protected Student() {
-  }
-
-  public Student(String name) {
-    this.name = name;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public Passport getPassport() {
-    return passport;
-  }
-
-  public void setPassport(Passport passport) {
-    this.passport = passport;
-  }
-
-  public List<Course> getCourses() {
-    return courses;
-  }
-
-  public void addCourse(Course course) {
-    this.courses.add(course);
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  @Override
-  public String toString() {
-    return String.format("Student[%s]", name);
-  }
-}
-```
----
-
-Modified Lines
-```
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-  @OneToOne(fetch = FetchType.LAZY)
-  @JoinTable(name = "STUDENT_COURSE", 
-  joinColumns = @JoinColumn(name = "STUDENT_ID"), 
-  inverseJoinColumns = @JoinColumn(name = "COURSE_ID"))
 ```
 
 ####  Step 38 - ManyToMany Mapping - Insert Data and Write Join Query
@@ -2252,225 +1511,30 @@ insert into student_course(student_id,course_id)
 values(20001,10003);
 ```
 /src/test/java/com/in28minutes/jpa/hibernate/demo/repository/StudentRepositoryTest.java Modified
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import javax.persistence.EntityManager;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.DemoApplication;
-import com.in28minutes.jpa.hibernate.demo.entity.Passport;
-import com.in28minutes.jpa.hibernate.demo.entity.Student;
-
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = DemoApplication.class)
-public class StudentRepositoryTest {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-
-  @Autowired
-  StudentRepository repository;
-
-  @Autowired
-  EntityManager em;
-
-  // Session & Session Factory
-
-  // EntityManager & Persistence Context
-  // Transaction
-
-  @Test
-  public void someTest() {
-    repository.someOperationToUnderstandPersistenceContext();
-  }
-
-  @Test
-  @Transactional
-  public void retrieveStudentAndPassportDetails() {
-    Student student = em.find(Student.class, 20001L);
-    logger.info("student -> {}", student);
-    logger.info("passport -> {}", student.getPassport());
-  }
+```java  
+@Test
+@Transactional
+public void retrieveStudentAndCourses() {
+  Student student = em.find(Student.class, 20001L);
   
-  @Test
-  @Transactional
-  public void retrievePassportAndAssociatedStudent() {
-    Passport passport = em.find(Passport.class, 40001L);
-    logger.info("passport -> {}", passport);
-    logger.info("student -> {}", passport.getStudent());
-  }
-  
-  @Test
-  @Transactional
-  public void retrieveStudentAndCourses() {
-    Student student = em.find(Student.class, 20001L);
-    
-    logger.info("student -> {}", student);
-    logger.info("courses -> {}", student.getCourses());
-  }
-
+  logger.info("student -> {}", student);
+  logger.info("courses -> {}", student.getCourses());
 }
-```
----
-Modified Lines
-```
-  public void retrieveStudentAndCourses() {
-    
-    logger.info("courses -> {}", student.getCourses());
 ```
 
 ####  Step 40 - ManyToMany Mapping - Insert Student and Course
 ####  Step 41 - Relationships between JPA Entities - A summary
 
 /src/main/java/com/in28minutes/jpa/hibernate/demo/DemoApplication.java Modified
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-import com.in28minutes.jpa.hibernate.demo.entity.Student;
-import com.in28minutes.jpa.hibernate.demo.repository.CourseRepository;
-import com.in28minutes.jpa.hibernate.demo.repository.StudentRepository;
-
-@SpringBootApplication
-public class DemoApplication implements CommandLineRunner{
-  
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-  
-  @Autowired
-  private CourseRepository courseRepository;
-
-  @Autowired
-  private StudentRepository studentRepository;
-
-  public static void main(String[] args) {
-    SpringApplication.run(DemoApplication.class, args);
-  }
-
-  @Override
-  public void run(String... arg0) throws Exception {
-    //studentRepository.saveStudentWithPassport();
-    //repository.playWithEntityManager();
-    //courseRepository.addHardcodedReviewsForCourse();
-    //List<Review> reviews = new ArrayList<>();
-    
-    //reviews.add(new Review("5", "Great Hands-on Stuff."));  
-    //reviews.add(new Review("5", "Hatsoff."));
-
-    //courseRepository.addReviewsForCourse(10003L, reviews );
-    //studentRepository.insertHardcodedStudentAndCourse();
-    studentRepository.insertStudentAndCourse(new Student("Jack"), 
-        new Course("Microservices in 100 Steps"));
-  } 
-}
 ```
----
 
-Modified Lines
-```
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-import com.in28minutes.jpa.hibernate.demo.entity.Student;
-    //List<Review> reviews = new ArrayList<>();
-    //reviews.add(new Review("5", "Great Hands-on Stuff."));  
-    //reviews.add(new Review("5", "Hatsoff."));
-    //courseRepository.addReviewsForCourse(10003L, reviews );
-    //studentRepository.insertHardcodedStudentAndCourse();
     studentRepository.insertStudentAndCourse(new Student("Jack"), 
         new Course("Microservices in 100 Steps"));
 ```
+
 /src/main/java/com/in28minutes/jpa/hibernate/demo/repository/StudentRepository.java Modified
-#### Full File
 
 ```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import javax.persistence.EntityManager;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-import com.in28minutes.jpa.hibernate.demo.entity.Passport;
-import com.in28minutes.jpa.hibernate.demo.entity.Student;
-
-@Repository
-@Transactional
-public class StudentRepository {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-  
-  @Autowired
-  EntityManager em;
-
-  public Student findById(Long id) {
-    return em.find(Student.class, id);
-  }
-
-  public Student save(Student student) {
-
-    if (student.getId() == null) {
-      em.persist(student);
-    } else {
-      em.merge(student);
-    }
-
-    return student;
-  }
-
-  public void deleteById(Long id) {
-    Student student = findById(id);
-    em.remove(student);
-  }
-
-  public void saveStudentWithPassport() {
-    Passport passport = new Passport("Z123456");
-    em.persist(passport);
-
-    Student student = new Student("Mike");
-
-    student.setPassport(passport);
-    em.persist(student);  
-  }
-  
-  public void someOperationToUnderstandPersistenceContext() {
-    //Database Operation 1 - Retrieve student
-    Student student = em.find(Student.class, 20001L);
-    //Persistence Context (student)
-    
-    
-    //Database Operation 2 - Retrieve passport
-    Passport passport = student.getPassport();
-    //Persistence Context (student, passport)
-
-    //Database Operation 3 - update passport
-    passport.setNumber("E123457");
-    //Persistence Context (student, passport++)
-    
-    //Database Operation 4 - update student
-    student.setName("Ranga - updated");
-    //Persistence Context (student++ , passport++)
-  }
   
   public void insertHardcodedStudentAndCourse(){
     Student student = new Student("Jack");
@@ -2493,28 +1557,6 @@ public class StudentRepository {
     em.persist(course);
   }
 
-}
-```
----
-
-Modified Lines
-```
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-  public void insertHardcodedStudentAndCourse(){
-    Student student = new Student("Jack");
-    Course course = new Course("Microservices in 100 Steps");
-    em.persist(student);
-    em.persist(course);
-    student.addCourse(course);
-    course.addStudent(student);
-    em.persist(student);
-  public void insertStudentAndCourse(Student student, Course course){
-    //Student student = new Student("Jack");
-    //Course course = new Course("Microservices in 100 Steps");
-    student.addCourse(course);
-    course.addStudent(student);
-    em.persist(student);
-    em.persist(course);
 ```
 
 ####  Step 42 - Introduction to Inheritance Hierarchies and Mappings
@@ -2522,91 +1564,10 @@ import com.in28minutes.jpa.hibernate.demo.entity.Course;
 ####  Step 44 - JPA Inheritance Hierarchies and Mappings - Setting up a Repository
 
 
-/src/main/java/com/in28minutes/jpa/hibernate/demo/DemoApplication.java Modified
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo;
-
-import java.math.BigDecimal;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import com.in28minutes.jpa.hibernate.demo.entity.FullTimeEmployee;
-import com.in28minutes.jpa.hibernate.demo.entity.PartTimeEmployee;
-import com.in28minutes.jpa.hibernate.demo.repository.CourseRepository;
-import com.in28minutes.jpa.hibernate.demo.repository.EmployeeRepository;
-import com.in28minutes.jpa.hibernate.demo.repository.StudentRepository;
-
-@SpringBootApplication
-public class DemoApplication implements CommandLineRunner {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-
-  @Autowired
-  private CourseRepository courseRepository;
-
-  @Autowired
-  private StudentRepository studentRepository;
-
-  @Autowired
-  private EmployeeRepository employeeRepository;
-
-  public static void main(String[] args) {
-    SpringApplication.run(DemoApplication.class, args);
-  }
-
-  @Override
-  public void run(String... arg0) throws Exception {
-    // studentRepository.saveStudentWithPassport();
-    // repository.playWithEntityManager();
-    // courseRepository.addHardcodedReviewsForCourse();
-    // List<Review> reviews = new ArrayList<>();
-
-    // reviews.add(new Review("5", "Great Hands-on Stuff."));
-    // reviews.add(new Review("5", "Hatsoff."));
-
-    // courseRepository.addReviewsForCourse(10003L, reviews );
-    // studentRepository.insertHardcodedStudentAndCourse();
-    // studentRepository.insertStudentAndCourse(new Student("Jack"),
-    // new Course("Microservices in 100 Steps"));
-
-    // Jack FullTimeEmployee salary - 10000$
-    // Jill PartTimeEmployee - 50$ per hour
-    employeeRepository.insert(new PartTimeEmployee("Jill", new BigDecimal("50")));
-    employeeRepository.insert(new FullTimeEmployee("Jack", new BigDecimal("10000")));
-
-    logger.info("All Employees -> {}", employeeRepository.retrieveAllEmployees());
-  }
-}
-```
----
-
+/src/main/java/com/in28minutes/jpa/hibernate/demo/DemoApplication.java
 Modified Lines
 ```
-import java.math.BigDecimal;
-import com.in28minutes.jpa.hibernate.demo.entity.FullTimeEmployee;
-import com.in28minutes.jpa.hibernate.demo.entity.PartTimeEmployee;
-import com.in28minutes.jpa.hibernate.demo.repository.EmployeeRepository;
-public class DemoApplication implements CommandLineRunner {
-  private EmployeeRepository employeeRepository;
-    // studentRepository.saveStudentWithPassport();
-    // repository.playWithEntityManager();
-    // courseRepository.addHardcodedReviewsForCourse();
-    // List<Review> reviews = new ArrayList<>();
-    // reviews.add(new Review("5", "Great Hands-on Stuff."));
-    // reviews.add(new Review("5", "Hatsoff."));
-    // courseRepository.addReviewsForCourse(10003L, reviews );
-    // studentRepository.insertHardcodedStudentAndCourse();
-    // studentRepository.insertStudentAndCourse(new Student("Jack"),
-    // new Course("Microservices in 100 Steps"));
-    // Jack FullTimeEmployee salary - 10000$
-    // Jill PartTimeEmployee - 50$ per hour
+
     employeeRepository.insert(new PartTimeEmployee("Jill", new BigDecimal("50")));
     employeeRepository.insert(new FullTimeEmployee("Jack", new BigDecimal("10000")));
     logger.info("All Employees -> {}", employeeRepository.retrieveAllEmployees());
@@ -2749,260 +1710,39 @@ public class EmployeeRepository {
 ####  Step 45 - JPA Inheritance Hierarchies and Mappings - Single Table
 
 /src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Employee.java Modified
-#### Full File
-
 ```java
-package com.in28minutes.jpa.hibernate.demo.entity;
-
-import javax.persistence.Column;
-import javax.persistence.DiscriminatorColumn;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
 
 @Entity
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name="EmployeeType")
 public abstract class Employee {
-
-  @Id
-  @GeneratedValue
-  private Long id;
-
-  @Column(nullable = false)
-  private String name;
-
-  protected Employee() {
-  }
-
-  public Employee(String name) {
-    this.name = name;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  @Override
-  public String toString() {
-    return String.format("Employee[%s]", name);
-  }
-}
-```
----
-
-Modified Lines
-```
-import javax.persistence.DiscriminatorColumn;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
-@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="EmployeeType")
 ```
 
 ####  Step 46 - JPA Inheritance Hierarchies and Mappings - Table Per Class
 
-/src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Employee.java Modified
-#### Full File
+/src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Employee.java
 
 ```java
-package com.in28minutes.jpa.hibernate.demo.entity;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
-
 @Entity
 @Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
 public abstract class Employee {
 
-  @Id
-  @GeneratedValue
-  private Long id;
-
-  @Column(nullable = false)
-  private String name;
-
-  protected Employee() {
-  }
-
-  public Employee(String name) {
-    this.name = name;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  @Override
-  public String toString() {
-    return String.format("Employee[%s]", name);
-  }
-}
-```
----
-
-Modified Lines
-```
-@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
 ```
 
 ####  Step 47 - JPA Inheritance Hierarchies and Mappings - Joined
 
-/src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Employee.java Modified
-#### Full File
+/src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Employee.java
 
 ```java
-package com.in28minutes.jpa.hibernate.demo.entity;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
-import javax.persistence.MappedSuperclass;
-
-//@MappedSuperclass
 //@Entity
 @Inheritance(strategy=InheritanceType.JOINED)
 public abstract class Employee {
-
-  @Id
-  @GeneratedValue
-  private Long id;
-
-  @Column(nullable = false)
-  private String name;
-
-  protected Employee() {
-  }
-
-  public Employee(String name) {
-    this.name = name;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  @Override
-  public String toString() {
-    return String.format("Employee[%s]", name);
-  }
-}
-```
----
-
-Modified Lines
-```
-import javax.persistence.MappedSuperclass;
-//@MappedSuperclass
-//@Entity
-@Inheritance(strategy=InheritanceType.JOINED)
 ```
 - Step 48 - JPA Inheritance Hierarchies and Mappings - Mapped Super Class
 - Step 49 - JPA Inheritance Hierarchies and Mappings - How to Choose?
 
 
 /src/main/java/com/in28minutes/jpa/hibernate/demo/DemoApplication.java Modified
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo;
-
-import java.math.BigDecimal;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import com.in28minutes.jpa.hibernate.demo.entity.FullTimeEmployee;
-import com.in28minutes.jpa.hibernate.demo.entity.PartTimeEmployee;
-import com.in28minutes.jpa.hibernate.demo.repository.CourseRepository;
-import com.in28minutes.jpa.hibernate.demo.repository.EmployeeRepository;
-import com.in28minutes.jpa.hibernate.demo.repository.StudentRepository;
-
-@SpringBootApplication
-public class DemoApplication implements CommandLineRunner {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-
-  @Autowired
-  private CourseRepository courseRepository;
-
-  @Autowired
-  private StudentRepository studentRepository;
-
-  @Autowired
-  private EmployeeRepository employeeRepository;
-
-  public static void main(String[] args) {
-    SpringApplication.run(DemoApplication.class, args);
-  }
-
-  @Override
-  public void run(String... arg0) throws Exception {
-    // studentRepository.saveStudentWithPassport();
-    // repository.playWithEntityManager();
-    // courseRepository.addHardcodedReviewsForCourse();
-    // List<Review> reviews = new ArrayList<>();
-
-    // reviews.add(new Review("5", "Great Hands-on Stuff."));
-    // reviews.add(new Review("5", "Hatsoff."));
-
-    // courseRepository.addReviewsForCourse(10003L, reviews );
-    // studentRepository.insertHardcodedStudentAndCourse();
-    // studentRepository.insertStudentAndCourse(new Student("Jack"),
-    // new Course("Microservices in 100 Steps"));
-
-    // Jack FullTimeEmployee salary - 10000$
-    // Jill PartTimeEmployee - 50$ per hour
-    employeeRepository.insert(new PartTimeEmployee("Jill", new BigDecimal("50")));
-    employeeRepository.insert(new FullTimeEmployee("Jack", new BigDecimal("10000")));
-
-    logger.info("Full Time Employees -> {}", 
-        employeeRepository.retrieveAllFullTimeEmployees());
-    
-    logger.info("Part Time Employees -> {}", 
-        employeeRepository.retrieveAllPartTimeEmployees());
-  }
-}
-```
----
-
 Modified Lines
 ```
     logger.info("Full Time Employees -> {}", 
@@ -3012,92 +1752,18 @@ Modified Lines
         employeeRepository.retrieveAllPartTimeEmployees());
 ```
 /src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Employee.java Modified
-#### Full File
 
 ```java
-package com.in28minutes.jpa.hibernate.demo.entity;
-
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
-
 @MappedSuperclass
 //@Entity
 //@Inheritance(strategy=InheritanceType.JOINED)
 public abstract class Employee {
 
-  @Id
-  @GeneratedValue
-  private Long id;
-
-  @Column(nullable = false)
-  private String name;
-
-  protected Employee() {
-  }
-
-  public Employee(String name) {
-    this.name = name;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  @Override
-  public String toString() {
-    return String.format("Employee[%s]", name);
-  }
-}
 ```
----
 
-Modified Lines
-```
-@MappedSuperclass
-//@Inheritance(strategy=InheritanceType.JOINED)
-```
 /src/main/java/com/in28minutes/jpa/hibernate/demo/repository/EmployeeRepository.java Modified
-#### Full File
 
 ```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import java.util.List;
-
-import javax.persistence.EntityManager;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.entity.Employee;
-import com.in28minutes.jpa.hibernate.demo.entity.FullTimeEmployee;
-import com.in28minutes.jpa.hibernate.demo.entity.PartTimeEmployee;
-
-@Repository
-@Transactional
-public class EmployeeRepository {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-
-  @Autowired
-  EntityManager em;
-
-  public void insert(Employee employee) {
-    em.persist(employee);
-  }
 
   public List<PartTimeEmployee> retrieveAllPartTimeEmployees() {
     return em.createQuery("select e from PartTimeEmployee e", PartTimeEmployee.class).getResultList();
@@ -3107,154 +1773,12 @@ public class EmployeeRepository {
     return em.createQuery("select e from FullTimeEmployee e", FullTimeEmployee.class).getResultList();
   }
 
-}
-```
----
-
-Modified Lines
-```
-import com.in28minutes.jpa.hibernate.demo.entity.FullTimeEmployee;
-import com.in28minutes.jpa.hibernate.demo.entity.PartTimeEmployee;
-  public List<PartTimeEmployee> retrieveAllPartTimeEmployees() {
-    return em.createQuery("select e from PartTimeEmployee e", PartTimeEmployee.class).getResultList();
-  public List<FullTimeEmployee> retrieveAllFullTimeEmployees() {
-    return em.createQuery("select e from FullTimeEmployee e", FullTimeEmployee.class).getResultList();
 ```
 ####  Step 50 - JPQL - Courses without Students
 ####  Step 51 - JPQL - Courses with atleast 2 Students and order by
 
-/src/main/java/com/in28minutes/jpa/hibernate/demo/DemoApplication.java Modified
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo;
-
-import java.math.BigDecimal;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import com.in28minutes.jpa.hibernate.demo.entity.FullTimeEmployee;
-import com.in28minutes.jpa.hibernate.demo.entity.PartTimeEmployee;
-import com.in28minutes.jpa.hibernate.demo.repository.CourseRepository;
-import com.in28minutes.jpa.hibernate.demo.repository.EmployeeRepository;
-import com.in28minutes.jpa.hibernate.demo.repository.StudentRepository;
-
-@SpringBootApplication
-public class DemoApplication implements CommandLineRunner {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-
-  @Autowired
-  private CourseRepository courseRepository;
-
-  @Autowired
-  private StudentRepository studentRepository;
-
-  @Autowired
-  private EmployeeRepository employeeRepository;
-
-  public static void main(String[] args) {
-    SpringApplication.run(DemoApplication.class, args);
-  }
-
-  @Override
-  public void run(String... arg0) throws Exception {
-    // studentRepository.saveStudentWithPassport();
-    // repository.playWithEntityManager();
-    // courseRepository.addHardcodedReviewsForCourse();
-    // List<Review> reviews = new ArrayList<>();
-
-    // reviews.add(new Review("5", "Great Hands-on Stuff."));
-    // reviews.add(new Review("5", "Hatsoff."));
-
-    // courseRepository.addReviewsForCourse(10003L, reviews );
-    // studentRepository.insertHardcodedStudentAndCourse();
-    // studentRepository.insertStudentAndCourse(new Student("Jack"),
-    // new Course("Microservices in 100 Steps"));
-
-    // Jack FullTimeEmployee salary - 10000$
-    // Jill PartTimeEmployee - 50$ per hour
-    /*
-    employeeRepository.insert(new PartTimeEmployee("Jill", new BigDecimal("50")));
-    employeeRepository.insert(new FullTimeEmployee("Jack", new BigDecimal("10000")));
-
-    logger.info("Full Time Employees -> {}", 
-        employeeRepository.retrieveAllFullTimeEmployees());
-    
-    logger.info("Part Time Employees -> {}", 
-        employeeRepository.retrieveAllPartTimeEmployees());*/
-  }
-}
-```
----
-
-Modified Lines
-```
-    /*
-        employeeRepository.retrieveAllPartTimeEmployees());*/
-```
 /src/test/java/com/in28minutes/jpa/hibernate/demo/repository/JPQLTest.java Modified
-#### Full File
-
 ```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import java.util.List;
-
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
-import javax.persistence.TypedQuery;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-
-import com.in28minutes.jpa.hibernate.demo.DemoApplication;
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = DemoApplication.class)
-public class JPQLTest {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-
-  @Autowired
-  EntityManager em;
-
-  @Test
-  public void jpql_basic() {
-    Query query = em.createNamedQuery("query_get_all_courses");
-    List resultList = query.getResultList();
-    logger.info("Select  c  From Course c -> {}", resultList);
-  }
-
-  @Test
-  public void jpql_typed() {
-    TypedQuery<Course> query = em.createNamedQuery("query_get_all_courses", Course.class);
-
-    List<Course> resultList = query.getResultList();
-
-    logger.info("Select  c  From Course c -> {}", resultList);
-  }
-
-  @Test
-  public void jpql_where() {
-    TypedQuery<Course> query = em.createNamedQuery("query_get_100_Step_courses", Course.class);
-
-    List<Course> resultList = query.getResultList();
-
-    logger.info("Select  c  From Course c where name like '%100 Steps'-> {}", resultList);
-    // [Course[Web Services in 100 Steps], Course[Spring Boot in 100 Steps]]
-  }
 
   @Test
   public void jpql_courses_without_students() {
@@ -3280,24 +1804,6 @@ public class JPQLTest {
     logger.info("Results -> {}", resultList);
   }
 
-}
-```
----
-
-Modified Lines
-```
-  public void jpql_courses_without_students() {
-    TypedQuery<Course> query = em.createQuery("Select c from Course c where c.students is empty", Course.class);
-    logger.info("Results -> {}", resultList);
-    // [Course[Spring in 50 Steps]]
-  
-  public void jpql_courses_with_atleast_2_students() {
-    TypedQuery<Course> query = em.createQuery("Select c from Course c where size(c.students) >= 2", Course.class);
-    logger.info("Results -> {}", resultList);
-    //[Course[JPA in 50 Steps]]
-  public void jpql_courses_ordered_by_students() {
-    TypedQuery<Course> query = em.createQuery("Select c from Course c order by size(c.students) desc", Course.class);
-    logger.info("Results -> {}", resultList);
 ```
 
 ####  Step 52 - JPQL - Courses like 100 Steps
@@ -3482,95 +1988,7 @@ public class CriteriaQueryTest {
 ---
 
 /src/test/java/com/in28minutes/jpa/hibernate/demo/repository/JPQLTest.java Modified
-#### Full File
-
 ```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import java.util.List;
-
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
-import javax.persistence.TypedQuery;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-
-import com.in28minutes.jpa.hibernate.demo.DemoApplication;
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-import com.in28minutes.jpa.hibernate.demo.entity.Student;
-
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = DemoApplication.class)
-public class JPQLTest {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-
-  @Autowired
-  EntityManager em;
-
-  @Test
-  public void jpql_basic() {
-    Query query = em.createNamedQuery("query_get_all_courses");
-    List resultList = query.getResultList();
-    logger.info("Select  c  From Course c -> {}", resultList);
-  }
-
-  @Test
-  public void jpql_typed() {
-    TypedQuery<Course> query = em.createNamedQuery("query_get_all_courses", Course.class);
-
-    List<Course> resultList = query.getResultList();
-
-    logger.info("Select  c  From Course c -> {}", resultList);
-  }
-
-  @Test
-  public void jpql_where() {
-    TypedQuery<Course> query = em.createNamedQuery("query_get_100_Step_courses", Course.class);
-
-    List<Course> resultList = query.getResultList();
-
-    logger.info("Select  c  From Course c where name like '%100 Steps'-> {}", resultList);
-    // [Course[Web Services in 100 Steps], Course[Spring Boot in 100 Steps]]
-  }
-
-  @Test
-  public void jpql_courses_without_students() {
-    TypedQuery<Course> query = em.createQuery("Select c from Course c where c.students is empty", Course.class);
-    List<Course> resultList = query.getResultList();
-    logger.info("Results -> {}", resultList);
-    // [Course[Spring in 50 Steps]]
-  }
-
-  
-  @Test
-  public void jpql_courses_with_atleast_2_students() {
-    TypedQuery<Course> query = em.createQuery("Select c from Course c where size(c.students) >= 2", Course.class);
-    List<Course> resultList = query.getResultList();
-    logger.info("Results -> {}", resultList);
-    //[Course[JPA in 50 Steps]]
-  }
-
-  @Test
-  public void jpql_courses_ordered_by_students() {
-    TypedQuery<Course> query = em.createQuery("Select c from Course c order by size(c.students) desc", Course.class);
-    List<Course> resultList = query.getResultList();
-    logger.info("Results -> {}", resultList);
-  }
-
-  @Test
-  public void jpql_students_with_passports_in_a_certain_pattern() {
-    TypedQuery<Student> query = em.createQuery("Select s from Student s where s.passport.number like '%1234%'", Student.class);
-    List<Student> resultList = query.getResultList();
-    logger.info("Results -> {}", resultList);
-  }
-
   //like
   //BETWEEN 100 and 1000
   //IS NULL
@@ -3610,53 +2028,6 @@ public class JPQLTest {
     }
   }
 
-}
-
-
-
-
-
-
-
-
-```
----
-
-Modified Lines
-```
-import com.in28minutes.jpa.hibernate.demo.entity.Student;
-  public void jpql_students_with_passports_in_a_certain_pattern() {
-    TypedQuery<Student> query = em.createQuery("Select s from Student s where s.passport.number like '%1234%'", Student.class);
-    List<Student> resultList = query.getResultList();
-  //like
-  //BETWEEN 100 and 1000
-  //IS NULL
-  //upper, lower, trim, length
-  //JOIN => Select c, s from Course c JOIN c.students s
-  //LEFT JOIN => Select c, s from Course c LEFT JOIN c.students s
-  //CROSS JOIN => Select c, s from Course c, Student s
-  //3 and 4 =>3 * 4 = 12 Rows
-  public void join(){
-    Query query = em.createQuery("Select c, s from Course c JOIN c.students s");
-    List<Object[]> resultList = query.getResultList();
-    logger.info("Results Size -> {}", resultList.size());
-    for(Object[] result:resultList){
-      logger.info("Course{} Student{}", result[0], result[1]);
-    }
-  public void left_join(){
-    Query query = em.createQuery("Select c, s from Course c LEFT JOIN c.students s");
-    List<Object[]> resultList = query.getResultList();
-    logger.info("Results Size -> {}", resultList.size());
-    for(Object[] result:resultList){
-      logger.info("Course{} Student{}", result[0], result[1]);
-    }
-  public void cross_join(){
-    Query query = em.createQuery("Select c, s from Course c, Student s");
-    List<Object[]> resultList = query.getResultList();
-    logger.info("Results Size -> {}", resultList.size());
-    for(Object[] result:resultList){
-      logger.info("Course{} Student{}", result[0], result[1]);
-    }
 ```
 ####  Step 58 - Introduction to Transaction Management
 ####  Step 59 - Transaction Management - ACID Properties
@@ -3701,96 +2072,10 @@ values(10006,'Dummy3', sysdate(), sysdate());
 values(10007,'Dummy4', sysdate(), sysdate());
 values(10008,'Dummy5', sysdate(), sysdate());
 ```
-/src/test/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepositoryTest.java Modified
-#### Full File
+
+/src/test/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepositoryTest.java 
 
 ```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-
-import java.util.List;
-
-import javax.persistence.EntityGraph;
-import javax.persistence.EntityManager;
-import javax.persistence.Subgraph;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.DemoApplication;
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-import com.in28minutes.jpa.hibernate.demo.entity.Review;
-import com.in28minutes.jpa.hibernate.demo.entity.Student;
-
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = DemoApplication.class)
-public class CourseRepositoryTest {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-
-  @Autowired
-  CourseRepository repository;
-
-  @Autowired
-  EntityManager em;
-
-  @Test
-  public void findById_basic() {
-    Course course = repository.findById(10001L);
-    assertEquals("JPA in 50 Steps", course.getName());
-  }
-
-  @Test
-  @DirtiesContext
-  public void deleteById_basic() {
-    repository.deleteById(10002L);
-    assertNull(repository.findById(10002L));
-  }
-
-  @Test
-  @DirtiesContext
-  public void save_basic() {
-    // get a course
-    Course course = repository.findById(10001L);
-    assertEquals("JPA in 50 Steps", course.getName());
-
-    // update details
-    course.setName("JPA in 50 Steps - Updated");
-    repository.save(course);
-
-    // check the value
-    Course course1 = repository.findById(10001L);
-    assertEquals("JPA in 50 Steps - Updated", course1.getName());
-  }
-
-  @Test
-  @DirtiesContext
-  public void playWithEntityManager() {
-    repository.playWithEntityManager();
-  }
-
-  @Test
-  @Transactional
-  public void retrieveReviewsForCourse() {
-    Course course = repository.findById(10001L);
-    logger.info("{}", course.getReviews());
-  }
-
-  @Test
-  @Transactional
-  public void retrieveCourseForReview() {
-    Review review = em.find(Review.class, 50001L);
-    logger.info("{}", review.getCourse());
-  }
 
   @Test
   @Transactional
@@ -3825,42 +2110,8 @@ public class CourseRepositoryTest {
       }
   }
 
-}
 ```
----
 
-Modified Lines
-```
-import java.util.List;
-import javax.persistence.EntityGraph;
-import javax.persistence.Subgraph;
-import com.in28minutes.jpa.hibernate.demo.entity.Student;
-    logger.info("{}", course.getReviews());
-    logger.info("{}", review.getCourse());
-  public void performance() {
-    //for (int i = 0; i < 20; i++)
-      //em.persist(new Course("Something" + i));
-    //em.flush();
-    
-    //EntityGraph graph = em.getEntityGraph("graph.CourseAndStudents");
-    
-    EntityGraph<Course> graph = em.createEntityGraph(Course.class);
-      Subgraph<List<Student>> bookSubGraph = graph.addSubgraph("students");
-      
-      List<Course> courses = em.createQuery("Select c from Course c", Course.class)
-          .setHint("javax.persistence.loadgraph", graph)
-          .getResultList();
-      for (Course course : courses) {
-        System.out.println(course + " " + course.getStudents());
-      }
-  public void performance_without_hint() {      
-      List<Course> courses = em.createQuery("Select c from Course c", Course.class)
-          //.setHint("javax.persistence.loadgraph", graph)
-          .getResultList();
-      for (Course course : courses) {
-        System.out.println(course + " " + course.getStudents());
-      }
-```
 /src/test/java/com/in28minutes/jpa/hibernate/demo/repository/CourseSpringDataRepositoryTest.java New
 
 ```java
@@ -3943,114 +2194,18 @@ public class CourseSpringDataRepositoryTest {
 ### /pom.xml 
 Modified Lines
 ```
-      <artifactId>spring-boot-starter-data-rest</artifactId>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-data-rest</artifactId>
 ```
 /src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Course.java Modified
-#### Full File
-
 ```java
-package com.in28minutes.jpa.hibernate.demo.entity;
-
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
-@Entity
-@NamedQueries(value = { 
-    @NamedQuery(name = "query_get_all_courses", 
-        query = "Select  c  From Course c"),
-    @NamedQuery(name = "query_get_100_Step_courses", 
-    query = "Select  c  From Course c where name like '%100 Steps'") })
-
-public class Course {
-
-  @Id
-  @GeneratedValue
-  private Long id;
-
-  @Column(nullable = false)
-  private String name;
-
-  @OneToMany(mappedBy="course")
-  private List<Review> reviews = new ArrayList<>();
   
   @ManyToMany(mappedBy="courses")
   @JsonIgnore
   private List<Student> students = new ArrayList<>();
   
-  @UpdateTimestamp
-  private LocalDateTime lastUpdatedDate;
-
-  @CreationTimestamp
-  private LocalDateTime createdDate;
-
-  protected Course() {
-  }
-
-  public Course(String name) {
-    this.name = name;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  
-  public List<Review> getReviews() {
-    return reviews;
-  }
-
-  public void addReview(Review review) {
-    this.reviews.add(review);
-  }
-
-  public void removeReview(Review review) {
-    this.reviews.remove(review);
-  }
-
-  public List<Student> getStudents() {
-    return students;
-  }
-
-  public void addStudent(Student student) {
-    this.students.add(student);
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  @Override
-  public String toString() {
-    return String.format("Course[%s]", name);
-  }
-}
 ```
----
 
-Modified Lines
-```
-import com.fasterxml.jackson.annotation.JsonIgnore;
-  @JsonIgnore
-```
 /src/main/java/com/in28minutes/jpa/hibernate/demo/repository/CourseSpringDataRepository.java Modified
 #### Full File
 
@@ -4087,26 +2242,7 @@ public interface CourseSpringDataRepository extends JpaRepository<Course, Long> 
   List<Course> courseWith100StepsInNameUsingNamedQuery();
 }
 ```
----
 
-Modified Lines
-```
-import java.util.List;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
-@RepositoryRestResource(path="courses")
-  List<Course> findByNameAndId(String name, Long id);
-  List<Course> findByName(String name);
-  List<Course> countByName(String name);
-  List<Course> findByNameOrderByIdDesc(String name);
-  List<Course> deleteByName(String name);
-  @Query("Select  c  From Course c where name like '%100 Steps'")
-  List<Course> courseWith100StepsInName();
-  @Query(value = "Select  *  From Course c where name like '%100 Steps'", nativeQuery = true)
-  List<Course> courseWith100StepsInNameUsingNativeQuery();
-  @Query(name = "query_get_100_Step_courses")
-  List<Course> courseWith100StepsInNameUsingNamedQuery();
-```
 /src/main/resources/data.sql 
 Modified Lines
 ```
