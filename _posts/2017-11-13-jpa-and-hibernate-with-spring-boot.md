@@ -379,7 +379,10 @@ values(20001,10003);
 ## Step By Step Notes
 
 ### Journey from JDBC To JPA
-- TODO 
+
+> TODO 
+
+> TODO 
 
 ### JPA/Hibernate in Depth
 
@@ -405,7 +408,9 @@ Notes
 
 ####  Step 02 - Create JPA Entity Course
 
-/src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Course.java New
+Define an Entity Course with a primary key id.
+
+/src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Course.java
 
 ```java
 package com.in28minutes.jpa.hibernate.demo.entity;
@@ -443,130 +448,20 @@ public class Course {
   }
 }
 ```
+
+Important things to note:
+
+- @Entity: Specifies that the class is an entity. This annotation is applied to the entity class.
+- @Id: Specifies the primary key of an entity.
+- @GeneratedValue: Provides for the specification of generation strategies for the values of primary keys.
+- protected Course(): Default constructor to make JPA Happy
+
+
 ---
 
 ####  Step 03 - Create findById using JPA Entity Manager
-####  Step 04 - Configuring application.properties to enable 
 
-/src/main/java/com/in28minutes/jpa/hibernate/demo/DemoApplication.java Modified
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-import com.in28minutes.jpa.hibernate.demo.repository.CourseRepository;
-
-@SpringBootApplication
-public class DemoApplication implements CommandLineRunner{
-  
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-  
-  @Autowired
-  private CourseRepository repository;
-
-  public static void main(String[] args) {
-    SpringApplication.run(DemoApplication.class, args);
-  }
-
-  @Override
-  public void run(String... arg0) throws Exception {
-    Course course = repository.findById(10001L);
-    
-    logger.info("Course 10001 -> {}", course);
-    
-  }
-}
-```
----
-
-Modified Lines
-```
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-import com.in28minutes.jpa.hibernate.demo.repository.CourseRepository;
-public class DemoApplication implements CommandLineRunner{
-  
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-  
-  @Autowired
-  private CourseRepository repository;
-  @Override
-  public void run(String... arg0) throws Exception {
-    Course course = repository.findById(10001L);
-    
-    logger.info("Course 10001 -> {}", course);
-    
-```
-/src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Course.java Modified
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo.entity;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
-@Entity
-public class Course {
-
-  @Id
-  @GeneratedValue
-  private Long id;
-
-  private String name;
-
-  protected Course() {
-  }
-
-  public Course(String name) {
-    this.name = name;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  @Override
-  public String toString() {
-    return String.format("Course[%s]", name);
-  }
-  
-  
-  
-}
-```
----
-
-Modified Lines
-```
-  @Override
-  public String toString() {
-    return String.format("Course[%s]", name);
-  
-  
-  
-```
-/src/main/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepository.java New
+/src/main/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepository.java
 
 ```java
 package com.in28minutes.jpa.hibernate.demo.repository;
@@ -594,10 +489,44 @@ public class CourseRepository {
 
 }
 ```
----
+
+Enhance DemoApplication to implement CommandLineRunner and invoke the ```repository.findById(10001L)``` method.
+
+/src/main/java/com/in28minutes/jpa/hibernate/demo/DemoApplication.java
+```java
+@SpringBootApplication
+public class DemoApplication implements CommandLineRunner{
+  
+  private Logger logger = LoggerFactory.getLogger(this.getClass());
+  
+  @Autowired
+  private CourseRepository repository;
+
+  public static void main(String[] args) {
+    SpringApplication.run(DemoApplication.class, args);
+  }
+
+  @Override
+  public void run(String... arg0) throws Exception {
+    Course course = repository.findById(10001L);
+    
+    logger.info("Course 10001 -> {}", course);
+    
+  }
+}
+```
+
+
+####  Step 04 - Configuring application.properties to enable H2 console and logging
+
+Three important things are configured in application.properties
+- Enable H2 Console spring.h2.console.enabled=true
+  - http://localhost:8080/h2-console
+  - Use db url jdbc:h2:mem:testdb
+- Turn the hibernate statistics on
+- Enable logging of all queries
 
 /src/main/resources/application.properties 
-Modified Lines
 ```
 # Enabling H2 Console
 spring.h2.console.enabled=true
@@ -609,7 +538,10 @@ spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
 logging.level.org.hibernate.type=trace
 ```
-/src/main/resources/data.sql New
+
+Insert a row into the Course table
+
+/src/main/resources/data.sql
 
 ```
 insert into course(id, name) values(10001,'JPA in 50 Steps');
@@ -618,33 +550,7 @@ insert into course(id, name) values(10001,'JPA in 50 Steps');
 
 ####  Step 05 - Writing Unit Test for findById method
 
-/src/test/java/com/in28minutes/jpa/hibernate/demo/DemoApplicationTests.java Modified
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-
-@RunWith(SpringRunner.class)
-@SpringBootTest
-public class DemoApplicationTests {
-
-  @Test
-  public void contextLoads() {
-  }
-
-}
-```
----
-
-Modified Lines
-```
-```
-/src/test/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepositoryTest.java New
+/src/test/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepositoryTest.java
 
 ```java
 package com.in28minutes.jpa.hibernate.demo.repository;
@@ -682,95 +588,27 @@ public class CourseRepositoryTest {
 ---
 ####  Step 06 - Writing a deleteByID method to delete an Entity
 
-/src/main/java/com/in28minutes/jpa/hibernate/demo/DemoApplication.java Modified
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-import com.in28minutes.jpa.hibernate.demo.repository.CourseRepository;
-
-@SpringBootApplication
-public class DemoApplication implements CommandLineRunner{
-  
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-  
-  @Autowired
-  private CourseRepository repository;
-
-  public static void main(String[] args) {
-    SpringApplication.run(DemoApplication.class, args);
-  }
-
-  @Override
-  public void run(String... arg0) throws Exception {
-    Course course = repository.findById(10001L);
-    
-    logger.info("Course 10001 -> {}", course);
-    
-    repository.deleteById(10001L);
-    
-  }
-}
-```
----
+class DemoApplication
 
 Modified Lines
 ```
     repository.deleteById(10001L);
 ```
-/src/main/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepository.java Modified
-#### Full File
 
-```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import javax.persistence.EntityManager;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-
-@Repository
-@Transactional
-public class CourseRepository { 
-  
-  @Autowired
-  EntityManager em;
-  
-  public Course findById(Long id){
-    return em.find(Course.class, id);
-  }
-  
-  //public Course save(Course course) -> insert or update
-  
-  public void deleteById(Long id){
-    Course course = findById(id);
-    em.remove(course);
-  }
-
-}
-```
----
-
+/src/main/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepository.java 
 Modified Lines
 ```
 import org.springframework.transaction.annotation.Transactional;
 @Transactional
-  public void deleteById(Long id){
-    Course course = findById(id);
-    em.remove(course);
 ```
+
+```
+public void deleteById(Long id){
+  Course course = findById(id);
+  em.remove(course);
+}
+```
+
 /src/main/resources/data.sql 
 Modified Lines
 ```
@@ -779,574 +617,103 @@ insert into course(id, name) values(10003,'Spring Boot in 100 Steps');
 ```
 ####  Step 07 - Writing Unit Test for deleteById method
 
-/src/main/java/com/in28minutes/jpa/hibernate/demo/DemoApplication.java Modified
-#### Full File
-
+/src/test/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepositoryTest.java 
 ```java
-package com.in28minutes.jpa.hibernate.demo;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-import com.in28minutes.jpa.hibernate.demo.repository.CourseRepository;
-
-@SpringBootApplication
-public class DemoApplication implements CommandLineRunner{
-  
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-  
-  @Autowired
-  private CourseRepository repository;
-
-  public static void main(String[] args) {
-    SpringApplication.run(DemoApplication.class, args);
-  }
-
-  @Override
-  public void run(String... arg0) throws Exception {
-    Course course = repository.findById(10001L);
-    logger.info("Course 10001 -> {}", course);
-  }
-}
-```
----
-
-Modified Lines
-```
-```
-/src/test/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepositoryTest.java Modified
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.DemoApplication;
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes=DemoApplication.class)
-public class CourseRepositoryTest {
-  
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-  
-  @Autowired
-  CourseRepository repository;
-  
-  @Test
-  public void findById_basic() {
-    Course course = repository.findById(10001L);
-    assertEquals("JPA in 50 Steps", course.getName());
-  }
-  
-  @Test
-  @DirtiesContext
-  public void deleteById_basic() {
-    repository.deleteById(10002L);
-    assertNull(repository.findById(10002L));
-  } 
-
-}
-```
----
-Modified Lines
-```
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+//Imports
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.transaction.annotation.Transactional;
-  @DirtiesContext
-  public void deleteById_basic() {
-    repository.deleteById(10002L);
-    assertNull(repository.findById(10002L));
-  } 
+
+//New Method
+@DirtiesContext
+public void deleteById_basic() {
+  repository.deleteById(10002L);
+  assertNull(repository.findById(10002L));
+} 
 ```
 
 ####  Step 08 - Writing a save method to update and insert an Entity
 
+/src/main/java/com/in28minutes/jpa/hibernate/demo/DemoApplication.java
+
+Modified Lines
+```
+    repository.save(new Course("Microservices in 100 Steps"));
+  } 
+```
+
+/src/main/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepository.java Modified Lines
+```
+  public Course save(Course course) {
+    
+    if (course.getId() == null) {
+      em.persist(course);
+    } else {
+      em.merge(course);
+    }
+    
+    return course;
+  }
+```
+
 ####  Step 09 - Writing Unit Test for save method
 
-/src/main/java/com/in28minutes/jpa/hibernate/demo/DemoApplication.java Modified
-#### Full File
 
-```java
-package com.in28minutes.jpa.hibernate.demo;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-import com.in28minutes.jpa.hibernate.demo.repository.CourseRepository;
-
-@SpringBootApplication
-public class DemoApplication implements CommandLineRunner{
-  
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-  
-  @Autowired
-  private CourseRepository repository;
-
-  public static void main(String[] args) {
-    SpringApplication.run(DemoApplication.class, args);
-  }
-
-  @Override
-  public void run(String... arg0) throws Exception {
-    Course course = repository.findById(10001L);
-    logger.info("Course 10001 -> {}", course);
-    repository.save(new Course("Microservices in 100 Steps"));
-  } 
-}
-```
----
-
+/src/test/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepositoryTest.java 
 Modified Lines
-```
-    repository.save(new Course("Microservices in 100 Steps"));
-  } 
-```
-/src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Course.java Modified
-#### Full File
 
-```java
-package com.in28minutes.jpa.hibernate.demo.entity;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
-@Entity
-public class Course {
-
-  @Id
-  @GeneratedValue
-  private Long id;
-
-  private String name;
-
-  protected Course() {
-  }
-
-  public Course(String name) {
-    this.name = name;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  @Override
-  public String toString() {
-    return String.format("Course[%s]", name);
-  }
-}
-```
----
-
-Modified Lines
-```
-```
-/src/main/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepository.java Modified
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import javax.persistence.EntityManager;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-
-@Repository
-@Transactional
-public class CourseRepository {
-
-  @Autowired
-  EntityManager em;
-
-  public Course findById(Long id) {
-    return em.find(Course.class, id);
-  }
-
-  public Course save(Course course) {
-    
-    if (course.getId() == null) {
-      em.persist(course);
-    } else {
-      em.merge(course);
-    }
-    
-    return course;
-  }
-
-  public void deleteById(Long id) {
-    Course course = findById(id);
-    em.remove(course);
-  }
-
-}
-```
----
-
-Modified Lines
-```
-public class CourseRepository {
-  public Course findById(Long id) {
-  public Course save(Course course) {
-    
-    if (course.getId() == null) {
-      em.persist(course);
-    } else {
-      em.merge(course);
-    }
-    
-    return course;
-  public void deleteById(Long id) {
-```
-/src/test/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepositoryTest.java Modified
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.DemoApplication;
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = DemoApplication.class)
-public class CourseRepositoryTest {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-
-  @Autowired
-  CourseRepository repository;
-
-  @Test
-  public void findById_basic() {
-    Course course = repository.findById(10001L);
-    assertEquals("JPA in 50 Steps", course.getName());
-  }
-
-  @Test
-  @DirtiesContext
-  public void deleteById_basic() {
-    repository.deleteById(10002L);
-    assertNull(repository.findById(10002L));
-  }
-
-  @Test
-  @DirtiesContext
-  public void save_basic() {
-
-    // get a course
-    Course course = repository.findById(10001L);
-    assertEquals("JPA in 50 Steps", course.getName());
-
-    // update details
-    course.setName("JPA in 50 Steps - Updated");
-
-    repository.save(course);
-
-    // check the value
-    Course course1 = repository.findById(10001L);
-    assertEquals("JPA in 50 Steps - Updated", course1.getName());
-  }
-
-}
-```
----
-Modified Lines
 ```
 @SpringBootTest(classes = DemoApplication.class)
-  public void save_basic() {
-    // get a course
-    // update details
-    course.setName("JPA in 50 Steps - Updated");
-    repository.save(course);
-    // check the value
-    Course course1 = repository.findById(10001L);
-    assertEquals("JPA in 50 Steps - Updated", course1.getName());
+```
+
+```java
+public void save_basic() {
+  // get a course
+  // update details
+  course.setName("JPA in 50 Steps - Updated");
+  repository.save(course);
+  // check the value
+  Course course1 = repository.findById(10001L);
+  assertEquals("JPA in 50 Steps - Updated", course1.getName());
+}
 ```
 
 ####  Step 10 - Quick Review and Debugging Tips
 
 ####  Step 11 - Playing with Entity Manager
 
-/src/main/java/com/in28minutes/jpa/hibernate/demo/DemoApplication.java Modified
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-import com.in28minutes.jpa.hibernate.demo.repository.CourseRepository;
-
-@SpringBootApplication
-public class DemoApplication implements CommandLineRunner{
-  
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-  
-  @Autowired
-  private CourseRepository repository;
-
-  public static void main(String[] args) {
-    SpringApplication.run(DemoApplication.class, args);
-  }
-
-  @Override
-  public void run(String... arg0) throws Exception {
-    repository.playWithEntityManager();
-  } 
-}
-```
----
-
+/src/main/java/com/in28minutes/jpa/hibernate/demo/DemoApplication.java
 Modified Lines
 ```
     repository.playWithEntityManager();
 ```
-/src/main/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepository.java Modified
-#### Full File
 
-```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import javax.persistence.EntityManager;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-
-@Repository
-@Transactional
-public class CourseRepository {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-  
-  @Autowired
-  EntityManager em;
-
-  public Course findById(Long id) {
-    return em.find(Course.class, id);
-  }
-
-  public Course save(Course course) {
-
-    if (course.getId() == null) {
-      em.persist(course);
-    } else {
-      em.merge(course);
-    }
-
-    return course;
-  }
-
-  public void deleteById(Long id) {
-    Course course = findById(id);
-    em.remove(course);
-  }
-
-  public void playWithEntityManager() {
-    Course course = new Course("Web Services in 100 Steps");
-    em.persist(course);
-    course.setName("Web Services in 100 Steps - Updated");
-  }
+/src/main/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepository.java 
+Modified Lines
+```java  
+public void playWithEntityManager() {
+  Course course = new Course("Web Services in 100 Steps");
+  em.persist(course);
+  course.setName("Web Services in 100 Steps - Updated");
 }
 ```
----
 
-Modified Lines
+/src/test/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepositoryTest.java 
+
 ```
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-  
-  public void playWithEntityManager() {
-    Course course = new Course("Web Services in 100 Steps");
-    em.persist(course);
-    course.setName("Web Services in 100 Steps - Updated");
-```
-/src/test/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepositoryTest.java Modified
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.junit4.SpringRunner;
-
-import com.in28minutes.jpa.hibernate.demo.DemoApplication;
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = DemoApplication.class)
-public class CourseRepositoryTest {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-
-  @Autowired
-  CourseRepository repository;
-
-  @Test
-  public void findById_basic() {
-    Course course = repository.findById(10001L);
-    assertEquals("JPA in 50 Steps", course.getName());
-  }
-
-  @Test
-  @DirtiesContext
-  public void deleteById_basic() {
-    repository.deleteById(10002L);
-    assertNull(repository.findById(10002L));
-  }
-
-  @Test
-  @DirtiesContext
-  public void save_basic() {
-
-    // get a course
-    Course course = repository.findById(10001L);
-    assertEquals("JPA in 50 Steps", course.getName());
-
-    // update details
-    course.setName("JPA in 50 Steps - Updated");
-    repository.save(course);
-
-    // check the value
-    Course course1 = repository.findById(10001L);
-    assertEquals("JPA in 50 Steps - Updated", course1.getName());
-  }
-
   @Test
   @DirtiesContext
   public void playWithEntityManager() {
     repository.playWithEntityManager();
   }
 
-}
-```
----
-Modified Lines
-```
-  public void playWithEntityManager() {
-    repository.playWithEntityManager();
 ```
 
 ####  Step 12 - Entity Manager Methods - clear and detach
 ####  Step 13 - Entity Manager Methods - refresh
 ####  Step 14 - A Quick Review of Entity Manager
 
-
-/src/main/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepository.java Modified
-#### Full File
-
+/src/main/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepository.java Modified Lines
 ```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import javax.persistence.EntityManager;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-
-@Repository
-@Transactional
-public class CourseRepository {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-  
-  @Autowired
-  EntityManager em;
-
-  public Course findById(Long id) {
-    return em.find(Course.class, id);
-  }
-
-  public Course save(Course course) {
-
-    if (course.getId() == null) {
-      em.persist(course);
-    } else {
-      em.merge(course);
-    }
-
-    return course;
-  }
-
-  public void deleteById(Long id) {
-    Course course = findById(id);
-    em.remove(course);
-  }
-
   public void playWithEntityManager() {
     
     Course course1 = new Course("Web Services in 100 Steps");
@@ -1364,195 +731,13 @@ public class CourseRepository {
     
     em.flush();
   }
-}
-```
----
-
-Modified Lines
-```
-    
-    Course course1 = new Course("Web Services in 100 Steps");
-    em.persist(course1);  
-    
-    Course course2 = new Course("Angular Js in 100 Steps");
-    em.persist(course2);
-    em.flush();
-    course1.setName("Web Services in 100 Steps - Updated");
-    course2.setName("Angular Js in 100 Steps - Updated");
-    
-    em.refresh(course1);
-    
-    em.flush();
 ```
 
 ####  Step 15 - JPQL - Basics
 
-/src/main/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepository.java Modified
-#### Full File
+/src/test/java/com/in28minutes/jpa/hibernate/demo/repository/JPQLTest.java
 
 ```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import javax.persistence.EntityManager;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-
-@Repository
-@Transactional
-public class CourseRepository {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-  
-  @Autowired
-  EntityManager em;
-
-  public Course findById(Long id) {
-    return em.find(Course.class, id);
-  }
-
-  public Course save(Course course) {
-
-    if (course.getId() == null) {
-      em.persist(course);
-    } else {
-      em.merge(course);
-    }
-
-    return course;
-  }
-
-  public void deleteById(Long id) {
-    Course course = findById(id);
-    em.remove(course);
-  }
-
-  public void playWithEntityManager() {
-    
-    Course course1 = new Course("Web Services in 100 Steps");
-    
-    em.persist(course1);  
-    
-    Course course2 = new Course("Angular Js in 100 Steps");
-    
-    em.persist(course2);
-
-    em.flush();
-
-    course1.setName("Web Services in 100 Steps - Updated");
-
-    course2.setName("Angular Js in 100 Steps - Updated");
-    
-    em.refresh(course1);
-    
-    em.flush();
-  }
-}
-```
----
-
-Modified Lines
-```
-```
-/src/test/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepositoryTest.java Modified
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.junit4.SpringRunner;
-
-import com.in28minutes.jpa.hibernate.demo.DemoApplication;
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = DemoApplication.class)
-public class CourseRepositoryTest {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-
-  @Autowired
-  CourseRepository repository;
-
-  @Test
-  public void findById_basic() {
-    Course course = repository.findById(10001L);
-    assertEquals("JPA in 50 Steps", course.getName());
-  }
-
-  @Test
-  @DirtiesContext
-  public void deleteById_basic() {
-    repository.deleteById(10002L);
-    assertNull(repository.findById(10002L));
-  }
-
-  @Test
-  @DirtiesContext
-  public void save_basic() {
-
-    // get a course
-    Course course = repository.findById(10001L);
-    assertEquals("JPA in 50 Steps", course.getName());
-
-    // update details
-    course.setName("JPA in 50 Steps - Updated");
-    repository.save(course);
-
-    // check the value
-    Course course1 = repository.findById(10001L);
-    assertEquals("JPA in 50 Steps - Updated", course1.getName());
-  }
-
-  @Test
-  @DirtiesContext
-  public void playWithEntityManager() {
-    repository.playWithEntityManager();
-  }
-
-}
-```
----
-
-Modified Lines
-```
-```
-/src/test/java/com/in28minutes/jpa/hibernate/demo/repository/JPQLTest.java New
-
-```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import java.util.List;
-
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
-import javax.persistence.TypedQuery;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-
-import com.in28minutes.jpa.hibernate.demo.DemoApplication;
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = DemoApplication.class)
@@ -1599,18 +784,9 @@ public class JPQLTest {
 
 ####  Step 17 - JPA and Hibernate Annotations - @Column
 
-
-/src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Course.java Modified
-#### Full File
+/src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Course.java
 
 ```java
-package com.in28minutes.jpa.hibernate.demo.entity;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
 @Entity
 public class Course {
 
@@ -1621,99 +797,19 @@ public class Course {
   @Column(nullable = false)
   private String name;
 
-  protected Course() {
-  }
+}
+```
 
-  public Course(String name) {
-    this.name = name;
-  }
+This method would throw an exception because is name is not nullable.
+```
+public void playWithEntityManager() {
+  Course course1 = new Course("Web Services in 100 Steps");
+  em.persist(course1);
 
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  @Override
-  public String toString() {
-    return String.format("Course[%s]", name);
-  }
+  course1.setName(null);
 }
 ```
 ---
-
-Modified Lines
-```
-import javax.persistence.Column;
-  @Column(nullable = false)
-```
-/src/main/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepository.java Modified
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import javax.persistence.EntityManager;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-
-@Repository
-@Transactional
-public class CourseRepository {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-  
-  @Autowired
-  EntityManager em;
-
-  public Course findById(Long id) {
-    return em.find(Course.class, id);
-  }
-
-  public Course save(Course course) {
-
-    if (course.getId() == null) {
-      em.persist(course);
-    } else {
-      em.merge(course);
-    }
-
-    return course;
-  }
-
-  public void deleteById(Long id) {
-    Course course = findById(id);
-    em.remove(course);
-  }
-
-  public void playWithEntityManager() {
-    Course course1 = new Course("Web Services in 100 Steps");
-    em.persist(course1);
-
-    course1.setName(null);
-  }
-}
-```
----
-
-Modified Lines
-```
-    em.persist(course1);
-    course1.setName(null);
-```
-
 
 ####  Step 18 - JPA and Hibernate Annotations - @UpdateTimestamp and @CreationTimestamp
 ####  Step 19 - JPA and Hibernate Annotations - @NamedQuery and @NamedQueries
@@ -1722,113 +818,7 @@ Modified Lines
 ####  Step 22 - Defining Entities - Student, Passport and Review
 ####  Step 23 - Introduction to One to One Relationship
 
-/src/main/java/com/in28minutes/jpa/hibernate/demo/DemoApplication.java Modified
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-import com.in28minutes.jpa.hibernate.demo.repository.CourseRepository;
-
-@SpringBootApplication
-public class DemoApplication implements CommandLineRunner{
-  
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-  
-  @Autowired
-  private CourseRepository repository;
-
-  public static void main(String[] args) {
-    SpringApplication.run(DemoApplication.class, args);
-  }
-
-  @Override
-  public void run(String... arg0) throws Exception {
-    //repository.playWithEntityManager();
-  } 
-}
-```
----
-
-Modified Lines
-```
-    //repository.playWithEntityManager();
-```
-/src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Course.java Modified
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo.entity;
-
-import java.time.LocalDateTime;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
-@Entity
-@NamedQueries(value = { 
-    @NamedQuery(name = "query_get_all_courses", 
-        query = "Select  c  From Course c"),
-    @NamedQuery(name = "query_get_100_Step_courses", 
-    query = "Select  c  From Course c where name like '%100 Steps'") })
-
-public class Course {
-
-  @Id
-  @GeneratedValue
-  private Long id;
-
-  @Column(nullable = false)
-  private String name;
-
-  @UpdateTimestamp
-  private LocalDateTime lastUpdatedDate;
-
-  @CreationTimestamp
-  private LocalDateTime createdDate;
-
-  protected Course() {
-  }
-
-  public Course(String name) {
-    this.name = name;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  @Override
-  public String toString() {
-    return String.format("Course[%s]", name);
-  }
-}
-```
----
-
+/src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Course.java
 Modified Lines
 ```
 import java.time.LocalDateTime;
@@ -1836,16 +826,20 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+
 @NamedQueries(value = { 
     @NamedQuery(name = "query_get_all_courses", 
         query = "Select  c  From Course c"),
     @NamedQuery(name = "query_get_100_Step_courses", 
     query = "Select  c  From Course c where name like '%100 Steps'") })
-  @UpdateTimestamp
-  private LocalDateTime lastUpdatedDate;
-  @CreationTimestamp
-  private LocalDateTime createdDate;
+
+@UpdateTimestamp
+private LocalDateTime lastUpdatedDate;
+
+@CreationTimestamp
+private LocalDateTime createdDate;
 ```
+
 /src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Passport.java New
 
 ```java
@@ -2001,50 +995,8 @@ public class Student {
 ```
 ---
 
-/src/main/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepository.java Modified
-#### Full File
-
+/src/main/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepository.java 
 ```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import javax.persistence.EntityManager;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-
-@Repository
-@Transactional
-public class CourseRepository {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-  
-  @Autowired
-  EntityManager em;
-
-  public Course findById(Long id) {
-    return em.find(Course.class, id);
-  }
-
-  public Course save(Course course) {
-
-    if (course.getId() == null) {
-      em.persist(course);
-    } else {
-      em.merge(course);
-    }
-
-    return course;
-  }
-
-  public void deleteById(Long id) {
-    Course course = findById(id);
-    em.remove(course);
-  }
 
   public void playWithEntityManager() {
     Course course1 = new Course("Web Services in 100 Steps");
@@ -2055,18 +1007,9 @@ public class CourseRepository {
     course2.setName("JPA in 50 Steps - Updated");
     
   }
-}
-```
----
 
-Modified Lines
 ```
-    
-    Course course2 = findById(10001L);
-    
-    course2.setName("JPA in 50 Steps - Updated");
-    
-```
+
 /src/main/resources/data.sql 
 Modified Lines
 ```
@@ -2095,44 +1038,11 @@ values(50002,'4', 'Wonderful Course');
 insert into review(id,rating,description)
 values(50003,'5', 'Awesome Course');
 ```
+
 /src/test/java/com/in28minutes/jpa/hibernate/demo/repository/JPQLTest.java Modified
 #### Full File
 
 ```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import java.util.List;
-
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
-import javax.persistence.TypedQuery;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-
-import com.in28minutes.jpa.hibernate.demo.DemoApplication;
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = DemoApplication.class)
-public class JPQLTest {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-
-  @Autowired
-  EntityManager em;
-
-  @Test
-  public void jpql_basic() {
-    Query query = em.createNamedQuery("query_get_all_courses");
-    List resultList = query.getResultList();
-    logger.info("Select  c  From Course c -> {}", resultList);
-  }
 
   @Test
   public void jpql_typed() {
@@ -2153,42 +1063,10 @@ public class JPQLTest {
     // [Course[Web Services in 100 Steps], Course[Spring Boot in 100 Steps]]
   }
 
-}
 ```
----
 
-Modified Lines
-```
-    Query query = em.createNamedQuery("query_get_all_courses");
-    logger.info("Select  c  From Course c -> {}", resultList);
-    TypedQuery<Course> query = em.createNamedQuery("query_get_all_courses", Course.class);
-    logger.info("Select  c  From Course c -> {}", resultList);
-    TypedQuery<Course> query = em.createNamedQuery("query_get_100_Step_courses", Course.class);
-    logger.info("Select  c  From Course c where name like '%100 Steps'-> {}", resultList);
-    // [Course[Web Services in 100 Steps], Course[Spring Boot in 100 Steps]]
-```
 /src/test/java/com/in28minutes/jpa/hibernate/demo/repository/NativeQueriesTest.java New
-
 ```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import java.util.List;
-
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
-import javax.persistence.TypedQuery;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.DemoApplication;
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = DemoApplication.class)
@@ -2244,66 +1122,10 @@ public class NativeQueriesTest {
 ####  Step 26 - OneToOne Mapping - Lazy Fetch
 ####  Step 27 - Transaction, Entity Manager and Persistence Context
 
-
-/src/main/java/com/in28minutes/jpa/hibernate/demo/DemoApplication.java Modified
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import com.in28minutes.jpa.hibernate.demo.repository.CourseRepository;
-import com.in28minutes.jpa.hibernate.demo.repository.StudentRepository;
-
-@SpringBootApplication
-public class DemoApplication implements CommandLineRunner{
-  
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-  
-  @Autowired
-  private CourseRepository courseRepository;
-
-  @Autowired
-  private StudentRepository studentRepository;
-
-  public static void main(String[] args) {
-    SpringApplication.run(DemoApplication.class, args);
-  }
-
-  @Override
-  public void run(String... arg0) throws Exception {
-    studentRepository.saveStudentWithPassport();
-    //repository.playWithEntityManager();
-  } 
-}
-```
----
-
-Modified Lines
-```
-import com.in28minutes.jpa.hibernate.demo.repository.StudentRepository;
-  private CourseRepository courseRepository;
-  private StudentRepository studentRepository;
-    studentRepository.saveStudentWithPassport();
-```
 /src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Student.java Modified
 #### Full File
 
 ```java
-package com.in28minutes.jpa.hibernate.demo.entity;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
 
 @Entity
 public class Student {
@@ -2318,65 +1140,12 @@ public class Student {
   @OneToOne(fetch=FetchType.LAZY)
   private Passport passport;
 
-  protected Student() {
-  }
-
-  public Student(String name) {
-    this.name = name;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public Passport getPassport() {
-    return passport;
-  }
-
-  public void setPassport(Passport passport) {
-    this.passport = passport;
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  @Override
-  public String toString() {
-    return String.format("Student[%s]", name);
-  }
 }
 ```
----
 
-Modified Lines
-```
-import javax.persistence.FetchType;
-  @OneToOne(fetch=FetchType.LAZY)
-  public Passport getPassport() {
-    return passport;
-  public void setPassport(Passport passport) {
-    this.passport = passport;
-```
 /src/main/java/com/in28minutes/jpa/hibernate/demo/repository/StudentRepository.java New
 
 ```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import javax.persistence.EntityManager;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.entity.Passport;
-import com.in28minutes.jpa.hibernate.demo.entity.Student;
 
 @Repository
 @Transactional
@@ -2439,83 +1208,6 @@ public class StudentRepository {
 }
 ```
 ---
-
-/src/test/java/com/in28minutes/jpa/hibernate/demo/repository/NativeQueriesTest.java Modified
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import java.util.List;
-
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
-import javax.persistence.TypedQuery;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.DemoApplication;
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = DemoApplication.class)
-public class NativeQueriesTest {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-
-  @Autowired
-  EntityManager em;
-
-  @Test
-  public void native_queries_basic() {
-    Query query = em.createNativeQuery("SELECT * FROM COURSE", Course.class);
-    List resultList = query.getResultList();
-    logger.info("SELECT * FROM COURSE  -> {}", resultList);
-    //SELECT * FROM COURSE  -> [Course[Web Services in 100 Steps], Course[JPA in 50 Steps - Updated], Course[Spring in 50 Steps], Course[Spring Boot in 100 Steps]]
-  }
-
-  @Test
-  public void native_queries_with_parameter() {
-    Query query = em.createNativeQuery("SELECT * FROM COURSE where id = ?", Course.class);
-    query.setParameter(1, 10001L);
-    List resultList = query.getResultList();
-    logger.info("SELECT * FROM COURSE  where id = ? -> {}", resultList);
-    //[Course[JPA in 50 Steps - Updated]]
-  }
-
-  @Test
-  public void native_queries_with_named_parameter() {
-    Query query = em.createNativeQuery("SELECT * FROM COURSE where id = :id", Course.class);
-    query.setParameter("id", 10001L);
-    List resultList = query.getResultList();
-    logger.info("SELECT * FROM COURSE  where id = :id -> {}", resultList);
-    //[Course[JPA in 50 Steps - Updated]]
-  }
-  
-  @Test
-  @Transactional
-  public void native_queries_to_update() {
-    Query query = em.createNativeQuery("Update COURSE set last_updated_date=sysdate()");
-    int noOfRowsUpdated = query.executeUpdate();
-    logger.info("noOfRowsUpdated  -> {}", noOfRowsUpdated);
-    //SELECT * FROM COURSE  -> [Course[Web Services in 100 Steps], Course[JPA in 50 Steps - Updated], Course[Spring in 50 Steps], Course[Spring Boot in 100 Steps]]
-  }
-
-
-}
-```
----
-
-Modified Lines
-```
-```
 /src/test/java/com/in28minutes/jpa/hibernate/demo/repository/StudentRepositoryTest.java New
 
 ```java
@@ -2571,103 +1263,9 @@ public class StudentRepositoryTest {
 ---
 ####  TODO CONFUSION Step 27 - Transaction, Entity Manager and Persistence Context
 
-/src/main/java/com/in28minutes/jpa/hibernate/demo/repository/StudentRepository.java Modified
-#### Full File
+/src/test/java/com/in28minutes/jpa/hibernate/demo/repository/StudentRepositoryTest.java 
 
 ```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import javax.persistence.EntityManager;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.entity.Passport;
-import com.in28minutes.jpa.hibernate.demo.entity.Student;
-
-@Repository
-@Transactional
-public class StudentRepository {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-  
-  @Autowired
-  EntityManager em;
-
-  public Student findById(Long id) {
-    return em.find(Student.class, id);
-  }
-
-  public Student save(Student student) {
-
-    if (student.getId() == null) {
-      em.persist(student);
-    } else {
-      em.merge(student);
-    }
-
-    return student;
-  }
-
-  public void deleteById(Long id) {
-    Student student = findById(id);
-    em.remove(student);
-  }
-
-  public void saveStudentWithPassport() {
-    Passport passport = new Passport("Z123456");
-    em.persist(passport);
-
-    Student student = new Student("Mike");
-
-    student.setPassport(passport);
-    em.persist(student);  
-  }
-}
-```
----
-
-Modified Lines
-```
-```
-/src/test/java/com/in28minutes/jpa/hibernate/demo/repository/StudentRepositoryTest.java Modified
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import javax.persistence.EntityManager;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.DemoApplication;
-import com.in28minutes.jpa.hibernate.demo.entity.Student;
-
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = DemoApplication.class)
-public class StudentRepositoryTest {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-
-  @Autowired
-  StudentRepository repository;
-  
-  @Autowired
-  EntityManager em;
-
-  //Session & Session Factory
-  //EntityManager & Persistence Context
-  //Transaction
   
   @Test
   @Transactional
@@ -2677,21 +1275,6 @@ public class StudentRepositoryTest {
     //Database Operation 3 - update passport
   }
 
-  @Test
-  @Transactional
-  public void retrieveStudentAndPassportDetails() {
-    Student student = em.find(Student.class, 20001L);
-    logger.info("student -> {}", student);
-    logger.info("passport -> {}",student.getPassport());
-  }
-}
-```
----
-Modified Lines
-```
-    //Database Operation 1 - Retrieve student
-    //Database Operation 2 - Retrieve passport
-    //Database Operation 3 - update passport
 ```
 
 ####  Step 28 - OneToOne Mapping - Bidirectional Relationship - Part 1
@@ -2699,133 +1282,17 @@ Modified Lines
 ####  Step 29 - OneToOne Mapping - Bidirectional Relationship - Part 2
 
 /src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Passport.java Modified
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo.entity;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
-
-@Entity
-public class Passport {
-
-  @Id
-  @GeneratedValue
-  private Long id;
-
-  @Column(nullable = false)
-  private String number;
-  
-  @OneToOne(fetch=FetchType.LAZY, mappedBy="passport")
-  private Student student;
-
-  protected Passport() {
-  }
-
-  public Passport(String number) {
-    this.number = number;
-  }
-
-  public String getNumber() {
-    return number;
-  }
-
-  public void setNumber(String number) {
-    this.number = number;
-  }
-
-  public Student getStudent() {
-    return student;
-  }
-
-  public void setStudent(Student student) {
-    this.student = student;
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  @Override
-  public String toString() {
-    return String.format("Passport[%s]", number);
-  }
-}
-```
----
-
 Modified Lines
 ```
 import javax.persistence.FetchType;
 import javax.persistence.OneToOne;
   
-  @OneToOne(fetch=FetchType.LAZY, mappedBy="passport")
-  private Student student;
-  public Student getStudent() {
-    return student;
-  public void setStudent(Student student) {
-    this.student = student;
+@OneToOne(fetch=FetchType.LAZY, mappedBy="passport")
+private Student student;
+
 ```
 /src/main/java/com/in28minutes/jpa/hibernate/demo/repository/StudentRepository.java Modified
-#### Full File
-
 ```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import javax.persistence.EntityManager;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.entity.Passport;
-import com.in28minutes.jpa.hibernate.demo.entity.Student;
-
-@Repository
-@Transactional
-public class StudentRepository {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-  
-  @Autowired
-  EntityManager em;
-
-  public Student findById(Long id) {
-    return em.find(Student.class, id);
-  }
-
-  public Student save(Student student) {
-
-    if (student.getId() == null) {
-      em.persist(student);
-    } else {
-      em.merge(student);
-    }
-
-    return student;
-  }
-
-  public void deleteById(Long id) {
-    Student student = findById(id);
-    em.remove(student);
-  }
-
-  public void saveStudentWithPassport() {
-    Passport passport = new Passport("Z123456");
-    em.persist(passport);
-
-    Student student = new Student("Mike");
-
-    student.setPassport(passport);
-    em.persist(student);  
-  }
   
   public void someOperationToUnderstandPersistenceContext() {
     //Database Operation 1 - Retrieve student
@@ -2846,79 +1313,16 @@ public class StudentRepository {
     //Persistence Context (student++ , passport++)
   }
 
-}
 ```
----
 
-Modified Lines
-```
-  public void someOperationToUnderstandPersistenceContext() {
-    //Database Operation 1 - Retrieve student
-    Student student = em.find(Student.class, 20001L);
-    //Persistence Context (student)
-    
-    
-    //Database Operation 2 - Retrieve passport
-    Passport passport = student.getPassport();
-    //Persistence Context (student, passport)
-    //Database Operation 3 - update passport
-    passport.setNumber("E123457");
-    //Persistence Context (student, passport++)
-    
-    //Database Operation 4 - update student
-    student.setName("Ranga - updated");
-    //Persistence Context (student++ , passport++)
-```
-/src/test/java/com/in28minutes/jpa/hibernate/demo/repository/StudentRepositoryTest.java Modified
-#### Full File
+/src/test/java/com/in28minutes/jpa/hibernate/demo/repository/StudentRepositoryTest.java 
 
 ```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import javax.persistence.EntityManager;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.DemoApplication;
-import com.in28minutes.jpa.hibernate.demo.entity.Passport;
-import com.in28minutes.jpa.hibernate.demo.entity.Student;
-
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = DemoApplication.class)
-public class StudentRepositoryTest {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-
-  @Autowired
-  StudentRepository repository;
-
-  @Autowired
-  EntityManager em;
-
-  // Session & Session Factory
-
-  // EntityManager & Persistence Context
-  // Transaction
 
   @Test
   public void someTest() {
     repository.someOperationToUnderstandPersistenceContext();
   }
-
-  @Test
-  @Transactional
-  public void retrieveStudentAndPassportDetails() {
-    Student student = em.find(Student.class, 20001L);
-    logger.info("student -> {}", student);
-    logger.info("passport -> {}", student.getPassport());
-  }
   
   @Test
   @Transactional
@@ -2927,313 +1331,24 @@ public class StudentRepositoryTest {
     logger.info("passport -> {}", passport);
     logger.info("student -> {}", passport.getStudent());
   }
-}
-```
----
-Modified Lines
-```
-import com.in28minutes.jpa.hibernate.demo.entity.Passport;
-  // Session & Session Factory
-  // EntityManager & Persistence Context
-  // Transaction
-    repository.someOperationToUnderstandPersistenceContext();
-    logger.info("passport -> {}", student.getPassport());
-  public void retrievePassportAndAssociatedStudent() {
-    Passport passport = em.find(Passport.class, 40001L);
-    logger.info("passport -> {}", passport);
-    logger.info("student -> {}", passport.getStudent());
 ```
 
 ####  Step 30 - ManyToOne Mapping - Designing the database
 ####  Step 30 - 02 - ManyToOne Mapping - Implementing the Mapping *****
 ####  Step 31 - ManyToOne Mapping - Retrieving and inserting Reviews for Course
 
-
-/src/main/java/com/in28minutes/jpa/hibernate/demo/DemoApplication.java Modified
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import com.in28minutes.jpa.hibernate.demo.repository.CourseRepository;
-import com.in28minutes.jpa.hibernate.demo.repository.StudentRepository;
-
-@SpringBootApplication
-public class DemoApplication implements CommandLineRunner{
-  
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-  
-  @Autowired
-  private CourseRepository courseRepository;
-
-  @Autowired
-  private StudentRepository studentRepository;
-
-  public static void main(String[] args) {
-    SpringApplication.run(DemoApplication.class, args);
-  }
-
-  @Override
-  public void run(String... arg0) throws Exception {
-    //studentRepository.saveStudentWithPassport();
-    //repository.playWithEntityManager();
-    courseRepository.addReviewsForCourse();
-    
-  } 
-}
-```
----
-
-Modified Lines
-```
-    //studentRepository.saveStudentWithPassport();
-    courseRepository.addReviewsForCourse();
-    
-```
 /src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Course.java Modified
-#### Full File
-
 ```java
-package com.in28minutes.jpa.hibernate.demo.entity;
-
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
-@Entity
-@NamedQueries(value = { 
-    @NamedQuery(name = "query_get_all_courses", 
-        query = "Select  c  From Course c"),
-    @NamedQuery(name = "query_get_100_Step_courses", 
-    query = "Select  c  From Course c where name like '%100 Steps'") })
-
-public class Course {
-
-  @Id
-  @GeneratedValue
-  private Long id;
-
-  @Column(nullable = false)
-  private String name;
 
   @OneToMany(mappedBy="course")
   private List<Review> reviews = new ArrayList<>();
   
-  @UpdateTimestamp
-  private LocalDateTime lastUpdatedDate;
-
-  @CreationTimestamp
-  private LocalDateTime createdDate;
-
-  protected Course() {
-  }
-
-  public Course(String name) {
-    this.name = name;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  
-  public List<Review> getReviews() {
-    return reviews;
-  }
-
-  public void addReview(Review review) {
-    this.reviews.add(review);
-  }
-
-  public void removeReview(Review review) {
-    this.reviews.remove(review);
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  @Override
-  public String toString() {
-    return String.format("Course[%s]", name);
-  }
-}
 ```
----
+/src/main/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepository.java 
 
-Modified Lines
-```
-import java.util.ArrayList;
-import java.util.List;
-import javax.persistence.OneToMany;
-  @OneToMany(mappedBy="course")
-  private List<Review> reviews = new ArrayList<>();
-  
-  
-  public List<Review> getReviews() {
-    return reviews;
-  public void addReview(Review review) {
-    this.reviews.add(review);
-  public void removeReview(Review review) {
-    this.reviews.remove(review);
-```
-/src/main/java/com/in28minutes/jpa/hibernate/demo/entity/Review.java Modified
 #### Full File
 
 ```java
-package com.in28minutes.jpa.hibernate.demo.entity;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-
-@Entity
-public class Review {
-
-  @Id
-  @GeneratedValue
-  private Long id;
-
-  private String rating;
-
-  private String description;
-
-  @ManyToOne
-  private Course course;
-
-  protected Review() {
-  }
-
-  public Review(String rating, String description) {
-    this.rating = rating;
-    this.description = description;
-  }
-
-  public String getDescription() {
-    return description;
-  }
-
-  public void setDescription(String description) {
-    this.description = description;
-  }
-
-  public String getRating() {
-    return rating;
-  }
-
-  public void setRating(String rating) {
-    this.rating = rating;
-  }
-
-  public Course getCourse() {
-    return course;
-  }
-
-  public void setCourse(Course course) {
-    this.course = course;
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  @Override
-  public String toString() {
-    return String.format("Review[%s %s]", rating, description);
-  }
-
-}
-```
----
-
-Modified Lines
-```
-import javax.persistence.ManyToOne;
-  @ManyToOne
-  private Course course;
-  public Course getCourse() {
-    return course;
-  public void setCourse(Course course) {
-    this.course = course;
-```
-/src/main/java/com/in28minutes/jpa/hibernate/demo/repository/CourseRepository.java Modified
-#### Full File
-
-```java
-package com.in28minutes.jpa.hibernate.demo.repository;
-
-import javax.persistence.EntityManager;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.in28minutes.jpa.hibernate.demo.entity.Course;
-import com.in28minutes.jpa.hibernate.demo.entity.Review;
-
-@Repository
-@Transactional
-public class CourseRepository {
-
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
-  
-  @Autowired
-  EntityManager em;
-
-  public Course findById(Long id) {
-    return em.find(Course.class, id);
-  }
-
-  public Course save(Course course) {
-
-    if (course.getId() == null) {
-      em.persist(course);
-    } else {
-      em.merge(course);
-    }
-
-    return course;
-  }
-
-  public void deleteById(Long id) {
-    Course course = findById(id);
-    em.remove(course);
-  }
-
-  public void playWithEntityManager() {
-    Course course1 = new Course("Web Services in 100 Steps");
-    em.persist(course1);
-    
-    Course course2 = findById(10001L);
-    
-    course2.setName("JPA in 50 Steps - Updated");
-    
-  }
 
   public void addReviewsForCourse() {
     //get the course 10003
@@ -3255,29 +1370,8 @@ public class CourseRepository {
     em.persist(review1);
     em.persist(review2);
   }
-}
 ```
----
 
-Modified Lines
-```
-import com.in28minutes.jpa.hibernate.demo.entity.Review;
-  public void addReviewsForCourse() {
-    //get the course 10003
-    Course course = findById(10003L);
-    logger.info("course.getReviews() -> {}", course.getReviews());
-    //add 2 reviews to it
-    Review review1 = new Review("5", "Great Hands-on Stuff.");  
-    Review review2 = new Review("5", "Hatsoff.");
-    //setting the relationship
-    course.addReview(review1);
-    review1.setCourse(course);
-    course.addReview(review2);
-    review2.setCourse(course);
-    //save it to the database
-    em.persist(review1);
-    em.persist(review2);
-```
 /src/main/resources/data.sql 
 Modified Lines
 ```
@@ -3288,10 +1382,11 @@ values(50002,'4', 'Wonderful Course',10001);
 insert into review(id,rating,description,course_id)
 values(50003,'5', 'Awesome Course',10003);
 ```
+
 ####  Step 32 - ManyToOne Mapping - Generalizing Insert Reviews
 
-
 /src/main/java/com/in28minutes/jpa/hibernate/demo/DemoApplication.java Modified
+
 #### Full File
 
 ```java
