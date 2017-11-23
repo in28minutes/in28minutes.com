@@ -1,13 +1,11 @@
 ---
 layout:     post
-title:      Creating a REST Service with Spring Boot
+title:      Spring Boot For Beginners in 100 Steps
 date:       2017-10-11 12:31:19
 summary:    Understand and love the power of Spring Boot - All its features are illustrated developing a web application managing todos and a basic API for survey questionnaire. Also covers unit testing, mocking and integration testing.
 categories: Spring Boot
 permalink:  /spring-boot-for-beginners-and-experts
 ---
-
-Understand and love the power of Spring Boot - All its features are illustrated developing a web application managing todos and a basic API for survey questionnaire. Also covers unit testing, mocking and integration testing.
 
 Spring Boot has a lot of magic going for it. 
 
@@ -176,7 +174,7 @@ You will learn about
 
 #### Files List
 
-##pom.xml
+pom.xml
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -234,7 +232,7 @@ You will learn about
 </project>
 ```
 ---
-##src/main/java/com/in28minutes/springboot/web/SpringBootFirstWebApplication.java
+src/main/java/com/in28minutes/springboot/web/SpringBootFirstWebApplication.java
 
 ```java
 package com.in28minutes.springboot.web;
@@ -251,12 +249,12 @@ public class SpringBootFirstWebApplication {
 }
 ```
 ---
-##src/main/resources/application.properties
+src/main/resources/application.properties
 
 ```
 ```
 ---
-##src/test/java/com/in28minutes/springboot/web/SpringBootFirstWebApplicationTests.java
+src/test/java/com/in28minutes/springboot/web/SpringBootFirstWebApplicationTests.java
 
 ```java
 package com.in28minutes.springboot.web;
@@ -774,6 +772,7 @@ public class TodoService {
 
 #### What we will do:
 - Lets discuss about Architecture of web applications
+
 ## Step12.md
 
 #### What You Will Learn during this Step:
@@ -1047,7 +1046,9 @@ src/main/java/com/in28minutes/springboot/web/controller/TodoController.java Modi
 		return "redirect:/list-todos";
 	}
 ```
+
 ---
+
 src/main/webapp/WEB-INF/jsp/list-todos.jsp Modified
 New Lines
 ```
@@ -1055,6 +1056,7 @@ New Lines
 	${todos}.
 	<a href="/add-todo">Add a Todo</a> 
 ```
+
 src/main/webapp/WEB-INF/jsp/todo.jsp New
 
 ```
@@ -1076,7 +1078,7 @@ ADD Todo Page for ${name}
 
 </html>
 ```
----
+
 ## Step14.md
 
 #### What we will do:
@@ -1561,6 +1563,7 @@ src/main/java/com/in28minutes/springboot/web/controller/TodoController.java Modi
 				false);
 		return "redirect:/list-todos";
 	}
+```
 ---
 src/main/webapp/WEB-INF/jsp/list-todos.jsp Modified
 New Lines
@@ -1568,6 +1571,7 @@ New Lines
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 						<td><fmt:formatDate value="${todo.targetDate}" pattern="dd/MM/yyyy"/></td>
 ```
+
 src/main/webapp/WEB-INF/jsp/todo.jsp Modified
 New Snippets
 ```
@@ -3051,7 +3055,7 @@ You will learn about
 - If you are comfortable with Spring, try to create a few dependencies and see if are automatically auto-wired!
 
 #### Files List
-##pom.xml
+pom.xml
 ```
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -3086,7 +3090,7 @@ You will learn about
 	</build>
 </project>
 ```
-##src/main/java/com/in28minutes/springboot/Application.java
+src/main/java/com/in28minutes/springboot/Application.java
 ```
 package com.in28minutes.springboot;
 
