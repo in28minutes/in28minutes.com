@@ -605,7 +605,7 @@ foreign key (user_id) references user;
 
 ###  Step 01 - Initializing a RESTful Services Project with Spring Boot
 
-####### /pom.xml
+/pom.xml
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -713,7 +713,7 @@ foreign key (user_id) references user;
 ```
 ---
 
-####### /src/main/java/com/in28minutes/rest/webservices/restfulwebservices/RestfulWebServicesApplication.java
+/src/main/java/com/in28minutes/rest/webservices/restfulwebservices/RestfulWebServicesApplication.java
 
 ```java
 package com.in28minutes.rest.webservices.restfulwebservices;
@@ -731,13 +731,13 @@ public class RestfulWebServicesApplication {
 ```
 ---
 
-####### /src/main/resources/application.properties
+/src/main/resources/application.properties
 
 ```properties
 ```
 ---
 
-####### /src/test/java/com/in28minutes/rest/webservices/restfulwebservices/RestfulWebServicesApplicationTests.java
+/src/test/java/com/in28minutes/rest/webservices/restfulwebservices/RestfulWebServicesApplicationTests.java
 
 ```java
 package com.in28minutes.rest.webservices.restfulwebservices;
