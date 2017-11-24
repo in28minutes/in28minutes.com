@@ -1,10 +1,10 @@
 ---
 layout:     post
-title:      Creating a REST Service with Spring Boot
-date:       2017-01-30 12:31:19
-summary:    Setting up a basic example REST Service with Spring Boot. Its a cake walk. 
-categories: Spring Boot, REST Service
-permalink:  /creating-rest-service-with-spring-boot
+title:      Spring MVC Tutorial For Beginners 
+date:       2017-10-19 12:31:19
+summary:    In this course, you will learn the basics developing a Basic Todo Management Application using Spring MVC with Login and Logout functionalities.
+categories: Spring MVC, Spring
+permalink:  /spring-mvc-tutorial-for-beginners
 ---
 
 Developing your first Spring MVC Web Application is fun.
