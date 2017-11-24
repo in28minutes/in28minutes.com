@@ -63,7 +63,7 @@ In this part of the course, you will be using Spring (Dependency Management), Sp
 ### Step 03 - Define Request and Response XML Structure
 ### Step 04 - Define XML Schema Definition (XSD) for Request - GetCourseDetailsRequest
 
-####### /example-files/course-details.xsd
+##### /example-files/course-details.xsd
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -87,7 +87,7 @@ xmlns:tns="http://in28minutes.com/courses" elementFormDefault="qualified">
 ```
 ---
 
-####### /example-files/Request.xml
+##### /example-files/Request.xml
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -99,7 +99,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```
 ---
 
-####### /example-files/Response.xml
+##### /example-files/Response.xml
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -113,7 +113,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```
 ---
 
-####### /pom.xml
+##### /pom.xml
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -216,7 +216,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```
 ---
 
-####### /src/main/java/com/in28minutes/soap/webservices/soapcoursemanagement/SoapCourseManagementApplication.java
+##### /src/main/java/com/in28minutes/soap/webservices/soapcoursemanagement/SoapCourseManagementApplication.java
 
 ```java
 package com.in28minutes.soap.webservices.soapcoursemanagement;
@@ -234,13 +234,13 @@ public class SoapCourseManagementApplication {
 ```
 ---
 
-####### /src/main/resources/application.properties
+##### /src/main/resources/application.properties
 
 ```properties
 ```
 ---
 
-####### /src/test/java/com/in28minutes/soap/webservices/soapcoursemanagement/SoapCourseManagementApplicationTests.java
+##### /src/test/java/com/in28minutes/soap/webservices/soapcoursemanagement/SoapCourseManagementApplicationTests.java
 
 ```java
 package com.in28minutes.soap.webservices.soapcoursemanagement;
