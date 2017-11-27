@@ -104,14 +104,16 @@ Read about what we love, why we create courses and our beliefs - [The in28Minute
 
 ### Step 01 : Up and running with a Web Application in Tomcat
 
-In this step, we will quickly setup a running web application.
+In this step, we will quickly setup a running web application and run it in tomcat.
 
-> Tip : This is one of the few steps where you copy code in! We would want to ensure that you have a running web application without any mistakes.
+> Tip : This is one of the rare steps where we copy code in! We want to ensure that you have a running web application without any mistakes. We will understand every line of code in the next 2 steps.
 
-You can run the project using Run as > Maven build > tomcat7:run.
+Create a Simple Maven Project and copy the three files in.
 
 You can copy code from 
 - [Step 01 on Github Repository](https://github.com/in28minutes/JavaWebApplicationStepByStep/blob/master/Step01.md)
+
+You can run the project using Run as > Maven build > tomcat7:run.
 
 \pom.xml
 
@@ -217,16 +219,60 @@ public class LoginServlet extends HttpServlet {
 
 </web-app>
 ```
-Java Platform, Enterprise Edition (Java EE) JEE6
+### Trouble Shooting
 
-Servlet is a Java programming language class used to extend the capabilities of servers  that host applications accessed by means of a request-response programming model.
+Go to http://www.in28minutes.com/spring-boot-maven-eclipse-troubleshooting-guide-and-faq for any issues that you face!
+
+### Step 01 : Theory
+
+Let's quickly look at some of the important things, we had already configured in the practical part of Step 01.
+
+Maven Tomcat Plugin (configured in pom.xml) helps us to download Tomcat and run the web application in Tomcat. ```mvn tomcat7:run``` is enabled by this plugin.
+
+```
+<plugin>
+	<groupId>org.apache.tomcat.maven</groupId>
+	<artifactId>tomcat7-maven-plugin</artifactId>
+	<version>2.2</version>
+	<configuration>
+		<path>/</path>
+		<contextReloadable>true</contextReloadable>
+	</configuration>
+</plugin>
+```
 
 Notes
-- ```extends javax.servlet.http.HttpServlet``` - All servlets should extend HttpServlet class
-- ```@WebServlet(urlPatterns = "/login.do")``` - Provide the url pattern to access the servlet
-- ```doGet(HttpServletRequest request, HttpServletResponse response)``` - To handle the RequestMethod GET we need to implement doGet method.
+- ```<contextReloadable>true</contextReloadable>``` - Enables automatic reload when java or jsp files change without needing to restart the server
+- ```<path>/</path>``` - Setting an empty context root. So, the application can be directly accessed at http://localhost:8080 without a context root
 
-Configuring welcome-file-list in web.xml will ensure that url http://localhost:8080/ redirects to http://localhost:8080/login.do
+
+To create a servet, we need HttpServlet which is defined in Java EE Web API. We added a dependency in the pom.xml.
+
+```
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-web-api</artifactId>
+			<version>6.0</version>
+			<scope>provided</scope>
+		</dependency>
+```
+
+
+> Servlet takes in a request and gives a response as output. HTTP is the protocol of the internet. Thats how all web applications work. For creating web applications, we extend HttpServlet which takes a HttpRequest as input and give HttpResponse as output.
+
+#### How do web applications work?
+
+Once you have everything setup and running you would see the following page render at http://localhost:8080
+JSP-Servlets-Step-1-Theory-1
+
+How does it really work? Let's take a quick look at what happens in the background.
+
+When you type in  in the browser url, the browser creates a HTTP GET Request.  Recommended Reading - [GET vs POST](https://www.w3schools.com/tags/ref_httpmethods.asp)
+JSP-Servlets-Step-1-Theory-2
+
+The HTTP GET Request is received by the web application deployed on Tomcat server. 
+
+We have configured a welcome-file of login.do.
 
 ```xml
 <welcome-file-list>
@@ -234,24 +280,67 @@ Configuring welcome-file-list in web.xml will ensure that url http://localhost:8
 </welcome-file-list>
 ```
 
+urlPattern of LoginServlet is "/login.do". We defined a ```doGet(HttpServletRequest request, HttpServletResponse response)``` method in LoginServlet. The doGet method handles the GET requests to the url pattern "/login.do". 
+
+```java
+@WebServlet(urlPatterns = "/login.do")
+public class LoginServlet extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+```
+
+In the doGet method, we are writing HTML content into the response.
+
+```
+PrintWriter out = response.getWriter();
+out.println("<html>");
+out.println("<head>");
+out.println("<title>Yahoo!!!!!!!!</title>");
+out.println("</head>");
+out.println("<body>");
+out.println("My First Servlet");
+out.println("</body>");
+out.println("</html>");
+```
+
+This response is sent out to the browser.
+
+JSP-Servlets-Step-1-Theory-3
+
+The browser understands the HTML and renders a beautiful page.
+
+#### Notes
+
+Java Platform, Enterprise Edition (Java EE) JEE6
+
+Servlet is a Java programming language class used to extend the capabilities of servers  that host applications accessed by means of a request-response programming model.
+
+```java
+@WebServlet(urlPatterns = "/login.do")
+public class LoginServlet extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+```
+
+Servlet
+- ```extends javax.servlet.http.HttpServlet``` - All servlets should extend HttpServlet class
+- ```@WebServlet(urlPatterns = "/login.do")``` - Provide the url pattern to access the servlet
+- ```doGet(HttpServletRequest request, HttpServletResponse response)``` - To handle the RequestMethod GET we need to implement doGet method.
+
+
 ### Step 02 : First JSP
 
 [Complete code](https://github.com/in28minutes/JavaWebApplicationStepByStep/blob/master/Step02.md)
 
-#### Notes
-- Create LoginServlet again
-- Redirect to a view - JSP
+#### What we will learn
+- How to create a JSP?
+- How to redirect to a JSP?
 
 #### Code Snippets and Examples
 
-Redirect to a view - JSP
-
-\src\main\java\webapp\LoginServlet.java
-```java
-request
- .getRequestDispatcher("/WEB-INF/views/login.jsp")
- .forward(request, response);
-```
+Creating a JSP
 
 \src\main\webapp\WEB-INF\views\login.jsp
 ```jsp
@@ -265,18 +354,27 @@ My First JSP!!!
 </html>
 ```
 
+Redirect to a view - JSP
 
+\src\main\java\webapp\LoginServlet.java
+```java
+request
+ .getRequestDispatcher("/WEB-INF/views/login.jsp")
+ .forward(request, response);
+```
 
 ### Step 03 : Adding a Get Parameter name
 
 [Complete code](https://github.com/in28minutes/JavaWebApplicationStepByStep/blob/master/Step03.md)
 
-#### Notes
-- Passing a Request Parameter Name
+#### What we will learn
+- Passing a Request Parameter "name"
 
 #### Code Snippets and Examples
 
-We read the request parameter and set it as a request attribute. Request attributes can be accessed from the view (jsp).
+We read the parameter from the HTTP Request. 
+
+We would want to show the value on the JSP. We set it as a request attribute.  Request attributes can be accessed from the view (jsp).
 
 \src\main\java\webapp\LoginServlet.java
 
