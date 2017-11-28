@@ -1,8 +1,8 @@
 # Site settings
-title:       Best Video Courses
+title: Java and Spring Online Courses
 email:       
-author:      Ranga Karanam
-description: "Best Video Courses from a Udemy Top Instructor. Courses on Spring, Spring Boot, Spring Cloud, Web Services and Microservices."
+author: Ranga Karanam
+description: "Best Selling Online Courses from Udemy Top Instructor on Spring, Spring Boot, Spring Cloud, Web Services and Microservices."
 baseurl:     ""
 url:         "http://www.in28minutes.com"
 date_format: "%b %-d, %Y"

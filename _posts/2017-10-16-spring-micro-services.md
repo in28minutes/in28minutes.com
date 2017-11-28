@@ -1,17 +1,19 @@
 ---
 layout:     post
-title:      Microservices and RESTful web services with Spring, Spring Boot and Spring Cloud for Beginners
+title:      Microservices and RESTful Web Services with Spring, Spring Boot and Spring Cloud for Beginners
 date:       2017-10-16 12:31:19
 summary:    Learn how to create awesome Microservices and RESTful web services with Spring, Spring Boot and Spring Cloud. 
 categories: Spring Boot, REST Service, Spring Cloud
 permalink:  /microservices-and-restful-services-with-spring-boot-for-beginners
 ---
 
-Learn how to create awesome Microservices and RESTful web services with Spring and Spring Boot.
+Learn how to create awesome Microservices and RESTful Web Services with Spring and Spring Boot.
 
 Developing RESTful web services is fun. The combination of Spring Boot, Spring Web MVC, Spring Web Services and JPA makes it even more fun. And its even more fun to create Microservices.
 
 There are two parts to this course - RESTful web services and Microservices
+
+### Part 1 - RESTful Web Services
 
 Architectures are moving towards microservices. 
 
@@ -21,12 +23,14 @@ In the first part of the course, you will learn the basics of RESTful web servic
 
 In this part of the course, you will be using Spring (Dependency Management), Spring MVC (or Spring REST), Spring Boot, Spring Security (Authentication and Authorization), Spring Boot Actuator (Monitoring), Swagger (Documentation), Maven (dependencies management), Eclipse (IDE), Postman (REST Services Client) and Tomcat Embedded Web Server. We will help you set up each one of these.
 
+### Part 2 - Microservices
+
 In the second part of the course, you will learn the basics of Microservices. You will understand how to implement microservices using Spring Cloud.
 
 In this part of the course, you will learn to establish communication between microservices, enable load balancing, scaling up and down of microservices. You will also learn to centralize configuration of microservices with Spring Cloud Config Server. You will implement Eureka Naming Server and Distributed tracing with Spring Cloud Sleuth and Zipkin. You will create fault toleranct microservices with Zipkin
 
 
-### You will learn
+## You will learn
 - You will be able to develop and design RESTful web services
 - You will setup Centralized Microservice Configuration with Spring Cloud Config Server
 - You will understand how to implement Exception Handling, Validation, HATEOAS and filtering for RESTful Web Services.

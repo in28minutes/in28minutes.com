@@ -4415,7 +4415,9 @@ basic:
 ```
 
 #### Exercises
-- Understand Type Safety
+
+Understand Type Safety
+
 ```
 ***************************
 APPLICATION FAILED TO START
@@ -4433,11 +4435,13 @@ Binding to target com.in28minutes.springboot.configuration.BasicConfiguration@39
 Action:
 
 Update your application's configuration
+
 ```
 
 #### Files List
 src/main/java/com/in28minutes/springboot/WelcomeController.java Modified
 New Lines
+
 ```
 import java.util.HashMap;
 import java.util.Map;
@@ -4451,6 +4455,7 @@ import com.in28minutes.springboot.configuration.BasicConfiguration;
 		map.put("value", configuration.isValue());
 		return map;
 ```
+
 ```
 package com.in28minutes.springboot;
 
