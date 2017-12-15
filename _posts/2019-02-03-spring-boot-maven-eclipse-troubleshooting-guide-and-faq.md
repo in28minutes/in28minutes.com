@@ -1115,7 +1115,7 @@ Long Answer:
 
 web.xml is a default Web Application configuration descriptor, it's a core part of any WAR (Web application ARchive) and it is not really related to Spring, it's more like a Web App standard. You usually provide all the servlet related mappings/configuration in this file, then this file is picked up and used by the Web Server (like Tomcat) to set up your application. Again, it has little to do with Spring, you can map any kind of servlet in there not necessarily Springs DispatcherServlet.
 
-todo-servlet.xml is a Spring specific configuration file, also referred to as an Application Context. It's a core of Springs IoC (Inversion of Control) module and contains stuff like Spring bean declarations, annotation-enabling configuration, etc. Without it your Spring application just wouldn't work (unless you're using Spring Bootstrap, but that's a different story).
+todo-servlet.xml is a Spring specific configuration file used to launch up the Application Context.  Application Context is the core spring component implementing IoC (Inversion of Control). The xml contains Spring bean declarations, annotation-enabling configuration, etc.
 
 So basically, web.xml defines the servlet and specifies which Spring application context file should be associated with this servlet (you can have different servlets use different app contexts), and the Spring application context defines the concrete configuration for this servlet and it's environment, e.g. which ViewResolver should it use and with what prefixes/suffixes.
 

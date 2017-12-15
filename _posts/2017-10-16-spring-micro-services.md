@@ -1048,35 +1048,35 @@ public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExce
 
   @ExceptionHandler(Exception.class)
   public final ResponseEntity<Object> handleAllExceptions(Exception ex, WebRequest request) {
-    ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), ex.getMessage(),
+    ErrorDetails errorDetails = new ErrorDetails(new Date(), ex.getMessage(),
         request.getDescription(false));
-    return new ResponseEntity(exceptionResponse, HttpStatus.INTERNAL_SERVER_ERROR);
+    return new ResponseEntity(errorDetails, HttpStatus.INTERNAL_SERVER_ERROR);
   }
 
   @ExceptionHandler(UserNotFoundException.class)
   public final ResponseEntity<Object> handleUserNotFoundException(UserNotFoundException ex, WebRequest request) {
-    ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), ex.getMessage(),
+    ErrorDetails errorDetails = new ErrorDetails(new Date(), ex.getMessage(),
         request.getDescription(false));
-    return new ResponseEntity(exceptionResponse, HttpStatus.NOT_FOUND);
+    return new ResponseEntity(errorDetails, HttpStatus.NOT_FOUND);
   }
 
 }
 ```
 ---
 
-##### /src/main/java/com/in28minutes/rest/webservices/restfulwebservices/exception/ExceptionResponse.java New
+##### /src/main/java/com/in28minutes/rest/webservices/restfulwebservices/exception/ErrorDetails.java New
 
 ```java
 package com.in28minutes.rest.webservices.restfulwebservices.exception;
 
 import java.util.Date;
 
-public class ExceptionResponse {
+public class ErrorDetails {
   private Date timestamp;
   private String message;
   private String details;
 
-  public ExceptionResponse(Date timestamp, String message, String details) {
+  public ErrorDetails(Date timestamp, String message, String details) {
     super();
     this.timestamp = timestamp;
     this.message = message;
@@ -1185,9 +1185,9 @@ New Lines
 @Override
 protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
     HttpHeaders headers, HttpStatus status, WebRequest request) {
-  ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), "Validation Failed",
+  ErrorDetails errorDetails = new ErrorDetails(new Date(), "Validation Failed",
       ex.getBindingResult().toString());
-  return new ResponseEntity(exceptionResponse, HttpStatus.BAD_REQUEST);
+  return new ResponseEntity(errorDetails, HttpStatus.BAD_REQUEST);
 } 
 ```
 
@@ -4371,42 +4371,42 @@ public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExce
 
   @ExceptionHandler(Exception.class)
   public final ResponseEntity<Object> handleAllExceptions(Exception ex, WebRequest request) {
-    ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), ex.getMessage(),
+    ErrorDetails errorDetails = new ErrorDetails(new Date(), ex.getMessage(),
         request.getDescription(false));
-    return new ResponseEntity(exceptionResponse, HttpStatus.INTERNAL_SERVER_ERROR);
+    return new ResponseEntity(errorDetails, HttpStatus.INTERNAL_SERVER_ERROR);
   }
 
   @ExceptionHandler(UserNotFoundException.class)
   public final ResponseEntity<Object> handleUserNotFoundException(UserNotFoundException ex, WebRequest request) {
-    ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), ex.getMessage(),
+    ErrorDetails errorDetails = new ErrorDetails(new Date(), ex.getMessage(),
         request.getDescription(false));
-    return new ResponseEntity(exceptionResponse, HttpStatus.NOT_FOUND);
+    return new ResponseEntity(errorDetails, HttpStatus.NOT_FOUND);
   }
   
   @Override
   protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
       HttpHeaders headers, HttpStatus status, WebRequest request) {
-    ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), "Validation Failed",
+    ErrorDetails errorDetails = new ErrorDetails(new Date(), "Validation Failed",
         ex.getBindingResult().toString());
-    return new ResponseEntity(exceptionResponse, HttpStatus.BAD_REQUEST);
+    return new ResponseEntity(errorDetails, HttpStatus.BAD_REQUEST);
   } 
 }
 ```
 ---
 
-##### /src/main/java/com/in28minutes/rest/webservices/restfulwebservices/exception/ExceptionResponse.java
+##### /src/main/java/com/in28minutes/rest/webservices/restfulwebservices/exception/ErrorDetails.java
 
 ```java
 package com.in28minutes.rest.webservices.restfulwebservices.exception;
 
 import java.util.Date;
 
-public class ExceptionResponse {
+public class ErrorDetails {
   private Date timestamp;
   private String message;
   private String details;
 
-  public ExceptionResponse(Date timestamp, String message, String details) {
+  public ErrorDetails(Date timestamp, String message, String details) {
     super();
     this.timestamp = timestamp;
     this.message = message;

@@ -14,7 +14,7 @@ Mockito is the most popular mocking framework in Java.
 
 ### Pre-requisites 
 - Java & Eclipse - https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
-- JUnit - https://www.youtube.com/watch?v=AN4NCnc4eZg
+- JUnit - https://courses.in28minutes.com/p/junit-tutorial-for-beginners
 
 ### IDE Configuration
 

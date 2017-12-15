@@ -13,15 +13,18 @@ Developing applications with it is cool and fun.
 
 Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can “just run”. Most Spring Boot applications need very little Spring configuration.
 
-In this course, you will learn the cool things about Spring Boot and Spring Boot Starter Projects. We will develop 
+> In this course, you will learn the cool things about Spring Boot and Spring Boot Starter Projects. 
+
+We will develop 
 - A web application to manage your todos
 - A basic REST Service to manage questions of a survey
 
-You will learn about Spring Boot step by step - in more than 90 steps. This course would be a perfect first step as an introduction to Spring Boot.
+This course would be a perfect first step as an introduction to Spring Boot.
+
+> You will learn about Spring Boot step by step - in more than 90 steps. 
 
 Here is a quick overview of different sections of the course:
 - Introduction to Spring in 10 Steps
-- Introduction to the power of Spring Boot in 10 Steps
 - Develop a Todo Management Web Application in 30 Steps
 - Introduction to Unit Testing with JUnit in 5 Steps 
 - Introduction to Mocking with Mockito in 5 Steps
@@ -51,12 +54,6 @@ You will learn about
 - Spring Boot Actuator
 - Spring Security
 - Spring Boot Developer Tools and LiveReload
-
-### Goals
-- Provide quick start for projects with Spring.
-- Be opinionated but provide options.
-- Provide a range of non-functional features that are common to large classes of projects (e.g. embedded servers, security, metrics, health checks, externalized configuration).
-- Absolutely no code generation and no requirement for XML configuration.
 
 ## Installing Tools
 - Installation Video : https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
@@ -286,6 +283,7 @@ public class SpringBootFirstWebApplicationTests {
  - Browser sends Http Request to Web Server
  - Code in Web Server => Input:HttpRequest, Output: HttpResponse
  - Web Server responds with Http Response
+
 src/main/java/com/in28minutes/springboot/web/controller/LoginController.java New
 
 ```java
@@ -6721,7 +6719,7 @@ public class SurveyControllerIT {
 - MockMvc framework
 - @MockBean
 
-> Programming Tip - Become an expert at Mockito - https://www.youtube.com/watch?v=d2KwvXQgQx4
+> Programming Tip - Become an expert at Mockito - https://courses.in28minutes.com/p/mockito-for-beginner-in-5-steps
 
 
 #### Exercises

@@ -19,6 +19,8 @@ Spring Framework remains as popular today as it was when I first used it 12 year
 - Overview of Spring Modules
 - Overview of Spring Projects
 
+### Section Introduction
+
 Welcome to this section where we would be introducing the Spring Framework to you. In this section, we will help you to set up a simple Spring project. We will help you understand the concepts of tight coupling, loose coupling, dependency injection, inversion of control and auto wiring. We will also give you a high level picture on the Spring world. 
 - What are Spring Modules? 
 - What are Spring projects? 
@@ -207,7 +209,7 @@ What we're looking at are seven of the Spring projects that are just touching th
 ![Image](/images/SpringIn10Steps-SpringPopularity.png "Spring In 10 Steps - Spring Popularity") 
 Spring is one of the very few frameworks that remains as popular today as it was 15 years back. 
 
-How did playing maintain its popularity through these one and half decades? 
+How did Spring maintain its popularity through these one and half decades? 
 - Unit Testing - The most important reason Spring is so popular is because it enables writing testable code. The core feature of Spring is dependency injection. And if we use Dependency Injection properly then we would be able to write unit tests for our code very easily. Spring has a really good integration frameworks like Junit and Mockito and it enables us to write good unit tests very quickly. 
 - Zero Plumbing Code - Zero exception handling code because Spring makes all its exceptions unchecked. 
 - Architectural Flexibility - Spring is very modular. There are Spring modules and Spring projects for very specific purposes. And I can use a specific Spring module without using all others. So even though Spring has a really good MVC framework - Spring MVC - it still offers good support with all the other MVC frameworks like Struts. Even though Spring has its own REST support through Spring MVC, it offers good support with JAX-RS and Jersey as well. If I use Spring in my project my options are not really restricted. 
