@@ -1802,7 +1802,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Autowired
 	public void configureGlobalSecurity(AuthenticationManagerBuilder auth)
 			throws Exception {
-		auth.inMemoryAuthentication().withUser("in28Minutes").password("dummy")
+		auth.inMemoryAuthentication().passwordEncoder(org.springframework.security.crypto.password.NoOpPasswordEncoder.getInstance()).withUser("in28Minutes").password("dummy")
 				.roles("USER", "ADMIN");
 	}
 
@@ -1856,7 +1856,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 	@Autowired
     public void configureGlobalSecurity(AuthenticationManagerBuilder auth)
             throws Exception {
-        auth.inMemoryAuthentication().withUser("in28Minutes").password("dummy")
+        auth.inMemoryAuthentication().passwordEncoder(org.springframework.security.crypto.password.NoOpPasswordEncoder.getInstance()).withUser("in28Minutes").password("dummy")
                 .roles("USER", "ADMIN");
     }
 	
@@ -2580,7 +2580,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 	@Autowired
     public void configureGlobalSecurity(AuthenticationManagerBuilder auth)
             throws Exception {
-        auth.inMemoryAuthentication().withUser("in28Minutes").password("dummy")
+        auth.inMemoryAuthentication().passwordEncoder(org.springframework.security.crypto.password.NoOpPasswordEncoder.getInstance()).withUser("in28Minutes").password("dummy")
                 .roles("USER", "ADMIN");
     }
 	
@@ -2893,7 +2893,7 @@ public class SpringBootFirstWebApplicationTests {
 ### /pom.xml Modified
 New Lines
 ```
-		<version>2.0.0.M3</version>
+		<version>2.0.0.RELEASE</version>
 ```
 ### /src/main/java/com/in28minutes/springboot/web/controller/TodoController.java Modified
 New Lines
@@ -6890,7 +6890,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	// Authentication : User --> Roles
 	protected void configure(AuthenticationManagerBuilder auth)
 			throws Exception {
-		auth.inMemoryAuthentication().withUser("user1").password("secret1")
+		auth.inMemoryAuthentication().passwordEncoder(org.springframework.security.crypto.password.NoOpPasswordEncoder.getInstance()).withUser("user1").password("secret1")
 				.roles("USER").and().withUser("admin1").password("secret1")
 				.roles("USER", "ADMIN");
 	}
@@ -7033,10 +7033,10 @@ src/test/java/com/in28minutes/springboot/controller/SurveyControllerTest.java Mo
 			<scope>runtime</scope>
 		</dependency>
 
-		<dependency>
+		<!--<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
+		</dependency>-->
 
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -7451,7 +7451,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 	@Autowired
     public void configureGlobalSecurity(AuthenticationManagerBuilder auth)
             throws Exception {
-        auth.inMemoryAuthentication().withUser("in28Minutes").password("dummy")
+        auth.inMemoryAuthentication().passwordEncoder(org.springframework.security.crypto.password.NoOpPasswordEncoder.getInstance()).withUser("in28Minutes").password("dummy")
                 .roles("USER", "ADMIN");
     }
 	
@@ -8256,7 +8256,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
   // Authentication : User --> Roles
   protected void configure(AuthenticationManagerBuilder auth)
       throws Exception {
-    auth.inMemoryAuthentication().withUser("user1").password("secret1")
+    auth.inMemoryAuthentication().passwordEncoder(org.springframework.security.crypto.password.NoOpPasswordEncoder.getInstance()).withUser("user1").password("secret1")
         .roles("USER").and().withUser("admin1").password("secret1")
         .roles("USER", "ADMIN");
   }
