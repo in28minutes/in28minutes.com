@@ -1412,18 +1412,17 @@ public class CourseNotFoundException extends RuntimeException {
 - http://server/doThis
 ---
 #### Level 1
-##### Expose Resources with proper URI
-- http://server/accounts
-- http://server/accounts/10
-
-> Improper use of HTTP Methods
+- Expose Resources with proper URI
+	- http://server/accounts
+	- http://server/accounts/10
+- Improper use of HTTP Methods
 ---
 #### Level 2
-##### Level 1 + HTTP Methods
+- Level 1 + HTTP Methods
 ---
 #### Level 3
-##### Level 2 + HATEOAS
-###### Data + Next Possible Actions
+- Level 2 + HATEOAS
+	- Data + Next Possible Actions
 ---
 #### Best Practices in RESTful Design
 - Consumer First
