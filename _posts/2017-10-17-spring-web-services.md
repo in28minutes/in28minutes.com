@@ -1319,8 +1319,11 @@ public class CourseNotFoundException extends RuntimeException {
 > REST is a style of software architecture for distributed hypermedia systems
 
 #### Make best use of HTTP
+
 ![Image](/images/REST_Block_Structure.png)
+
 ![Image](/images/Web_Service_Browser_Server__Interaction.png)
+
 #### Key abstraction - Resource
 - A resource has an URI (Uniform Resource Identifier)
  - /users/Ranga/todos/1
@@ -1330,11 +1333,13 @@ public class CourseNotFoundException extends RuntimeException {
  - XML
  - HTML
  - JSON
+
 ##### Example
 - Create a User - POST    /users
 - Delete a User - DELETE  /users/1
 - Get all Users - GET     /users
 - Get one Users - GET     /users/1 
+
 #### REST
   - Data Exchange Format
   	- No Restriction. JSON is popular
@@ -1342,13 +1347,14 @@ public class CourseNotFoundException extends RuntimeException {
     - Only HTTP
   - Service Definition
     - No Standard. WADL/Swagger/...
---- 
+
 #### REST vs SOAP
 - Restrictions vs Architectural Approach
 - Data Exchange Format
 - Service Definition
 - Transport
 - Ease of implementation
+
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
     <SOAP-ENV:Header/>
@@ -1359,6 +1365,7 @@ public class CourseNotFoundException extends RuntimeException {
     </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
+
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
     <SOAP-ENV:Header/>
@@ -1373,22 +1380,29 @@ public class CourseNotFoundException extends RuntimeException {
     </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
+
 ### Richardson Maturity Model
+
 #### Level 0
+
 ##### Expose SOAP web services in REST style
 - http://server/getPosts
 - http://server/deletePosts
 - http://server/doThis
+
 #### Level 1
 - Expose Resources with proper URI
 	- http://server/accounts
 	- http://server/accounts/10
 - Improper use of HTTP Methods
+
 #### Level 2
 - Level 1 + HTTP Methods
+
 #### Level 3
 - Level 2 + HATEOAS
 	- Data + Next Possible Actions
+
 #### Best Practices in RESTful Design
 - Consumer First
 - Make best use of HTTP
