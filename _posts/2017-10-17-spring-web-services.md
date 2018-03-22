@@ -79,7 +79,6 @@ In this part of the course, you will be using Spring (Dependency Management), Sp
 
 > Service delivered over the web?
 
----
 ![Image](/images/Web_Services_Web_Application_To_Manage_Todos.png)
 ---
 > Is the Todo Management Application a Web Service?
