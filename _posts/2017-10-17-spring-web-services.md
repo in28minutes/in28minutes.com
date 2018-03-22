@@ -76,7 +76,9 @@ In this part of the course, you will be using Spring (Dependency Management), Sp
 ## Introduction to Web Services
 
 ### Web Service
+
 > Service delivered over the web?
+
 ---
 ![Image](/images/Web_Services_Web_Application_To_Manage_Todos.png)
 ---
