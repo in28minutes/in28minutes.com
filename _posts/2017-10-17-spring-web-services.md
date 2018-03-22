@@ -1,11 +1,9 @@
----
 layout:     post
 title:      SOAP and RESTful Web Services with Spring Boot and Hibernate 
 date:       2017-10-17 12:31:19
 summary:    Developing SOAP and RESTful Web Services is fun. The combination of Spring Boot, Spring Web MVC, Spring Web Services and JPA makes it even more fun. There are two parts to this course - RESTful web services and SOAP Web Services.
 categories: Spring Boot, REST Service, RESTful web service, SOAP Web Service
 permalink:  /soap-and-restful-web-services-with-spring-boot-and-jpa
----
 
 Learn how to create awesome SOAP and RESTful web services with Spring and Spring Boot.
 
@@ -79,69 +77,59 @@ In this part of the course, you will be using Spring (Dependency Management), Sp
 
 > Service delivered over the web?
 
----
 ![Image](/images/Web_Services_Web_Application_To_Manage_Todos.png)
----
 
 > Is the Todo Management Application a Web Service?
 
 - It delivers HTML output - Not consumable by other applications.
----
 ![Image](/images/Web_Services_Application_Layers.png)
----
+
 - Can I reuse the Business Layer by creating a JAR?
   - Not Platform independent
   - Communication of Changes
   - Managing Dependencies - like Database
----
+
 
 > How can I make my Todo application consumable by other applications?
 
----
 
 > That where we get into the concept of a web service!
 
----
 ![Image](/images/Web_Service_Multiple_Application_Interaction.png)
----
 ![Image](/images/Web_Service_Single_Application_Interaction.png)
----
 ![Image](/images/Web_Service_Basic_Interaction.png)
----
 
 #### Web Service - W3C definition
 
 > Software system designed to support interoperable machine-to-machine interaction over a network.
----
+
+
 #### 3 Keys
+
 - Designed for machine-to-machine (or application-to-application) interaction
 - Should be interoperable - Not platform dependent
 - Should allow communication over a network
----
+
 #### How?
----
 
 > How does data exchange between applications take place?
 
----
 ![Image](/images/Web_Service_Z_ApplicationA_WebService.png)
----
 ![Image](/images/Web_Service_Z_ApplicationA_WebService_Request_Response.png)
----
 
 > How can we make web services platform independent?
 
----
 ![Image](/images/Web_Service_Z_PlatformIndependence.png)
----
+
 #### XML
 ```xml
         <getCourseDetailsRequest>
             <id>Course1</id>
         </getCourseDetailsRequest>
 ```
----
+
 #### JSON
+
 ```json
 [
   {
@@ -156,59 +144,52 @@ In this part of the course, you will be using Spring (Dependency Management), Sp
   }
 ]
 ```
----
 
 > How does the Application A know the format of Request and Response?
 
----
 ![Image](/images/Web_Service_Service_Definition.png)
----
 
 > How does Application A and Web Service convert its internal data to (XML or JSON)?
 
----
 ![Image](/images/Web_Service_Z_ApplicationA_WebService_Request_Response.png)
----
+
 #### Key Terminology
 - Request and  Response
 - Message Exchange Format
   - XML and JSON
----
+
 #### Key Terminology
 - Service Provider or Server
 - Service Consumer or Client
 - Service Definition
----
+
 #### Key Terminology
 - Transport
   - HTTP and MQ
----
+
 ![Image](/images/soapoverhttp.png)
----
+
 ![Image](/images/soapovermq.png)
----
+
 ### Web Service Groups
+
 - SOAP-based
 - REST-styled
----
 
 > SOAP and REST are not really comparable. 
 
----
 #### SOAP
----
+
 ##### SOAP?
+
 ![Image](/images/Web_Service_Basic_Interaction_SOAP.png)
 ```xml
         <getCourseDetailsRequest>
             <id>Course1</id>
         </getCourseDetailsRequest>
 ```
----
 ![Image](/images/Web_Service_SOAP-Envelope.svg.png)
----
 ![Image](/images/Web_Service_Basic_Interaction_SOAP_2.png)
----
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
     <SOAP-ENV:Header/>
@@ -223,17 +204,17 @@ In this part of the course, you will be using Spring (Dependency Management), Sp
     </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
----
+
 ##### SOAP
-  - Format
-  	- SOAP XML Request
-  	- SOAP XML Response
-  - Transport
-    - SOAP over MQ
-    - SOAP over HTTP
-  - Service Definition
-    - WSDL 
----
+- Format
+	- SOAP XML Request
+	- SOAP XML Response
+- Transport
+- SOAP over MQ
+- SOAP over HTTP
+- Service Definition
+- WSDL 
+
 
 ## SOAP Web Services with Spring and Spring Boot
 
@@ -315,7 +296,6 @@ Creating a Spring Project with Spring Initializr is a cake walk.
 	</build>
 </project>
 ```
----
 
 ##### /src/main/java/com/in28minutes/soap/webservices/soapcoursemanagement/SoapCourseManagementApplication.java
 
@@ -333,13 +313,11 @@ public class SoapCourseManagementApplication {
 	}
 }
 ```
----
 
 ##### /src/main/resources/application.properties
 
 ```properties
 ```
----
 
 ##### /src/test/java/com/in28minutes/soap/webservices/soapcoursemanagement/SoapCourseManagementApplicationTests.java
 
@@ -361,7 +339,6 @@ public class SoapCourseManagementApplicationTests {
 
 }
 ```
----
 
 
 ### Step 02 - Overview of creating SOAP Web Service using Contract First Approach
@@ -380,7 +357,6 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<id>123</id> <!-- numbers  -->
 </GetCourseDetailsRequest>
 ```
----
 
 ##### /example-files/Response.xml
 
@@ -394,7 +370,6 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	</CourseDetails>
 </GetCourseDetailsResponse>
 ```
----
 
 ### Step 04 - Define XML Schema Definition (XSD) for Request - GetCourseDetailsRequest
 
@@ -420,7 +395,6 @@ xmlns:tns="http://in28minutes.com/courses" elementFormDefault="qualified">
 </GetCourseDetailsRequest>
  -->
 ```
----
 
 ### Step 05 - Define XML Schema Definition (XSD) for Respone - GetCourseDetailsResponse
 
@@ -575,7 +549,6 @@ public class CourseDetailsEndpoint {
 
 }
 ```
----
 
 ##### /src/main/resources/course-details.xsd New
 
@@ -730,7 +703,6 @@ public class CourseDetailsEndpoint {
 
 }
 ```
----
 
 ##### /src/main/java/com/in28minutes/soap/webservices/soapcoursemanagement/soap/bean/Course.java New
 
@@ -781,7 +753,6 @@ public class Course {
 
 }
 ```
----
 
 ##### /src/main/java/com/in28minutes/soap/webservices/soapcoursemanagement/soap/service/CourseDetailsService.java New
 
@@ -844,7 +815,6 @@ public class CourseDetailsService {
 	// updating course & new course
 }
 ```
----
 
 ### Step 13 - Implementing SOAP Web Service for GetAllCourseDetailsRequest
 
@@ -912,7 +882,6 @@ public class CourseDetailsEndpoint {
 
 }
 ```
----
 
 ##### /src/main/resources/course-details.xsd Modified
 New Lines
@@ -938,15 +907,10 @@ New Lines
 ```
 
 ### Step 14 - Quick introduction to different parts of a WSDL
----
 ![Image](/images/Web_Services_WSDL_HighLevel.png)
----
 ![Image](/images/Web_Services_WSDL_LowLevel.png)
----
 ![Image](/images/SOAP_WEB_SERVICE_Initial_Setup_Overview.png)
----
 ![Image](/images/SOAPWebServiceClientAndServiceProvider.png)
----
 
 ### Step 15 - Implementing SOAP Web Service for DeleteCourseDetailsRequest
 
@@ -969,7 +933,6 @@ public DeleteCourseDetailsResponse deleteCourseDetailsRequest(
 }
 
 ```
----
 
 ##### /src/main/resources/course-details.xsd Modified
 New Lines
@@ -1028,7 +991,6 @@ New Lines
 		return com.in28minutes.courses.Status.SUCCESS;
 	}
 ```
----
 
 ##### /src/main/java/com/in28minutes/soap/webservices/soapcoursemanagement/soap/exception/CourseNotFoundException.java New
 
@@ -1050,7 +1012,6 @@ public class CourseNotFoundException extends RuntimeException {
 
 }
 ```
----
 
 ##### /src/main/java/com/in28minutes/soap/webservices/soapcoursemanagement/soap/service/CourseDetailsService.java Modified
 ```java
@@ -1072,7 +1033,6 @@ public class CourseNotFoundException extends RuntimeException {
 	}
 
 ```
----
 
 ##### /src/main/resources/course-details.xsd Modified
 New Lines
@@ -1192,7 +1152,6 @@ New Lines
 	}
 
 ```
----
 
 ##### /src/main/java/com/in28minutes/soap/webservices/soapcoursemanagement/soap/exception/CourseNotFoundException.java Modified
 ```java
@@ -1200,7 +1159,6 @@ New Lines
 public class CourseNotFoundException extends RuntimeException {
 
 ```
----
 
 ##### /src/main/resources/course-details.xsd Modified
 ```
@@ -1283,7 +1241,6 @@ public class CourseNotFoundException extends RuntimeException {
 		passwordDigestRequired="false" nonceRequired="false" />
 </xwss:SecurityConfiguration>
 ```
----
 
 ### Example Requests and Responses
 
@@ -1306,7 +1263,6 @@ public class CourseNotFoundException extends RuntimeException {
 	</Body>
 </Envelope>
 ```
----
 
 ##### /example-files/Request.xml
 
@@ -1319,7 +1275,6 @@ public class CourseNotFoundException extends RuntimeException {
 	</Body>
 </Envelope>
 ```
----
 
 ##### /example-files/Response-Fault.xml
 
@@ -1334,7 +1289,6 @@ public class CourseNotFoundException extends RuntimeException {
 	</SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
----
 
 ##### /example-files/Response.xml
 
@@ -1355,20 +1309,15 @@ public class CourseNotFoundException extends RuntimeException {
 
 
 ### REST
----
 
 > REpresentational State Transfer
 
----
 
 > REST is a style of software architecture for distributed hypermedia systems
 
----
 #### Make best use of HTTP
 ![Image](/images/REST_Block_Structure.png)
----
 ![Image](/images/Web_Service_Browser_Server__Interaction.png)
----
 #### Key abstraction - Resource
 - A resource has an URI (Uniform Resource Identifier)
  - /users/Ranga/todos/1
@@ -1378,13 +1327,11 @@ public class CourseNotFoundException extends RuntimeException {
  - XML
  - HTML
  - JSON
----
 ##### Example
 - Create a User - POST    /users
 - Delete a User - DELETE  /users/1
 - Get all Users - GET     /users
 - Get one Users - GET     /users/1 
----
 #### REST
   - Data Exchange Format
   	- No Restriction. JSON is popular
@@ -1399,7 +1346,6 @@ public class CourseNotFoundException extends RuntimeException {
 - Service Definition
 - Transport
 - Ease of implementation
----
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
     <SOAP-ENV:Header/>
@@ -1410,7 +1356,6 @@ public class CourseNotFoundException extends RuntimeException {
     </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
----
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
     <SOAP-ENV:Header/>
@@ -1425,28 +1370,22 @@ public class CourseNotFoundException extends RuntimeException {
     </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
----
 ### Richardson Maturity Model
----
 #### Level 0
 ##### Expose SOAP web services in REST style
 - http://server/getPosts
 - http://server/deletePosts
 - http://server/doThis
----
 #### Level 1
 - Expose Resources with proper URI
 	- http://server/accounts
 	- http://server/accounts/10
 - Improper use of HTTP Methods
----
 #### Level 2
 - Level 1 + HTTP Methods
----
 #### Level 3
 - Level 2 + HATEOAS
 	- Data + Next Possible Actions
----
 #### Best Practices in RESTful Design
 - Consumer First
 - Make best use of HTTP
