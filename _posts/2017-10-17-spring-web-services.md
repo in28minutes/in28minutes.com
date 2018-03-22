@@ -1,9 +1,11 @@
+---
 layout:     post
 title:      SOAP and RESTful Web Services with Spring Boot and Hibernate 
 date:       2017-10-17 12:31:19
 summary:    Developing SOAP and RESTful Web Services is fun. The combination of Spring Boot, Spring Web MVC, Spring Web Services and JPA makes it even more fun. There are two parts to this course - RESTful web services and SOAP Web Services.
 categories: Spring Boot, REST Service, RESTful web service, SOAP Web Service
 permalink:  /soap-and-restful-web-services-with-spring-boot-and-jpa
+---
 
 Learn how to create awesome SOAP and RESTful web services with Spring and Spring Boot.
 
@@ -166,22 +168,16 @@ In this part of the course, you will be using Spring (Dependency Management), Sp
 #### Key Terminology
 - Transport
   - HTTP and MQ
-
 ![Image](/images/soapoverhttp.png)
-
 ![Image](/images/soapovermq.png)
-
 ### Web Service Groups
-
 - SOAP-based
 - REST-styled
 
 > SOAP and REST are not really comparable. 
 
 #### SOAP
-
 ##### SOAP?
-
 ![Image](/images/Web_Service_Basic_Interaction_SOAP.png)
 ```xml
         <getCourseDetailsRequest>
@@ -204,17 +200,15 @@ In this part of the course, you will be using Spring (Dependency Management), Sp
     </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
-
 ##### SOAP
-- Format
-	- SOAP XML Request
-	- SOAP XML Response
-- Transport
-- SOAP over MQ
-- SOAP over HTTP
-- Service Definition
-- WSDL 
-
+  - Format
+  	- SOAP XML Request
+  	- SOAP XML Response
+  - Transport
+    - SOAP over MQ
+    - SOAP over HTTP
+  - Service Definition
+    - WSDL 
 
 ## SOAP Web Services with Spring and Spring Boot
 
