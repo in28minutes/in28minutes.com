@@ -156,11 +156,13 @@ In this part of the course, you will be using Spring (Dependency Management), Sp
 ![Image](/images/Web_Service_Z_ApplicationA_WebService_Request_Response.png)
 
 #### Key Terminology
+
 - Request and  Response
 - Message Exchange Format
   - XML and JSON
 
 #### Key Terminology
+
 - Service Provider or Server
 - Service Consumer or Client
 - Service Definition
@@ -177,15 +179,21 @@ In this part of the course, you will be using Spring (Dependency Management), Sp
 > SOAP and REST are not really comparable. 
 
 #### SOAP
+
 ##### SOAP?
+
 ![Image](/images/Web_Service_Basic_Interaction_SOAP.png)
+
 ```xml
         <getCourseDetailsRequest>
             <id>Course1</id>
         </getCourseDetailsRequest>
 ```
+
 ![Image](/images/Web_Service_SOAP-Envelope.svg.png)
+
 ![Image](/images/Web_Service_Basic_Interaction_SOAP_2.png)
+
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
     <SOAP-ENV:Header/>
@@ -200,6 +208,7 @@ In this part of the course, you will be using Spring (Dependency Management), Sp
     </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
+
 ##### SOAP
   - Format
   	- SOAP XML Request
