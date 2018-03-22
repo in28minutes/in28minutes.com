@@ -79,8 +79,10 @@ In this part of the course, you will be using Spring (Dependency Management), Sp
 
 > Service delivered over the web?
 
+---
 ![Image](/images/Web_Services_Web_Application_To_Manage_Todos.png)
 ---
+
 > Is the Todo Management Application a Web Service?
 
 - It delivers HTML output - Not consumable by other applications.
@@ -92,9 +94,13 @@ In this part of the course, you will be using Spring (Dependency Management), Sp
   - Communication of Changes
   - Managing Dependencies - like Database
 ---
+
 > How can I make my Todo application consumable by other applications?
+
 ---
+
 > That where we get into the concept of a web service!
+
 ---
 ![Image](/images/Web_Service_Multiple_Application_Interaction.png)
 ---
@@ -102,7 +108,9 @@ In this part of the course, you will be using Spring (Dependency Management), Sp
 ---
 ![Image](/images/Web_Service_Basic_Interaction.png)
 ---
+
 #### Web Service - W3C definition
+
 > Software system designed to support interoperable machine-to-machine interaction over a network.
 ---
 #### 3 Keys
@@ -112,13 +120,17 @@ In this part of the course, you will be using Spring (Dependency Management), Sp
 ---
 #### How?
 ---
+
 > How does data exchange between applications take place?
+
 ---
 ![Image](/images/Web_Service_Z_ApplicationA_WebService.png)
 ---
 ![Image](/images/Web_Service_Z_ApplicationA_WebService_Request_Response.png)
 ---
+
 > How can we make web services platform independent?
+
 ---
 ![Image](/images/Web_Service_Z_PlatformIndependence.png)
 ---
@@ -145,11 +157,15 @@ In this part of the course, you will be using Spring (Dependency Management), Sp
 ]
 ```
 ---
+
 > How does the Application A know the format of Request and Response?
+
 ---
 ![Image](/images/Web_Service_Service_Definition.png)
 ---
+
 > How does Application A and Web Service convert its internal data to (XML or JSON)?
+
 ---
 ![Image](/images/Web_Service_Z_ApplicationA_WebService_Request_Response.png)
 ---
@@ -175,7 +191,9 @@ In this part of the course, you will be using Spring (Dependency Management), Sp
 - SOAP-based
 - REST-styled
 ---
+
 > SOAP and REST are not really comparable. 
+
 ---
 #### SOAP
 ---
@@ -1338,9 +1356,13 @@ public class CourseNotFoundException extends RuntimeException {
 
 ### REST
 ---
+
 > REpresentational State Transfer
+
 ---
+
 > REST is a style of software architecture for distributed hypermedia systems
+
 ---
 #### Make best use of HTTP
 ![Image](/images/REST_Block_Structure.png)
