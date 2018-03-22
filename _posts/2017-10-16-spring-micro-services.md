@@ -393,6 +393,7 @@ public org.springframework.web.servlet.ModelAndView org.springframework.boot.aut
 
 #### GET http://localhost:8080/users
 - Accept application/xml
+
 ```xml
 <List>
     <item>
