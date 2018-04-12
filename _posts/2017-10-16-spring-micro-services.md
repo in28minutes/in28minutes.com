@@ -3661,6 +3661,14 @@ New Lines
 
 ###  Step 43 - Implementing Spring Cloud Bus
 
+- http://localhost:8080/actuator/refresh
+- http://localhost:8080/actuator/bus-refresh
+
+bootstrap.properties Modified
+```
+management.endpoints.web.exposure.include=*
+```
+
 ###  Step 44 - Fault Tolerance with Hystrix
 
 /03.microservices/limits-service/pom.xml Modified
