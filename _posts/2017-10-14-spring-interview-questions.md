@@ -21,7 +21,7 @@ This course helps you prepare for Spring Interview with code examples covering 2
 
 ## Get this course
 
-> [Subscribe](http://eepurl.com/bOJulL){:target="_blank"} to get amazing offers on all in28minutes courses.
+> [Get this course for $10.99](http://www.in28minutes.com/p/in28minutes-udemy-courses-discount-codes.html){:target="_blank"}
 
 ## What Will I Learn?
 

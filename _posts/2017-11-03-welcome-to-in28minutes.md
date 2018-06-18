@@ -9,7 +9,7 @@ permalink:  /welcome-to-in28minutes
 
 Join 100,000 Learners having awesome learning experiences with in28Minutes
 
-> [Get Amazing Offers on All Our Courses](http://eepurl.com/bOJulL)
+> [Get all courses for $10.99](http://www.in28minutes.com/p/in28minutes-udemy-courses-discount-codes.html){:target="_blank"}
 
 ![Image](/images/in28Minutes-Java-Course-Roadmap.png "in28Minutes Java Course Roadmap") 
 
