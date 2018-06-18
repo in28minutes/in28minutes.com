@@ -10,7 +10,7 @@ Join 180,000 Learners having awesome learning experiences with in28Minutes
 
 ![Image](/images/in28Minutes-Java-Course-Roadmap.png "in28Minutes Java Course Roadmap") 
 
-# All courses for $10.99 or less
+# All courses for $10.99
 
 > Coupon Code `IN28MINUTES` is embedded in all these links
 
