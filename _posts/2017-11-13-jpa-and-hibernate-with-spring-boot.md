@@ -25,6 +25,21 @@ Hibernate is the most popular implementation of JPA. It was the most popular ORM
 - You will learn the basics of caching - First Level Cache and Second Level Cache with EhCache
 - You will understand the basics of Spring Data JPA and Spring Data REST
 
+## Hibernate Course
+
+[![Image](https://www.in28minutes.com/course-promotional-images/Master-Hibernate-and-JPA-with-Spring-Boot-in-100-Steps.png "Master Hibernate and JPA with Spring Boot in 100 Steps")](https://www.udemy.com/hibernate-jpa-tutorial-for-beginners-in-100-steps/?couponCode=SBT-2019)
+
+## Spring, Spring Boot and Spring Cloud - REST & Microservices
+
+[![Image](https://www.in28minutes.com/course-promotional-images/Your-First-Steps-From-Programmer-To-Software-Architect.png "Your First Steps from Programmer to Software Architect")](https://www.udemy.com/software-architect-course-first-steps/?couponCode=SBT-2019)
+
+[![Image](https://www.in28minutes.com/course-promotional-images/Master-Microservices-with-Spring-Boot-and-Spring-Cloud.png "Master Microservices with Spring Boot and Spring Cloud")](https://www.udemy.com/microservices-with-spring-boot-and-spring-cloud/?couponCode=SBT-2019)
+
+
+[![Image](https://www.in28minutes.com/course-promotional-images/Spring-Framework-Master-Class---Beginner-to-Expert.png "Spring Master Class - Beginner to Expert")](https://www.udemy.com/spring-tutorial-for-beginners/?couponCode=SBT-2019)
+
+
+
 ## Connecting to My SQL and Other Databases
 
 Spring Boot makes it easy to switch databases! Yeah really simple.
