@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Amazing Offers on all in28Minutes Udemy Courses
+title:      in28Minutes Courses with 240,000+ Learners
 date:       2017-11-19 12:31:19
 summary:    Get Amazing Offers on all in28Minutes Udemy Courses.
 categories: Udemy, Courses, Spring Boot, Spring Framework
