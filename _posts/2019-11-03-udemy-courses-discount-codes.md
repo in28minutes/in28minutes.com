@@ -8,8 +8,6 @@ permalink:  /p/in28minutes-udemy-courses-discount-codes.html
 ---
 Join 180,000 Learners having awesome learning experiences with in28Minutes
 
-![Image](/images/in28Minutes-Java-Course-Roadmap.png "in28Minutes Java Course Roadmap") 
-
 # All courses for $10.99
 
 > Coupon Code `IN28MINUTES` is embedded in all these links
@@ -62,6 +60,8 @@ Join 180,000 Learners having awesome learning experiences with in28Minutes
 
 
 ## Course Overview
+
+![Image](/images/in28Minutes-Java-Course-Roadmap.png "in28Minutes Java Course Roadmap") 
 
 ### Master Microservices with Spring Boot & Spring Cloud
 - Expert - Microservices with Spring Cloud
