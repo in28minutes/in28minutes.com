@@ -8,9 +8,7 @@ permalink:  /p/in28minutes-udemy-courses-discount-codes.html
 ---
 Join 180,000 Learners having awesome learning experiences with in28Minutes
 
-# All courses for $10.99
-
-> Coupon Code `IN28MINUTES` is embedded in all these links
+> All Courses for $10.99
 
 [![Image](https://www.in28minutes.com/course-promotional-images/Your-First-Steps-From-Programmer-To-Software-Architect.png "Your First Steps from Programmer to Software Architect")](https://www.udemy.com/software-architect-course-first-steps/?couponCode=IN28MINUTES-2019){:target="_blank"}
 
