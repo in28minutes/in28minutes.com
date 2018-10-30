@@ -6,7 +6,7 @@ summary:    Get Amazing Offers on all in28Minutes Udemy Courses.
 categories: Udemy, Courses, Spring Boot, Spring Framework
 permalink:  /p/in28minutes-udemy-courses-discount-codes.html
 ---
-Join 180,000 Learners having awesome learning experiences with in28Minutes
+Join 240,000 Learners having awesome learning experiences with in28Minutes
 
 > All Courses for $10.99
 
