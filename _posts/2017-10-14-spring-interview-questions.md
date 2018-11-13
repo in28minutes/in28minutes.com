@@ -21,9 +21,9 @@ This course helps you prepare for Spring Interview with code examples covering 2
 
 ## Java and Spring Interview Guides
 
-[![Image](https://www.in28minutes.com/course-promotional-images/Spring-Framework-Interview-Guide-200-Questions-Answers.png "Spring Framework Interview Guide - 200+ Questions & Answers")](https://www.udemy.com/spring-interview-questions-and-answers/?couponCode=SBT-2019){:target="_blank"}
+[![Image](/course-promotional-images/Spring-Framework-Interview-Guide-200-Questions-Answers.png "Spring Framework Interview Guide - 200+ Questions & Answers")](https://www.udemy.com/spring-interview-questions-and-answers/?couponCode=SBT-2019){:target="_blank"}
 
-[![Image](https://www.in28minutes.com/course-promotional-images/Java-Interview-Guide-200-Interview-Questions-and-Answers.png "Java Interview Guide : 200+ Interview Questions and Answers")](https://www.udemy.com/java-interview-questions-and-answers/?couponCode=SBT-2019){:target="_blank"}
+[![Image](/course-promotional-images/Java-Interview-Guide-200-Interview-Questions-and-Answers.png "Java Interview Guide : 200+ Interview Questions and Answers")](https://www.udemy.com/java-interview-questions-and-answers/?couponCode=SBT-2019){:target="_blank"}
 
 ## What Will I Learn?
 

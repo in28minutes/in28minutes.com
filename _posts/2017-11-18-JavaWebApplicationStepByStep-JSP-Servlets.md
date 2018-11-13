@@ -13,7 +13,7 @@ In this course, you will learn the basics developing a Basic Todo Management App
 
 You will build a Dynamic Website using the Core technologies of Java Web Programming. You will understand the basic concepts of Java Web Application Development - HTTP protocol, Request-Response cycle, Java Servlets, JSPs.
 
-[![Image](https://www.in28minutes.com/course-promotional-images/Java-Servlets-and-JSP-BuildJavaEEAppIn25Steps.png "Java Servlets and JSP - Build Java EE(JEE) app in 25 Steps")](https://www.udemy.com/learn-java-servlets-and-jsp-web-application-in-25-steps/?couponCode=SBT-2019)
+[![Image](/course-promotional-images/Java-Servlets-and-JSP-BuildJavaEEAppIn25Steps.png "Java Servlets and JSP - Build Java EE(JEE) app in 25 Steps")](https://www.udemy.com/learn-java-servlets-and-jsp-web-application-in-25-steps/?couponCode=SBT-2019)
 
 ## About in28Minutes
 
@@ -1369,13 +1369,13 @@ Share on Twitter - https://twitter.com/home?status=Having%20a%20great%20time!%20
 
 ## Spring, Spring Boot and Spring Cloud - REST & Microservices
 
-[![Image](https://www.in28minutes.com/course-promotional-images/Your-First-Steps-From-Programmer-To-Software-Architect.png "Your First Steps from Programmer to Software Architect")](https://www.udemy.com/software-architect-course-first-steps/?couponCode=SBT-2019)
+[![Image](/course-promotional-images/Your-First-Steps-From-Programmer-To-Software-Architect.png "Your First Steps from Programmer to Software Architect")](https://www.udemy.com/software-architect-course-first-steps/?couponCode=SBT-2019)
 
-[![Image](https://www.in28minutes.com/course-promotional-images/Master-Microservices-with-Spring-Boot-and-Spring-Cloud.png "Master Microservices with Spring Boot and Spring Cloud")](https://www.udemy.com/microservices-with-spring-boot-and-spring-cloud/?couponCode=SBT-2019)
+[![Image](/course-promotional-images/Master-Microservices-with-Spring-Boot-and-Spring-Cloud.png "Master Microservices with Spring Boot and Spring Cloud")](https://www.udemy.com/microservices-with-spring-boot-and-spring-cloud/?couponCode=SBT-2019)
 
-[![Image](https://www.in28minutes.com/course-promotional-images/Master-Hibernate-and-JPA-with-Spring-Boot-in-100-Steps.png "Master Hibernate and JPA with Spring Boot in 100 Steps")](https://www.udemy.com/hibernate-jpa-tutorial-for-beginners-in-100-steps/?couponCode=SBT-2019)
+[![Image](/course-promotional-images/Master-Hibernate-and-JPA-with-Spring-Boot-in-100-Steps.png "Master Hibernate and JPA with Spring Boot in 100 Steps")](https://www.udemy.com/hibernate-jpa-tutorial-for-beginners-in-100-steps/?couponCode=SBT-2019)
 
-[![Image](https://www.in28minutes.com/course-promotional-images/Spring-Framework-Master-Class---Beginner-to-Expert.png "Spring Master Class - Beginner to Expert")](https://www.udemy.com/spring-tutorial-for-beginners/?couponCode=SBT-2019)
+[![Image](/course-promotional-images/Spring-Framework-Master-Class---Beginner-to-Expert.png "Spring Master Class - Beginner to Expert")](https://www.udemy.com/spring-tutorial-for-beginners/?couponCode=SBT-2019)
 
 ![](/images/in28Minutes-Java-Course-Roadmap.png)
 
