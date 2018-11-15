@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Microservices and RESTful Web Services with Spring, Spring Boot and Spring Cloud for Beginners
+title:      Spring Boot Microservices and RESTful Web Services Tutorial for Beginners
 date:       2017-10-16 12:31:19
 summary:    Learn how to create awesome Microservices and RESTful web services with Spring, Spring Boot and Spring Cloud. 
 categories: Spring Boot, REST Service, Spring Cloud

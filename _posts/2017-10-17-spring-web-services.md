@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      SOAP and RESTful Web Services with Spring Boot and Hibernate 
+title:      Spring Boot SOAP and RESTful Web Services Tutorial for Beginners
 date:       2017-10-17 12:31:19
 summary:    Developing SOAP and RESTful Web Services is fun. The combination of Spring Boot, Spring Web MVC, Spring Web Services and JPA makes it even more fun. There are two parts to this course - RESTful web services and SOAP Web Services.
 categories: Spring Boot, REST Service, RESTful web service, SOAP Web Service

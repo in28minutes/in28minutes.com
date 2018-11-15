@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      JPA and Hibernate with Spring Boot - Course Guide
+title:      JPA and Hibernate Tutorial for Beginners - with Spring Boot
 date:       2017-11-13 12:31:19
 summary:    JPA and Hibernate with Spring Boot - Course Guide with Step by Step Details, Code Examples and the Notes
 categories: Spring Boot, JPA, Hibernate

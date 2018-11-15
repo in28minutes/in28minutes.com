@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Learn Spring MVC in 25 Easy Steps - A Tutorial for Beginners 
+title:      Spring MVC Tutorial for Beginners - in 25 Easy Steps
 date:       2017-10-19 12:31:19
 summary:    In this course, you will learn the basics developing a Basic Todo Management Application using Spring MVC with Login and Logout functionalities.
 categories: Spring MVC, Spring
