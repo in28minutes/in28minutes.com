@@ -30,6 +30,10 @@ Every Day Developer does a lot of things
 	- Java & Eclipse - https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
 - We will use embedded maven in Eclipse
 
+### Other Recommended Courses
+[![Image](/course-promotional-images/Course-Go-Full-Stack-With-Spring-Boot-and-React.png "Go Full Stack with Spring Boot and React")](https://www.udemy.com/full-stack-application-with-spring-boot-and-react/?couponCode=GITHUB-2019){:target="_blank"}
+
+
 ### Overview
 - Step 1 : Creating and importing a Maven Project
 - Step 2 : Understanding Project Object Model - pom.xml

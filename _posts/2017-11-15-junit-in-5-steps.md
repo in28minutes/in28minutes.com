@@ -21,6 +21,11 @@ Here is an overview of what we would learn in this section
 - Step 4 : Other assert methods
 - Step 5 : Important annotations
 
+### Other Recommended Courses
+[![Image](/course-promotional-images/Course-Go-Full-Stack-With-Spring-Boot-and-React.png "Go Full Stack with Spring Boot and React")](https://www.udemy.com/full-stack-application-with-spring-boot-and-react/?couponCode=GITHUB-2019){:target="_blank"}
+
+
+
 ### Step 1 : What is JUnit and Unit Testing?
  - What is JUnit?
  - What is Unit Testing?
