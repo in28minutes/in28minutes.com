@@ -2,19 +2,19 @@
 layout:  post
 title:  Design Patterns For Beginners - with Java Examples
 date:    2019-04-16 12:31:19
-summary: In this guide, we give you an introduction to the world of design patterns.For each pattern, we understand 1) the pattern a2) the context in which it is applicable -  with a real world example.
+summary: In this guide, we give you an introduction to the world of design patterns.For each pattern, we understand 1) the pattern a2) the context in which it is applicable -  with a real-world example.
 categories: Software Design
 permalink:  /design-patterns-for-beginners-with-java-examples
 ---
  
-In this guide, we give you an introduction to the world of design patterns.For each pattern, we understand 1) the pattern a2) the context in which it is applicable -  with a real world example.
+In this guide, we give you an introduction to the world of design patterns.For each pattern, we understand 1) the pattern a2) the context in which it is applicable -  with a real-world example.
 
 ## You will learn
 - What are Design Patterns?
 - Why do you use Design Patterns?
 - What are the different types of Design Patterns?
 - When do you use Design Patterns?
-- How do you implement differnt Design Patterns in Java?
+- How do you implement different Design Patterns in Java?
 - What are the real world examples for Design Patterns?
 
 ### Software Design
@@ -33,7 +33,7 @@ This is the second article in a series of articles on Software Design:
 
 ### What Are Design Patterns?
 
-We have been building object oriented software for over 40 years now, starting with Smalltalk, which was the first object oriented language. 
+We have been building object-oriented software for over 40 years now, starting with Smalltalk, which was the first object-oriented language. 
 
 The programming world has encountered a large number of problems, and a variety of solution have been proposed to tackle them. 
 
@@ -49,14 +49,14 @@ The advantages of design patterns are:
 
 ### What Are The Types Of Design Patterns?
 
-The design patterns we talk about here, are from the perspective of an object oriented world. There are mainly three different kinds of design patterns:
+The design patterns we talk about here, are from the perspective of an object-oriented world. There are mainly three different kinds of design patterns:
 - Creational Patterns
 - Structural Patterns
 - Behavioral Patterns
 
 #### Creational
 
-Creational patterns deal with creation of objects.
+Creational patterns deal with the creation of objects.
 
 #### Structural
 
@@ -110,7 +110,7 @@ The Builder Pattern separates object construction from its representation. What 
 
 ![image info](images/Capture-109-05.png)
 
-Assume that you go out for a multi- course dinner to a Restaurant. Such a dinner would have many options, such as Starters, Main course and Desserts. You would probably choose two or three out of the presented options. A particular client may want to have dinner with the first two options only, leaving out the Desserts option. Yet another would prefer the Main course and Desserts, skipping the Starters entirely. 
+Assume that you go out for a multi-course dinner to a Restaurant. Such a dinner would have many options, such as Starters, Main course and Desserts. You would probably choose two or three out of the presented options. A particular client may want to have dinner with the first two options only, leaving out the Desserts option. Yet another would prefer the Main course and Desserts, skipping the Starters entirely. 
 
 Similar situations might arise in designing software. You may need to build an object using a subset of the options that are available - or, create the object in multiple ways. This is where the Builder pattern comes in handy. 
 
@@ -118,69 +118,69 @@ To understand it further, let's look at a small piece of code.
 
 ```java
 
-	public class BuilderPattern {
-		static class Coffee {
-			private Coffee(Builder builder) {
-				this.type = builder.type;
-				this.sugar = builder.sugar;
-				this.milk = builder.milk;
-				this.size = builder.size;
-			}
+    public class BuilderPattern {
+        static class Coffee {
+            private Coffee(Builder builder) {
+                this.type = builder.type;
+                this.sugar = builder.sugar;
+                this.milk = builder.milk;
+                this.size = builder.size;
+            }
 
-			private String type;
-			private boolean sugar;
-			private boolean milk;
-			private String size;
+            private String type;
+            private boolean sugar;
+            private boolean milk;
+            private String size;
 
-			public static class Builder {
-				private String type;
-				private boolean sugar;
-				private boolean milk;
-				private String size;
+            public static class Builder {
+                private String type;
+                private boolean sugar;
+                private boolean milk;
+                private String size;
 
-				public Builder(String type) {
-					this.type = type;
-				}
+                public Builder(String type) {
+                    this.type = type;
+                }
 
-				public Builder sugar(boolean value) {
-					this.sugar = value;
-					return this;
-				}
-				
-				public Builder milk(boolean value) {
-					this.milk = value;
-					return this;
-				}
+                public Builder sugar(boolean value) {
+                    this.sugar = value;
+                    return this;
+                }
+                
+                public Builder milk(boolean value) {
+                    this.milk = value;
+                    return this;
+                }
 
-				public Builder size(String value) {
-					this.size = value;
-					return this;
-				}
-			}
+                public Builder size(String value) {
+                    this.size = value;
+                    return this;
+                }
+            }
 
-			public Coffee build() {
-				return new Coffee(this);
-			}
-		}
-		@Override
-		public String toString() {
-			return String.format("Coffee [type=%s, sugar=%s, milk=%s, size=%s]",
-									type, sugar, milk, size);
-		}
+            public Coffee build() {
+                return new Coffee(this);
+            }
+        }
+        @Override
+        public String toString() {
+            return String.format("Coffee [type=%s, sugar=%s, milk=%s, size=%s]",
+                                    type, sugar, milk, size);
+        }
 
-		public static void main(String[] args) {
-			Coffee coffee = new Coffee.Builder("Mocha")
-										.milk(true).sugar(false).size("Large").build();
-			System.out.println(coffee);
-			
-		}
-	}
+        public static void main(String[] args) {
+            Coffee coffee = new Coffee.Builder("Mocha")
+                                        .milk(true).sugar(false).size("Large").build();
+            System.out.println(coffee);
+            
+        }
+    }
 
 ``` 
 
 Let's say you're writing software for a machine that prepares coffee. The main ingredients of coffee are coffee, milk and sugar. 
 
-Dependending from which part of the world you are from, you choose whether or not you have sugar and milk. 
+Depending from which part of the world you are from, you choose whether or not you have sugar and milk. 
 
 The Builder pattern steps in to provide these Coffee creation options for you. 
 
@@ -190,10 +190,10 @@ What we have inside the ```Coffee``` is a ```Builder```, to which we pass the *m
 
 Someone else who wants a different coffee can easily build it. This leads to a huge amount of flexibility in building objects.
 
-> Other approaches to solving this problem, such as the use of setters, have many inherent problems. These solution lead to code that is difficult to read, and also behave erratically in multithreaded programs. The Builder pattern solves all those problems. 
+> Other approaches to solving this problem, such as the use of setters, have many inherent problems. These solutions lead to code that is difficult to read, and also behave erratically in multithreaded programs. The Builder pattern solves all those problems. 
 
 The advantages of using the Builder pattern are:
-* It simplfies object creation
+* It simplifies object creation
 * Leads to more readable code
 * Does not allow the values to be modified
 
@@ -201,7 +201,7 @@ The advantages of using the Builder pattern are:
 
 The Singleton pattern is the most famous among all the design patterns. What this pattern does is very clear from its name - allow only one instance of a class per JVM at any point in time. 
 
-A good real world comparison would probably be the President of a Nation. 
+A good real-world comparison would probably be the President of a Nation. 
 
 ![image info](images/Capture-109-06.png)
 
@@ -210,9 +210,9 @@ However, there is a disclaimer here - there can only be one instance of that cla
 There are a few things to remember whenever you create a Singleton class. 
 
 * The constructor needs to be ```private```, to prevent the possibility of other objects creating instances of your class. 
-* In Java, build a Singleton using an ```Enum```. 
-* JEE 7 has a built in annotation named ```@Singleton```, along with other related annotations. 
-* The main disadvantage of using the Singleton pattern is that the resulting code is difficult to unit test. Make clear decision as to where you absolutely need to use a Singleton, and where you don't. 
+* In Java, build a Singleton using a ```Enum```. 
+* JEE 7 has a built-in annotation named ```@Singleton```, along with other related annotations. 
+* The main disadvantage of using the Singleton pattern is that the resulting code is difficult to unit test. Make a clear decision as to where you absolutely need to use a Singleton, and where you don't. 
 * In frameworks such as Spring, the objects that are managed are called beans, and beans are Singletons by default. What Spring does well is to ensure all this is in the background. 
 
 #### The Factory Method Pattern
@@ -223,70 +223,70 @@ The intent of the Factory Method pattern is to create a family of object types. 
 
 ```java
 
-	public class FactoryPattern {
-		public static class PersonFactory {
-			public static Person getPerson(String name, String gender) {
-				if(gender.equalsIgnoreCase("M")) {
-					return new Male(name);
-				} else if(gender.equalsIgnoreCase("F")) {
-					return new Female(name);
-				} // So on
-				return null;
-			}
-		}
-	}
+    public class FactoryPattern {
+        public static class PersonFactory {
+            public static Person getPerson(String name, String gender) {
+                if(gender.equalsIgnoreCase("M")) {
+                    return new Male(name);
+                } else if(gender.equalsIgnoreCase("F")) {
+                    return new Female(name);
+                } // So on
+                return null;
+            }
+        }
+    }
 
-	static abstract class Person {
-		Person(String name) {
-			this.name = name;
-		}
+    static abstract class Person {
+        Person(String name) {
+            this.name = name;
+        }
 
-		private String name;
+        private String name;
 
-		abstract String getSalutation();
+        abstract String getSalutation();
 
-		String getNameAndSalutation() {
-			
-		}
-	}
+        String getNameAndSalutation() {
+            
+        }
+    }
 
-	static class Male extends Person {
-		public Male(String name) {
-			super(name);
-		}
+    static class Male extends Person {
+        public Male(String name) {
+            super(name);
+        }
 
-		@Override
-		String getSalutation() {
-			return "Mr";
-		}
-	}
+        @Override
+        String getSalutation() {
+            return "Mr";
+        }
+    }
 
-	static class Female extends Person {
-		public Female(String name) {
-			super(name);
-		}
+    static class Female extends Person {
+        public Female(String name) {
+            super(name);
+        }
 
-		@Override
-		String getSalutation() {
-			return "Miss/Mrs";
-		}
-	}
+        @Override
+        String getSalutation() {
+            return "Miss/Mrs";
+        }
+    }
 
-	public static void main(String[] args) {
-		Person male = PersonFactory.getPerson("Robinhood", "M");
-		System.out.println(male.getNameAndSalutation);
+    public static void main(String[] args) {
+        Person male = PersonFactory.getPerson("Robinhood", "M");
+        System.out.println(male.getNameAndSalutation);
 
-		Person female = PersonFactory.getPerson("Mary", "F");
-		System.out.println(female.getNameAndSalutation);
-	}
+        Person female = PersonFactory.getPerson("Mary", "F");
+        System.out.println(female.getNameAndSalutation);
+    }
 
 ```
 
 This code implements a ```PersonFactory```. This class has a static method named ```getPerson()``` that accepts a person's name and gender as parameters. Depending on the gender ```String``` passed in, it either returns a ```Male``` or a ```Female``` object. 
 
-If somebody wants to create a male person, they invoke the ```getPerson()``` method on the ```PersonFactory``` with an gender argument of ```"M"```. Similarly, you can create a female person by invoking the ```getPerson()``` method on the ```PersonFactory``` with an gender argument of ```"F"```. 
+If somebody wants to create a male person, they invoke the ```getPerson()``` method on the ```PersonFactory``` with a gender argument of ```"M"```. Similarly, you can create a female person by invoking the ```getPerson()``` method on the ```PersonFactory``` with a gender argument of ```"F"```. 
 
-We are passing in an  identifier of the the type of object we need, at the time of creation, while still referring to the generic type, ```Person```. 
+We are passing in an  identifier of the type of object we need, at the time of creation, while still referring to the generic type, ```Person```. 
 
 The ```Male``` and ```Female``` classes are hidden behind the ```PersonFactory``` implementation. 
 
@@ -310,15 +310,15 @@ Let us now have a look at the structural design patterns we want to explore.
 
 > A Proxy is an object that represents another object. 
 
-Let's look at a real world example.
+Let's look at a real-world example.
 
 Your debit card is a proxy for your bank account.  Whenever you make a transaction using a debit card, the corresponding money is deducted from the bank account. 
 
 The debit card is a proxy for your bank account, which is the actual object.
 
-Similar to that, in programming you might have to program interactions with remote objects. In such situations, you create a proxy object that takes care of all external communications. You would communicate with the proxy as if it were residing on your local machine. 
+Similar to that, in programming, you might have to program interactions with remote objects. In such situations, you create a proxy object that takes care of all external communications. You would communicate with the proxy as if it were residing on your local machine. 
 
-A good example are the EJB Home and Remote interfaces. 
+Good examples are the EJB Home and Remote interfaces. 
 
 A proxy hides the complexity involved in communicating with the real object.
 
@@ -328,13 +328,13 @@ A proxy hides the complexity involved in communicating with the real object.
 
 ![image info](images/Capture-109-09.png)
 
-In object oriented programming, we typically use a lot of inheritance. 
+In object-oriented programming, we typically use a lot of inheritance. 
 
 ##### Example 1
 
-Let's say a particular Pizza outlet has 10 types of pizza. Our implementation has 10 classes for these Pizza types.
+Let's say a particular Pizza outlet has ten types of pizza. Our implementation has ten classes for these Pizza types.
 
-Now there is a requirement to make these pizzas available with 3 types of toppings. If we would want to create individual classes for each pizza and topping combination, we have a total of 30 classes to manage.
+Now there is a requirement to make these pizzas available with three types of toppings. If we would want to create individual classes for each pizza and topping combination, we have a total of 30 classes to manage.
 
 Instead of doing this, can we make the pizza-topping relationship dynamic? Can we add a topping on top of an existing pizza? 
 
@@ -342,24 +342,24 @@ We need to use a topping as a decorator on top of any pizza.
 
 ##### Example 2
 
-Another example would be the adding a discount on a pizza order. 
+Another example would be adding a discount on a pizza order. 
 
-Let's say, you have an order, and based on some criteria, you want to offer a discount to the customer. There might be a variety of discounts which might be applicable at different times. If you add a different type of a discount to each type of order, then in a static relationship, you need to maintain hundreds of classes. 
+Let's say, you have an order, and based on some criteria, you want to offer a discount to the customer. There might be a variety of discounts which might be applicable at different times. If you add a different type of a discount to every kind of order, then in a static relationship, you need to maintain hundreds of classes. 
 
-Treating a discount as a decorator on an order makes the relationship dynamic.
+Treating a discount as a decorator on order makes the relationship dynamic.
 
 
 ##### Example 3
 
-A very good example where the Decorator pattern is implemented in Java is the Java I/O packages. This is reflected in the way we create an input stream in an I/O program:  
+A perfect example where the Decorator pattern is implemented in Java is the Java I/O packages. This is reflected in the way we create an input stream in an I/O program:  
 
 ```java
 
-	new LineNumberInputStream(new BufferedInputStream(new FileInputStream()));
+    new LineNumberInputStream(new BufferedInputStream(new FileInputStream()));
 
 ```
 
-You have a ```FileInputStream```. If you want to make it buffered, then add a decorator to it in the form of a ```BufferedInputStream```. If you want the buffered ```FileInputStream``` to have line numbers in addition, then add a decorator for a ```LineNumberInputStream```.
+You have a ```FileInputStream```. If you want to make it buffered, then add a decorator to it in the form of a ```BufferedInputStream```. If you want the buffered ```FileInputStream``` to have line numbers also, then add a decorator for a ```LineNumberInputStream```.
 
 ##### Summary
 
@@ -373,7 +373,7 @@ The drawback of this approach is the complexity involved in creating objects. Th
 
 > A Facade is a single class that represents an entire subsystem. 
 
-Let's take the example of an event manager. An event manager is the go-to person when you want to organize an event. He/She would handle several aspects of an event such as the decorations, the food, sending out invitations to guests, the music arrangements, and similar things.  The event manager acts as the facade of the event organization subsystem. 
+Let's take the example of an event manager. An event manager is a go-to person when you want to organize an event. He/She would handle several aspects of an event such as the decorations, the food, sending out invitations to guests, the music arrangements, and similar things.  The event manager acts as the facade of the event organization subsystem. 
 
 Consider the case of a distributed system. You typically have the need for multiple calls, across layers. 
 
@@ -401,16 +401,16 @@ Solution : The solution is to use a travel adapter, to use with your charger whe
 
 Similarly, when you try to talk to a system that uses a different message format or a language, you need an adapter to translate messages. 
 
-An interesting example is communication between a Java program and a web service. Before sending out the data to the service, we need to convert the object into XML or JSON format. We are implementing the Adapter pattern!
+An interesting example is a communication between a Java program and a web service. Before sending out the data to the service, we need to convert the object into XML or JSON format. We are implementing the Adapter pattern!
 
 #### The Flyweight Pattern
 
 Let's consider a few scenarios
 - Creation of an object takes a lot of time and involves multiple instances
 - Each instance of an object occupies a lot of memory
-- Some objects might be used several times across same application with same values
+- Some objects might be used several times across the same application with the same values
 
-In these scenarios, you might not want to create a new instance everytime it is needed. 
+In these scenarios, you might not want to create a new instance every time it is needed. 
 
 How about caching an instance and reusing it when needed?
 
@@ -426,7 +426,7 @@ In the PSTN, there are always a limited number of lines, and for simplicity, let
 
 ##### Example 2
 
-In the software world, a good example of Flyweight pattern is JDBC connections.
+In the software world, a good example of a Flyweight pattern is JDBC connections.
 
 A connection pool is a set of connections to the database. The application may be firing a lot of queries, but we don't create a new connection whenever a new query comes in. As soon as a query comes in, we match it to an available connection, and the query gets fired. Once query execution is done, the connection is released back into the pool. 
 
@@ -448,11 +448,11 @@ The best example of this pattern can be seen in the exception handling mechanism
 
 Suppose you have a ```method1()``` calling ```method2()```, and ```method2()``` in turn calls ```method3()```. Assume that ```method3()``` throws an exception. 
 
-If ```method3()``` has no exception handling, then the exception is passed on to ```method2()``` to handle it. If again ```method2()``` has no exception handling inside it, then the exception is passed on to ```method1()```. If even ```method1()``` cannot handle it, it get thrown out of ```method1()``` as well.
+If ```method3()``` has no exception handling, then the exception is passed on to ```method2()``` to handle it. If again ```method2()``` has no exception handling inside it, then the exception is passed on to ```method1()```. If even ```method1()``` cannot handle it, it gets thrown out of ```method1()``` as well.
 
 ##### Example 2
 
-Consider a real world example of a loan approval process. 
+Consider a real-world example of a loan approval process. 
 
 A bank clerk has permissions to approve loans within a certain amount. If the amount goes above that, then it goes to the supervisor. The supervisor has a similar, albeit larger loan approval limit set for him. If the loan amount exceeds that limit, then it goes to his supervisor, and so on.
 
@@ -464,7 +464,7 @@ With Chain Of Responsibility, we have a chain of objects already ready, that wai
 
 ![image info](images/Capture-109-14.png)
 
-The Iterator pattern is one of the most simple design patterns. You have a set of elements arranged in a collection, and you want to sequentially access those elements. A good example of an Iterator is a TV remote, which has the "next" and "previous" buttons to surf TV channels. Pressing the "next" button takes me one channel in the forward direction, and pressing the "previous" button takes me one channel in the backward direction.
+The Iterator pattern is one of the most simple design patterns. You have a set of elements arranged in a collection, and you want to access those elements sequentially. A good example of an Iterator is a TV remote, which has the "next" and "previous" buttons to surf TV channels. Pressing the "next" button takes me one channel in the forward direction, and pressing the "previous" button takes me one channel in the backward direction.
 
 In the programming works, examples of the ```Iterator``` class and the enhanced ```for``` loop in Java are examples of the Iterator pattern. 
 
@@ -478,64 +478,64 @@ Take a look at this Java example:
 
 ```java
 
-	public class StatePattern {
-		static class FanWallControl {
-			private SpeedLevel current;
-	
-			public FanWallControl() {
-				current = new Off();
-			}
+    public class StatePattern {
+        static class FanWallControl {
+            private SpeedLevel current;
+    
+            public FanWallControl() {
+                current = new Off();
+            }
 
-			public void set_state(SpeedLevel state) {
-				current = state;
-			}
-	
-			public void rotate() {
-				current.rotate(this);
-			}
+            public void set_state(SpeedLevel state) {
+                current = state;
+            }
+    
+            public void rotate() {
+                current.rotate(this);
+            }
 
-			@Override
-			public String toString() {
-				return String.format("Fan Wall Control [current = %s]", current);
-			}
-		}
+            @Override
+            public String toString() {
+                return String.format("Fan Wall Control [current = %s]", current);
+            }
+        }
 
-		interface speedLevel {
-			void rotate(FanWallControl fanWallControl);
-		}
-	
-		static class Off implements SpeedLevel {
-			public void rotate(FanWallControl fanWallControl) {
-				fanWallControl.set_state(new SpeedLevel1());
-			}
-		}
-	
-		static class SpeedLevel1 implements SpeedLevel {
-			public void rotate(FanWallControl fanWallControl) {
-				fanWallControl.set_state(new SpeedLevel2());
-			}
-		}
-	
-		static class SpeedLevel2 implements SpeedLevel {
-			public void rotate(FanWallControl fanWallControl) {
-				fanWallControl.set_state(new SpeedLevel3());
-			}
-		}
-	
-		static class SpeedLevel3 implements SpeedLevel {
-			public void rotate(FanWallControl fanWallControl) {
-				fanWallControl.set_state(new Off());
-			}
-		}
-	}
+        interface speedLevel {
+            void rotate(FanWallControl fanWallControl);
+        }
+    
+        static class Off implements SpeedLevel {
+            public void rotate(FanWallControl fanWallControl) {
+                fanWallControl.set_state(new SpeedLevel1());
+            }
+        }
+    
+        static class SpeedLevel1 implements SpeedLevel {
+            public void rotate(FanWallControl fanWallControl) {
+                fanWallControl.set_state(new SpeedLevel2());
+            }
+        }
+    
+        static class SpeedLevel2 implements SpeedLevel {
+            public void rotate(FanWallControl fanWallControl) {
+                fanWallControl.set_state(new SpeedLevel3());
+            }
+        }
+    
+        static class SpeedLevel3 implements SpeedLevel {
+            public void rotate(FanWallControl fanWallControl) {
+                fanWallControl.set_state(new Off());
+            }
+        }
+    }
 
 ```  
 
-Let's take the example of a fan wall control. The fan wall control controls the speed with with a fan rotates. It has speed levels ranging from 0 to 5. When it is at level 0, the fan does not rotate, and it rotates the fastest at level 5.
+Let's take the example of a fan wall control. The fan wall control controls the speed with a fan rotates. It has speed levels ranging from 0 to 5. When it is at level 0, the fan does not rotate, and it rotates the fastest at level 5.
 
 When you rotate the knob of the fan control, the level changes, and this causes the speed of the fan to change as well. This is a classic case of a change in state (level) causing a change in behavior (speed). 
 
-A ```FanwallControl``` object is composed of a ```SpeedLevel``` object. ```SpeedLevel``` is an interface that has four different implementations. Initially, the level is at ```Off```, and when yuo click rotate at that time, the new speed is at ```SpeedLevel1```. The happens successively, and if you rotate at ```SpeedLevel3```, the level returns to ```Off```.
+A ```FanwallControl``` object is composed of a ```SpeedLevel``` object. ```SpeedLevel``` is an interface that has four different implementations. Initially, the level is at ```Off```, and when you click rotate at that time, the new speed is at ```SpeedLevel1```. The happens successively, and if you rotate at ```SpeedLevel3```, the level returns to ```Off```.
 
 In case you need to define an additional speed level, just add in a new class that implements the ```SpeedLevel``` interface, and implement its rotate method. 
 
@@ -549,52 +549,52 @@ The strategy has the task of encapsulating an algorithm inside a class. Let's lo
 
 ```java
 
-	public class StrategyPattern {
-		interface Sortable {
-			public int[] sort(int[] numbers);
-		}
+    public class StrategyPattern {
+        interface Sortable {
+            public int[] sort(int[] numbers);
+        }
 
-		static class BubbleSort implements Sortable {
-			@Override
-			public int[] sort(int[] numbers) {
-				//sort using bubble sort algorithm
+        static class BubbleSort implements Sortable {
+            @Override
+            public int[] sort(int[] numbers) {
+                //sort using bubble sort algorithm
 
-				return numbers;
-			}
-		}
+                return numbers;
+            }
+        }
 
-		static class QuickSort implements Sortable {
-			@Override
-			public int[] sort(int[] numbers) {d 
-				//sort using quicksort algorithm
+        static class QuickSort implements Sortable {
+            @Override
+            public int[] sort(int[] numbers) {d 
+                //sort using quicksort algorithm
 
-				return numbers;
-			}
-		}
+                return numbers;
+            }
+        }
 
-		static class ComplexClass {
-			private Sortable sorter;
+        static class ComplexClass {
+            private Sortable sorter;
 
-			ComplexClass(Sortable sorter) {
-				this.sorter = sorter;
-			}
+            ComplexClass(Sortable sorter) {
+                this.sorter = sorter;
+            }
 
-			void doAComplexThing() {
-				int[] values = null;
+            void doAComplexThing() {
+                int[] values = null;
 
-				//logic...
+                //logic...
 
-				sorter.sort(values);
+                sorter.sort(values);
 
-				//logic...
-			}
-		}
+                //logic...
+            }
+        }
 
-		public static void main(String[] args) {
-			ComplexClass complexClassInstance = new ComplexClass(new BubbleSort());
-			complexClassInstance.doAComplexThing();
-		}
-	}
+        public static void main(String[] args) {
+            ComplexClass complexClassInstance = new ComplexClass(new BubbleSort());
+            complexClassInstance.doAComplexThing();
+        }
+    }
 
 ```
 
@@ -628,42 +628,42 @@ Here is a simple implementation of the Observer pattern:
 
 ```java
 
-	public class Observer Pattern {
-		static class SachinCenturyNotifier {
-			List<SachinFan> fans = new ArrayList<SachinFan>();
-			
-			void register(SachinFan fan) {
-				fans.add(fan);
-			} 
+    public class Observer Pattern {
+        static class SachinCenturyNotifier {
+            List<SachinFan> fans = new ArrayList<SachinFan>();
+            
+            void register(SachinFan fan) {
+                fans.add(fan);
+            } 
 
-			void sachinScoredACentury() {
-				for(SachinFan fan: fans) {
-					fan.announce();
-				}
-			}
-		}
+            void sachinScoredACentury() {
+                for(SachinFan fan: fans) {
+                    fan.announce();
+                }
+            }
+        }
 
-		static class SachinFan {
-			private String name;
-			
-			SachinFan(String name) {
-				this.name = name;
-			}
+        static class SachinFan {
+            private String name;
+            
+            SachinFan(String name) {
+                this.name = name;
+            }
 
-			void announce() {
-				System.out.println(name + " notified");
-			}
-		}
+            void announce() {
+                System.out.println(name + " notified");
+            }
+        }
 
-		public static void main(String[] args) {
-			SachinCenturyNotifier notifier = new SachinCenturyNotifier();
-			notifier.register(new SachinFan("Ranga"));
-			notifier.register(new SachinFan("Ramya"));
-			notifier.register(new SachinFan("Veena"));
+        public static void main(String[] args) {
+            SachinCenturyNotifier notifier = new SachinCenturyNotifier();
+            notifier.register(new SachinFan("Ranga"));
+            notifier.register(new SachinFan("Ramya"));
+            notifier.register(new SachinFan("Veena"));
 
-			notifier.sachinScoredACentury();
-		}
-	}
+            notifier.sachinScoredACentury();
+        }
+    }
 
 ```
 
@@ -681,11 +681,11 @@ There are a lot of scenarios when designing frameworks, where we don't want othe
 
 The Visitor pattern allows you to do this.
 
-A good real world example of the Visitor pattern is the operation of a taxi company. 
+A good real-world example of the Visitor pattern is the operation of a taxi company. 
 
 As soon as a person calls a taxi company, and a cab is dispatched, the company accepts a visitor. Once the visitor, or customer enters the taxi, he is no longer in control of where he is going. The cab driver is now in control.  
 
-If we look at it as object oriented code, the driver class is in control of the customer class. The driver class can add new operations on top of the customer/visitor. 
+If we look at it as object-oriented code, the driver class is in control of the customer class. The driver class can add new operations on top of the customer/visitor. 
 
 #### The Template Method Pattern
 
@@ -693,37 +693,37 @@ If we look at it as object oriented code, the driver class is in control of the 
 
 ![image info](images/Capture-109-19.png)
 
-A good real world example of this pattern is how we go about creating a house plan. Any good house plan consists of a floor plan, the foundation, plumbing, framing and wiring. Such a plan is almost identical for each house. 
+A good real-world example of this pattern is how we go about creating a house plan. Any good house plan consists of a floor plan, the foundation, plumbing, framing and wiring. Such a plan is almost identical for each house. 
 
 If you were to model this in software, you could create a template class with this standard behavior defined. A subclass could extend this and give actual implementations. Such details could include the wooden flooring type, the wall paint colors, and any added wings as required.
 
-A god example of the Template Method pattern is within the Spring framework, in the form of ```AbstractController```:
+A good example of the Template Method pattern is within the Spring framework, in the form of ```AbstractController```:
 
 ```java
 
-	@Override
-	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) {
-		checkRequest(request);
-		prepareResponse(response);
+    @Override
+    public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) {
+        checkRequest(request);
+        prepareResponse(response);
 
-		if(this.synchronizeOnSession) {
-			HttpSession session = request.getSession(false);
-			if(session != null) {
-				ObjectMutex mutex = WebUtils.getSessionMutex(session);
-	
-				synchronized(mutex) {
-					return handleRequestInternal(request, response);
-				}
-			}
-		}
-		return handleRequestInternal(request, response);
-	}
+        if(this.synchronizeOnSession) {
+            HttpSession session = request.getSession(false);
+            if(session != null) {
+                ObjectMutex mutex = WebUtils.getSessionMutex(session);
+    
+                synchronized(mutex) {
+                    return handleRequestInternal(request, response);
+                }
+            }
+        }
+        return handleRequestInternal(request, response);
+    }
 
 ```
 
-```handleRequest()``` merely takes care of the basic things. However, it leaves the lions share for the implementation to the method ```handleRequestInternal()```. This method is defined by sub classes, where more specific logic can be implemented.
+```handleRequest()``` merely takes care of the basic things. However, it leaves the lions to share for the implementation to the method ```handleRequestInternal()```. This method is defined by subclasses, where more specific logic can be implemented.
 
-The Template Method pattern is all about doing the high level steps, and leaving the low level details to the sub classes. The sub classes can override the low steps and provide their own implementation.
+The Template Method pattern is all about doing the high-level steps, and leaving the low-level details to the subclasses. The subclasses can override the low steps and provide their own implementation.
 
 #### The Command Pattern
 
@@ -731,13 +731,13 @@ The Template Method pattern is all about doing the high level steps, and leaving
 
 ![image info](images/Capture-109-20.png)
 
-Let's take a real world example.
+Let's take a real-world example.
 
 Consider the scenario when a customer goes to a restaurant and wants to place an order for a meal. The writer merely writes the order he gets on a piece of paper, and passes it on to the chef. The chef executes the order, and then prepares the meal. He passes the piece of paper to the manager.
 
 The verbal order from the customer has now become a paper object. This piece of paper is the command object. The command object contains all the details needed to execute the request. 
 
-Similarly in object oriented programming, we can encapsulate all the details of a request into an object, and pass that object to execute it. 
+Similarly in object-oriented programming, we can encapsulate all the details of a request into an object, and pass that object to execute it. 
 
 In web applications, when a user types in the details on a form, these details are captured in a single request object, which is then passed across.
 
@@ -755,7 +755,7 @@ To implement this, we need to save the internal states of the game objects, and 
 
 This save-revert functionality can be implemented by using serialization in a language such as Java. 
 
-The memento pattern is very useful implementing undo/redo operations. 
+The memento pattern is very useful for implementing undo/redo operations. 
 
 For example, if you are working on a text document in a word processor. If at a certain point, you decide to undo changes, you can see each undo until you reach a point where you are satisfied. You have now reverted to an earlier saved state of the document.
 
@@ -765,7 +765,7 @@ The Mediator pattern is used to define simplified communication between classes.
 
 ![image info](images/Capture-109-22.png)
 
-Take the example of an Air Traffic Controller (ATC). Let's say that at any point of time in India, we have about 500 flights in air. We need to decide the routes that each of these flights needs to take. This also includes deciding the times at which each of these flights takes off and lands. It would be a highly complex situation if each of these 500 flights needs to talk with each other and arrive at an acceptable schedule of routes. 
+Take the example of an Air Traffic Controller (ATC). Let's say that at any point of time in India, we have about 500 flights in the air. We need to decide the routes that each of these flights needs to take. This also includes deciding the times at which each of these flights takes off and lands. It will be a highly complex situation if each of these 500 flights needs to talk with each other and arrive at an acceptable schedule of routes. 
 
 That's why we have the concept of an ATC. The flights communicate with the ATC, and having assimilated the information from all the flights, the ATC makes the decisions and communicates them back the flights. 
 
@@ -777,6 +777,6 @@ Do check out our video on the same topic:
 
 ### Summary
 
-In this article, we had an quick look over a variety of design patterns.
+In this article, we had a quick look over a variety of design patterns.
 
-A design pattern is an approach to solve a problem in a given context. We focused on understanding the context in which a particular pattern may be applicable with real world examples.
+A design pattern is an approach to solve a problem in a given context. We focused on understanding the context in which a particular pattern may be applicable with real-world examples.
