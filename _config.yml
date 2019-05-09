@@ -4,7 +4,7 @@ email:
 author: Ranga Karanam
 description: "Best Selling Online Courses from Udemy Top Instructor on Spring, Spring Boot, Spring Cloud, Web Services and Microservices."
 baseurl:     ""
-url:         "http://www.in28minutes.com"
+url:         "https://www.in28minutes.com"
 date_format: "%b %-d, %Y"
 
 # Google services

@@ -142,7 +142,7 @@ Have a look at the following example of code.
 
 ``` 
 
-Suppose we have a set fo class to represent and create different kinds of persons. Also, we would need a way to do the same in code as well. Also, we would not like the users of the class not to know, that there are underlying implementations of ```Person``` named ```Male``` and ```Female```. 
+Suppose we have a set of classes to represent and create different kinds of persons. Also, we would need a way to do the same in code as well. Also, we would not like the users of the class not to know, that there are underlying implementations of ```Person``` named ```Male``` and ```Female```. 
 
 We can abstract that detail away by using the **Factory Pattern**. As we see in the code above, the user creates a male person by passing in a name and a string "M" to the ```getPerson()``` method of ```PersonFactory```. He has no idea that there are classes called ```Male``` and ```Female``` hidden away from him.
 
