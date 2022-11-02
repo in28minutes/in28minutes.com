@@ -10,9 +10,7 @@ plugins:
 # Products
 products:
   - name: Articles
-    url: /blog
-  - name: Videos
-    url: https://www.youtube.com/user/rithustutorials/videos
+    url: https://www.springboottutorial.com/blog
   - name: Roadmaps
     url: https://www.in28minutes.com/roadmaps
 
