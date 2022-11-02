@@ -1,0 +1,153 @@
+---
+layout: default
+---
+<!-- ====== Hero Start ====== -->
+<section class="ud-hero" id="home">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ud-hero-content wow fadeInUp" data-wow-delay=".2s">
+                    <h1 class="ud-hero-title">
+                        {{page.header.title}}
+                    </h1>
+                    <p class="ud-hero-desc">
+                        {{page.header.description}}
+                    </p>
+                    <ul class="ud-hero-buttons">
+                        <li>
+                            <a href="{{page.header.main_button.url | relative_url}}" rel="nofollow noopener"
+                                target="_blank" class="ud-main-btn ud-white-btn">
+                                {{page.header.main_button.title}}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{page.header.secondary_button.url | relative_url}}" rel="nofollow noopener"
+                                target="_blank" class="ud-main-btn ud-link-btn">
+                                {{page.header.secondary_button.title}} <i class="lni lni-arrow-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ud-hero-brands-wrapper wow fadeInUp" data-wow-delay=".3s">
+                    <img src="assets/images/hero/brand.svg" alt="brand" />
+                </div>
+                <div class="ud-hero-image wow fadeInUp" data-wow-delay=".25s">
+                    <img src="assets/images/hero/hero-image.png" alt="hero-image" />
+                    <img src="assets/images/hero/dotted-shape.svg" alt="shape" class="shape shape-1" />
+                    <img src="assets/images/hero/dotted-shape.svg" alt="shape" class="shape shape-2" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ====== Hero End ====== -->
+
+<!-- ====== Features Start ====== -->
+<section id="features" class="ud-features">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ud-section-title">
+                    <span>Features</span>
+                    <h2>{{page.features.title}}</h2>
+                    <p>
+                        {{page.features.description}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+            {% for feature in page.features.items %}
+            <div class="col">
+                <div class="ud-single-feature wow fadeInUp" data-wow-delay=".1s">
+                    <div class="ud-feature-icon">
+                        <i class="lni {{feature.icon}}"></i>
+                    </div>
+                    <div class="ud-feature-content">
+                        <h3 class="ud-feature-title">{{feature.title}}</h3>
+                        <p class="ud-feature-desc">
+                            {{feature.description}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- ====== Features End ====== -->
+
+<!-- ====== About Start ====== -->
+<section id="about" class="ud-about">
+    <div class="container">
+        <div class="ud-about-wrapper wow fadeInUp" data-wow-delay=".2s">
+            <div class="ud-about-content-wrapper">
+                <div class="ud-about-content">
+                    <span class="tag">About Us</span>
+                    <h2>{{page.about.title}}</h2>
+                    <p>{{page.about.description}}</p>
+                    <a href="{{'/about' | relative_url}}" class="ud-main-btn">Learn More</a>
+                </div>
+            </div>
+            <div class="ud-about-image">
+                <img src="assets/images/about/about-image.svg" alt="about-image" />
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ====== About End ====== -->
+
+
+<!-- ====== Testimonials Start ====== -->
+<section id="testimonials" class="ud-testimonials">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ud-section-title mx-auto text-center">
+                    <span>Testimonials</span>
+                    <h2>{{page.testimonials.title}}</h2>
+                    <p>
+                        {{page.testimonials.description}}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-lg-3 g-3">
+            {% for item in page.testimonials.items %}
+            <div class="col">
+                <div class="ud-single-testimonial wow fadeInUp" data-wow-delay=".1s">
+                    <div class="ud-testimonial-ratings">
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                        <i class="lni lni-star-filled"></i>
+                    </div>
+                    <div class="ud-testimonial-content">
+                        <p>
+                            "{{item.comment}}"
+                        </p>
+                    </div>
+                    <div class="ud-testimonial-info">
+                        <div class="ud-testimonial-image">
+                            <img src="assets/images/testimonials/author-01.png" alt="author" />
+                        </div>
+                        <div class="ud-testimonial-meta">
+                            <h4>{{item.name}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- ====== Testimonials End ====== -->
+
+
+<!-- ====== Subscribe Start ====== -->
+
+{% include newsletter.html %}
+
+<!-- ====== Subscribe End ====== -->

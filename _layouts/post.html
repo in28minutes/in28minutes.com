@@ -1,67 +1,148 @@
 ---
 layout: default
 ---
+<style>
+    #content {
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
 
-{% assign minutes = content | strip_html | number_of_words | divided_by: 180 %}
-{% if minutes == 0 %}
-{% assign minutes = 1 %}
-{% endif %}
+    #content>p,
+    li {
+        line-height: 2em;
+        color: var(--body-color);
+    }
 
-<div class="post-header mb2">
-  <h1>{{ page.title }}</h1>
-  <span class="post-meta">{{ page.date | date: site.date_format }}</span><br>
-  {% if page.update_date %}
-    <span class="post-meta">{{ site.text.post.updated }}: {{ page.update_date | date: site.date_format }}</span><br>
-  {% endif %}
-  <span class="post-meta small">
-  {% if page.minutes %}
-    {{ page.minutes }} {{ site.text.post.minute_read }}
-  {% else %}
-    {{ minutes }} {{ site.text.post.minute_read }}
-  {% endif %}
-  </span>
-</div>
+    #content>p {
+        line-height: 2em;
+    }
 
-<article class="post-content">
-  {{ content }}
-</article>
+    #content>h2,
+    h3,
+    h4 {
+        margin-top: 2em;
+        font-weight: bold;
+        margin-bottom: 1em;
+        color: var(--heading-color);
+    }
 
-{% if site.show_sharing_icons %}
-  {% include share_buttons.html %}
-{% endif %}
+    div.highlight {
+        margin-top: 2em;
+        padding: 1em;
+        font-family: monospace !important;
+        margin-bottom: 2em;
+        padding-bottom: 0.25em;
+    }
 
-{% if site.show_post_footers %}
-  {% include post_footer.html %}
-{% endif %}
+    pre.highlight {
+        margin-bottom: none !important;
+        padding-bottom: none !important;
+    }
 
-{% if site.disqus_shortname %}
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-    var disqus_shortname  = '{{ site.disqus_shortname }}';
-    var disqus_identifier = '{{ page.id }}';
-    var disqus_title      = {{ page.title | jsonify }};
+    #content>ul {
+        padding-left: 2em;
+        margin-bottom: 1em;
+    }
 
-    (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-{% endif %}
-
-{% if site.facebook_comments %}
-  <div class="fb-comments" data-href="{{ site.url }}{{ page.url }}" data-width="100%" data-numposts="{{ site.facebook_comments_number }}"></div>
-{% endif %}
-
-{% if site.show_related_posts %}
-  <h3 class="related-post-title">{{ site.text.post.related_posts }}</h3>
-  {% for post in site.related_posts %}
-    <div class="post ml2">
-      <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
-        <h4 class="post-title">{{ post.title }}</h4>
-        <p class="post-summary">{{ post.summary }}</p>
-      </a>
+    #content>ul>li {
+        list-style: disc;
+    }
+</style>
+<section class="ud-page-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ud-banner-content">
+                    <h1>{{page.title}}</h1>
+                </div>
+            </div>
+        </div>
     </div>
-  {% endfor %}
-{% endif %}
+</section>
+<section class="ud-blog-details">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ud-blog-details-image">
+                    <img src="{{page.image | default: '/images/default-image-wide.png' | relative_url}}"
+                        alt="blog details"/>
+                    <div class="ud-blog-overlay">
+                        <div class="ud-blog-overlay-content">
+                            <div class="ud-blog-author">
+                                <img src="{{site.author.image | relative_url}}" alt="author" />
+                                <i class="lni lni-pencil text-white me-2"></i> <span class="me-2">
+                                    <a href="javascript:void(0)"> {{site.author.name}} </a>
+                                </span>
+                                <i class="lni lni-calendar text-white me-2"></i> <span class="me-2">{{page.date | date:
+                                    '%B
+                                    %d,
+                                    %Y'}}</span>
+                                {% assign minutes = content | strip_html | number_of_words | divided_by: 180 %}
+                                {% if minutes == 0 %}
+                                {% assign minutes = 1 %}
+                                {% endif %}
+                                <i class="lni lni-eye text-white me-2"></i> <span>{{minutes}} minutes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <div id="content">
+                    {{content | markdownify}}
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="ud-blog-sidebar">
+
+                    <div class="ud-articles-box">
+                        <h3 class="ud-articles-box-title">Related Articles</h3>
+                        <ul class="ud-articles-list">
+                            {% assign posts = site.blog | where_exp: "post", "post.categories == page.categories"%}
+                            {% for relatedPost in posts  limit: 15 %}
+                            <li>
+                                <div class="ud-article-image">
+                                    <img src="{{relatedPost.image | default: 'assets/images/blog/blog-details-01.jpg' | relative_url}}"
+                                        alt="author" />
+                                </div>
+                                <div class="ud-article-content">
+                                    <h5 class="ud-article-title">
+                                        <a href="{{relatedPost.url | relative_url}}">
+                                            {{relatedPost.title}}
+                                        </a>
+                                    </h5>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    
+                    <h3 class="ud-articles-box-title">Related Courses</h3>
+                    <div class="ud-banner-ad">
+                        <a href="https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud/" target="_blank">
+                            <img src="/images/microservices-course.png" alt="ad banner" />
+                        </a>
+                    </div>
+
+                    <div class="ud-banner-ad">
+                        <a href="https://www.udemy.com/course/cloud-computing-aws/" target="_blank">
+                            <img src="/images/aws-course.png" alt="ad banner" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include newsletter.html %}
+
+<script>
+    document.querySelectorAll('table').forEach(table => {
+        table.classList.add('table');
+    })
+    document.querySelectorAll('p').forEach(p => {
+        p.classList.add('ud-blog-details-para');
+    })
+</script>

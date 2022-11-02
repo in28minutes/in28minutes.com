@@ -1,16 +1,145 @@
-<footer class="center">
-  <div class="measure">
-    <small>
-    You can read about in28Minutes <a href="https://github.com/in28minutes/in28minutes-initiatives/tree/master/The-in28Minutes-Way">here</a>. You can check out our courses at <a href="http://www.in28minutes.com">in28minutes.com</a>. 
-    </small>
-  </div>
+<!-- ====== Footer Start ====== -->
+<footer class="ud-footer wow fadeInUp pt-5" data-wow-delay=".15s">
+    <div class="shape shape-1">
+        <img src="{{'assets/images/footer/shape-1.svg' | relative_url}}" alt="shape" />
+    </div>
+    <div class="shape shape-2">
+        <img src="{{'assets/images/footer/shape-2.svg' | relative_url}}" alt="shape" />
+    </div>
+    <div class="shape shape-3">
+        <img src="{{'assets/images/footer/shape-3.svg' | relative_url}}" alt="shape" />
+    </div>
+    <div class="ud-footer-widgets">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="ud-widget">
+                        <a href="index.html" class="ud-footer-logo">
+                            <!-- <img src="{{site.logo | default: 'assets/images/logo/logo.svg' | relative_url}}"
+                                alt="logo" /> -->
+                            <span class="fw-bold fs-1 text-white">in28minutes</span>
+                        </a>
+                        <p class="ud-widget-desc">
+                            {{site.description}}
+                        </p>
+                        <ul class="ud-widget-socials">
+                            <li>
+                                <a href="{{site.social.facebook}}" target="_blank">
+                                    <i class="lni lni-facebook-filled"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{site.social.twitter}}" target="_blank">
+                                    <i class="lni lni-twitter-filled"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{site.social.youtube}}" target="_blank">
+                                    <i class="lni lni-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{site.social.linkedin}}" target="_blank">
+                                    <i class="lni lni-linkedin-original"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
+                    <div class="ud-widget">
+                        <h5 class="ud-widget-title">Keep Learning</h5>
+                        <ul class="ud-widget-links">
+                            <li>
+                                <a href="{{'/' | relative_url}}">Home</a>
+                            </li>
+                            <li>
+                                <a href="{{'https://www.springboottutorial.com/blog/2-spring-framework.html' | relative_url}}">Spring Boot</a>
+                            </li>
+                            <li>
+                                <a href="{{'https://cloud.in28minutes.com' | relative_url}}">Cloud</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6">
+                    <div class="ud-widget">
+                        <h5 class="ud-widget-title">Our Products</h5>
+                        <ul class="ud-widget-links">
+                            {% for product in site.products %}
+                            <li>
+                                <a href="{{product.url | relative_url}}" rel="nofollow noopner" target="_blank">
+                                    {{product.name}}
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ud-footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <ul class="ud-footer-bottom-left">
+                        <li>
+                            <a href="https://www.privacypolicygenerator.info/live.php?token=oMRFWSatCvLhaKHNpUcF9IEVhKc3FSu6">Privacy policy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
+<!-- ====== Footer End ====== -->
 
-<script src="https://my.hellobar.com/95dfaf65377fbb29fabcf22c0d4865ea5c97416d.js" type="text/javascript" charset="utf-8" async="async"></script>
+<!-- ====== Back To Top Start ====== -->
+<a href="javascript:void(0)" class="back-to-top">
+    <i class="lni lni-chevron-up"></i>
+</a>
+<!-- ====== Back To Top End ====== -->
 
-{% if site.enable_anchorjs %}<!-- AnchorJS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.0.0/anchor.min.js"></script>
+<!-- ====== All Javascript Files ====== -->
+<script src="{{'assets/js/bootstrap.bundle.min.js' | relative_url}}"></script>
+<script src="{{'assets/js/wow.min.js' | relative_url}}"></script>
+<script src="{{'assets/js/main.js' | relative_url}}"></script>
 <script>
-    anchors.options.visible = 'always';
-    anchors.add('article h2, article h3, article h4, article h5, article h6');
-</script>{% endif %}
+    // section menu active
+    function onScroll(event) {
+        const sections = document.querySelectorAll('.ud-menu-scroll')
+        const scrollPos =
+            window.pageYOffset ||
+            document.documentElement.scrollTop ||
+            document.body.scrollTop
+
+        const navbarBrand = document.querySelector('.navbar-brand');
+
+        try {
+            for (let i = 0; i < sections.length; i++) {
+                const currLink = sections[i]
+                const value = currLink.getAttribute('href')
+                const refElement = document.querySelector(value)
+                const scrollTopMinus = scrollPos + 73
+                if (
+                    refElement.offsetTop <= scrollTopMinus &&
+                    refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
+                ) {
+                    document.querySelector('.ud-menu-scroll').classList.remove('active')
+                    currLink.classList.add('active')
+                    navbarBrand.classList.remove('text-dark')
+                    navbarBrand.classList.add('text-white')
+                } else {
+                    navbarBrand.classList.remove('text-white')
+                    navbarBrand.classList.add('text-dark')
+                    currLink.classList.remove('active')
+                }
+            }
+        }
+        catch (_) { }
+    }
+
+    window.document.addEventListener('scroll', onScroll)
+</script>
