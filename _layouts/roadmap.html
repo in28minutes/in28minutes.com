@@ -54,12 +54,13 @@ layout: page
                   <img src="{{course.thumbnail}}" class="img-fluid rounded shadow-lg">
                 </div>
                 <div class="col-9">
-                  <div class="mb-3"><strong>{{course.students}}</strong> Students</div>
+                  <div class="mb-3">{{course.name}}</div>
                   <div class="mb-3 course-rating"> <i
                       class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i
                       class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i
-                      class="lni lni-star-filled"></i>
-                    <strong>({{course.ratingCount}})</strong></div>  
+                      class="lni lni-star-filled"></i> (<strong>{{course.ratingCount}} </strong>ratings),
+                    <strong>{{course.students}}</strong> students 
+                    </div>  
                   <a href="{{course.url}}" class="ud-main-btn fw-bold">View on <strong>Udemy</strong></a>
                 </div>
               </div>
