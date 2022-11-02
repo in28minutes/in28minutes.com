@@ -1,5 +1,5 @@
 ---
-layout: resources
+layout: resource
 title: Java Programming Course - Resources
 resources:
   - title: Download PDF - Slides

@@ -1,5 +1,5 @@
 ---
-layout: resources
+layout: resource
 title: Google Cloud Associate Cloud Engineer - Resources
 resources:
   - title: Download PDF - Slides
