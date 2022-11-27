@@ -41,24 +41,15 @@ courses:
     ratingCount: 29,362 
     students: 177,875
     thumbnail: https://img-c.udemycdn.com/course/480x270/1535678_0ce9_7.jpg
-  - name: Spring Framework Master Class - Java Spring the Modern Way
+  - name: Master Spring Boot 3 & Spring Framework 6 with Java
     description:
     objectives:
       - test
-    url: https://www.udemy.com/course/spring-tutorial-for-beginners/?couponCode=NOV2022
+    url: https://www.udemy.com/course/spring-boot-and-spring-framework-tutorial-for-beginners/?couponCode=NOV2022
     rating: 4.5
-    ratingCount: 24,219
-    students: 132,600
-    thumbnail: https://img-c.udemycdn.com/course/480x270/684824_3626_3.jpg
-  - name: Learn Spring Boot 3 in 100 Steps - No 1 Java Framework
-    description:
-    objectives:
-      - test
-    url: https://www.udemy.com/course/spring-boot-tutorial-for-beginners/?couponCode=NOV2022
-    rating: 4.5
-    ratingCount: 10,536
-    students: 70,842
-    thumbnail: https://img-c.udemycdn.com/course/480x270/1078208_530c_3.jpg
+    ratingCount: NEW
+    students: NEW
+    thumbnail: https://img-c.udemycdn.com/course/480x270/4993276_3452.jpg
   - name: Master Microservices with Spring Boot and Spring Cloud
     description:
     objectives:
