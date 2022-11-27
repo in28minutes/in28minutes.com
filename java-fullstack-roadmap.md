@@ -39,7 +39,7 @@ courses:
     ratingCount: 29,362 
     students: 177,875
     thumbnail: https://img-c.udemycdn.com/course/480x270/1535678_0ce9_7.jpg
-  - name: Master Spring Boot 3 & Spring Framework 6 with Java
+  - name: NEW - Master Spring Boot 3 & Spring Framework 6 with Java
     description:
     objectives:
       - test
