@@ -9,7 +9,7 @@ card_bg: '#9aacd5'
 cards:
   - title: Dependency Injection
     description: Identify beans, their dependencies and wire them together (provides IOC - Inversion of Control)
-  - title: Constr. injection
+  - title: Constructor injection
     description: Dependencies are set by creating the Bean using its Constructor
   - title: Setter injection
     description: Dependencies are set by calling setter methods on your beans

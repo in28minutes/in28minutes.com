@@ -7,11 +7,11 @@ main_card_bg: '#6586c3'
 # Other cards
 card_bg: '#9aacd5'
 cards:
-  - title: Goal 
+  - title: Goal of Spring Boot
     description: Help you build PRODUCTION-READY apps QUICKLY
-  - title: Features - Build QUICKLY
+  - title: Spring Boot Features - Build QUICKLY
     description: Spring Initializr, Spring Boot Starter Projects,  Auto Configuration, DevTools
-  - title: Features - Be PRODUCTION-READY
+  - title: Spring Boot Features - Be PRODUCTION-READY
     description: Logging, Profiles, ConfigurationProperties, Monitoring (Spring Boot Actuator)
   - title: Spring Boot Starter Projects
     description: Convenient dependency descriptors. Contain a lot of the dependencies that you need to get a project up and running quickly.
@@ -23,7 +23,7 @@ cards:
     description: Automatically configures your Spring application based on the jar dependencies that you have added
   - title: Profiles
     description: Environment specific configuration. Segregate parts of your application configuration and make it be available only in certain environments.
-  - title: ConfigurationProperties
+  - title: Configuration Properties
     description: Simplifies externalized configuration. Define a bean containing all external configuration that varies from environment to environment.
   - title: Spring Boot Actuator
     description: Provides production ready features to help you monitor and manage your application
