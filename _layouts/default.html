@@ -7,7 +7,9 @@
 
 <body>
     {% if page.layout != "resources" %}
-    {% include nav.html %}
+        {% if page.layout != "flashcard-topic" %}
+            {% include nav.html %}
+        {% endif %}
     {% endif %}
     {{content}}
     {% include footer.html %}
