@@ -1,5 +1,5 @@
 ---
-layout: resource
+layout: resources
 title: Master Spring and Spring Boot - Resources
 resources:
   - title: Download PDF - Slides

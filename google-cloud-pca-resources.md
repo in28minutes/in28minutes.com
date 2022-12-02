@@ -1,5 +1,5 @@
 ---
-layout: resource
+layout: resources
 title: Google Cloud Professional Cloud Architect - Resources
 resources:
   - title: Download PDF - Slides

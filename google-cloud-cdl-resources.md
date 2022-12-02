@@ -1,5 +1,5 @@
 ---
-layout: resource
+layout: resources
 title: Google Cloud Digital Leader - Resources
 resources:
   - title: Download PDF - Slides

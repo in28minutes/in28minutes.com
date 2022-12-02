@@ -1,5 +1,5 @@
 ---
-layout: resource
+layout: resources
 title: Microservices with Spring Boot and Spring Cloud - Resources
 resources:
   - title: Download PDF - Slides

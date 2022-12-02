@@ -1,36 +1,39 @@
 ---
 layout: page
+show_header: false
 ---
-<!-- ====== Features Start ====== -->
 <div class="container">
     <div class="row py-5">
-        <div class="col">
-            <p class="fs-5">
-                {{page.description}}
-            </p>
+        <div class="col text-center">
+            <div class="fs-2">Thank you for enrolling! We're excited to have you here!</div>
+            <div class="fs-2"><strong>{{page.resources.size}} steps</strong> to get ready for the course.</div>
         </div>
     </div>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 mb-5">
-        {% for roadmap in page.roadmaps %}
-        <div class="ud-single-blog">
-            <div class="ud-blog-image">
-                <a href="{{roadmap.url | relative_url}}">
-                    <img src="{{roadmap.image}}" alt="Image" />
-                </a>
-            </div>
-            <div class="ud-blog-content text-center">
-                <h3 class="ud-blog-title">
-                    <a href="{{post.url | relative_url}}" class="fw-bold fs-3">
-                        {{roadmap.name}}
-                    </a>
-                </h3>
-                <p class="ud-blog-desc">
-                    {{roadmap.description}}
-                </p>
+    <div class="row mb-2">
+        <div class="col border-right">
+
+            <div class="wrapper">
+                <div class="timeline">
+                    {% for item in page.resources %}
+                    <div class="timeline--entry ud-single-feature wow fadeInUp p-3 bg-white" data-wow-delay=".1s"
+                        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                        <a target="_blank" href="{{item.url}}" class="btn btn-link">
+                            <div class="ud-feature-icon">
+                                <i class="lni {{item.icon | default: 'lni-download'}}"></i>
+                            </div>
+                        </a>
+                        <div class="ud-feature-content">
+                            <h3 class="ud-feature-title">{{item.title}}</h3>
+                            <p class="ud-feature-desc">
+                                {{item.description}}
+                            </p>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
             </div>
         </div>
-        {% endfor %}
     </div>
+    {% include newsletter.html %}
 </div>
-<!-- ====== Features End ====== -->
-{% include newsletter.html %}
