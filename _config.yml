@@ -9,10 +9,10 @@ plugins:
 
 # Products
 products:
-  - name: Articles
-    url: https://www.springboottutorial.com/blog
   - name: Roadmaps
-    url: https://www.in28minutes.com/roadmaps
+    url: /roadmaps
+  - name: Flashcards
+    url: /flashcards-list
 
 # Articles
 articles:
