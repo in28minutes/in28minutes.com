@@ -17,6 +17,8 @@ cards:
     description: Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.
   - title: Applications of Java
     description: Enterprise applications, Network applications, Desktop applications, Web applications, Games, Android app, and many more.
+  - title: JVM
+    description: Java Virtual Machine, or JVM, provides runtime environment in which Java bytecode can be loaded, verifies, and executed
   - title: Compiler
     description: A compiler in Java converts the source code into a machine-code or bytecode code, and that is then executed. It is platform-independent.
   - title: IDE
