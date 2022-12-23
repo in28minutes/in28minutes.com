@@ -20,7 +20,7 @@ cards:
   - title: JVM
     description: Java Virtual Machine, or JVM, provides runtime environment in which Java bytecode can be loaded, verifies, and executed
   - title: JRE
-    description: JRE = JVM + Libraries + Other Components. Java Runtime Environment, or JRE, is needed to Run Java Programs. 
+    description: Java Runtime Environment, or JRE, is needed to Run Java Programs. JRE = JVM + Libraries + Other Components.
   - title: Compiler
     description: A compiler in Java converts the source code into a machine-code or bytecode code, and that is then executed. It is platform-independent.
   - title: IDE
