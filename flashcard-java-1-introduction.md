@@ -20,11 +20,7 @@ cards:
   - title: JVM
     description: Java Virtual Machine, or JVM, provides runtime environment in which Java bytecode can be loaded, verifies, and executed
   - title: JRE
-    description: JRE 
-    Java Runtime Environment, or JRE, is needed to Run Java Programs
-    JVM runs your program bytecode
-    Libraries are built-in Java utilities that can be used within any program you create.
-    System.out.println was a method in java.lang, one such utility. Other Components include tools for debugging and code profiling 
+    description: JRE  
   - title: JDK
     description: JDK = JRE + Compilers + Debuggers
     - JDK refers to the Java Development Kit. It's an acronym for the bundle needed to compile (with the compiler) and run (with the JRE bundle) your Java program.
