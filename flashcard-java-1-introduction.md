@@ -23,6 +23,8 @@ cards:
     description: Java Runtime Environment, or JRE, is needed to Run Java Programs. JRE = JVM + Libraries + Other Components.
   - title: JDK
     description: Java Development Kit is an acronym for the bundle needed to compile (with the compiler) and run (with the JRE bundle) your Java program. JDK = JRE + Compilers + Debuggers. 
+  - title: Java LTS Version
+    description: A Java LTS (long-term support) release is a version of Java that will remain the industry standard for several years. To give you an example of this, Java 8 was released in 2014, it will continue to receive updates until 2020, and extended support will end by 2025.
   - title: Compiler
     description: A compiler in Java converts the source code into a machine-code or bytecode code, and that is then executed. It is platform-independent.
   - title: IDE
