@@ -27,15 +27,6 @@ cards:
     description: A Java LTS (long-term support) release is a version of Java that will remain the industry standard for several years. Example Java 7, 8, 11 and 17.
   - title: JShell
     description: The Java Shell tool (JShell) is an interactive tool for learning the Java programming language and prototyping Java code. JShell is a Read-Evaluate-Print Loop (REPL), which evaluates declarations, statements, and expressions as they are entered and immediately shows the results.
-  - title: MyFirstJavaProgram
-    description: "java
-    public class MyFirstJavaProgram{
-     public static void main{
-     System.out.println("Hello World");
-     }
-    }
-    Output: Hello World
-    "
   - title: Compiler
     description: A compiler in Java converts the source code into a machine-code or bytecode code, and that is then executed. It is platform-independent.
   - title: IDE
