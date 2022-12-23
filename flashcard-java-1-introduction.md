@@ -20,7 +20,7 @@ cards:
   - title: JVM
     description: Java Virtual Machine, or JVM, provides runtime environment in which Java bytecode can be loaded, verifies, and executed
   - title: JRE
-    description: JRE = JVM + Libraries + Other Components
+    description: JRE 
     Java Runtime Environment, or JRE, is needed to Run Java Programs
     JVM runs your program bytecode
     Libraries are built-in Java utilities that can be used within any program you create.
