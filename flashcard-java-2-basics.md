@@ -7,34 +7,30 @@ main_card_bg: '#6586c3'
 # Other cards
 card_bg: '#9aacd5'
 cards:
-  - title: System.out.print
-    description: In Java, System.out.println
-  - title: System in System.out.print() 
-    description: System is a final class defined in the java. lang package. 
-  - title: out in System.out.print() 
-    description: This is an instance of PrintStream type, which is a public and static member field of the System class.
- - title: print() vs println()
-    description: The prints method simply print text on the console and does not add any new line. While println adds new line after print text on console.
- - title: printf()
-    description: The Java printf function helps simplify the task of printing formatted output to the console, terminal window or log files.
-  - title: public static void main(){}
-    description: The keyword public static void main is the means by which you create a main method within the Java application.
-  - title: \textbf{public} static void main(){}
-    description: public is an Access modifier, which tells our program from where and who can acces our method. Making the main() method public means it is globally available, So, JVM can invoke it from outside the class.
-  - title: static 
-    description: Static methods can be called without creating an object of class. The main() method is static so that JVM can invoke it without instantiating the class. 
-  - title: void 
-    description: The keyword public static void main is the means by which you create a main method within the Java application.
-  - title: public static void \textbf{main()}
-    description: main() is not a keyword, it's a method. At the starting point of java program, JVM looks for the main() method.
-  - title: Classes in Java
-    description: A class is a blueprint or prototype defined by user from which objects are created. It represents the group of objects which have common properties.
-  - title: Object in Java
-    description: An object is a member or an instance of a Java class. Each object has an identity, a behavior and a state.
- - title: Fields in Java
-    description: Fields are the elements that make up the object state. Object behavior is implemented through Methods.
- - title: Modularization in Java
-    description: Modularity is the process of decomposing a problem (program) into a set of modules so as to reduce the overall complexity of the problem.
- - title: Advantages Modularization
-    description: 1. Compile Time Checks, 2. Better Encapsulation, 3. Smaller Java Runtime
+  - title: Programming
+    description: Programming is the process of creating a set of instructions that tell a computer how to perform a particular task
+  - title: Programming Language
+    description: A programming language is a type of written language that tells computers what to do. 
+  - title: Examples of Programming Language
+    description: Examples are Java, Python, Ruby, JavaScript, C, C++, and C#. Programming languages are used to write all computer programs and computer software.
+  - title: What is Java?
+    description: Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.
+  - title: Applications of Java
+    description: Enterprise applications, Network applications, Desktop applications, Web applications, Games, Android app, and many more.
+  - title: JVM
+    description: Java Virtual Machine, or JVM, provides runtime environment in which Java bytecode can be loaded, verifies, and executed
+  - title: JRE
+    description: Java Runtime Environment, or JRE, is needed to Run Java Programs. JRE = JVM + Libraries + Other Components.
+  - title: JDK
+    description: Java Development Kit is an acronym for the bundle needed to compile (with the compiler) and run (with the JRE bundle) your Java program. JDK = JRE + Compilers + Debuggers. 
+  - title: Java LTS Version
+    description: A Java LTS (long-term support) release is a version of Java that will remain the industry standard for several years. Example Java 7, 8, 11 and 17.
+  - title: JShell
+    description: The Java Shell tool (JShell) is an interactive Read-Evaluate-Print Loop (REPL) tool for learning the Java programming language and prototyping Java code.
+  - title: Compiler
+    description: A compiler in Java converts the source code into a machine-code or bytecode code, and that is then executed. It is platform-independent.
+  - title: IDE
+    description: An integrated development environment (IDE) is a software application that helps programmers develop software code efficiently.
+  - title: Eclipse IDE
+    description: Eclipse is an integrated development environment used by programmers to develop software.
 ---
