@@ -7,7 +7,7 @@ main_card_bg: '#6586c3'
 # Other cards
 card_bg: '#9aacd5'
 cards:
-  - title: Programming
+  - title: System.out.print()
     description: Programming is the process of creating a set of instructions that tell a computer how to perform a particular task
   - title: Programming Language
     description: A programming language is a type of written language that tells computers what to do. 
