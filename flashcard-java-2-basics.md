@@ -19,13 +19,13 @@ cards:
     description: The Java printf function helps simplify the task of printing formatted output to the console, terminal window or log files.
   - title: public static void main(){}
     description: The keyword public static void main is the means by which you create a main method within the Java application.
-  - title: \textbf{public} static void main(){}
+  - title: public in static void main(){}
     description: public is an Access modifier, which tells our program from where and who can acces our method. Making the main() method public means it is globally available, So, JVM can invoke it from outside the class.
-  - title: static 
+  - title: static in public static void main(){}
     description: Static methods can be called without creating an object of class. The main() method is static so that JVM can invoke it without instantiating the class. 
-  - title: void 
-    description: The keyword public static void main is the means by which you create a main method within the Java application.
-  - title: public static void \textbf{main()}
+  - title: void in public static void main(){}
+    description: void keyword is a return type that denotes a method doesn’t return anything. As our main() method doesn’t return anything, so void is used.
+  - title: main() in public static void main(){}
     description: main() is not a keyword, it's a method. At the starting point of java program, JVM looks for the main() method.
   - title: Classes in Java
     description: A class is a blueprint or prototype defined by user from which objects are created. It represents the group of objects which have common properties.
