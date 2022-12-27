@@ -9,24 +9,6 @@ card_bg: '#9aacd5'
 cards:
   - title: System.out.print()
     description: In Java, System.out.println() is a statement which prints the argument passed inside it. The print() method display results on the console.
-  - title: System in System.out.print() 
-    description: System is a final class defined in the java. lang package. 
-  - title: out in System.out.print() 
-    description: This is an instance of PrintStream type, which is a public and static member field of the System class.
- - title: print() vs println()
-    description: The prints method simply print text on the console and does not add any new line. While println adds new line after print text on console.
- - title: printf()
-    description: The Java printf function helps simplify the task of printing formatted output to the console, terminal window or log files.
-  - title: public static void main(){}
-    description: The keyword public static void main is the means by which you create a main method within the Java application.
-  - title: Object in Java
-    description: An object is a member or an instance of a Java class. Each object has an identity, a behavior and a state.
- - title: Fields in Java
-    description: Fields are the elements that make up the object state. Object behavior is implemented through Methods.
- - title: Modularization in Java
-    description: Modularity is the process of decomposing a problem (program) into a set of modules so as to reduce the overall complexity of the problem.
- - title: Advantages Modularization
-    description: 1. Compile Time Checks, 2. Better Encapsulation, 3. Smaller Java Runtime
   - title: Eclipse IDE
     description: Eclipse is an integrated development environment used by programmers to develop software.
 ---
