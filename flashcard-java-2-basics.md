@@ -35,6 +35,4 @@ cards:
     description: Modularity is the process of decomposing a problem (program) into a set of modules so as to reduce the overall complexity of the problem.
   - title: Advantages Modularization
     description: 1. Compile Time Checks, 2. Better Encapsulation, 3. Smaller Java Runtime
-  - title: Eclipse IDE
-    description: Eclipse is an integrated development environment used by programmers to develop software.
 ---
