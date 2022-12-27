@@ -8,7 +8,7 @@ main_card_bg: '#6586c3'
 card_bg: '#9aacd5'
 cards:
   - title: System.out.print()
-    description: Programming is the process of creating a set of instructions that tell a computer how to perform a particular task
+    description: In Java, System.out.println() is a statement which prints the argument passed inside it. The print() method display results on the console.
   - title: Programming Language
     description: A programming language is a type of written language that tells computers what to do. 
   - title: Examples of Programming Language
