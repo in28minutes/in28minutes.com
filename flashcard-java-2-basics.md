@@ -33,6 +33,6 @@ cards:
     description: Fields are the elements that make up the object state. Object behavior is implemented through Methods.
   - title: Modularization in Java
     description: Modularity is the process of decomposing a problem (program) into a set of modules so as to reduce the overall complexity of the problem.
-  - title: Advantages Modularization
+  - title: Advantages of Modularization
     description: 1. Compile Time Checks, 2. Better Encapsulation, 3. Smaller Java Runtime
 ---
