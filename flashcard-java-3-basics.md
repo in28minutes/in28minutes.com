@@ -13,6 +13,7 @@ cards:
     description: test 
   - title: local variable
     description: test
+  - title: Instance variables
     description: test
   - title: Static variable
     description: Ttest
@@ -23,9 +24,4 @@ cards:
   - title: Overflow 
     description: test
   - title: Final Variables
-    description: test
-  - title: Instance variables
-    description: test
-  - title: Static variables
-    description: test
 ---
