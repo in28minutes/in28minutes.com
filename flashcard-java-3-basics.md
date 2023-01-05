@@ -8,7 +8,7 @@ main_card_bg: '#6586c3'
 card_bg: '#9aacd5'
 cards:
   - title: variable
-    description: n Java, a variable is a location in memory where a programmer can store a value. 
+    description: In Java, a variable is a location in memory where a programmer can store a value. 
   - title: Primitive variables
     description: These are variables that hold a single value of a primitive data type, such as an integer, float, or boolean.
   - title: Reference variables
