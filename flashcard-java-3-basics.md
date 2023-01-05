@@ -13,7 +13,7 @@ cards:
     description: These are variables that hold a single value of a primitive data type, such as an integer, float, or boolean.
   - title: Reference variables
     description: These are variables that hold a reference to an object in memory. They do not contain the object itself, but rather a reference to the object's location in memory.
-    - title: Local variable
+  - title: Local variable
     description: In Java, a local variable is a variable that is defined within a method, constructor, or block of code. Local variables are only visible and accessible within the block of code in which they are defined, and they are not accessible from outside the block.
   - title: Instance variables
     description: In Java, an instance variable is a variable that is defined in a class, but outside of any method. Instance variables are unique to each instance of a class, meaning that each object of a class has its own copy of the instance variables.
