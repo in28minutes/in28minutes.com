@@ -14,11 +14,11 @@ cards:
   - title: Reference variables
     description: These are variables that hold a reference to an object in memory. They do not contain the object itself, but rather a reference to the object's location in memory.
   - title: Local variable
-    description: In Java, a local variable is a variable that is defined within a method, constructor, or block of code. Local variables are only visible and accessible within the block of code in which they are defined, and they are not accessible from outside the block.
+    description: In Java, a local variable is a variable that is defined within a method, constructor, or block of code. 
   - title: Instance variables
-    description: In Java, an instance variable is a variable that is defined in a class, but outside of any method. Instance variables are unique to each instance of a class, meaning that each object of a class has its own copy of the instance variables.
+    description: In Java, an instance variable is a variable that is defined in a class, but outside of any method. 
   - title: Static variable
-    description: In Java, a static variable is a variable that is shared by all instances of a class. This means that there is only one copy of the static variable, regardless of how many objects of the class are created.
+    description: In Java, a static variable is a variable that is shared by all instances of a class. 
   - title: Typecasting 
     description: In Java, typecasting refers to the process of converting a variable from one data type to another.
   - title: Overflow 
