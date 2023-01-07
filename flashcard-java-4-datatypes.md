@@ -13,16 +13,24 @@ cards:
     description: There are two types of data types in Java - primitive and reference.
   - title: Primitive Data Type 
     description: In Java, a primitive data type is a basic data type that is built into the language and is not a class.
-  - title: Local variable
-    description: In Java, a local variable is a variable that is defined within a method, constructor, or block of code. 
-  - title: Instance variables
-    description: In Java, an instance variable is a variable that is defined in a class, but outside of any method. 
-  - title: Static variable
-    description: In Java, a static variable is a variable that is shared by all instances of a class. 
-  - title: Typecasting 
-    description: In Java, typecasting refers to the process of converting a variable from one data type to another.
-  - title: Overflow 
-    description: In Java, an integer overflow occurs when an arithmetic operation results in a value that is too large to be stored in the variable's data type.
-  - title: Final Variables
-    description: In Java, a final variable is a variable that cannot be reassigned. Once a value is assigned to a final variable, it cannot be changed.
+  - title: Examples of Primitive Data Type 
+    description: There are eight primitive data types in Java: boolean, char, byte, short, int, long, float, and double. 
+  - title: boolean
+    description: boolean: represents a logical value, either true or false. 
+  - title: char
+    description: char: represents a single character.
+  - title: byte
+    description: byte: represents an 8-bit integer.
+  - title: short
+    description: short: represents a 16-bit integer.
+  - title: int
+    description: int: represents a 32-bit integer.
+  - title: long
+    description: long: represents a 64-bit integer.
+  - title: float
+    description: float: represents a single-precision 32-bit IEEE 754 floating-point number.
+  - title: double
+    description:double: represents a double-precision 64-bit IEEE 754 floating-point number.
+  - title: Reference data types
+    description: Reference data types are objects and arrays, and they are stored on the heap rather than on the stack like primitive types.
 ---
