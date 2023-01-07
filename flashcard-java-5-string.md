@@ -25,6 +25,8 @@ cards:
     description: Returns a new string with all the characters in lower case.
   - title: toUpperCase()
     description: Returns a new string with all the characters in upper case.
+  - title: trim()
+    description: Returns a new string with leading and trailing whitespace removed.
   - title: indexOf(String str)
     description: Returns the index of the first occurrence of the specified string, or -1 if the string is not found.
   - title: contains(String str)
