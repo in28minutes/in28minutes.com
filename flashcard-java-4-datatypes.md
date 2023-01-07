@@ -16,21 +16,21 @@ cards:
   - title: Examples of Primitive Data Type 
     description: There are eight primitive data types in Java - boolean, char, byte, short, int, long, float, and double. 
   - title: boolean
-    description: boolean: represents a logical value, either true or false. 
+    description: boolean represents a logical value, either true or false. 
   - title: char
-    description: char: represents a single character.
+    description: char represents a single character.
   - title: byte
-    description: byte: represents an 8-bit integer.
+    description: byte represents an 8-bit integer.
   - title: short
-    description: short: represents a 16-bit integer.
+    description: short represents a 16-bit integer.
   - title: int
-    description: int: represents a 32-bit integer.
+    description: int represents a 32-bit integer.
   - title: long
-    description: long: represents a 64-bit integer.
+    description: long represents a 64-bit integer.
   - title: float
-    description: float: represents a single-precision 32-bit IEEE 754 floating-point number.
+    description: float represents a single-precision 32-bit IEEE 754 floating-point number.
   - title: double
-    description:double: represents a double-precision 64-bit IEEE 754 floating-point number.
+    description:double represents a double-precision 64-bit IEEE 754 floating-point number.
   - title: Reference data types
     description: Reference data types are objects and arrays, and they are stored on the heap rather than on the stack like primitive types.
 ---
