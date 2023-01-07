@@ -7,32 +7,28 @@ main_card_bg: '#6586c3'
 # Other cards
 card_bg: '#9aacd5'
 cards:
-  - title: Data Type
-    description: In Java, a data type is a classification that determines the values, operations, and storage for a variable. 
-  - title: Types of Data Type
-    description: There are two types of data types in Java - primitive and reference.
-  - title: Primitive Data Type 
-    description: In Java, a primitive data type is a basic data type that is built into the language and is not a class.
-  - title: Examples of Primitive Data Type 
-    description: There are eight primitive data types in Java - boolean, char, byte, short, int, long, float, and double. 
-  - title: boolean
-    description: boolean represents a logical value, either true or false. 
-  - title: char
-    description: char represents a single character.
-  - title: byte
-    description: byte represents an 8-bit integer.
-  - title: short
-    description: short represents a 16-bit integer.
-  - title: int
-    description: int represents a 32-bit integer.
-  - title: long
-    description: long represents a 64-bit integer.
-  - title: float
-    description: float represents a single-precision 32-bit IEEE 754 floating-point number.
-  - title: double
-    description: double represents a double-precision 64-bit IEEE 754 floating-point number.
-  - title: Reference data types
-    description: Reference data types are objects and arrays, and they are stored on the heap rather than on the stack like primitive types.
-  - title: Note **DataType
-    description: Using a data type that is too small to hold a value can cause loss of precision, and using a data type that is too large can waste memory and processing resources.
+  - title: String
+    description: In Java, a string is an object that represents a sequence of characters.
+  - title: Nature of Strings
+    description: Strings are immutable, which means that once you create a string, you cannot change its contents. Instead, you can create a new string with the desired modifications.
+  - title: Concatenating strings 
+    description: You can use the + operator to concatenate two strings.
+  - title: Important String methods
+    description: Here are some important methods that you might use when working with strings in Java
+  - title: charAt(int index)
+    description: Returns the character at the specified index in the string.
+  - title: length()
+    description: Returns the length of the string.
+  - title: substring(int startIndex, int endIndex)
+    description: Returns a new string that is a substring of this string, starting at the specified startIndex and ending at the specified endIndex - 1
+  - title: toLowerCase()
+    description: Returns a new string with all the characters in lower case.
+  - title: toUpperCase()
+    description: Returns a new string with all the characters in upper case.
+  - title: indexOf(String str)
+    description: Returns the index of the first occurrence of the specified string, or -1 if the string is not found.
+  - title: contains(String str)
+    description: Returns true if the string contains the specified string, false otherwise.
+  - title: replace(CharSequence oldStr, CharSequence newStr)
+    description: Returns a new string with all occurrences of the specified string replaced by the new string.
 ---
