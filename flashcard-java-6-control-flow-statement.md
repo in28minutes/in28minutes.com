@@ -8,7 +8,7 @@ main_card_bg: '#6586c3'
 card_bg: '#9aacd5'
 cards:
   - title: Control flow statements
-    description: In Java, control flow statements are used to control the flow of execution of a program. They allow you to specify which lines of code should be executed under certain conditions, and provide a way to specify different paths of execution based on the results of boolean expressions.
+    description: Java control flow statements are statements that control the order in which statements are executed in a Java program, based on specified conditions or values. 
   - title: Nature of Strings
     description: Strings are immutable, which means that once you create a string, you cannot change its contents. Instead, you can create a new string with the desired modifications.
   - title: Concatenating strings 
