@@ -14,7 +14,7 @@ cards:
   - title: Primitive Data Type 
     description: In Java, a primitive data type is a basic data type that is built into the language and is not a class.
   - title: Examples of Primitive Data Type 
-    description: There are eight primitive data types in Java: boolean, char, byte, short, int, long, float, and double. 
+    description: There are eight primitive data types in Java - boolean, char, byte, short, int, long, float, and double. 
   - title: boolean
     description: boolean: represents a logical value, either true or false. 
   - title: char
