@@ -30,7 +30,7 @@ cards:
   - title: float
     description: float represents a single-precision 32-bit IEEE 754 floating-point number.
   - title: double
-    description:double represents a double-precision 64-bit IEEE 754 floating-point number.
+    description: double represents a double-precision 64-bit IEEE 754 floating-point number.
   - title: Reference data types
     description: Reference data types are objects and arrays, and they are stored on the heap rather than on the stack like primitive types.
 ---
