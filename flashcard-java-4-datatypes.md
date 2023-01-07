@@ -33,4 +33,6 @@ cards:
     description: double represents a double-precision 64-bit IEEE 754 floating-point number.
   - title: Reference data types
     description: Reference data types are objects and arrays, and they are stored on the heap rather than on the stack like primitive types.
+  - title: Note **DataType
+    description: It's important to choose the appropriate data type for your variables based on the values they will hold. Using a data type that is too small to hold a value can cause loss of precision, and using a data type that is too large can waste memory and processing resources.
 ---
