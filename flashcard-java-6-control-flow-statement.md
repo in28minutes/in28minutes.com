@@ -9,18 +9,16 @@ card_bg: '#9aacd5'
 cards:
   - title: Control flow statements
     description: Java control flow statements are statements that control the order in which statements are executed in a Java program, based on specified conditions or values. 
-  - title: Nature of Strings
-    description: Strings are immutable, which means that once you create a string, you cannot change its contents. Instead, you can create a new string with the desired modifications.
-  - title: Concatenating strings 
-    description: You can use the + operator to concatenate two strings.
-  - title: Important String methods
-    description: Here are some important methods that you might use when working with strings in Java
-  - title: charAt(int index)
-    description: Returns the character at the specified index in the string.
-  - title: length()
-    description: Returns the length of the string.
-  - title: substring(int startIndex, int endIndex)
-    description: Returns a new string that is a substring of this string, starting at the specified startIndex and ending at the specified endIndex - 1
+  - title: Types of Control flow statements
+    description: Java provides three types of control flow statements. Decision Making statements, Loop statements, Jump statements
+  - title: Decision Making Statements
+    description: Decision making statements in Java allow you to specify different paths of execution in your code based on the results of boolean expressions.
+  - title: Types of Decision Making Statements
+    description: There are two types of decision making statements in Java - if-else statements, switch statements
+  - title: if-else statements
+    description: The if-else statement allows you to specify two different blocks of code to be executed, depending on whether a boolean condition is true or false.
+  - title: switch statements
+    description: The switch statement is an alternative to the if-else statement for specifying multiple blocks of code to be executed based on the value of a variable.
   - title: toLowerCase()
     description: Returns a new string with all the characters in lower case.
   - title: toUpperCase()
