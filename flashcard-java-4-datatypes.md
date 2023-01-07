@@ -1,7 +1,7 @@
 ---
 layout: flashcard-topic
 # Main card
-title: Java Data Types
+title: Data Types in Java
 main_card_title: Java
 main_card_bg: '#6586c3'
 # Other cards
