@@ -29,6 +29,6 @@ cards:
     description: Returns the index of the first occurrence of the specified string, or -1 if the string is not found.
   - title: contains(String str)
     description: Returns true if the string contains the specified string, false otherwise.
-  - title: replace(CharSequence oldStr, CharSequence newStr)
+  - title: replace(CharSeq oldStr, CharSeq newStr)
     description: Returns a new string with all occurrences of the specified string replaced by the new string.
 ---
