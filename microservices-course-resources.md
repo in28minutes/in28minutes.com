@@ -4,7 +4,7 @@ title: Microservices with Spring Boot and Spring Cloud - Resources
 resources:
   - title: Download PDF - Slides
     description: Download the slides and have them ready.
-    url: 'https://github.com/in28minutes/course-material/raw/main/01-spring-microservices/v2/Microservices-V2-presentation.pdf'
+    url: 'https://in28minutes.com/downloads/01-spring-microservices/v2/Microservices-V2-presentation.pdf'
   - title: Download Code
     description: Download and have this ready. We will use the examples during the course.
     url: 'https://github.com/in28minutes/spring-microservices-v2/archive/main.zip'
