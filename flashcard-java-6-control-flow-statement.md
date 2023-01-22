@@ -21,8 +21,8 @@ cards:
     description: The switch statement is an alternative to the if-else statement for specifying multiple blocks of code to be executed based on the value of a variable.
   - title: loop statement
     description: loop statements are used to repeatedly execute a block of code, such as for, while, do-while, and enhanced for loop which is used to iterate over a collection of elements.
-  - title: toUpperCase()
-    description: Returns a new string with all the characters in upper case.
+  - title: Types of loop statement in Java
+    description: In Java, there are several types of loop statements including for, while, and do-while.
   - title: trim()
     description: Returns a new string with leading and trailing whitespace removed.
   - title: indexOf(String str)
