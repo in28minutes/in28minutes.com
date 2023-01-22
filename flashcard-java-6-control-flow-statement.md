@@ -39,4 +39,18 @@ cards:
     description: enhanced for loop (also known as the "for-each" loop) which is used to iterate over a collection of elements, such as arrays or lists.
   - title: enhanced for loop syntax
     description: for (type variable ':' collection) { // code to be executed }
+  - title: jump statements in java
+    description: Jump statements in Java allow exiting loops, skipping iterations, exiting methods, throwing exceptions, pausing thread execution.
+  - title: types of jump statements in java
+    description: break, continue, return, and throw.
+  - title: break statement
+    description: The break statement is used to exit a loop or a switch statement
+  - title: continue statement
+    description: The continue statement is used to skip over one iteration of a loop.
+  - title: eturn statement
+    description: The return statement is used to exit a method and return a value (if the method is non-void). It can also be used to exit a constructor.
+  - title: throw statement
+    description: The throw statement is used to throw an exception.
+  - title: yield statement
+    description: used to pause the execution of the current thread and allow other threads to execute, but it's not a common statement, and it's mostly used in multi-threading environments.
 ---
