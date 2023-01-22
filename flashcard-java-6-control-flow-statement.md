@@ -24,11 +24,19 @@ cards:
   - title: Types of loop statement in Java
     description: In Java, there are several types of loop statements including for, while, and do-while.
   - title: for loop
-    description: The for loop is used to iterate a specific number of times. for (initialization; condition; iteration) { //code }
-  - title: indexOf(String str)
-    description: Returns the index of the first occurrence of the specified string, or -1 if the string is not found.
-  - title: contains(String str)
-    description: Returns true if the string contains the specified string, false otherwise.
-  - title: replace(CharSeq oldStr, CharSeq newStr)
-    description: Returns a new string with all occurrences of the specified string replaced by the new string.
+    description: The for loop is used to iterate a specific number of times. 
+  - title: for loop syntax
+    description: for (initialization; condition; iteration) { // code to be executed }
+  - title: while loop
+    description: The while loop is used to repeatedly execute a block of code as long as a certain condition is met. 
+  - title: while loop syntax
+    description: while (condition) { //code to be executed }
+  - title: do-while loop
+    description: The do-while loop is similar to the while loop, but it executes the code block at least once before checking the condition.
+  - title: do-while loop syntax
+    description: do { // code to be executed } while (condition);
+  - title: enhanced for loop
+    description: enhanced for loop (also known as the "for-each" loop) which is used to iterate over a collection of elements, such as arrays or lists.
+  - title: enhanced for loop syntax
+    description: for (type variable : collection) { // code to be executed }
 ---
