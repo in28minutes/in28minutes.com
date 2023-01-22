@@ -38,5 +38,5 @@ cards:
   - title: enhanced for loop
     description: enhanced for loop (also known as the "for-each" loop) which is used to iterate over a collection of elements, such as arrays or lists.
   - title: enhanced for loop syntax
-    description: for (type variable : collection) { // code to be executed }
+    description: for (type variable ':' collection) { // code to be executed }
 ---
