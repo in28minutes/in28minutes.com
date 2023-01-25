@@ -11,12 +11,12 @@ cards:
     description: OOPS stands for Object-Oriented Programming System.
   - title: More on OOPs
     description: Object-oriented programming paradigm which models real-world entities as objects.
-  - title: Concatenating strings 
-    description: You can use the + operator to concatenate two strings.
-  - title: Important String methods
-    description: Here are some important methods that you might use when working with strings in Java
-  - title: charAt(int index)
-    description: Returns the character at the specified index in the string.
+  - title: building blocks of OOP
+    description: In Java, the basic building blocks of OOP are classes and objects.
+  - title: Java Classes
+    description: Java classes are templates for creating objects
+  - title: Java Objects
+    description: Java objects are instances of a class
   - title: length()
     description: Returns the length of the string.
   - title: substring(int startIndex, int endIndex)
