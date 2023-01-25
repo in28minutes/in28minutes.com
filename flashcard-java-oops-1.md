@@ -14,9 +14,9 @@ cards:
   - title: building blocks of OOP
     description: In Java, the basic building blocks of OOP are classes and objects.
   - title: Java Classes
-    description: Java classes are templates for creating objects
+    description: Java classes are emplate or blueprint for creating objects
   - title: Java Objects
-    description: Java objects are instances of a class
+    description: Java objects are instances of a class, with their own properties and methods, created with the "new" keyword.
   - title: length()
     description: Returns the length of the string.
   - title: substring(int startIndex, int endIndex)
