@@ -17,8 +17,8 @@ cards:
     description: Java classes are emplate or blueprint for creating objects
   - title: Java Objects
     description: Java objects are instances of a class, with their own properties and methods, created with the "new" keyword.
-  - title: length()
-    description: Returns the length of the string.
+  - title: Java Methods
+    description: Java methods are functions associated with classes/objects, performing specific actions, can be overloaded and have access levels
   - title: substring(int startIndex, int endIndex)
     description: Returns a new string that is a substring of this string, starting at the specified startIndex and ending at the specified endIndex - 1
   - title: toLowerCase()
