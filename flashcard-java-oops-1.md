@@ -7,10 +7,10 @@ main_card_bg: '#6586c3'
 # Other cards
 card_bg: '#9aacd5'
 cards:
-  - title: String
-    description: In Java, a string is an object that represents a sequence of characters.
-  - title: Nature of Strings
-    description: Strings are immutable, which means that once you create a string, you cannot change its contents. Instead, you can create a new string with the desired modifications.
+  - title: OOPs
+    description: OOPS stands for Object-Oriented Programming System.
+  - title: More on OOPs
+    description: Object-oriented programming paradigm which models real-world entities as objects.
   - title: Concatenating strings 
     description: You can use the + operator to concatenate two strings.
   - title: Important String methods
