@@ -11,8 +11,6 @@ cards:
     description: Programming is the process of creating a set of instructions that tell a computer how to perform a particular task
   - title: Programming Language
     description: A programming language is a type of written language that tells computers what to do. 
-  - title: Examples of Programming Language
-    description: Examples are Java, Python, Ruby, JavaScript, C, C++, and C#. Programming languages are used to write all computer programs and computer software.
   - title: What is Java?
     description: Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.
   - title: JShell
