@@ -1,8 +1,8 @@
 ---
 layout: flashcard-topic
 # Main card
-title: Introduction to Java
-main_card_title: Java
+title: Introduction To Java Programming With JShell
+main_card_title: Java Fundamentals
 main_card_bg: '#6586c3'
 # Other cards
 card_bg: '#9aacd5'
