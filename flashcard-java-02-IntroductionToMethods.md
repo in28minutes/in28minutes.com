@@ -26,10 +26,9 @@ cards:
   - title: JRE
     description: Java Runtime Environment, or JRE, is needed to Run Java Programs. JRE = JVM + Libraries + Other Components.
   - title: JDK
-    description: Java Development Kit is an acronym for the bundle needed to compile (with the compiler) and run (with the JRE bundle) your Java program. JDK = JRE + Compilers + Debuggers. 
-  - title: Java LTS Version
+    description: Java Development Kit is an acronym for the bundle needed to compile and run your Java program. JDK = JRE + Compilers + Debuggers. 
   - title: Compiler
-    description: A compiler in Java converts the source code into a machine-code or bytecode code, and that is then executed. It is platform-independent.
+    description: A compiler converts the source code into a machine-code or bytecode code, and that is then executed. It is platform-independent.
   - title: IDE
     description: An integrated development environment (IDE) is a software application that helps programmers develop software code efficiently.
   - title: Eclipse IDE
