@@ -30,7 +30,7 @@ cards:
   - title: Compiler
     description: A compiler converts the source code into a machine-code or bytecode code, and that is then executed. It is platform-independent.
   - title: IDE
-    description: An integrated development environment (IDE) is a software application that helps programmers develop software code efficiently.
+    description: An integrated development environment (IDE) is a software application that helps to develop software code efficiently.
   - title: Eclipse IDE
     description: Eclipse is an integrated development environment used by programmers to develop software.
   - title: Debugging
