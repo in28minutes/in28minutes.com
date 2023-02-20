@@ -1,8 +1,8 @@
 ---
 layout: flashcard-topic
 # Main card
-title: Introduction To Methods
-main_card_title: Java Fundamentals
+title: Introduction To Object Oriented Programming
+main_card_title: Java OOPs
 main_card_bg: '#6586c3'
 # Other cards
 card_bg: '#9aacd5'
