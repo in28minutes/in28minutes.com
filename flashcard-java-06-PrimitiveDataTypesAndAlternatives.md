@@ -34,12 +34,12 @@ cards:
     description: Boolean in Java is a data type that represents true or false values.
   - title: What is "||" operator?
     description: In Java, "||" is a logical operator used for OR operations.
-  - title: "&&"
-    description: "&&" in Java is a logical operator that performs a "and" operation between two boolean values.
+  - title: What is "&&" operator?
+    description: In Java "&&" is a logical operator that performs a "and" operation between two boolean values.
   - title: ^
     description: ^ is a bitwise operator in Java used for performing XOR operations.
-  - title: "Not" operator
-    description: "Not" operator in Java is represented by the exclamation mark (!) and is used to negate a boolean value.
+  - title: Not operator
+    description: Not operator in Java is represented by the exclamation mark (!) and is used to negate a boolean value.
   - title: Short Circuit Operators
     description: Short Circuit Operators in Java are used for optimizing logical expressions and improving program efficiency.
   - title: Char
