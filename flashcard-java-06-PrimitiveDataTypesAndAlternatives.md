@@ -32,8 +32,8 @@ cards:
     description: BigDecimal is a Java class for precise arithmetic operations on very large or very small numbers.
   - title: Boolean
     description: Boolean in Java is a data type that represents true or false values.
-  - title: "||"
-    description: "||" is a logical operator in Java used for OR operations.
+  - title: What is "||" operator?
+    description: In Java, "||" is a logical operator used for OR operations.
   - title: "&&"
     description: "&&" in Java is a logical operator that performs a "and" operation between two boolean values.
   - title: ^
