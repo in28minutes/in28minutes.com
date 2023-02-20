@@ -36,7 +36,7 @@ cards:
     description: In Java, "||" is a logical operator used for OR operations.
   - title: What is "&&" operator?
     description: In Java "&&" is a logical operator that performs a "and" operation between two boolean values.
-  - title: ^
+  - title: ^ Operator
     description: ^ is a bitwise operator in Java used for performing XOR operations.
   - title: Not operator
     description: Not operator in Java is represented by the exclamation mark (!) and is used to negate a boolean value.
