@@ -17,6 +17,10 @@ cards:
     description: if-else statements, switch statements
   - title: If-Else Statement
     description: A conditional statement in Java that executes different blocks of code based on a specified condition.
+  - title: If-Else Syntax
+    description: if (condition){ //code -> if condition is true } else { //code -> if condition is false }
   - title: Switch Statement
     description: Switch statement in Java is a control flow statement that allows the selection of multiple cases.
+  - title: Switch Syntax
+    description: "switch(expression) { case value1: // code break; default: // code }"
 ---
