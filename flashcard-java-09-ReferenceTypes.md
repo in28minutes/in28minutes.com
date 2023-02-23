@@ -37,6 +37,10 @@ cards:
     description: Checks if a String is empty or not.
   - title: endsWith()
     description: Java String endsWith checks if a string ends with specified suffix. 
-  - title: str.startsWith()
+  - title: startsWith()
     description: Starts with checks if a string starts with specified prefix.
+  - title: StringBuffer
+    description: StringBuffer is a mutable string in Java used to manipulate strings with operations like append, delete and insert
+  - title: StringBuilder
+    description: StringBuilder in Java is a mutable sequence of characters. It provides a more efficient way of creating and manipulating strings.
 ---
