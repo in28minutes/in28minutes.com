@@ -10,7 +10,7 @@ cards:
   - title: What is Loop?
     description: Java loop statements repeat code execution.
   - title: Types of Loop
-    description: In Java, there are several types of loop statements including for, while, and do-while.
+    description: There are several types of loop statements including for, while, and do-while.
   - title: For Loop
     description: The for loop is used to iterate a specific number of times. 
   - title: For Syntax
