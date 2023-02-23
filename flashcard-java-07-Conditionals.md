@@ -8,15 +8,15 @@ main_card_bg: '#6586c3'
 card_bg: '#9aacd5'
 cards:
   - title: Control flow statements
-    description: Java control flow statements are statements that control the order in which statements are executed in a Java program, based on specified conditions or values. 
+    description: Java control flow statements are used to control the flow of a program's execution.
   - title: Types of Control flow statements
-    description: Java provides three types of control flow statements. Decision Making statements, Loop statements, Jump statements
+    description: Decision Making statements, Loop statements, Jump statements
   - title: Decision Making Statements
-    description: Decision making statements in Java allow you to specify different paths of execution in your code based on the results of boolean expressions.
+    description: Java's decision-making statements control program flow based on specified conditions.
   - title: Types of Decision Making Statements
-    description: There are two types of decision making statements in Java - if-else statements, switch statements
-  - title: if-else statements
-    description: The if-else statement allows you to specify two different blocks of code to be executed, depending on whether a boolean condition is true or false.
-  - title: switch statements
-    description: The switch statement is an alternative to the if-else statement for specifying multiple blocks of code to be executed based on the value of a variable.
+    description: if-else statements, switch statements
+  - title: If-Else Statement
+    description: A conditional statement in Java that executes different blocks of code based on a specified condition.
+  - title: Switch Statement
+    description: Switch statement in Java is a control flow statement that allows the selection of multiple cases.
 ---
