@@ -7,7 +7,7 @@ main_card_bg: '#6586c3'
 # Other cards
 card_bg: '#9aacd5'
 cards:
-  - title: Control flow statements
+  - title: Control Flow Statement
     description: Java control flow statements are used to control the flow of a program's execution.
   - title: Types of Control flow statements
     description: Decision Making statements, Loop statements, Jump statements
