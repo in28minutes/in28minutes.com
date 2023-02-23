@@ -7,32 +7,28 @@ main_card_bg: '#6586c3'
 # Other cards
 card_bg: '#9aacd5'
 cards:
-  - title: loop statement
+  - title: What is Loop?
     description: Java loop statements repeat code execution.
-  - title: Types of loop statement in Java
+  - title: Types of Loop
     description: In Java, there are several types of loop statements including for, while, and do-while.
-  - title: for loop
+  - title: For Loop
     description: The for loop is used to iterate a specific number of times. 
-  - title: for loop syntax
+  - title: For Syntax
     description: for (initialization; condition; iteration) { // code to be executed }
-  - title: while loop
+  - title: While Loop
     description: The while loop is used to repeatedly execute a block of code as long as a certain condition is met. 
-  - title: while loop syntax
+  - title: While syntax
     description: while (condition) { //code to be executed }
-  - title: do-while loop
+  - title: Do-While Loop
     description: The do-while loop is similar to the while loop, but it executes the code block at least once before checking the condition.
-  - title: do-while loop syntax
+  - title: Do-While Syntax
     description: do { // code to be executed } while (condition);
-  - title: enhanced for loop
-    description: enhanced for loop (also known as the "for-each" loop) which is used to iterate over a collection of elements, such as arrays or lists.
-  - title: enhanced for loop syntax
-    description: for (type variable ':' collection) { // code to be executed }
-  - title: jump statements in java
+  - title: Jump Statement
     description: Jump statements in Java allow exiting loops, skipping iterations, exiting methods, throwing exceptions, pausing thread execution.
-  - title: types of jump statements in java
+  - title: Types of Jump
     description: break, continue, return, and throw.
-  - title: break statement
+  - title: Break Statement
     description: The break statement is used to exit a loop or a switch statement
-  - title: continue statement
+  - title: Continue Statement
     description: The continue statement is used to skip over one iteration of a loop.
 ---
