@@ -16,15 +16,15 @@ cards:
   - title: For Syntax
     description: for (initialization; condition; iteration) { // code to be executed }
   - title: While Loop
-    description: The while loop is used to repeatedly execute a block of code as long as a certain condition is met. 
+    description: The while loop is used to repeatedly execute a block of code while a condition is true. 
   - title: While syntax
     description: while (condition) { //code to be executed }
   - title: Do-While Loop
-    description: The do-while loop is similar to the while loop, but it executes the code block at least once before checking the condition.
+    description: Similar to the while loop, but it executes the code block at least once before checking the condition.
   - title: Do-While Syntax
     description: do { // code to be executed } while (condition);
   - title: Jump Statement
-    description: Jump statements in Java allow exiting loops, skipping iterations, exiting methods, throwing exceptions, pausing thread execution.
+    description: A Jump Statement in Java is used to transfer control to a specific part of the program.
   - title: Types of Jump
     description: break, continue, return, and throw.
   - title: Break Statement
