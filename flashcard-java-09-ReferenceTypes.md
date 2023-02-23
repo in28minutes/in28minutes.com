@@ -35,8 +35,6 @@ cards:
     description: Returns a new string with all occurrences of the specified string replaced by the new string.
   - title: isEmpty()
     description: Checks if a String is empty or not.
-  - title: replace(CharSeq oldStr, CharSeq newStr)
-    description: Returns a new string with all occurrences of the specified string replaced by the new string.
   - title: endsWith()
     description: Java String endsWith checks if a string ends with specified suffix. 
   - title: str.startsWith()
