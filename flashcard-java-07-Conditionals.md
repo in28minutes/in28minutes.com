@@ -19,8 +19,4 @@ cards:
     description: The if-else statement allows you to specify two different blocks of code to be executed, depending on whether a boolean condition is true or false.
   - title: switch statements
     description: The switch statement is an alternative to the if-else statement for specifying multiple blocks of code to be executed based on the value of a variable.
-  - title: break statement
-    description: The break statement is used to exit a loop or a switch statement
-  - title: continue statement
-    description: The continue statement is used to skip over one iteration of a loop.
 ---
