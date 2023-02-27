@@ -11,36 +11,32 @@ cards:
     description: In Java, it provides a way to represent and manipulate dates without time and time zones.
   - title: LocalDate API Implementation
     description: import java.time.LocalDate; LocalDate now = LocalDate.now();
-  - title: String Class
-    description: String is a class in Java used to represent a sequence of characters.
-  - title: Concatenating strings 
-    description: You can use the + operator to concatenate two strings.
-  - title: charAt(int index)
-    description: Returns the character at the specified index in the string.
-  - title: length()
-    description: Returns the length of the string.
-  - title: substring(int startIndex, int endIndex)
-    description: Returns a substring of this string, starting at startIndex and ending at the endIndex - 1
-  - title: toLowerCase()
-    description: Returns a new string with all the characters in lower case.
-  - title: toUpperCase()
-    description: Returns a new string with all the characters in upper case.
-  - title: trim()
-    description: Returns a new string with leading and trailing whitespace removed.
-  - title: indexOf(String str)
-    description: Returns the index of the first occurrence of the string, or -1 if the string is not found.
-  - title: contains(String str)
-    description: Returns true if the string contains the specified string, false otherwise.
-  - title: replace(CharSeq oldStr, CharSeq newStr)
-    description: Returns a new string with all occurrences of the specified string replaced by the new string.
-  - title: isEmpty()
-    description: Checks if a String is empty or not.
-  - title: endsWith()
-    description: Java String endsWith checks if a string ends with specified suffix. 
-  - title: startsWith()
-    description: Starts with checks if a string starts with specified prefix.
-  - title: StringBuffer
-    description: Mutable string in Java used to manipulate strings with operations like append, delete and insert
-  - title: StringBuilder
-    description: Mutable sequence of characters. It provides a more efficient way of creating and manipulating strings.
+  - title: getDayOfMonth()
+    description: Returns the day of the month from a LocalDate object in Java.
+  - title: getDayOfWeek()
+    description: Returns the day of the week from a LocalDate object in Java.
+  - title: getDayOfYear()
+    description: Returns the day of the year from a LocalDate object in Java.
+  - title: getEra()
+    description: Returns the era of the LocalDate in Java.
+  - title: getMonth()
+    description: Returns the month of a LocalDate object in Java.
+  - title: getMonthValue()
+    description: Returns the month as an integer from 1 to 12 in LocalDate API Java.
+  - title: isLeapYear()
+    description: To check if a year is a leap year or not.
+  - title: lengthOfMonth()
+    description: Returns the length of the month in days.
+  - title: lengthOfYear()
+    description: Returns the length of the year in days of the given LocalDate object in Java.
+  - title: isBefore(LocalDate.now())
+    description: Checks if the LocalDate is before the current system date.
+  - title: isBefore(LocalDate.of(2020,1,1))
+    description: Checks if the date is before January 1st, 2020 in LocalDate API Java.
+  - title: now.plusDays(10)
+    description: It adds 10 days to the current date and returns a new LocalDate object.
+  - title: now.minusDays(10)
+    description: It returns a LocalDate object with the date of 10 days before the current date.
+  - title: now.withDayOfMonth(2)
+    description: Sets the day of the month of the LocalDate object to 2.
 ---
