@@ -39,4 +39,6 @@ cards:
     description: Adds an element to the end of an ArrayList in Java.
   - title: arrayList.remove("XYZ")
     description: Removes the first occurrence of the element "XYZ" from the ArrayList.
+  - title: Array vs ArrayList
+    description: Array is fixed size, ArrayList is dynamic size.
 ---
