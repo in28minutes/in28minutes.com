@@ -68,5 +68,19 @@ cards:
   - title: treeSet.headSet()
     description: Returns a subset of elements that are less than the specified element in a TreeSet.
   - title: treeSet.tailSet()
-    description: Returns a view of the portion of the set greater than or equal to the specified element
+    description: Returns a view of the portion of the set greater than or equal to the specified element.
+  - title: PriorityQueue<>()
+    description: Data structure that orders elements based on priority in Java.
+  - title: queue.poll()
+    description: Retrieves and removes the head of the queue, or returns null if the queue is empty.
+  - title: queue.offer()
+    description: The method to insert an element into the Queue in Java.
+  - title: HashMap<>()
+    description: Stores key-value pairs, allows quick retrieval of values based on keys.
+  - title: hashMap.put()
+    description: Inserts a key-value mapping into the HashMap.
+  - title: hashMap.keySet()
+    description: Returns a set of keys stored in the HashMap object.
+  - title: hashMap.values()
+    description: Returns a set of values contained in the HashMap.
 ---
