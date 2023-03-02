@@ -60,13 +60,13 @@ cards:
   - title: treeSet.floor()
     description: Returns the greatest element in the TreeSet less than or equal to the given element.
   - title: treeSet.lower()
-    description: Used to replace an element at a specified index.
+    description: Return the greatest element in the TreeSet less than the given element.
   - title: treeSet.ceiling()
-    description:  Removes the element at the specified index from the ArrayList.
+    description: Returns the least element greater than or equal to the given element.
   - title: treeSet.subSet()
-    description: Used to sort the elements in a collection.
+    description: Returns a subset of the TreeSet within a specified range.
   - title: treeSet.headSet()
-    description: Interface in Java, used to define the natural order of objects in Java.
+    description: Returns a subset of elements that are less than the specified element in a TreeSet.
   - title: treeSet.tailSet()
-    description: Interface in Java, used to define the natural order of objects in Java.
+    description: Returns a view of the portion of the set greater than or equal to the specified element
 ---
