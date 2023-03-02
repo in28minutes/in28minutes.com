@@ -83,4 +83,22 @@ cards:
     description: Returns a set of keys stored in the HashMap object.
   - title: hashMap.values()
     description: Returns a set of values contained in the HashMap.
+  - title: TreeMap<>()
+    description: A Class in Java that implements the Map interface using a red-black tree.
+  - title: treeMap.put()
+    description: Used to insert key-value pairs into a TreeMap.
+  - title: treeMap.higherKey()
+    description: Returns the least key greater than the given key, or null if no key.
+  - title: treeMap.ceilingKey()
+    description: Returns the lowest key greater than or equal to the given key.
+  - title: treeMap.lowerKey()
+    description: Returns the greatest key less than the given key.
+  - title: treeMap.floorKey()
+    description: Returns the greatest key less than or equal to the given key.
+  - title: treeMap.firstEntry()
+    description: Returns the first key-value mapping of the TreeMap.
+  - title: treeMap.lastEntry()
+    description: Returns the last key-value pair in the TreeMap.
+  - title: treeMap.subMap()
+    description: Returns a portion of TreeMap based on specified range.
 ---
