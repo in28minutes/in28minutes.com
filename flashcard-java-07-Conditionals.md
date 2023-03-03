@@ -12,11 +12,11 @@ cards:
   - title: Types of Control flow statements
     description: Decision Making statements, Loop statements, Jump statements
   - title: Decision Making Statements
-    description: Java's decision-making statements control program flow based on specified conditions.
+    description: Controls program flow based on specified conditions.
   - title: Types of Decision Making Statements
     description: if-else statements, switch statements
   - title: If-Else Statement
-    description: A conditional statement in Java that executes different blocks of code based on a specified condition.
+    description: A conditional statement, executes different blocks of code based on a specified condition.
   - title: If-Else Syntax
     description: if (condition){ //code -> if condition is true } else { //code -> if condition is false }
   - title: Switch Statement
