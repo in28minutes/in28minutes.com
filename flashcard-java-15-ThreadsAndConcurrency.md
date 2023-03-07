@@ -37,7 +37,7 @@ cards:
     description: Thread.yield() pauses the currently executing thread to allow other threads to execute.
   - title: ExecutorService
     description:  ExecutorService is a framework to manage threads in Java.
-  - title: exctrSvc.newFixedThreadPool()
+  - title: newFixedThreadPool()
     description: Creates a fixed-size thread pool that reuses threads in Java.
   - title: CallableTask
     description: Used to execute tasks asynchronously and return a result.
