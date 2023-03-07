@@ -2,7 +2,7 @@
 layout: flashcard-topic
 # Main card
 title: Java New Features
-main_card_title: Java  5 to 16
+main_card_title: Java 5 to 16
 main_card_bg: '#6586c3'
 # Other cards
 card_bg: '#9aacd5'
