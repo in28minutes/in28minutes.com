@@ -24,13 +24,13 @@ cards:
   - title: All Java Versions 
     description: API Improvements, Performance and Garbage Collection Improvements
   - title: Java Modularization
-    description: API Improvements, Performance and Garbage Collection Improvements
+    description: Java SE 9 introduced modularization to improve performance, security and scalability of Java applications.
   - title: Switch Expression
-    description: API Improvements, Performance and Garbage Collection Improvements
+    description: Switch expression is a new feature in Java SE 14 for more concise switch statements.
   - title: Text Blocks
     description: A new feature to write multiline strings with fewer escape characters.
   - title: Record Classes
-    description: Record Classes (Preview in 14 and 15
-  - title: Garbage Collection
-    description: API Improvements, Performance and Garbage Collection Improvements
+    description: Record classes are a new feature in Java SE 16 for creating immutable data classes.
+  - title: Garbage Collection Improvements
+    description: Improvements to the garbage collection mechanism
 ---
