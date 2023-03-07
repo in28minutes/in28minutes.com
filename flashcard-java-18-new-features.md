@@ -23,6 +23,10 @@ cards:
     description: Record Classes (Preview in 14 and 15
   - title: All Java Versions 
     description: API Improvements, Performance and Garbage Collection Improvements
+  - title: Java Modularization
+    description: API Improvements, Performance and Garbage Collection Improvements
+  - title: Switch Expression
+    description: API Improvements, Performance and Garbage Collection Improvements
   - title: Text Blocks
     description: A new feature to write multiline strings with fewer escape characters.
   - title: Record Classes
