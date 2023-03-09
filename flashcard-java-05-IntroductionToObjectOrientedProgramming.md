@@ -8,7 +8,7 @@ main_card_bg: '#6586c3'
 card_bg: '#9aacd5'
 cards:
   - title: OOPs
-    description: Object-Oriented Programming (OOP) is a programming paradigm in Java that focuses on creating reusable code for real-life scenarios.
+    description: OOPs is a programming paradigm in Java that focuses on creating reusable code for real-life scenarios.
   - title: Class
     description: Class in Java is a blueprint for creating objects with common properties and behaviors.
   - title: Object
