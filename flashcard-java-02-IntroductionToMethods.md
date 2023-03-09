@@ -21,16 +21,16 @@ cards:
     description: A class is a blueprint or prototype defined by user from which objects are created.
   - title: Object in Java
     description: An object is a member or an instance of a Java class. Each object has an identity, a behavior and a state.
-  - title: JVM
-    description: Java Virtual Machine, or JVM, provides runtime environment in which Java bytecode can be loaded, verifies, and executed
+  - title: Java Virtual Machine
+    description: , JVM, provides runtime environment in which Java bytecode can be loaded, verifies, and executed
   - title: JRE
     description: Java Runtime Environment, or JRE, is needed to Run Java Programs. JRE = JVM + Libraries + Other Components.
-  - title: JDK
-    description: Java Development Kit is an acronym for the bundle needed to compile and run your Java program. JDK = JRE + Compilers + Debuggers. 
+  - title: Java Development Kit
+    description: JDK is an acronym for the bundle needed to compile and run your Java program. JDK = JRE + Compilers + Debuggers. 
   - title: Compiler
-    description: A compiler converts the source code into a machine-code or bytecode code, and that is then executed. It is platform-independent.
-  - title: IDE
-    description: An integrated development environment (IDE) is a software application that helps to develop software code efficiently.
+    description: Converts the source code into a machine-code or bytecode code, and that is then executed. It's platform-independent.
+  - title: Integrated Development Environment
+    description: An IDE is a software application that helps to develop software code efficiently.
   - title: Eclipse IDE
     description: Eclipse is an integrated development environment used by programmers to develop software.
   - title: Debugging
