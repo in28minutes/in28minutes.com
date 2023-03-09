@@ -7,8 +7,8 @@ main_card_bg: '#6586c3'
 # Other cards
 card_bg: '#9aacd5'
 cards:
-  - title: Exception
-    description: Exception is an event that interrupts the program's normal flow.
+  - title: Functional Programming
+    description: Is a paradigm that emphasizes immutability and higher-order functions
   - title: Exception Handling
     description: Handling and managing errors and exceptions in Java.
   - title: NullPointer Exception
