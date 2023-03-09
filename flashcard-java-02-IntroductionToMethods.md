@@ -22,7 +22,7 @@ cards:
   - title: Object in Java
     description: An object is a member or an instance of a Java class. Each object has an identity, a behavior and a state.
   - title: Java Virtual Machine
-    description: , JVM, provides runtime environment in which Java bytecode can be loaded, verifies, and executed
+    description: JVM, provides runtime environment in which Java bytecode can be loaded, verifies, and executed
   - title: JRE
     description: Java Runtime Environment, or JRE, is needed to Run Java Programs. JRE = JVM + Libraries + Other Components.
   - title: Java Development Kit
