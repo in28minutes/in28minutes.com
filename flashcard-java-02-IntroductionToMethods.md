@@ -28,7 +28,7 @@ cards:
   - title: Java Development Kit
     description: JDK is an acronym for the bundle needed to compile and run your Java program. JDK = JRE + Compilers + Debuggers. 
   - title: Compiler
-    description: Converts the source code into a machine-code or bytecode code, and that is then executed. It's platform-independent.
+    description: Converts the source code into a machine-code or bytecode code, and that is then executed.
   - title: Integrated Development Environment
     description: An IDE is a software application that helps to develop software code efficiently.
   - title: Eclipse IDE
