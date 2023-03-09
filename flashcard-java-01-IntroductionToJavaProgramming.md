@@ -18,11 +18,11 @@ cards:
   - title: Compiler
     description: Converts the source code into a machine-code or bytecode code, and that is then executed. 
   - title: System & out
-    description: System is a final class defined in the java. lang package. Out is an instance of PrintStream type, which is a public and static member field of the System class. 
+    description: System.out is a standard output stream used to display information in the console.
   - title: print() vs println()
-    description: The prints method simply print text on the console and does not add any new line. While println adds new line after print text on console.
+    description: print() outputs text without a newline, println() outputs with a newline at the end.
   - title: printf()
-    description: The Java printf function helps simplify the task of printing formatted output to the console, terminal window or log files.
+    description: Simplify the task of printing formatted output to the console, terminal window or log files.
   - title: System.out.print()
     description: In Java, System.out.println() is a statement which prints the argument passed inside it.
   - title: variable
@@ -76,7 +76,7 @@ cards:
   - title: Types of Control flow statements
     description: Java provides three types of control flow statements. Decision Making statements, Loop statements, Jump statements
   - title: Decision Making Statements
-    description: Decision making statements in Java allow you to specify different paths of execution in your code based on the results of boolean expressions.
+    description: Allow you to specify different paths of execution in your code based on the results of boolean expressions.
   - title: Types of Decision Making Statements
     description: There are two types of decision making statements in Java - if-else statements, switch statements
   - title: if-else statements
