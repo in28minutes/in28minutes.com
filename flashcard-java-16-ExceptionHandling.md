@@ -11,7 +11,7 @@ cards:
     description: Exception is an event that interrupts the program's normal flow.
   - title: Exception Handling
     description: Handling and managing errors and exceptions in Java.
-  - title: NullPointerException
+  - title: NullPointer Exception
     description: An error that occurs when a program tries to use a null object.
   - title: Exception Class
     description: A class in Java that handles errors and exceptional events.
