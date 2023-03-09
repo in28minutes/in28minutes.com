@@ -17,7 +17,7 @@ cards:
   - title: int
     description: Integer represents a 32-bit integer. The range of int in Java is -2,147,483,648 to 2,147,483,647.
   - title: long
-    description: Long represents a 64-bit integer. The range of long in Java is -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.
+    description: Represents a 64-bit integer. The range is -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.
   - title: float
     description: Represents a single-precision 32-bit IEEE 754 floating-point number. The range is approximately 3.4E-38 to 3.4E+38.
   - title: double
