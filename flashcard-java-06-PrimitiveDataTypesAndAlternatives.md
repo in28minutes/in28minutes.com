@@ -19,9 +19,9 @@ cards:
   - title: long
     description: Long represents a 64-bit integer. The range of long in Java is -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.
   - title: float
-    description: Float represents a single-precision 32-bit IEEE 754 floating-point number. The range of a float in Java is approximately 3.4E-38 to 3.4E+38.
+    description: Represents a single-precision 32-bit IEEE 754 floating-point number. The range is approximately 3.4E-38 to 3.4E+38.
   - title: double
-    description: Double represents a double-precision 64-bit IEEE 754 floating-point number. The range of a double in Java is approximately 4.9e-324 to 1.8e+308.
+    description: Represents a double-precision 64-bit IEEE 754 floating-point number. The range is approximately 4.9e-324 to 1.8e+308.
   - title: Typecasting
     description: Typecasting in Java is the process of converting one data type into another.
   - title: Lossy conversion

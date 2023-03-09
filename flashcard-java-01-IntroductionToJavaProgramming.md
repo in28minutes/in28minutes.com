@@ -8,7 +8,7 @@ main_card_bg: '#6586c3'
 card_bg: '#9aacd5'
 cards:
   - title: Programming
-    description: Programming is the process of creating a set of instructions that tell a computer how to perform a particular task
+    description: Process of creating a set of instructions that tell a computer how to perform a particular task
   - title: Programming Language
     description: A programming language is a type of written language that tells computers what to do. 
   - title: What is Java?
@@ -80,7 +80,7 @@ cards:
   - title: Types of Decision Making Statements
     description: There are two types of decision making statements in Java - if-else statements, switch statements
   - title: if-else statements
-    description: The if-else statement allows you to specify two different blocks of code to be executed, depending on whether a boolean condition is true or false.
+    description: This allows you to specify two different blocks of code to be executed, depending on whether a boolean condition is true or false.
   - title: loop statement
     description: Java loop statements repeat code execution.
   - title: Types of loop statement in Java
