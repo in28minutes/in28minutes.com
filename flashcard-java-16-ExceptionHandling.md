@@ -23,7 +23,7 @@ cards:
     description: A finally block in Java is used for executing code after try-catch.
   - title: ArrayIndex OutOfBounds Exception
     description: Accessing an array element with an invalid index. 
-  - title: InterruptedException
+  - title: Interrupted Exception
     description:  Is a Java exception that occurs when a thread is interrupted.
   - title: RuntimeException
     description: Is a type of Java exception that occurs at runtime.
