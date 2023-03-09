@@ -12,11 +12,11 @@ cards:
   - title: Programming Language
     description: A programming language is a type of written language that tells computers what to do. 
   - title: What is Java?
-    description: Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.
+    description: Java is a high-level, class-based, object-oriented programming language.
   - title: JShell
-    description: The Java Shell tool (JShell) is an interactive Read-Evaluate-Print Loop (REPL) tool for learning the Java programming language and prototyping Java code.
+    description: The Java Shell tool (JShell) is an interactive Read-Evaluate-Print Loop (REPL) tool.
   - title: Compiler
-    description: A compiler in Java converts the source code into a machine-code or bytecode code, and that is then executed. It is platform-independent.
+    description: Converts the source code into a machine-code or bytecode code, and that is then executed. 
   - title: System & out
     description: System is a final class defined in the java. lang package. Out is an instance of PrintStream type, which is a public and static member field of the System class. 
   - title: print() vs println()
@@ -24,21 +24,21 @@ cards:
   - title: printf()
     description: The Java printf function helps simplify the task of printing formatted output to the console, terminal window or log files.
   - title: System.out.print()
-    description: In Java, System.out.println() is a statement which prints the argument passed inside it. The print() method display results on the console.
+    description: In Java, System.out.println() is a statement which prints the argument passed inside it.
   - title: variable
     description: In Java, a variable is a location in memory where a programmer can store a value. 
   - title: Primitive variables
-    description: These are variables that hold a single value of a primitive data type, such as an integer, float, or boolean.
+    description: Variables that hold a single value of a primitive data type, such as an integer, float, or boolean.
   - title: Reference variables
-    description: These are variables that hold a reference to an object in memory. They do not contain the object itself, but rather a reference to the object's location in memory.
+    description: Variables that hold a reference to an object in memory. 
   - title: Local variable
-    description: In Java, a local variable is a variable that is defined within a method, constructor, or block of code. 
+    description: A variable that is defined within a method, constructor, or block of code. 
   - title: Instance variables
-    description: In Java, an instance variable is a variable that is defined in a class, but outside of any method. 
+    description: A variable that is defined in a class, but outside of any method. 
   - title: Static variable
-    description: In Java, a static variable is a variable that is shared by all instances of a class. 
+    description: A variable that is shared by all instances of a class. 
   - title: Final Variables
-    description: In Java, a final variable is a variable that cannot be reassigned. Once a value is assigned to a final variable, it cannot be changed.
+    description: A variable that cannot be reassigned. Once a value is assigned to a final variable, it cannot be changed.
   - title: Data Type
     description: In Java, a data type is a classification that determines the values, operations, and storage for a variable. 
   - title: Types of Data Type
@@ -68,11 +68,11 @@ cards:
   - title: String
     description: In Java, a string is an object that represents a sequence of characters.
   - title: Nature of Strings
-    description: Strings are immutable, which means that once you create a string, you cannot change its contents. Instead, you can create a new string with the desired modifications.
+    description: Strings are immutable.
   - title: Concatenating strings 
     description: You can use the + operator to concatenate two strings.
   - title: Control flow statements
-    description: Java control flow statements are statements that control the order in which statements are executed in a Java program, based on specified conditions or values. 
+    description: Statements that control the order in which statements are executed, based on specified conditions or values. 
   - title: Types of Control flow statements
     description: Java provides three types of control flow statements. Decision Making statements, Loop statements, Jump statements
   - title: Decision Making Statements
