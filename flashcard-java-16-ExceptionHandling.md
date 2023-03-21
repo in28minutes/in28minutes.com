@@ -8,29 +8,25 @@ main_card_bg: '#6586c3'
 card_bg: '#9aacd5'
 cards:
   - title: Exception
-    description: Exception is an event that interrupts the program's normal flow.
+    description: An event that interrupts the program's normal flow
   - title: Exception Handling
-    description: Handling and managing errors and exceptions in Java.
+    description: Handling and managing errors and exceptions in Java
   - title: NullPointer Exception
-    description: An error that occurs when a program tries to use a null object.
+    description: An error that occurs when a program tries to operate on a null object
   - title: Exception Class
-    description: A class in Java that handles errors and exceptional events.
+    description: A class in Java that represents errors and exceptional events
   - title: printStackTrace()
-    description: printStackTrace() in Java displays the error message and its trace.
+    description: printStackTrace() in Java displays the error message and its trace
   - title: try-catch
-    description: A Java mechanism for handling errors and exceptions during program execution.
+    description: A Java mechanism for handling errors and exceptions during program execution
   - title: finally
-    description: A finally block in Java is used for executing code after try-catch.
-  - title: ArrayIndex OutOfBounds Exception
-    description: Accessing an array element with an invalid index. 
-  - title: Interrupted Exception
-    description:  Is a Java exception that occurs when a thread is interrupted.
+    description: Code in finally block is almost always executed (Usecase - clean up resources)
   - title: RuntimeException
-    description: Is a type of Java exception that occurs at runtime.
+    description: Type of exception that does not need to be explicitly handled
   - title: Custom Exception
-    description: Is a user-defined exception.
+    description: A user-defined exception class
   - title: IOException
-    description: Is an exception that occurs when dealing with input/output operations.
+    description: Exception that occurs when dealing with input/output operations
   - title: SQLException
-    description: Is an error that occurs during database operations.
+    description: Exception that occurs when dealing with database operations
 ---

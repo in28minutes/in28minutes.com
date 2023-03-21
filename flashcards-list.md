@@ -7,6 +7,10 @@ topics:
     url: /flashcards-list-master-spring-and-spring-boot
     description: Master Spring and Spring Boot with Java
     color: '#9aacd5'
+  - name: Java Programming for Absolute Beginners
+    url: /flashcards-list-java
+    description: Java Programming for Absolute Beginners
+    color: '#9aacd5'
 
 
 

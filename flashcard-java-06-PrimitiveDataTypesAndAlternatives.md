@@ -7,9 +7,8 @@ main_card_bg: '#6586c3'
 # Other cards
 card_bg: '#9aacd5'
 cards:
-
   - title: Primitive Data types 
-    description: The basic building blocks of data in Java such as integers, booleans, and characters.
+    description: Basic building blocks of data in Java such as integers, booleans, and characters
   - title: byte
     description: In Java, the range of byte data type is from -128 to 127. It is an 8-bit signed two's complement integer.
   - title: short
@@ -23,27 +22,21 @@ cards:
   - title: double
     description: Represents a double-precision 64-bit IEEE 754 floating-point number. The range is approximately 4.9e-324 to 1.8e+308.
   - title: Typecasting
-    description: Typecasting in Java is the process of converting one data type into another.
+    description: Process of converting one data type into another
   - title: Lossy conversion
-    description: Lossy conversion in Java refers to data compression that results in loss of information.
+    description: Data compression that results in loss of information
   - title: Explicit Cast
-    description: An explicit cast in Java is a type conversion that is explicitly declared by the programmer.
+    description: A type conversion that is explicitly declared by the programmer.
   - title: BigDecimal
     description: BigDecimal is a Java class for precise arithmetic operations on very large or very small numbers.
   - title: Boolean
     description: Boolean in Java is a data type that represents true or false values.
-  - title: What is "||" operator?
-    description: In Java, "||" is a logical operator used for OR operations.
-  - title: What is "&&" operator?
-    description: In Java "&&" is a logical operator that performs a "and" operation between two boolean values.
-  - title: ^ Operator
-    description: ^ is a bitwise operator in Java used for performing XOR operations.
+  - title: A "||" operator
+    description: Logical operator used for OR operations
+  - title: A "&&" operator
+    description: Logical operator that performs a "and" operation between two boolean values
   - title: Not operator
-    description: Not operator in Java is represented by the exclamation mark (!) and is used to negate a boolean value.
-  - title: Short Circuit Operators
-    description: Short Circuit Operators in Java are used for optimizing logical expressions and improving program efficiency.
-  - title: Char
-    description: Char in Java is a data type that represents a single character.
-  - title: Unicode value
-    description: Unicode value in Java is the numeric representation of a character.
+    description: Represented by the exclamation mark (!) and is used to negate a boolean value
+  - title: char
+    description: Data type that represents a single character
 ---
