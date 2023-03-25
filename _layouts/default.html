@@ -6,11 +6,7 @@
 </head>
 
 <body>
-    {% if page.layout != "resources" %}
-        {% if page.layout != "flashcard-topic" %}
-            {% include nav.html %}
-        {% endif %}
-    {% endif %}
+    {% include nav.html %}
     {{content}}
     {% include footer.html %}
 </body>
