@@ -8,23 +8,23 @@ main_card_bg: '#6586c3'
 card_bg: '#9aacd5'
 cards:
   - title: Object Oriented Programming
-    description: Focuses on objects and their interactions (by defining blueprints called classes)
+    description: Focuses on objects and their interactions
   - title: Class
-    description: Blueprint for creating objects with common properties and behaviors
+    description: Defines a blueprint for creating objects that share common properties and behaviors
   - title: Object
-    description: Instance of a class. Contains data and defines behavior.
+    description: An instance of a class that contains data and behavior defined by its class
   - title: State of Object
-    description: The state of an object in Java refers to its current data values
+    description: Refers to the current data values held by an object
   - title: Behaviour of Object
-    description: What actions can be performed on each object?
+    description: Refers to the actions that can be performed on an object
   - title: Encapsulation
-    description: Technique of wrapping data and code together into a single unit
+    description: The technique of combining data and code into a single unit, protecting the data from being accessed or modified directly from outside the unit
   - title: Getters
-    description: Methods to retrieve the values of a class's private fields
+    description: Methods used to retrieve the values of a class's private fields
   - title: Setters
-    description: Setters are methods used to set values of class variables
+    description: Methods used to set the values of a class's private fields
   - title: Abstraction
-    description: Technique to hide complex implementation details and provide a simplified view
+    description: The technique of hiding complex implementation details and presenting a simplified view to the user
   - title: Constructor
-    description: Special method that initializes objects when they are created
+    description: A special method that initializes objects when they are created
 ---

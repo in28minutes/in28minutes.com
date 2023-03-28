@@ -8,29 +8,29 @@ main_card_bg: '#6586c3'
 card_bg: '#9aacd5'
 cards:
   - title: Collections
-    description: Utility classes used for storing and manipulating groups of objects
+    description: Classes to store and manipulate groups of objects
   - title: Array
-    description: A collection of similar data types stored in contiguous memory locations
+    description: Collection of similar data types in contiguous memory
   - title: LinkedList
-    description: A data structure that stores multiple items with each item pointing to the next
+    description: Data structure that stores items with each pointing to the next
   - title: Hashing
-    description: Process of generating a unique code for a given input data
+    description: Generating a unique code for given input
   - title: Trees
-    description: A data structure that represents a hierarchical structure consisting of nodes
+    description: Data structure that represents hierarchical structure consisting of nodes
   - title: Collection Interface
-    description: Provides a framework for working with collections of objects
+    description: Framework for working with collections of objects
   - title: List
-    description: Used to implement an ordered collection. Allows duplicate elements.
+    description: Ordered collection allowing duplicate elements
   - title: Set
-    description: Used to store unique elements in no particular order
+    description: Unordered collection storing unique elements
   - title: Queue
     description: Stores elements in a First-In-First-Out (FIFO) order
   - title: Stack
     description: Follows Last In First Out (LIFO) principle
   - title: Map
-    description: Collection of key-value pairs that allows quick lookup by key
+    description: Collection of key-value pairs allowing quick lookup by key
   - title: Comparable
-    description: Interface in Java, used to define the natural order of objects. Used when sorting.
+    description: Interface to define natural order of objects, used for sorting
   - title: TreeSet
-    description: Sorted set data structure, stores unique elements in ascending order.
+    description: Sorted set data structure storing unique elements in ascending order
 ---

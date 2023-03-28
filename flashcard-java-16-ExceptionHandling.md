@@ -8,19 +8,19 @@ main_card_bg: '#6586c3'
 card_bg: '#9aacd5'
 cards:
   - title: Exception
-    description: An event that interrupts the program's normal flow
+    description: An interruption in program flow due to an error or exceptional event
   - title: Exception Handling
-    description: Handling and managing errors and exceptions in Java
+    description: Managing errors and exceptions in Java
   - title: NullPointer Exception
-    description: An error that occurs when a program tries to operate on a null object
+    description: Error caused by attempting to operate on a null object
   - title: Exception Class
     description: A class in Java that represents errors and exceptional events
   - title: printStackTrace()
-    description: printStackTrace() in Java displays the error message and its trace
+    description: Displays an error message and its trace in Java
   - title: try-catch
-    description: A Java mechanism for handling errors and exceptions during program execution
+    description: Mechanism for handling errors and exceptions during program execution
   - title: finally
-    description: Code in finally block is almost always executed (Usecase - clean up resources)
+    description: Code in finally block is almost always executed (use case - clean up resources)
   - title: RuntimeException
     description: Type of exception that does not need to be explicitly handled
   - title: Custom Exception

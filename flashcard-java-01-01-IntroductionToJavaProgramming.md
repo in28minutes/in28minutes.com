@@ -8,21 +8,21 @@ main_card_bg: '#6586c3'
 card_bg: '#9aacd5'
 cards:
   - title: Programming
-    description: Process of creating a set of instructions that tell a computer how to perform a particular task
+    description: Creating instructions for a computer to perform a task
   - title: Programming Language
-    description: Type of written language. Tells computers what to do.
-  - title: What is Java?
-    description: High-level, class-based, object-oriented programming language
+    description: Written language that tells computers what to do
+  - title: Java
+    description: Object-oriented programming language that is class-based and high-level
   - title: JShell
-    description: Interactive Read-Evaluate-Print Loop (REPL) tool
+    description: Tool for interactive code testing and evaluation
   - title: Compiler
     description: Converts the source code into machine-code (understandable by computer)
   - title: Syntax
     description: Rules that your program should follow!
   - title: System.out
-    description: Standard output stream used to display information in the console
+    description: Standard output stream to display information in console
   - title: Variable
-    description: Location in memory where you can store a value
+    description: Memory location for storing a value
   - title: Assignment
-    description: Giving value to a variable (i = 1)
+    description: Giving a value to a variable (e.g. i = 1)
 ---

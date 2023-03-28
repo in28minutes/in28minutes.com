@@ -8,15 +8,17 @@ main_card_bg: '#6586c3'
 card_bg: '#9aacd5'
 cards:
   - title: Amazon EC2 + ELB
-    description: Traditional Approach (Virtual Servers + Load Balancing). Use when you need control over OS OR you want to run custom software
+    description: Traditional approach with virtual servers and load balancing
+  - title: Amazon EC2 Auto Scaling
+    description: Automatically scales EC2 instances based on demand or schedule
   - title: AWS Elastic Beanstalk
-    description: Simplify management of web applications and batch applications .Automatically creates EC2 + ELB(load balancing and auto scaling)
+    description: Simplify management of web applications and batch applications 
   - title: Amazon Elastic Container Service (Amazon ECS)
-    description: Simplify running of microservices with Docker containers .Run containers in EC2 based ECS Clusters
+    description: Simplifies running of microservices with Docker containers
   - title: Amazon Elastic Kubernetes Service (Amazon EKS)
-    description: Run and scale Kubernetes clusters
+    description: Runs and scales Kubernetes clusters
   - title: AWS Fargate
     description: Serverless version of ECS and EKS
   - title: AWS Lambda
-    description: Serverless - Do NOT worry about servers
+    description: Serverless computing, no need to worry about servers
 ---

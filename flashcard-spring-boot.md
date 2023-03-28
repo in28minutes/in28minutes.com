@@ -14,17 +14,17 @@ cards:
   - title: Spring Boot Features - Be PRODUCTION-READY
     description: Logging, Profiles, ConfigurationProperties, Monitoring (Spring Boot Actuator)
   - title: Spring Boot Starter Projects
-    description: Convenient dependency descriptors. Contain a lot of the dependencies that you need to get a project up and running quickly.
+    description: Describes dependencies needed to get a project running quickly
   - title: Spring Boot Starter Web
     description: Starter for building web, including RESTful, applications using Spring MVC.
   - title: Spring Boot Starter Data JPA
     description: Starter for using Spring Data JPA with Hibernate
   - title: Auto Configuration
-    description: Automatically configures your Spring application based on the jar dependencies that you have added
+    description: Automatically configures your Spring application based on jar dependencies added
   - title: Profiles
-    description: Environment specific configuration. Segregate parts of your application configuration and make it be available only in certain environments.
+    description: Define and apply environment specific configuration
   - title: Configuration Properties
-    description: Simplifies externalized configuration. Define a bean containing all external configuration that varies from environment to environment.
+    description: Defines externalized configuration that varies from environment to environment
   - title: Spring Boot Actuator
-    description: Provides production ready features to help you monitor and manage your application
+    description: Provides production-ready features to help monitor and manage applications
 ---

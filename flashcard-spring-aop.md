@@ -8,23 +8,23 @@ main_card_bg: '#6586c3'
 card_bg: '#9aacd5'
 cards:
   - title: Cross Cutting Concerns
-    description: Common aspects that apply to all layers - Security, Performance and Logging
+    description: Common aspects (Security, Performance, Logging) applicable to all layers
   - title: Aspect Oriented Programming
-    description: Can be used to implement Cross Cutting Concerns
+    description: Programming approach used to implement Cross Cutting Concerns
   - title: Advice
-    description: What code to execute? Example - Logging, Authentication.
+    description: Code to execute (e.g., Logging, Authentication)
   - title: Pointcut 
-    description: Expression that identifies method calls to be intercepted. Example - execution(* com.in28minutes.aop.data.*.*(..)).
+    description: Expression to identify intercepted method calls (e.g., execution(* com.in28minutes.aop.data.*.*(..))).
   - title: Aspect
     description: A combination of Advice (what to do) AND Pointcut (when to intercept a method call)
   - title: Before Annotation
     description: Intercept and do something before a method is called
   - title: After Annotation
-    description: Intercept and do something after a method is executed irrespective of whether the method executes successfully OR throws an exception
+    description: Intercept and do something after a method is executed regardless of its success or failure
   - title: AfterReturning Annotation
     description: Intercept and do something ONLY when a method executes successfully
   - title: AfterThrowing Annotation
     description: Intercept and do something ONLY when a method throws an exception
   - title: Around Annotation
-    description: Intercept and do something before and after a method execution. Do something AROUND a method execution.
+    description: Intercept and do something before and after a method execution
 ---

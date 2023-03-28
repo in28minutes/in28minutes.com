@@ -8,19 +8,21 @@ main_card_bg: '#6586c3'
 card_bg: '#9aacd5'
 cards:
   - title: Functional Programming
-    description: Functions are first-class citizens.  Passed as arguments to other functions, returned as results, and stored in variables. 
+    description: Functions are like values, can be passed and returned
+  - title: Lambda Expression 
+    description: Short-hand syntax for defining functions in Java
   - title: Stream
     description: Sequence of elements
-  - title: Lambda Expression 
-    description: Short hand syntax to create a function
-  - title: Intermediate Operation
-    description: An operation on stream that produces another stream as output
-  - title: Terminal Operation
-    description: An operation on stream that produces a single result - reduce(), forEach(), ..
+  - title: Stream API
+    description: A collection of methods in Java for processing streams of data in a functional manner
+  - title: Intermediate Operations
+    description: Stream operations that produce another stream as output, such as filter, map, and flatMap
+  - title: Terminal Operations
+    description: Stream operations that produce a single result, such as reduce, collect, and forEach
   - title: Optional class
     description: Allow graceful handling of nulls
   - title: Functional Interface
-    description: An interface with one abstract method
+    description: Interfaces in Java that define a single abstract method, used as the basis for creating lambda expressions
   - title: Method References
     description: Simplify creation of Lambda Expressions
   - title: Example Method Reference

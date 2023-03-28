@@ -8,13 +8,13 @@ main_card_bg: '#6586c3'
 card_bg: '#9aacd5'
 cards:
   - title: Reference variable
-    description: Reference variable stores memory address of an object
+    description: Stores memory address of an object
   - title: String class
-    description: A class in Java that represents a sequence of characters
+    description: Represents a sequence of characters
   - title: Concatenating strings 
     description: + operator is used to concatenate two strings
   - title: charAt(index)
-    description: A String method that returns the character at the specified index
+    description: Returns the character at specified index
   - title: length()
     description: Returns the length of the string
   - title: substring(int startIndex, int endIndex)
@@ -34,9 +34,9 @@ cards:
   - title: isEmpty()
     description: Checks if a String is empty or not.
   - title: endsWith()
-    description: Java String endsWith checks if a string ends with specified suffix
+    description: Checks if a string ends with specified suffix
   - title: startsWith()
-    description: Starts with checks if a string starts with specified prefix
+    description: Checks if a string starts with specified prefix
   - title: StringBuffer
-    description: Mutable string in Java used to manipulate strings with operations like append, delete and insert
+    description: Mutable string used to manipulate strings with operations like append, delete and insert
 ---

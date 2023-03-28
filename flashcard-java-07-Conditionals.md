@@ -8,23 +8,23 @@ main_card_bg: '#6586c3'
 card_bg: '#9aacd5'
 cards:
   - title: Control Flow Statement
-    description: Statements used to control the flow of a program's execution.
+    description: Statements that control how a program runs
   - title: If-Else Statement
-    description: A conditional statement, executes different blocks of code based on a specified condition.
+    description: A statement that runs different code depending on a condition
   - title: If-Else Syntax
     description: if (condition){ //code -> if condition is true } else { //code -> if condition is false }
   - title: Switch Statement
-    description: Control flow statement that allows the selection of multiple cases.
+    description: A statement that lets you choose between multiple cases of code
   - title: Switch Syntax
     description: "switch(expression) { case value1: // code break; default: // code }"
   - title: Scanner
-    description: Java class to read user input from the console
+    description: A Java class for getting user input from the console
   - title: default clause
-    description: Executed when none of the Switch cases match
+    description: Code that runs if no switch cases match
   - title: break statement
-    description: Used to break out of the switch statement or a for loop
+    description: A statement that exits out of a loop or switch statement
   - title: Ternary Operator
-    description: Simplified If Statement
+    description: A shorthand if statement that assigns a value based on a condition
   - title: Ternary Operator Syntax
     description: "result = (condition ? expression-if-condition-true : expression:if-condition-false);"
 ---

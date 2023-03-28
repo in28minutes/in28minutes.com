@@ -1,26 +1,28 @@
 ---
 layout: flashcard-topic
 # Main card
-title: Spring Framework Concepts Flash Cards
-main_card_title: Spring Framework
+title: Spring Framework Concepts 
+main_card_title: Spring Framework Fundamentals
 main_card_bg: '#6586c3'
 # Other cards
 card_bg: '#9aacd5'
 cards:
   - title: Dependency Injection
-    description: Identify beans, their dependencies and wire them together (provides IOC - Inversion of Control)
+    description: Identify and wire beans together
+  - title:  Inversion of Control (IOC)
+    description: Design pattern where control is inverted from hardcoded code to Spring framework
   - title: Constructor injection
-    description: Dependencies are set by creating the Bean using its Constructor
+    description: Set dependencies via Bean constructor
   - title: Setter injection
-    description: Dependencies are set by calling setter methods on your beans
+    description: Set dependencies via Bean setter methods
   - title: Field injection
     description: No setter or constructor. Dependency is injected using reflection.
   - title: IOC Container
-    description: Spring IOC Context that manages Spring beans & their lifecycle
+    description: Manages Spring beans and their lifecycle
   - title: Bean Factory
     description: Basic Spring IOC Container
   - title: Application Context
-    description: Advanced Spring IOC Container with enterprise-specific features - Easy to use in web applications with internationalization features and good integration with Spring AOP
+    description: Advanced IOC Container with enterprise features
   - title: Spring Beans
     description: Objects managed by Spring
   - title: Auto-wiring

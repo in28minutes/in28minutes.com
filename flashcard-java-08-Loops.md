@@ -10,7 +10,7 @@ cards:
   - title: Loop Statements
     description: Loop Statements help you to repeat code execution
   - title: Types of Loop Statements
-    description: For, while, do-while etc.
+    description: Different types of loops include for, while, and do-while loops
   - title: For Loop
     description: Used to iterate a specific number of times
   - title: For Loop Syntax

@@ -8,23 +8,23 @@ main_card_bg: '#6586c3'
 card_bg: '#9aacd5'
 cards:
   - title: Authentication
-    description: Is it a valid user?
+    description: Checking if a user is valid
   - title: Authorization
-    description: Does the user have right access?
+    description: Checking if a user has the right access
   - title: Spring Security Filter Chain
-    description: Series of filters that Spring Security executes for each request
+    description: A series of filters that Spring Security runs for each request
   - title: Form Based Authentication
-    description: Used by most web applications. Depends on a Session Cookie(`JSESSIONID`).
+    description: Used by most web applications, depends on a session cookie (JSESSIONID)
   - title: Basic Authentication
-    description: Basic option for securing REST API. Many Flaws. NOT recommended for production. Header with Base 64 encoded credentials(`Authorization` - `Basic aW4yOG1pbnV0ZXM6ZHVtbXk=`)
+    description: Basic option for securing REST APIs, but has many flaws and is not recommended for production.
   - title: Cross-Origin Resource Sharing (CORS)
-    description: Specification that allows you to configure which cross-domain requests are allowed
+    description: A specification that allows you to configure which cross-domain requests are allowed
   - title: JWT (Json Web Token)
-    description: Open, industry standard for representing claims securely between two parties. Can Contain User Details and Authorizations.
+    description: An open way of representing claims between two parties. Can contain user details and authorizations.
   - title: Symmetric Key Encryption
-    description: Symmetric encryption algorithms use the same key for encryption and decryption
+    description: Uses the same key for encryption and decryption
   - title: Asymmetric Key Encryption
-    description: Two Keys - Public Key and Private Key. One is used for encryption and other for decryption. Also called Public Key Cyptography.
+    description: Uses two keys - a public key for encryption and a private key for decryption. Also known as Public Key Cryptography.
   - title: OAuth
-    description: Industry-standard protocol for authorization. Also supports authentication now.
+    description: An industry-standard protocol for authorization, which now also supports authentication
 ---
