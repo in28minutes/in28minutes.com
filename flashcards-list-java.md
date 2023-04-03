@@ -1,7 +1,7 @@
 ---
 layout: flashcards
-title: Master Spring and Spring Boot Flashcards
-subtitle: Master Spring and Spring Boot with these flashcards!
+title: Java Programming For Complete Beginners Flash Cards
+subtitle: Master Java Programming with these flashcards!
 topics:
   - name: Java Programming Introduction
     url: /flashcard-java-01-01-IntroductionToJavaProgramming
