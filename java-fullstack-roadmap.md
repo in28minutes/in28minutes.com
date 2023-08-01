@@ -34,25 +34,25 @@ courses:
     description:
     objectives:
       - test
-    url: https://www.udemy.com/course/java-programming-tutorial-for-beginners/?couponCode=JUL2023
+    url: https://www.udemy.com/course/java-programming-tutorial-for-beginners/?couponCode=AUG2023
     rating: 4.5
-    ratingCount: 29,362 
-    students: 177,875
+    ratingCount: 37,372
+    students: 221,009
     thumbnail: https://img-c.udemycdn.com/course/480x270/1535678_0ce9_7.jpg
-  - name: NEW - Master Spring Boot 3 & Spring Framework 6 with Java
+  - name: Master Spring Boot 3 & Spring Framework 6 with Java
     description:
     objectives:
       - test
-    url: https://www.udemy.com/course/spring-boot-and-spring-framework-tutorial-for-beginners/?couponCode=JUL2023
+    url: https://www.udemy.com/course/spring-boot-and-spring-framework-tutorial-for-beginners/?couponCode=AUG2023
     rating: 4.5
-    ratingCount: NEW
-    students: NEW
+    ratingCount: 3,234
+    students: 22,213
     thumbnail: https://img-c.udemycdn.com/course/480x270/4993276_3452.jpg
   - name: Go Java Full Stack with Spring Boot and Angular
     description:
     objectives:
       - test
-    url: https://www.udemy.com/course/full-stack-application-development-with-spring-boot-and-angular/?couponCode=JUL2023
+    url: https://www.udemy.com/course/full-stack-application-development-with-spring-boot-and-angular/?couponCode=AUG2023
     rating: 4.5
     ratingCount: 8011
     students: 68,645

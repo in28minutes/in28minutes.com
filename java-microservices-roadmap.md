@@ -36,28 +36,28 @@ courses:
     description:
     objectives:
       - test
-    url: https://www.udemy.com/course/java-programming-tutorial-for-beginners/?couponCode=JUL2023
+    url: https://www.udemy.com/course/java-programming-tutorial-for-beginners/?couponCode=AUG2023
     rating: 4.5
-    ratingCount: 29,362 
-    students: 177,875
+    ratingCount: 37,372
+    students: 221,009
     thumbnail: https://img-c.udemycdn.com/course/480x270/1535678_0ce9_7.jpg
   - name: Master Spring Boot 3 & Spring Framework 6 with Java
     description:
     objectives:
       - test
-    url: https://www.udemy.com/course/spring-boot-and-spring-framework-tutorial-for-beginners/?couponCode=JUL2023
+    url: https://www.udemy.com/course/spring-boot-and-spring-framework-tutorial-for-beginners/?couponCode=AUG2023
     rating: 4.5
-    ratingCount: NEW
-    students: NEW
+    ratingCount: 3,234
+    students: 22,213
     thumbnail: https://img-c.udemycdn.com/course/480x270/4993276_3452.jpg
   - name: Master Microservices with Spring Boot and Spring Cloud
     description:
     objectives:
       - test
-    url: https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud/?couponCode=JUL2023
+    url: https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud/?couponCode=AUG2023
     rating: 4.5
-    ratingCount: 40,175
-    students: 193,086
+    ratingCount: 45,996
+    students: 226,108
     thumbnail: https://img-c.udemycdn.com/course/480x270/1352468_3d97_8.jpg
 
 ---
