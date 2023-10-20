@@ -29,11 +29,7 @@ cards:
     description: Python's package installer.
   - title: Integrated Development Environment (IDE)
     description: Software that provides comprehensive tools for programming.
-  - title: PyCharm IDE
-    description: An integrated development environment used by programmers to develop Python software.
   - title: Debugging
     description: The process of identifying and fixing errors or bugs in a Python program.
-  - title: Python Shell
-    description: An interactive mode of running Python, often referred to as "REPL" (Read-Eval-Print Loop).
 ---
 

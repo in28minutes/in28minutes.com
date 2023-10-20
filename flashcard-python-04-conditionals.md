@@ -12,15 +12,15 @@ cards:
   - title: If-Elif-Else Statement
     description: A statement that runs different code depending on multiple conditions
   - title: If-Elif-Else Syntax
-    description: "if condition\: \n    #code if condition is true \nelif another_condition: \n    #code for another condition \nelse: \n    #code if no conditions are true"
+    description: "if condition:"
   - title: While Loop
     description: A loop that continues as long as a condition is true
   - title: While Loop Syntax
-    description: "while condition: \n    #code to execute while condition is true"
+    description: "while condition:"
   - title: For Loop
     description: A loop that iterates over a sequence (like a list or range)
   - title: For Loop Syntax
-    description: "for variable in sequence: \n    #code to execute for each item in sequence"
+    description: "for variable in sequence:"
   - title: break statement
     description: A statement that exits out of a loop
   - title: continue statement
