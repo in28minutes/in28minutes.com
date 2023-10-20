@@ -1,8 +1,8 @@
 ---
 layout: flashcard-topic
 # Main card
-title: Python Object-Oriented Programming (OOP)
-main_card_title: OOP Overview in Python
+title: Python Object-Oriented Programming System (OOPs)
+main_card_title: OOPs Overview in Python
 main_card_bg: '#6c7fa1'
 # Other cards
 card_bg: '#8a94b6'
