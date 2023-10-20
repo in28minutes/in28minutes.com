@@ -1,35 +1,54 @@
 ---
 layout: flashcard-topic
 # Main card
-title: Introduction To Functions
-main_card_title: Python Fundamentals
-main_card_bg: '#306998'
+title: Functions in Python
+main_card_title: Python Functions
+main_card_bg: '#6c7fa1'
 # Other cards
-card_bg: '#5a88b6'
+card_bg: '#8a94b6'
 cards:
-  - title: Function
-    description: A named block of code designed to do one specific job and can be called multiple times.
-  - title: Function Syntax
-    description:  "def function_name(parameters) :"
-  - title: What is Return in a Function?
-    description: A keyword that sends a result back to the caller of a function.
-  - title: None
-    description: A special constant in Python that represents the absence of a value or a null value. It's the default return value of functions.
-  - title: Function Arguments
-    description: Inputs you can pass into a function when you call it.
-  - title: Module
-    description: A file containing Python definitions and statements intended for use in other Python programs.
-  - title: Python Interpreter
-    description: A program that reads and executes Python code.
-  - title: PEP 8
-    description: Python Enhancement Proposal #8, a style guide for Python code.
-  - title: Virtual Environment
-    description: A self-contained directory that contains a Python interpreter and any additional packages.
-  - title: pip
-    description: Python's package installer.
-  - title: Integrated Development Environment (IDE)
-    description: Software that provides comprehensive tools for programming.
-  - title: Debugging
-    description: The process of identifying and fixing errors or bugs in a Python program.
----
+  - title: What is a Function?
+    description: "A block of organized, reusable code that performs a specific task."
 
+  - title: Why We Need Functions?
+    description: "To reduce code repetition, improve readability, and break complex tasks into simpler ones."
+
+  - title: Function Structure
+    description: "Defined using `def` keyword, followed by function name and parameters."
+  - title: Structure Syntax
+    description: "```def function_name(parameters):``` \n ```    # Code here```"
+
+  - title: Return Type Function
+    description: "A function that sends back a result value."
+  - title: Return Syntax
+    description: "```def add(a, b):``` \n ```    return a + b```"
+
+  - title: Non-return Type Function
+    description: "A function that performs an action but doesn't send back a value."
+  - title: Non-return Syntax
+    description: "```def display(message):``` \n ```    print(message)```"
+
+  - title: Default Parameters
+    description: "Function parameters that have a default value."
+  - title: Default Parameter Syntax
+    description: "```def greet(name='Guest'):``` \n ```    print(f'Hello, {name}!')```"
+
+  - title: Variable-length Arguments
+    description: "Allow functions to accept any number of positional arguments."
+  - title: Variable-length Syntax
+    description: "```def func(*args):``` \n ```    # args is a tuple of arguments```"
+
+  - title: Keyword Arguments
+    description: "Allow functions to accept any number of keyword arguments."
+  - title: Keyword Argument Syntax
+    description: "```def func(**kwargs):``` \n ```    # kwargs is a dictionary```"
+
+  - title: Lambda Functions
+    description: "Small, anonymous functions defined using the `lambda` keyword."
+  - title: Lambda Syntax
+    description: "```f = lambda x: x + 1```"
+
+  - title: Summary
+    description: "Functions help to organize, reuse code and perform specific tasks efficiently."
+
+---
