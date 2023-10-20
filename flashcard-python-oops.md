@@ -7,6 +7,15 @@ main_card_bg: '#6c7fa1'
 # Other cards
 card_bg: '#8a94b6'
 cards:
+  - title: What is Functional Programming (FP)?
+    description: "A paradigm where programs are built using functions."
+
+  - title: What is OOP?
+    description: "A programming paradigm based on 'objects' that encapsulate data and functions."
+
+  - title: OOP vs FP
+    description: "OOP organizes around 'objects'. FP organizes around functions."
+
   - title: Class Definition
     description: "Defines a new type of object.\nExample: `class Car:`."
 
