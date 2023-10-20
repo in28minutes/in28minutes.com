@@ -16,52 +16,52 @@ cards:
   - title: OOP vs FP
     description: "OOP organizes around 'objects'. FP organizes around functions."
 
-  - title: Class Definition
-    description: "Defines a new type of object.\nExample: `class Car:`."
+  - title: Class
+    description: "A blueprint for objects.\nExample: `class Car:`."
 
-  - title: Object (Instance)
-    description: "An individual instance of a class.\nExample: `my_car = Car()`."
+  - title: Object
+    description: "A thing created from a class.\nExample: `my_car = Car()`."
 
   - title: Methods
-    description: "Functions within classes that operate on objects.\nExample: `def drive(self):`."
+    description: "Actions of a class.\nExample: `def drive(self):`."
 
   - title: Constructor
-    description: "`__init__` method. Initializes object attributes.\nExample: `def __init__(self, make, model):`."
+    description: "Sets up the object.\nExample: `def __init__(self):`."
 
   - title: Inheritance
-    description: "Allows a class to inherit methods and properties from another.\nExample: `class ElectricCar(Car):`."
+    description: "A class gets properties from another class.\nExample: `class ElectricCar(Car):`."
 
   - title: Polymorphism
-    description: "Different classes can use methods with the same name but with different implementations."
+    description: "Different classes can use the same method name."
 
   - title: Encapsulation
-    description: "Bundling data (attributes) and methods that operate on data within a single unit (class). Use of private and public access specifiers."
+    description: "Keeping data safe inside the class."
 
   - title: Abstraction
-    description: "Hiding the complex implementation details and showing only the essential features."
+    description: "Hiding complex details, showing the essentials."
 
-  - title: Attributes (Properties)
-    description: "Variables associated with an object.\nExample: `self.make = make`."
+  - title: Attributes
+    description: "Variables inside a class.\nExample: `self.color`."
 
-  - title: self Keyword
-    description: "Refers to the instance of the object itself. Commonly used in instance method definitions."
+  - title: `self` Keyword
+    description: "Refers to the object itself."
 
   - title: Static Methods
-    description: "Methods that don't require an instance to be called. Defined using `@staticmethod` decorator."
+    description: "Methods that belong to the class, not the object."
 
   - title: Class Methods
-    description: "Methods that take the class as their first parameter. Defined using `@classmethod` decorator."
+    description: "Methods that work on the class itself."
 
-  - title: Private and Public Access
-    description: "Private members: `_single_leading_underscore`. Strictly private: `__double_leading_underscore`."
+  - title: Private Access
+    description: "Hidden members of a class. Starts with `_` or `__`."
 
   - title: Overriding
-    description: "Child class provides a specific implementation of a method already defined in its parent class."
+    description: "A child class changes a method from its parent."
 
   - title: Composition
-    description: "Building complex objects by combining simpler ones. Represents a 'has-a' relationship."
+    description: "Using other objects inside a class."
 
   - title: Multiple Inheritance
-    description: "A class can inherit from more than one base class.\nExample: `class Hybrid(ElectricCar, GasCar):`."
+    description: "A class inherits from multiple classes."
 
 ---
