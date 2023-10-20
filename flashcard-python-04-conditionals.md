@@ -12,7 +12,7 @@ cards:
   - title: If-Elif-Else Statement
     description: A statement that runs different code depending on multiple conditions
   - title: If-Elif-Else Syntax
-    description: "if condition: \n    #code if condition is true \nelif another_condition: \n    #code for another condition \nelse: \n    #code if no conditions are true"
+    description: "if condition\: \n    #code if condition is true \nelif another_condition: \n    #code for another condition \nelse: \n    #code if no conditions are true"
   - title: While Loop
     description: A loop that continues as long as a condition is true
   - title: While Loop Syntax

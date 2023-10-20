@@ -10,7 +10,7 @@ cards:
   - title: Function
     description: A named block of code designed to do one specific job and can be called multiple times.
   - title: Function Syntax
-    description:  def function_name(parameters) <BR/> # Body of the function <BR/> return value_or_expression
+    description:  def function_name(parameters)\: <BR/> # Body of the function <BR/> return value_or_expression
   - title: What is Return in a Function?
     description: A keyword that sends a result back to the caller of a function.
   - title: None
