@@ -34,7 +34,7 @@ cards:
   - title: Attributes (Properties)
     description: "Variables associated with an object.\nExample: `self.make = make`."
 
-  - title: `self` Keyword
+  - title: self Keyword
     description: "Refers to the instance of the object itself. Commonly used in instance method definitions."
 
   - title: Static Methods
