@@ -43,7 +43,7 @@ cards:
   - title: Attributes
     description: "Variables inside a class.\nExample: `self.color`."
 
-  - title: `self` Keyword
+  - title: self Keyword
     description: "Refers to the object itself."
 
   - title: Static Methods
