@@ -21,7 +21,7 @@ cards:
     description: "min, max, sum, and len"
   - title: Union, Intersection, and Difference
     description: "Union (|), Intersection (&), Difference (-)"
-  - title: Set vs List: Key Differences
+  - title: Set vs List
     description: "Duplication: Set doesn't allow, List does. \nOrder: Set is unordered, List is ordered. \nAccess: Set doesn't support index, List does."
   - title: Use of Sets
     description: "Ideal for unique elements, or operations like union, intersection, or difference."
