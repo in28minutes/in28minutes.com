@@ -16,6 +16,7 @@ features:
     description: 
     icon: lni-download
 objectives:
+  - Learn Python Programming
   - Get Started with DevOps
   - Go Hands-On with 6 Different DevOps Tools
   - Create Containers with Docker
@@ -31,6 +32,15 @@ testimonials:
   - name: Learner
     comment: EXCELLENT COURSE!!! Love the instructor's energy, enthusiasm, and manner of instruction. This course is like 5 courses in 1. It is rare to find a course with such a breadth of technical topics and cloud platforms covered. Thank you for creating this course.
 courses:
+  - name: Python Bootcamp - Learn Python with 200 Labs and Exercises
+    description:
+    objectives:
+      - test
+    url: https://links.in28minutes.com/python
+    rating: 4.7
+    ratingCount: 30
+    students: 700
+    thumbnail: https://img-c.udemycdn.com/course/480x270/5414974_e415.jpg
   - name: Learn DevOps - Docker, Kubernetes, Terraform and Azure DevOps
     description:
     objectives:
