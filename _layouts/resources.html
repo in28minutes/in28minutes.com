@@ -17,7 +17,7 @@ show_header: false
                     {% for item in page.resources %}
                     <div class="timeline--entry ud-single-feature wow fadeInUp p-3 bg-white" data-wow-delay=".1s"
                         style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                        <a target="_blank" href="{{item.url}}" class="btn btn-link" {% if item.url contains '.pdf' or item.url contains '.zip' %} download="01-in28minutes-course-presentation" {% endif %}>
+                        <a target="_blank" href="{{item.url}}" class="btn btn-link">
                             <div class="ud-feature-icon">
                                 <i class="lni {{item.icon | default: 'lni-download'}}"></i>
                             </div>
