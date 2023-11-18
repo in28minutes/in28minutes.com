@@ -3,11 +3,11 @@ layout: flashcards
 title: Flash Cards for in28minutes Courses
 subtitle: Revise, Reconnect and Reskill
 topics:
-  - name: Master Spring and Spring Boot with Java
+  - name: Master Spring and Spring Boot
     url: /flashcards-list-master-spring-and-spring-boot
     description: Master Spring and Spring Boot
     color: '#9aacd5'
-  - name: Java Programming for Absolute Beginners
+  - name: Java Programming
     url: /flashcards-list-java
     description: Java Programming
     color: '#9aacd5'
