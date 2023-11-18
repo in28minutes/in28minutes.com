@@ -5,11 +5,11 @@ subtitle: Revise, Reconnect and Reskill
 topics:
   - name: Master Spring and Spring Boot with Java
     url: /flashcards-list-master-spring-and-spring-boot
-    description: Master Spring and Spring Boot with Java
+    description: Master Spring and Spring Boot
     color: '#9aacd5'
   - name: Java Programming for Absolute Beginners
     url: /flashcards-list-java
-    description: Java Programming for Absolute Beginners
+    description: Java Programming
     color: '#9aacd5'
   - name: Azure Fundamentals AZ-900
     url: /flashcards-list-az-900
