@@ -3,14 +3,6 @@ layout: roadmaps
 title: Roadmaps
 description: 
 roadmaps:
-  - name: Cloud Beginner Roadmap
-    url: /cloud-beginner-roadmap
-    description:
-    image: /images/cloud-beginner-roadmap.png
-  - name: DevOps Roadmap
-    url: /devops-roadmap
-    description:
-    image: /images/devops-roadmap.png
   - name: AWS Roadmap
     url: /aws-roadmap
     description:
@@ -31,5 +23,13 @@ roadmaps:
     url: /java-fullstack-roadmap
     description:
     image: /images/java-fullstack-roadmap.png
+  - name: Cloud Beginner Roadmap
+    url: /cloud-beginner-roadmap
+    description:
+    image: /images/cloud-beginner-roadmap.png
+  - name: DevOps Roadmap
+    url: /devops-roadmap
+    description:
+    image: /images/devops-roadmap.png
 ---
 
