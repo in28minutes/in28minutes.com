@@ -1910,7 +1910,7 @@ p {
 
 /* ====== Blog Details CSS ====== */
 .ud-blog-details {
-  padding-top: 120px;
+  padding-top: 10px;
 }
 
 @media (max-width: 767px) {
