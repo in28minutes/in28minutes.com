@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      What is Docker?
-date:       2019-01-01 12:31:19
+date:       2023-11-20 15:26:00
 summary:    Docker is the No 1 Tool to Containerize your applications. Learning Docker would help you streamline your deployment processes and experiment easily with new frameworks and tools.
 categories:  docker, devops
 permalink:  /docker
@@ -10,20 +10,21 @@ image: /images/docker-00.png
 
 ## World Before Docker
 
-Different apps, Different deployable units, Different instructions => Headaches for Ops Teams
+ - In the pre-Docker era, applications were written in various programming languages and built using different technologies. Deploying these applications involved reading and following deployment documents for each application, making the process complex and time-consuming => Headaches for Ops Teams
 
-![Image](/images/docker-00.png "World Before Docker") 
+![Image](/images/docker-traditional-vs-docker-deployment-00.gif "World Before Docker")
 
 ## How Does Docker Help?
 
-Same process for all apps!
+- Docker streamlined application deployment by providing a unified containerized environment, eliminating the need to navigate through diverse deployment documents for each application.
+- Same process for all apps!
 
-![Image](/images/docker-01.png "How does Docker Help?") 
+![Image](/images/docker-traditional-vs-docker-deployment-01.gif "How does Docker Help?")
 
 ## What are the advantages of Docker?
 
-![Image](/images/docker-02.png "Advantages of Docker") 
+![Image](/images/docker-traditional-vs-docker-deployment-02.gif "Advantages of Docker")
 
 ## Reviewing Important Docker Concepts
 
-![Image](/images/docker-03.png "Important Docker Concepts") 
+![Image](/images/docker-traditional-vs-docker-deployment-03.gif "Important Docker Concepts")
