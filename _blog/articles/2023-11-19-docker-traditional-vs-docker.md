@@ -26,4 +26,4 @@ permalink:  /docker
 
 ## Reviewing Important Docker Concepts
 
-![Image](/images/docker-important-docker-cocept-03.gif "Important Docker Concepts")
+![Image](/images/docker-important-docker-concepts-03.gif "Important Docker Concepts")
