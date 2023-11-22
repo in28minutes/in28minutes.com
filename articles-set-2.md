@@ -197,3 +197,24 @@ Goal of the article: Quick Visual Introduction to Google Cloud
 
 - https://www.youtube.com/watch?v=OwF9-K5JFb8
 - I'm unable to find the image
+
+# Why Multi Cloud?
+
+## Enterprises are going multi cloud
+
+Multi-cloud is the future of enterprise IT. 80% of enterprises have a multi-cloud strategy!
+
+
+## Most Learners are going multi cloud
+
+Career Path 1: AWS (2 Years) > Azure (1 Year) > AWS (1 Year)
+
+Career Path 2: Google Cloud (2 Years) > AWS (1 Year)
+
+Career Path 3: AWS (2 Years) > Google Cloud (2 Years)
+
+## Multi Cloud is Easy!
+
+Fundamentally, all cloud platforms are the same!
+
+Same services with Different Branding!
