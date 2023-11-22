@@ -43,7 +43,7 @@
 	- Hardware, Networking & Virtualization
 - You are responsible for:
 	- OS upgrades and patches
-	- Application Code and Runtime
+	- Application code, data and runtime
 	- Configuring load balancing
 	- Auto scaling
 	- Availability
@@ -61,11 +61,13 @@
 		- Auto scaling, Availability & Load balancing etc..
 	- You are responsible for:
 		- Configuration (of Application and Services)
-		- Application code (if needed)
-- Examples:
-	- Compute: AWS Elastic Beanstalk, Azure App Service, Google App Engine
-	- Databases: Relational & NoSQL (Amazon RDS, Google Cloud SQL, Azure SQL Database etc)
-	- Queues, AI, ML, Operations etc!
+		- Application code/data (if needed)
+
+## PAAS is NOT just for Compute!
+
+- Compute: AWS Elastic Beanstalk, Azure App Service, Google App Engine
+- Databases: Relational & NoSQL (Amazon RDS, Google Cloud SQL, Azure SQL Database etc)
+- Queues, AI, ML, Operations and a lot more...
 
 ## SaaS (Software as a Service) 
 
@@ -82,6 +84,7 @@
 	- Application Configuration (How much memory? How many instances? ..)
 - Customer is responsible for:
 	- Configuring the software!
+	- Your data
 
 ## Example: VMs with Load Balancer
 
