@@ -9,21 +9,38 @@ permalink:  /docker
 
 ## World Before Docker
 
- - In the pre-Docker era, applications were written in various programming languages and built using different technologies. Deploying these applications involved reading and following deployment documents for each application, making the process complex and time-consuming => Headaches for Ops Teams
+![Image](/images/docker/docker-traditional-deployment.gif "World Before Docker")
 
-![Image](/images/docker-world-before-docker-00.gif "World Before Docker")
+<details>
+    <summary>Notes</summary>
+    <ul>
+        <li>Pre-Docker, applications in diverse languages and technologies </li>
+        <li>Complex, manual deployment processes </li>
+        <li>Ops teams struggled with varied applications</li>
+    </ul>
+</details>
+
+
 
 ## How Does Docker Help?
 
-- Docker streamlined application deployment by providing a unified containerized environment, eliminating the need to navigate through diverse deployment documents for each application.
-- Same process for all apps!
+![Image](/images/docker/docker-docker-deployment.gif "How does Docker Help?")
 
-![Image](/images/docker-how-does-docker-help-01.gif "How does Docker Help?")
+<details>
+    <summary>Notes</summary>
+    <ul>
+        <li>Same process for all applications</li>
+        <li>Eliminates need for diverse deployment documents</li>
+        <li>Docker streamlines deployment with unified containerized environment</li>
+    </ul>
+</details>
+
+
 
 ## What are the advantages of Docker?
 
-![Image](/images/docker-advantages-of-docker-02.gif "Advantages of Docker")
+![Image](/images/docker/docker-advantages.gif "Advantages of Docker")
 
 ## Reviewing Important Docker Concepts
 
-![Image](/images/docker-important-docker-concepts-03.gif "Important Docker Concepts")
+![Image](/images/docker/docker-concepts.gif "Important Docker Concepts")

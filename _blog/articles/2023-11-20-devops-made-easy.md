@@ -10,42 +10,88 @@ permalink:  /devops
 ## 3 Elements of Great Software Teams
 
 ### Communication
-- Team success starts with clear communication; sharing ideas and updates builds a strong foundation.
-![Image](/images/three-element-communication.gif "Communication")
+
+![Image](/images/devops-made-easy/three-element-communication.gif "Communication")
+
+<details>
+    <summary>Notes</summary>
+    <ul>
+        <li>Team success starts with clear communication.</li>
+        <li>Share ideas and updates.</li>
+        <li>Builds a strong foundation.</li>
+    </ul>
+</details>
 
 
 ### Quick Feedback
-- Rapid feedback drives constant improvement; it's the key to agile and responsive development.
-![Image](/images/three-element-quick-feedback.gif "Quick Feedback")
+
+![Image](/images/devops-made-easy/three-element-quick-feedback.gif "Quick Feedback")
+
+<details>
+    <summary>Notes</summary>
+    <ul>
+        <li>Rapid feedback drives constant improvement.</li>
+        <li>Rapid feedback drives constant improvement.</li>
+    </ul>
+</details>
 
 
 ### Automation
-- Efficiency soars with smart automation; it frees up time for creativity and minimizes errors.
-![Image](/images/three-element-automation.gif "Automation")
+
+![Image](/images/devops-made-easy/three-element-automation.gif "Automation")
+
+<details>
+    <summary>Notes</summary>
+    <ul>
+        <li>Efficiency soars with smart automation.</li>
+        <li>It frees up time for creativity and minimizes errors.</li>
+    </ul>
+</details>
 
 
 ## DevOps Overview
-- Bringing together development and operations for smooth teamwork and efficiency
-![Image](/images/devops-overview.gif "DevOps Overview")
+
+![Image](/images/devops-made-easy/devops-overview.gif "DevOps Overview")
+
+<details>
+    <summary>Notes</summary>
+    <ul>
+        <li>Bringing together development and operations.</li>
+        <li>Make smooth teamwork and increase efficiency.</li>
+    </ul>
+</details>
 
 ## DevOps Evolution
-- DevOps Evolution accelerated collaboration for seamless software delivery over the years.
-![Image](/images/devop-evolution-first.gif "DevOps Evolution")
-![Image](/images/devop-evolution-second.gif "DevOps Evolution")
 
+![Image](/images/devops-made-easy/devop-evolution-first.gif "DevOps Evolution")
+
+![Image](/images/devops-made-easy/devop-evolution-second.gif "DevOps Evolution")
+
+<details>
+    <summary>Notes</summary>
+    <ul>
+        <li>DevOps Evolution accelerated collaboration.</li>
+        <li>Made seamless software delivery over the years.</li>
+    </ul>
+</details>
 
 ## Top 5 DevOps Tools
-![Image](/images/top-five-tools.gif "Top 5 DevOps Tools")
+
+![Image](/images/devops-made-easy/top-five-tools.gif "Top 5 DevOps Tools")
 
 ## 7 C's of DevOps
-![Image](/images/severn'cs.gif "7 C's of DevOps")
+
+![Image](/images/devops-made-easy/severn'cs.gif "7 C's of DevOps")
 
 ## Best Practices
-![Image](/images/best-practices.gif "Best Practices")
+
+![Image](/images/devops-made-easy/best-practices.gif "Best Practices")
 
 ## Key Metrics
-![Image](/images/key-metrics.gif "Key Metrics")
+
+![Image](/images/devops-made-easy/key-metrics.gif "Key Metrics")
 
 ## Maturity Assessment
-![Image](/images/maturity-assessment-first-part.gif "Maturity Assessment")
-![Image](/images/maturity-assessment-second-part.gif "Maturity Assessment")
+![Image](/images/devops-made-easy/maturity-assessment-first-part.gif "Maturity Assessment")
+
+![Image](/images/devops-made-easy/maturity-assessment-second-part.gif "Maturity Assessment")
