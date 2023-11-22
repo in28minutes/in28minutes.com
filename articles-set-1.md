@@ -10,6 +10,17 @@
 - Google Cloud for Beginners - https://www.youtube.com/watch?v=OwF9-K5JFb8
 - My Recording Notes - https://github.com/in28minutes/learning-paths-cloud-and-devops/blob/main/00-cloud-made-easy/notes.md
 
+# Add all notes into this
+
+<details>
+    <summary>Notes</summary>
+    <ul>
+        <li>HTML LIST <b>1</b></li>
+        <li>HTML LIST <b>2</b></li>
+        <li>HTML LIST <b>3</b></li>
+    </ul>
+</details>
+
 # Cloud service categories
 
 ## Overview
@@ -1772,3 +1783,4 @@ Please recreate both these images
 Video - https://www.youtube.com/watch?v=h-qM4J2ueHQ&list=PLBBog2r6uMCQgjZrb1auB1VdMrS-YqYzz&index=10
 
 ![](https://raw.githubusercontent.com/in28minutes/learning-paths-cloud-and-devops/main/00-cloud-made-easy/10%20-%20NoSQL%20Databases.svg)
+
