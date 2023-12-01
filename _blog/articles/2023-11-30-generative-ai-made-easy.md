@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      DevOps Made Easy
+title:      Generative AI Made Easy
 date:       2023-11-30 15:26:00
 summary:    Generative AI refers to a cutting-edge technology that enables machines to autonomously produce creative content, ranging from art and music to text and beyond. By harnessing advanced algorithms, it opens new frontiers in artificial intelligence, fostering creativity and generating novel solutions.
 categories:  generative-ai
