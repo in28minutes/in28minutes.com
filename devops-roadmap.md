@@ -45,7 +45,7 @@ courses:
     description:
     objectives:
       - test
-    url: https://www.udemy.com/course/devops-with-docker-kubernetes-and-azure-devops/?couponCode=NOV2023
+    url: https://www.udemy.com/course/devops-with-docker-kubernetes-and-azure-devops/?couponCode=DEC2023
     rating: 4.5
     ratingCount: 8,683
     students: 96,388
