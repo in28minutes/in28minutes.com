@@ -263,7 +263,6 @@ permalink:  /generative-ai
 
 ### Generative AI - Needs Huge Volumes of Data
 
-<!-- ![Image](/images/generative-ai/gen_ai_model_training.gif "Temerature") -->
 
 <details>
     <summary>Notes</summary>
@@ -389,7 +388,6 @@ permalink:  /generative-ai
 
 ### Generative AI Text - Uses RLHF - Step 1
 
-<!-- ![Image](/images/generative-ai/self_supervised_learning.gif "RLHF") -->
 
 <details>
     <summary>Notes</summary>
@@ -413,7 +411,6 @@ permalink:  /generative-ai
 
 ### Generative AI Text - Uses RLHF - Step 2
 
-<!-- ![Image](/images/generative-ai/self_supervised_learning.gif "RLHF") -->
 
 <details>
     <summary>Notes</summary>
@@ -455,7 +452,6 @@ permalink:  /generative-ai
 
 ### Exploring Embeddings with an Example
 
-<!-- ![Image](/images/generative-ai/embeddings.gif "Embeddings") -->
 
 <details>
     <summary>Notes</summary>
