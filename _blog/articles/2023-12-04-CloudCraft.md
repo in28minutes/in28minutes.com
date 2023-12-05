@@ -19,11 +19,11 @@ permalink:  /cloudcraft
 
 Note: Before creating any images, please take a look at the notes [HERE](https://example.com). **Utilize that information first**. You can add extra details if desired
 
-1) Serverless
-2) Microservices (Docker)
-3) Object-Oriented Programming
-4) HTTP vs HTTPS vs TCP vs TLS vs UDP
-5) Symmetric Key Encryption & Asymmetric Key Encryption
+- Serverless
+- Microservices (Docker)
+- Object-Oriented Programming
+- HTTP vs HTTPS vs TCP vs TLS vs UDP
+- Symmetric Key Encryption & Asymmetric Key Encryption
 
 ## 🧑‍🏫 Instructions
 - Choose a Topic:
