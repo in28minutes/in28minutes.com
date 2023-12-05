@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Cloud Craft
+title:      Cloud Craft - 💪 Unleash your creativity and technical prowess ⚡
 date:       2023-12-04 15:26:00
 summary:    Dive into innovation with 'Cloud Craft,' an in28minutes community event for Indian tech enthusiasts! 🚀✨ Elevate your creativity, showcase expertise, and win fantastic rewards! 💻🏆
 categories:  event
