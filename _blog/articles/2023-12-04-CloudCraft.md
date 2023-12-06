@@ -9,7 +9,7 @@ permalink:  /cloud-craft
 
 ![Image](/images/cloudcraft/title_image_three.png "Cloud Craft")
 
-## What should I do?
+## What should YOU do?
 
 Are you a creative person? Do you love creating wonderful pictures and visualizations?
 
