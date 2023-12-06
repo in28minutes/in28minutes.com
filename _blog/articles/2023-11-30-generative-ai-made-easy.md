@@ -258,15 +258,6 @@ permalink:  /generative-ai
             <ul>
                 <li>🔸Based on Foundation Models and LLMs (Large Language Models) </li>
             </ul>
-    </ul>
-</details>
-
-### Generative AI - Needs Huge Volumes of Data
-
-
-<details>
-    <summary>Notes</summary>
-    <ul>
         <li>🔹Generative AI models: Statistical models that learn to generate new data by analyzing existing data </li>
             <ul>
                 <li>🔸More data analyzed => Better new data similar to existing data </li>
@@ -334,7 +325,7 @@ permalink:  /generative-ai
 
 ### Generative AI Text - Uses SFT
 
-![Image](/images/generative-ai/self_supervised_learning.gif "SFT")
+![Image](/images/generative-ai/sft.gif "SFT")
 
 <details>
     <summary>Notes</summary>
