@@ -46,8 +46,8 @@ permalink:  /design-Specification
     ![Image](/images/design-specification/circle.gif "circle format")
 
 
-- #### Half Circle [Download template](/images/design-specification/half_circle.sw)
-    ![Image](/images/design-specification/half_circle.gif "circle format")
+- Half Circle [Download template](/images/design-specification/hierarchical_data.sw)
+    - ![Image](/images/design-specification/hierarchical_data.gif.gif "circle format")
 
 
 - #### List [Download template](/images/design-specification/list.sw)
