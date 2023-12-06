@@ -28,7 +28,7 @@ Note: Before creating any images, please take a look at the notes for each topic
 ## 🧑‍🏫 Instructions
 - Choose a Topic:
     - Select at least one topic from the provided list of intriguing subjects.
-    - For better understanding, delve into additional information about your chosen topic **[HERE](https://example.com)**. Please take a look once.
+    - For better understanding, delve into additional information about your chosen topic **[HERE](#info)**. Please take a look once.
 - Conceptualize and Simplify:
     - Visualize your chosen topic and simplify its core concepts.
 - Software or Application:
