@@ -82,7 +82,7 @@ permalink:  /generative-ai
             <ul>
                 <li>🔸REMEMBER: Subset of Foundation Models </li>
                 <li>🔸Models that are trained on a lot of text to generate more text! </li>
-            <ul>
+            </ul>
     </ul>
 </details>
 
@@ -111,7 +111,7 @@ permalink:  /generative-ai
                 <li>🔸OpenAI API </li>
                 <li>🔸Azure OpenAI </li>
                 <li>🔸Google Cloud PaLM API, ... </li>
-            <ul>
+            </ul>
         <li>🔹Foundation Models: </li>
             <ul>
                 <li>🔸OpenAI:  </li>
@@ -124,7 +124,7 @@ permalink:  /generative-ai
                         <li>✅ OpenLLaMA (Meta): Generate text, images, and code </li>
                     </ul>
                 <li>🔸Other Vendors: Google PaLM, ... </li>
-            <ul>
+            </ul>
     </ul>
 </details>
 
@@ -190,7 +190,7 @@ permalink:  /generative-ai
                 <li>🔸Have a token limit on context and generated text </li>
                     <ul>
                         <li>✅ Example: 1,024 tokens or 4,096 tokens </li>
-                    <ul>
+                    </ul>
             </ul>
     </ul>
 </details>
@@ -375,13 +375,6 @@ permalink:  /generative-ai
                 <li>🔸2: Tune Generative AI Model using Reward Model </li>
             </ul>
     </ul>
-</details>
-
-### Generative AI Text - Uses RLHF - Step 1
-
-
-<details>
-    <summary>Notes</summary>
     <ul>
         <li>🔹Goal: Build a Reward Model that understands human values and preferences </li>
         <li>🔹How? </li>
@@ -396,15 +389,6 @@ permalink:  /generative-ai
                 <li>🔸It will be used later to tune the responses from the Generative AI model </li>
             </ul>
     </ul>
-</details>
-
-
-
-### Generative AI Text - Uses RLHF - Step 2
-
-
-<details>
-    <summary>Notes</summary>
     <ul>
         <li>🔹Goal: Tune Generative AI Model using Reward Model </li>
         <li>🔹How? </li>
@@ -439,13 +423,6 @@ permalink:  /generative-ai
                 <li>🔸Movement: "flying," "running," "swimming," or "crawling." </li>
             </ul>
     </ul>
-</details>
-
-### Exploring Embeddings with an Example
-
-
-<details>
-    <summary>Notes</summary>
     <ul>
         <li>🔹Shown here is an embedding of a single word </li>
             <ul>
