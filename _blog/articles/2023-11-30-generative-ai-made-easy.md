@@ -95,7 +95,7 @@ permalink:  /generative-ai
 
 ### An Overview of Generative AI Stack
 
-![Image](/images/generative-ai/overview_of_gen_ai_stack.gif "Overview of Generative AI Stack")
+![Image](/images/generative-ai/overview_of_gen_ai_stack.gif "Overview of Generative AI Stack ")
 
 <details>
     <summary>Notes</summary>
