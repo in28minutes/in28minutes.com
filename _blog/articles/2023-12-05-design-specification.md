@@ -41,19 +41,21 @@ permalink:  /design-Specification
 
 ## Templates:
 - Utilize the provided templates to seamlessly incorporate your content.
-- Circle [Download template](/images/design-specification/circle.sw)
-    - ![Image](/images/design-specification/circle.gif "circle format")
 
-- Half Circle [Download template](/images/design-specification/half_circle.sw)
-    - ![Image](/images/design-specification/half_circle.gif "circle format")
+- #### Circle [Download template](/images/design-specification/circle.sw)
+    ![Image](/images/design-specification/circle.gif "circle format")
 
 
-- List [Download template](/images/design-specification/list.sw)
-    - ![Image](/images/design-specification/list.gif "circle format")
-
-- Pencil [Download template](/images/design-specification/pencil.sw)
-    - ![Image](/images/design-specification/pencil.gif "circle format")
+- #### Half Circle [Download template](/images/design-specification/half_circle.sw)
+    ![Image](/images/design-specification/half_circle.gif "circle format")
 
 
-- Roadmap [Download template](/images/design-specification/roadmap_info.sw)
-    - ![Image](/images/design-specification/roadmap_info.gif "circle format")
+- #### List [Download template](/images/design-specification/list.sw)
+    ![Image](/images/design-specification/list.gif "circle format")
+
+- #### Pencil [Download template](/images/design-specification/pencil.sw)
+    ![Image](/images/design-specification/pencil.gif "circle format")
+
+
+- #### Roadmap [Download template](/images/design-specification/roadmap_info.sw)
+    ![Image](/images/design-specification/roadmap_info.gif "circle format")
