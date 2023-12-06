@@ -67,11 +67,12 @@ Do you have questions, need assistance, or want to clarify any details regarding
     - Note ( Write your quries in the 🚁-cloudcraft channel )
 
 
-
-## <a id="info"></a> Topics with detaild explanation:
+<a id="info"></a>
+##  Topics with detaild explanation:
 ***Note***: **Utilize this information first to create Image**
 
-### <a id="serverless"></a> Serverless
+<a id="serverless"></a>
+###  Serverless
 - You don't worry about infrastructure
     - You have ZERO visibility into infrastructure
     - Flexible scaling and automated high availability
@@ -94,7 +95,9 @@ Do you have questions, need assistance, or want to clarify any details regarding
     - Level 2: Google Cloud Functions, AWS Lambda, Azure Functions etc
 You pay for invocations
 
-### <a id="microservice"></a> Microservices (Docker)
+
+<a id="microservice"></a>
+###  Microservices (Docker)
 Microservice 1 > Microservice 2 > Microservice 3 > Microservice 4 > Microservice 5 (Each microservice calling another. Also show that each microservice has its own database. Show that different microservices are built with different languages. Also show that each microservice can have different number of instances active at a specific point in time.)
 
 - Enterprises are heading towards microservices architectures
@@ -109,8 +112,8 @@ Microservice 1 > Microservice 2 > Microservice 3 > Microservice 4 > Microservice
     - How can we have one way of deploying Go, Java, Python or JavaScript .. microservices?
         - Enter containers!
 
-
-### <a id="oops"></a> Object-Oriented Programming
+<a id="oops"></a>
+### Object-Oriented Programming
 
 ### <a id="networking"></a> HTTP vs HTTPS vs TCP vs TLS vs UDP
 - Network Layer:
@@ -132,8 +135,8 @@ Microservice 1 > Microservice 2 > Microservice 3 > Microservice 4 > Microservice
 - Objective: Understand the Big Picture. It's OK if you do not understand all the details.
 
 
-
-### <a id="security"></a> Symmetric Key Encryption & Asymmetric Key Encryption
+<a id="security"></a>
+###  Symmetric Key Encryption & Asymmetric Key Encryption
 - Symmetric Key Encryption
     - Symmetric encryption algorithms use the same key for encryption and decryption
     - Key Factor 1: Choose the right encryption algorithm
@@ -150,4 +153,4 @@ Microservice 1 > Microservice 2 > Microservice 3 > Microservice 4 > Microservice
     - How do you create keys in the cloud?
         - AWS: AWS KMS
         - Azure: Azure Key Vault
-        - Google Cloud: Cloud KMS and Cloud H
+        - Google Cloud: Cloud KMS and Cloud HSM
