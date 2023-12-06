@@ -4,7 +4,7 @@ layout:     post
 title:      Design Specification
 date:       2023-12-04 15:26:00
 summary:    The page outlines design specifications, including font choices, size guidelines, color contrast recommendations, color preferences, image sizes, formats, and templates for creating visually appealing content.
-categories:  event
+categories:  design
 permalink:  /design-specification
 ---
 
