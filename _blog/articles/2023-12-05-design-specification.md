@@ -25,7 +25,7 @@ permalink:  /design-Specification
 ## Colors:
 - Feel free to choose from the following colors or use your preference.
 - Circle [Download template](/images/design-specification/color.sw)
-    - ![Image](/images/design-specification/color.gif "circle format")
+    - ![Image](/images/design-specification/color.jpg "circle format")
 
 ## Image Sizes:
 - Vertical Image: 1280 x 1810
