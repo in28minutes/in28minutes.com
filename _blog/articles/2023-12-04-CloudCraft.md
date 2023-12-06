@@ -18,33 +18,33 @@ permalink:  /cloudcraft
 ## 💡 Images to Explore:
 ***Note:-*** Explore our insightful video content on various image topics below. We highly recommend watching the videos before creating the actual image. You'll find the link attached to each topic for easy access
 
-- #### Overview of Networking [video](https://www.youtube.com/watch?v=nBwDFt1LHCg)
+- #### Overview of Networking - [video](https://www.youtube.com/watch?v=nBwDFt1LHCg)
     ![Image](/images/cloudcraft/networking.png "Cloud Craft")
 
-- #### DevOps CI/CD [video](https://www.youtube.com/watch?v=rM76t6ksPrQ)
-    ![Image](/images/cloudcraft/devops_cide.png "Cloud Craft")
+- #### DevOps CI/CD - [video](https://www.youtube.com/watch?v=rM76t6ksPrQ)
+    ![Image](/images/cloudcraft/devops_cicd.png "Cloud Craft")
 
-- #### Infrastructure as a Code [video](https://www.youtube.com/watch?v=rM76t6ksPrQ)
+- #### Infrastructure as a Code - [video](https://www.youtube.com/watch?v=rM76t6ksPrQ)
     ![Image](/images/cloudcraft/IAC.png "Cloud Craft")
 
-- #### Docker [video](https://www.youtube.com/watch?v=6FqrZ6qq2Q4&list=PLBBog2r6uMCQgjZrb1auB1VdMrS-YqYzz&index=4)
+- #### Docker - [video](https://www.youtube.com/watch?v=6FqrZ6qq2Q4&list=PLBBog2r6uMCQgjZrb1auB1VdMrS-YqYzz&index=4)
     ![Image](/images/cloudcraft/docker.png "Cloud Craft")
 
-- #### Unstructured Data [video](https://www.youtube.com/watch?v=3cWS58Odzro&list=PLBBog2r6uMCQgjZrb1auB1VdMrS-YqYzz&index=8)
+- #### Unstructured Data - [video](https://www.youtube.com/watch?v=3cWS58Odzro&list=PLBBog2r6uMCQgjZrb1auB1VdMrS-YqYzz&index=8)
     ![Image](/images/cloudcraft/unstructured_data.png "Cloud Craft")
 
-- #### Semi Structured Data [video](https://www.youtube.com/watch?v=h-qM4J2ueHQ&list=PLBBog2r6uMCQgjZrb1auB1VdMrS-YqYzz&index=11)
+- #### Semi Structured Data - [video](https://www.youtube.com/watch?v=h-qM4J2ueHQ&list=PLBBog2r6uMCQgjZrb1auB1VdMrS-YqYzz&index=11)
     ![Image](/images/cloudcraft/semi_structured_data.png "Cloud Craft")
 
 - #### Types of Cloud
-    ![Image](/images/cloudcraft/types_of_cloud.png "Cloud Craft")
+    ![Image](/images/cloudcraft/types_of_cloud.jpg "Cloud Craft")
 
 - #### Generative AI Model training
     ![Image](/images/cloudcraft/Gen-ai-model-training.png "Cloud Craft")
 
 ## 🧑‍🏫 Instructions
 - Choose a Topic:
-    - Select at least one Image from the provided list of intriguing Images.
+    - Select at least one Image from the provided list above.
 - Conceptualize and Simplify:
     - Transform your selected image into a captivating and aesthetically pleasing visualization, ensuring both engagement and beauty while simplifying its core concepts
 - Software or Application:
