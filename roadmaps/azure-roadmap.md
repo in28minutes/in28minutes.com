@@ -1,6 +1,7 @@
 ---
 layout: roadmap
 title: Azure Roadmap
+permalink: azure-roadmap
 description:
 features:
   - name: Access on Mobile and TV

@@ -1,6 +1,7 @@
 ---
 layout: resources
 title: Java Programming Course - Resources
+permalink: resources-java-course
 resources:
   - title: Download PDF - Slides
     description: Download the slides and have them ready.

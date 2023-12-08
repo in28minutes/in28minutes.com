@@ -2,6 +2,7 @@
 layout: roadmap
 title: Java Full Stack Roadmap
 description:
+permalink: java-fullstack-roadmap
 features:
   - name: Access on Mobile and TV
     description: 

@@ -1,6 +1,7 @@
 ---
 layout: roadmap
 title: Cloud Beginner Roadmap
+permalink: cloud-beginner-roadmap
 description: 
 features:
   - name: Access on Mobile and TV

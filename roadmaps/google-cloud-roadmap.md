@@ -1,6 +1,7 @@
 ---
 layout: roadmap
 title: Google Cloud Roadmap
+permalink: google-cloud-roadmap
 description: 
 features:
   - name: Access on Mobile and TV

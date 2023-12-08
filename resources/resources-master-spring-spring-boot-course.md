@@ -1,6 +1,7 @@
 ---
 layout: resources
 title: Master Spring and Spring Boot - Resources
+permalink: resources-master-spring-spring-boot-course
 resources:
   - title: Download PDF - Slides
     description: Download the slides and have them ready.

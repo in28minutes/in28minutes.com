@@ -1,6 +1,7 @@
 ---
 layout: roadmap
 title: AWS Roadmap
+permalink: aws-roadmap
 description:
 features:
   - name: Access on Mobile and TV
@@ -39,7 +40,7 @@ courses:
     students: 2,418
     thumbnail: https://img-c.udemycdn.com/course/480x270/4819470_509b_3.jpg
   - name: AWS Certified Cloud Practitioner - AWS Certification
-    thumbnail: 
+    thumbnail: https://img-c.udemycdn.com/course/480x270/3545764_ad88.jpg
     description:
     url: https://www.udemy.com/course/aws-certified-cloud-practitioner-step-by-step/?couponCode=DEC2023
     objectives:

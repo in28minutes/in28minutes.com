@@ -2,6 +2,7 @@
 layout: roadmap
 title: Java Microservices Roadmap
 description:
+permalink: java-microservices-roadmap
 features:
   - name: Access on Mobile and TV
     description: 

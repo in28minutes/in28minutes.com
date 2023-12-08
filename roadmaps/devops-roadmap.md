@@ -1,6 +1,7 @@
 ---
 layout: roadmap
 title: DevOps Roadmap
+permalink: devops-roadmap
 description: 
 features:
   - name: Access on Mobile and TV

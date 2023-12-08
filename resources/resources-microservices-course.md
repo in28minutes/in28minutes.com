@@ -1,6 +1,7 @@
 ---
 layout: resources
 title: Microservices with Spring Boot and Spring Cloud - Resources
+permalink: resources-microservices-course
 resources:
   - title: Download PDF - Slides
     description: Download the slides and have them ready.
