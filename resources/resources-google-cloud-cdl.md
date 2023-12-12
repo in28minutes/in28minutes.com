@@ -9,8 +9,8 @@ resources:
   - title: Download Code Examples
     description: Download and have this ready. We will use the code examples during the course.
     url: 'https://in28minutes.com/downloads/15-google-cloud-digital-leader/downloads.zip'
-  - title: LinkedIn Newsletter
-    description: Read in28minutes Newsletter. Published on LinkedIn.
-    icon: lni-linkedin
-    url: 'https://www.linkedin.com/newsletters/6978624731038023681/'
+  - title: Join Our Community
+    description: Get Your Certification Questions Answered. Join Our Community on Discord.
+    icon: lni-discord
+    url: 'https://links.in28minutes.com/community-google-cloud'
 ---
