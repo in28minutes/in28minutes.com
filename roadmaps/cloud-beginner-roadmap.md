@@ -33,7 +33,7 @@ courses:
     description:
     objectives:
       - 
-    url: https://www.udemy.com/course/cloud-computing-aws/?couponCode=DEC2023
+    url: https://www.udemy.com/course/cloud-computing-aws/?couponCode=JAN2024
     rating: 4.6
     ratingCount: 130
     students: 2,418
@@ -41,7 +41,7 @@ courses:
   - name: AWS Certified Cloud Practitioner - AWS Certification
     thumbnail: 
     description:
-    url: https://www.udemy.com/course/aws-certified-cloud-practitioner-step-by-step/?couponCode=DEC2023
+    url: https://www.udemy.com/course/aws-certified-cloud-practitioner-step-by-step/?couponCode=JAN2024
     objectives:
       - 
     rating: 4.6
@@ -51,7 +51,7 @@ courses:
     description:
     objectives:
       - 
-    url: https://www.udemy.com/course/azure-certification-az-900-azure-fundamentals/?couponCode=DEC2023
+    url: https://www.udemy.com/course/azure-certification-az-900-azure-fundamentals/?couponCode=JAN2024
     rating: 4.6
     ratingCount: 15,346
     students: 64,857
@@ -60,7 +60,7 @@ courses:
     description:
     objectives:
       - Start your journey to become a Google Cloud Digital Leader
-    url: https://www.udemy.com/course/google-cloud-digital-leader-certification/?couponCode=DEC2023
+    url: https://www.udemy.com/course/google-cloud-digital-leader-certification/?couponCode=JAN2024
     rating: 4.6
     ratingCount: 6,200
     students: 30,000

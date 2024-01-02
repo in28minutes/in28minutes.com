@@ -33,7 +33,7 @@ courses:
     description:
     objectives:
       - Start your journey to become a Google Cloud Digital Leader
-    url: https://www.udemy.com/course/google-cloud-digital-leader-certification/?couponCode=DEC2023
+    url: https://www.udemy.com/course/google-cloud-digital-leader-certification/?couponCode=JAN2024
     rating: 4.6
     ratingCount: 6,200
     students: 30,000
@@ -41,7 +41,7 @@ courses:
   - name: GCP Associate Cloud Engineer - Google Cloud Certification
     thumbnail: https://img-c.udemycdn.com/course/240x135/3995372_4064.jpg
     description:
-    url: https://www.udemy.com/course/google-cloud-certification-associate-cloud-engineer/?couponCode=DEC2023
+    url: https://www.udemy.com/course/google-cloud-certification-associate-cloud-engineer/?couponCode=JAN2024
     objectives:
       - 
     rating: 4.6
@@ -50,7 +50,7 @@ courses:
   - name: Google Cloud Developer - GCP Professional Certification
     description:
     thumbnail: https://img-c.udemycdn.com/course/480x270/3827154_aecc_4.jpg
-    url: https://www.udemy.com/course/google-cloud-certified-professional-cloud-developer/?couponCode=DEC2023
+    url: https://www.udemy.com/course/google-cloud-certified-professional-cloud-developer/?couponCode=JAN2024
     rating: 4.6
     students: 8,980
     ratingCount: 859
@@ -58,7 +58,7 @@ courses:
       - 
   - name: GCP Professional Cloud Architect - Google Cloud Certification
     description:
-    url: https://www.udemy.com/course/google-cloud-professional-cloud-architect-certification/?couponCode=DEC2023
+    url: https://www.udemy.com/course/google-cloud-professional-cloud-architect-certification/?couponCode=JAN2024
     thumbnail: https://img-c.udemycdn.com/course/240x135/3995372_4064.jpg
     rating: 4.6
     ratingCount: 5,184

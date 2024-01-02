@@ -35,7 +35,7 @@ courses:
     description:
     objectives:
       - test
-    url: https://www.udemy.com/course/java-programming-tutorial-for-beginners/?couponCode=DEC2023
+    url: https://www.udemy.com/course/java-programming-tutorial-for-beginners/?couponCode=JAN2024
     rating: 4.5
     ratingCount: 37,372
     students: 221,009
@@ -44,7 +44,7 @@ courses:
     description:
     objectives:
       - test
-    url: https://www.udemy.com/course/spring-boot-and-spring-framework-tutorial-for-beginners/?couponCode=DEC2023
+    url: https://www.udemy.com/course/spring-boot-and-spring-framework-tutorial-for-beginners/?couponCode=JAN2024
     rating: 4.5
     ratingCount: 3,234
     students: 22,213
@@ -53,7 +53,7 @@ courses:
     description:
     objectives:
       - test
-    url: https://www.udemy.com/course/full-stack-application-development-with-spring-boot-and-angular/?couponCode=DEC2023
+    url: https://www.udemy.com/course/full-stack-application-development-with-spring-boot-and-angular/?couponCode=JAN2024
     rating: 4.5
     ratingCount: 8011
     students: 68,645

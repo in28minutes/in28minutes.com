@@ -34,7 +34,7 @@ courses:
     description:
     objectives:
       - 
-    url: https://www.udemy.com/course/cloud-computing-aws/?couponCode=DEC2023
+    url: https://www.udemy.com/course/cloud-computing-aws/?couponCode=JAN2024
     rating: 4.6
     ratingCount: 130
     students: 2,418
@@ -42,7 +42,7 @@ courses:
   - name: AWS Certified Cloud Practitioner - AWS Certification
     thumbnail: https://img-c.udemycdn.com/course/480x270/3545764_ad88.jpg
     description:
-    url: https://www.udemy.com/course/aws-certified-cloud-practitioner-step-by-step/?couponCode=DEC2023
+    url: https://www.udemy.com/course/aws-certified-cloud-practitioner-step-by-step/?couponCode=JAN2024
     objectives:
       - 
     rating: 4.6
@@ -51,7 +51,7 @@ courses:
   - name: AWS Certified Solutions Architect Associate - SAA C03
     thumbnail: https://img-c.udemycdn.com/course/480x270/3082678_ffe8.jpg
     description:
-    url: https://www.udemy.com/course/aws-certified-solutions-architect-associate-step-by-step/?couponCode=DEC2023
+    url: https://www.udemy.com/course/aws-certified-solutions-architect-associate-step-by-step/?couponCode=JAN2024
     objectives:
       - 
     rating: 4.6
@@ -60,7 +60,7 @@ courses:
   - name: AWS Certified Developer Associate - AWS Certification
     thumbnail: https://img-c.udemycdn.com/course/480x270/3594850_c2d3.jpg
     description:
-    url: https://www.udemy.com/course/aws-certified-developer-associate-step-by-step/?couponCode=DEC2023
+    url: https://www.udemy.com/course/aws-certified-developer-associate-step-by-step/?couponCode=JAN2024
     objectives:
       - 
     rating: 4.6
@@ -69,7 +69,7 @@ courses:
   - name: AWS Interview Guide - Review 50+ AWS Services in 5 Hours
     thumbnail: https://img-c.udemycdn.com/course/480x270/4782778_a323.jpg
     description:
-    url: https://www.udemy.com/course/aws-interview-questions-answers/?couponCode=DEC2023
+    url: https://www.udemy.com/course/aws-interview-questions-answers/?couponCode=JAN2024
     objectives:
       - 
     rating: 4.3
