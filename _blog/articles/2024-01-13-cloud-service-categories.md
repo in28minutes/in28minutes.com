@@ -4,7 +4,7 @@ title: Cloud service categories
 date: 2024-01-13 15:26:00
 summary: Cloud services (IaaS, PaaS, SaaS) streamline deployment. IaaS provides VMs and load balancers, while PaaS extends beyond compute (e.g., MySQL in Example 1). Mastery ensures efficient deployment. Categories -- cloud, IaaS, PaaS, SaaS.
 categories: Cloud-service-categories, IAAS, PAAS, SAAS
-permalink: /Cloud-service-categories
+permalink: /cloud-services
 ---
 
 ## Cloud service categorie
@@ -31,7 +31,7 @@ permalink: /Cloud-service-categories
 <details>
     <summary>Notes</summary>
     <ul>
-    <li>Applications > Application Runtime > OS > Virtualization > Physical Hardware > Networking (First 3 are customer responsibility) 
+    <li>Applications > Application Runtime > OS > Virtualization > Physical Hardware > Networking (First 3 are customer responsibility)
         <ul>
             <li>Use only infrastructure from cloud provider
                 <ul>
@@ -67,7 +67,7 @@ permalink: /Cloud-service-categories
 
 ### PAAS (Platform as a Service)
 
-![Image](/images/cloud-service-categories/PAAS.gif  "PAAS (Platform as a Service)")
+![Image](/images/cloud-service-categories/PAAS.gif "PAAS (Platform as a Service)")
 
 <details>
     <summary>Notes</summary>
@@ -157,7 +157,7 @@ permalink: /Cloud-service-categories
 
 </details>
 
-### PAAS is NOT just for Compute Services!
+### PAAS is NOT just for Compute Services
 
 ![Image](/images/cloud-service-categories/PASS-isnt-just-compute.gif "PAAS is NOT just for Compute Services!")
 
@@ -182,7 +182,7 @@ permalink: /Cloud-service-categories
 <details>
     <summary>Notes</summary>
     <ul>
-    <li>IaaS Approach 
+    <li>IaaS Approach
         <ul>
             <li>Setup VMs in Different Zones</li>
             <li>Install database on each VM</li>
