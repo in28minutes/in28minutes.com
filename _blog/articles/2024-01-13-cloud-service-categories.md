@@ -7,7 +7,7 @@ categories: Cloud-service-categories, IAAS, PAAS, SAAS
 permalink: /cloud-services
 ---
 
-## Cloud service categorie
+## Cloud service categories
 
 ### Overview
 
