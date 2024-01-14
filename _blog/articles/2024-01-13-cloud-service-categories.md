@@ -4,7 +4,7 @@ title: Cloud service categories
 date: 2024-01-12 15:26:00
 summary: Cloud services (IaaS, PaaS, SaaS) streamline deployment. IaaS provides VMs and load balancers, while PaaS extends beyond compute (e.g., MySQL in Example 1). Mastery ensures efficient deployment. Categories -- cloud, IaaS, PaaS, SaaS.
 categories: Cloud-service-categories, IAAS, PAAS, SAAS
-permalink: /cloud-services-categories
+permalink: /cloud-service-categories
 ---
 
 ## Cloud service categories
