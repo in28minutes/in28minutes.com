@@ -29,3 +29,13 @@ permalink:  /azure-updates
 - Click Create a load balancer
 	- Choose Azure load balancer for load balancing
 	- Give vm-scale-set-1-lb as the name of the load balancer and take the defaults for all other options
+
+## Create Azure Database for MySQL Flexible Server
+
+<iframe src="https://scribehow.com/embed/Create_Azure_Database_for_MySQL_Flexible_Server__fd2eNVcXSUyYpOF8MA-VTw?removeLogo=true" width="640" height="640" allowfullscreen frameborder="0"></iframe>
+
+**Key Changes**
+- Choose **Flexible Server**
+- Ensure that these check boxes are checked
+	- "Allow public access to this resource through the internet using a public IP address"
+	- "Allow public access from any Azure service within Azure to this server"
