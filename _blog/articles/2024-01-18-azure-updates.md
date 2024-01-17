@@ -1,0 +1,17 @@
+---
+layout:     post
+title:      Azure Course Updates
+date:       2024-01-13 15:26:00
+summary:    Cloud UI is changing rapidly. Let's adapt!
+categories:  azure
+permalink:  /azure-updates
+---
+
+## Connecting to a VM
+
+Key changes:
+- You do not need an SSH key anymore
+- Instead of `python --version` you can use `python3 --version`
+
+<iframe src="https://scribehow.com/embed/Connecting_to_a_Virtual_Machine_in_Azure__gWL9X4yvQBqUoLA5eTNniQ" width="640" height="640" allowfullscreen frameborder="0"></iframe>
+
