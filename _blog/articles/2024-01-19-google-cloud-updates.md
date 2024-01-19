@@ -7,14 +7,6 @@ categories:  google-cloud
 permalink:  /google-cloud-updates
 ---
 
-## Update: Creating a VM
+## Exploring External IP Addresses 
 
-<iframe src="https://scribehow.com/embed/Creating_a_VM_on_Google_Cloud_Platform__csGgmjZjQJSBja_xJSG_fw?removeLogo=true" width="640" height="640" allowfullscreen frameborder="0"></iframe>
-
-## Update: Creating a KMS Key
-
-<iframe src="https://scribehow.com/embed/Creating_a_VM_on_Google_Cloud_Platform__csGgmjZjQJSBja_xJSG_fw?removeLogo=true" width="640" height="640" allowfullscreen frameborder="0"></iframe>
-
-## Update: Creating a Dummy Page
-
-<iframe src="https://scribehow.com/embed/Creating_a_VM_on_Google_Cloud_Platform__csGgmjZjQJSBja_xJSG_fw?removeLogo=true" width="640" height="640" allowfullscreen frameborder="0"></iframe>
+<iframe src="https://scribehow.com/embed/Exploring_External_IP_Addresses__npv09O-zQ7aUGcS6XOdkSQ?removeLogo=true" width="640" height="640" allowfullscreen frameborder="0"></iframe>
