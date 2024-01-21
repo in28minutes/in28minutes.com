@@ -78,13 +78,13 @@ permalink: /terraform
 <details>
     <summary>Notes</summary>
 <ul>
-    <li>Infrastructure as Code (IaC): Manages infrastructure through code</li>
-    <li>Data: Infrastructure as Code (IaC) Manages infrastructure through code</li>
-    <li>Providers: Plugins that interact with APIs to manage resources</li>
-    <li>Resources: Infrastructure components like compute instances, storage, and networking.</li>
-    <li>State: A snapshot of your infrastructure's resources at a point in time.</li>
-    <li>Modules: Reusable Terraform configurations for organizing resources.</li>
-    <li>Terraform Configuration Files (tf): Files where Terraform code is written to define and provision infrastructure</li>
+    <li><strong>Infrastructure as Code (IaC):</strong> Manages infrastructure through code</li>
+    <li><strong>Data:</strong> Infrastructure as Code (IaC) Manages infrastructure through code</li>
+    <li><strong>Providers:</strong> Plugins that interact with APIs to manage resources</li>
+    <li><strong>Resources:</strong> Infrastructure components like compute instances, storage, and networking.</li>
+    <li><strong>State:</strong> A snapshot of your infrastructure's resources at a point in time.</li>
+    <li><strong>Modules:</strong> Reusable Terraform configurations for organizing resources.</li>
+    <li><strong>Terraform Configuration Files (tf):</strong> Files where Terraform code is written to define and provision infrastructure</li>
 </ul>
 
 </details>
