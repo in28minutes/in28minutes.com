@@ -4,7 +4,7 @@ title: Terraform
 date: 2024-01-20 15:26:00
 summary: Terraform, a key Infrastructure as Code (IaaC) tool, streamlines deployment with benefits like scalability. Challenges exist, but understanding key concepts and adopting best practices maximizes Terraform's efficiency in DevOps.
 categories: Terraform, DevOps
-permalink: /Terraform
+permalink: /terraform
 ---
 
 ## Terafform
