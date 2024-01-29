@@ -44,12 +44,12 @@ permalink: /identity-management
   </li>
   <li><strong>Typically we need very granular control</strong>
         <ul>
-          <li>Limit a single user:
+          <li><strong>&nbsp;&nbsp;&nbsp;&nbsp;Limit a single user:</strong>
           <ul>
-          <li>to perform single action</li>
-          <li>on a specific cloud resource</li>
-          <li>from a specific IP address</li>
-          <li>during a specific time window</li>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to perform single action</li>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on a specific cloud resource</li>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from a specific IP address</li>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;during a specific time window</li>
         </ul>
         </li>
 </ul>
