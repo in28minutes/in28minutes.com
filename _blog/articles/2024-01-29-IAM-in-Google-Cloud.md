@@ -42,7 +42,7 @@ permalink: /iam-gcp
     <ul>
       <li>Way of uniquely identifying individuals, systems, or processes that interact with GCP services</li>
       <li>Google account</li>
-      <li>Service account
+      <li>Service account:
         <ul>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;Default</li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;Google managed</li>
