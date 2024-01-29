@@ -38,9 +38,9 @@ courses:
     objectives:
       - test
     url: https://links.in28minutes.com/python
-    rating: 4.7
-    ratingCount: 30
-    students: 700
+    rating: 4.6
+    ratingCount: 322
+    students: 3013
     thumbnail: https://img-c.udemycdn.com/course/480x270/5414974_e415.jpg
   - name: Learn DevOps - Docker, Kubernetes, Terraform and Azure DevOps
     description:

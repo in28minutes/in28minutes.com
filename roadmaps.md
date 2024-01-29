@@ -31,5 +31,9 @@ roadmaps:
     url: /devops-roadmap
     description:
     image: /images/devops-roadmap.png
+  - name: Python Roadmap
+    url: /python-roadmap
+    description:
+    image: /images/python-roadmap.png
 ---
 
