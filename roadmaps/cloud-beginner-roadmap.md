@@ -4,18 +4,18 @@ title: Cloud Beginner Roadmap
 permalink: cloud-beginner-roadmap
 description: 
 features:
-  - name: Access on Mobile and TV
+  - name: Fastest Roadmap
     description: 
-    icon: lni-laptop-phone
+    icon: lni-helicopter
   - name: Lifetime Access
     description: 
     icon: lni-key
   - name: Certificate of Completion
     description: 
     icon: lni-certificate
-  - name: Free PDF Downloads
+  - name: Build Your Career
     description: 
-    icon: lni-download
+    icon: lni-infinite
 objectives:
   - Get started with AWS, Azure and Google Cloud
   - Go Hands-On with the 3 Popular Cloud Platforms

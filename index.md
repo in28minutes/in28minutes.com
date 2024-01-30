@@ -3,21 +3,24 @@ layout: home
 
 # Header
 header:
-  title: 1 Million Learners - Cloud, DevOps and Microservices
-  description: 7 Amazing Roadmaps - ZERO to EXPERT
+  title: Learn Fast & Become an Expert
+  description: Grow in your career and join 1 MILLION learners!
   image:
   main_button:
-    title: Start learning
+    title: Your Roadmaps
     url: /roadmaps
   secondary_button:
-    title: Watch on YouTube
-    url: https://www.youtube.com/user/rithustutorials/videos
+    title: Join us on YouTube
+    url: https://www.youtube.com/@in28minutes/shorts
 
 # Features
 features:
-  title: Take your first step into Cloud and DevOps
-  description: Join 1 MILLION learners
+  title: Take the next step in your career
+  description: Learn quickly and get certified!
   items:
+    - title: Python and Java Roadmaps
+      description: Learn Programming Fast!
+      icon: lni-layout
     - title: Cloud Roadmaps
       description: Get started with AWS, Azure and Google Cloud
       icon: lni-layout
@@ -26,9 +29,6 @@ features:
       icon: lni-layout
     - title: Spring Boot Roadmaps
       description: Learn Java, Spring Boot, Microservices and Full Stack development
-      icon: lni-layout
-    - title: Hands-on courses designed for absolute beginners
-      description: 50+ Course with almost 250,000+ reviews
       icon: lni-layout
 
 # About

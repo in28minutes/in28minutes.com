@@ -1,16 +1,20 @@
 ---
 layout: roadmaps
-title: Roadmaps
-description: 
+title: Guided Paths to Learn Fast & become an Expert
+description:
 roadmaps:
-  - name: AWS Roadmap
-    url: /aws-roadmap
+  - name: Python Roadmap
+    url: /python-roadmap
     description:
-    image: /images/aws-roadmap.png
+    image: /images/python-roadmap.png
   - name: Azure Roadmap
     url: /azure-roadmap
     description:
     image: /images/azure-roadmap.png
+  - name: AWS Roadmap
+    url: /aws-roadmap
+    description:
+    image: /images/aws-roadmap.png
   - name: Google Cloud Roadmap
     url: /google-cloud-roadmap
     description:
@@ -31,9 +35,5 @@ roadmaps:
     url: /devops-roadmap
     description:
     image: /images/devops-roadmap.png
-  - name: Python Roadmap
-    url: /python-roadmap
-    description:
-    image: /images/python-roadmap.png
 ---
 
