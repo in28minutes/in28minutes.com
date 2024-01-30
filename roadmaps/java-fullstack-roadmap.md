@@ -37,8 +37,8 @@ courses:
       - test
     url: https://www.udemy.com/course/java-programming-tutorial-for-beginners/?couponCode=JAN2024
     rating: 4.5
-    ratingCount: 37,372
-    students: 221,009
+    ratingCount: 41,700
+    students: 244,867
     thumbnail: https://img-c.udemycdn.com/course/480x270/1535678_0ce9_7.jpg
   - name: Master Spring Boot 3 & Spring Framework 6 with Java
     description:
@@ -46,8 +46,8 @@ courses:
       - test
     url: https://www.udemy.com/course/spring-boot-and-spring-framework-tutorial-for-beginners/?couponCode=JAN2024
     rating: 4.5
-    ratingCount: 3,234
-    students: 22,213
+    ratingCount: 5,573
+    students: 36,365
     thumbnail: https://img-c.udemycdn.com/course/480x270/4993276_3452.jpg
   - name: Go Java Full Stack with Spring Boot and Angular
     description:

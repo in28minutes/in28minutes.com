@@ -13,7 +13,7 @@ features:
   - name: Certificate of Completion
     description: 
     icon: lni-certificate
-  - name: Build Your Career
+  - name: Join 200,000 Learners!
     description: 
     icon: lni-infinite
 objectives:
@@ -48,8 +48,8 @@ courses:
       - test
     url: https://www.udemy.com/course/spring-boot-and-spring-framework-tutorial-for-beginners/?couponCode=JAN2024
     rating: 4.5
-    ratingCount: 3,234
-    students: 22,213
+    ratingCount: 5,573
+    students: 36,365
     thumbnail: https://img-c.udemycdn.com/course/480x270/4993276_3452.jpg
   - name: Master Microservices with Spring Boot and Spring Cloud
     description:

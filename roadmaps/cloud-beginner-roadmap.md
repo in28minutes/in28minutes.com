@@ -29,15 +29,6 @@ testimonials:
   - name: Learner
     comment: Trainer was very good at breaking down key points in terms that are easily understood.
 courses:
-  - name: Cloud Computing in a Weekend - Learn AWS
-    description:
-    objectives:
-      - 
-    url: https://www.udemy.com/course/cloud-computing-aws/?couponCode=JAN2024
-    rating: 4.6
-    ratingCount: 130
-    students: 2,418
-    thumbnail: https://img-c.udemycdn.com/course/480x270/4819470_509b_3.jpg
   - name: AWS Certified Cloud Practitioner - AWS Certification
     thumbnail: 
     description:
@@ -45,16 +36,16 @@ courses:
     objectives:
       - 
     rating: 4.6
-    ratingCount: 2,420
-    students: 31,183
+    ratingCount: 7,000
+    students: 55,031
   - name: AZ-900 - Microsoft Azure Fundamentals in a Weekend
     description:
     objectives:
       - 
     url: https://www.udemy.com/course/azure-certification-az-900-azure-fundamentals/?couponCode=JAN2024
     rating: 4.6
-    ratingCount: 15,346
-    students: 64,857
+    ratingCount: 32,311
+    students: 132,410
     thumbnail: https://img-c.udemycdn.com/course/480x270/4049392_dfe6.jpg
   - name: GCP for Beginners - Become a Google Cloud Digital Leader
     description:

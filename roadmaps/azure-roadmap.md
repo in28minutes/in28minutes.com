@@ -35,8 +35,8 @@ courses:
       - 
     url: https://www.udemy.com/course/azure-certification-az-900-azure-fundamentals/?couponCode=JAN2024
     rating: 4.6
-    ratingCount: 15,346
-    students: 64,857
+    ratingCount: 32,311
+    students: 132,410
     thumbnail: https://img-c.udemycdn.com/course/480x270/4049392_dfe6.jpg
   - name: DP-900 - Microsoft Azure Data Fundamentals in a Weekend
     thumbnail: https://img-c.udemycdn.com/course/480x270/4241488_e344.jpg

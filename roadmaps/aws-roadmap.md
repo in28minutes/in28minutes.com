@@ -30,15 +30,6 @@ testimonials:
   - name: Learner
     comment: Trainer was very good at breaking down key points in terms that are easily understood.
 courses:
-  - name: Cloud Computing in a Weekend - Learn AWS
-    description:
-    objectives:
-      - 
-    url: https://www.udemy.com/course/cloud-computing-aws/?couponCode=JAN2024
-    rating: 4.6
-    ratingCount: 130
-    students: 2,418
-    thumbnail: https://img-c.udemycdn.com/course/480x270/4819470_509b_3.jpg
   - name: AWS Certified Cloud Practitioner - AWS Certification
     thumbnail: https://img-c.udemycdn.com/course/480x270/3545764_ad88.jpg
     description:
@@ -46,8 +37,8 @@ courses:
     objectives:
       - 
     rating: 4.6
-    ratingCount: 2,420
-    students: 31,183
+    ratingCount: 7,000
+    students: 55,031
   - name: AWS Certified Solutions Architect Associate - SAA C03
     thumbnail: https://img-c.udemycdn.com/course/480x270/3082678_ffe8.jpg
     description:
@@ -55,8 +46,8 @@ courses:
     objectives:
       - 
     rating: 4.6
-    ratingCount: 3,424
-    students: 45,953
+    ratingCount: 4,923
+    students: 55,024
   - name: AWS Certified Developer Associate - AWS Certification
     thumbnail: https://img-c.udemycdn.com/course/480x270/3594850_c2d3.jpg
     description:
@@ -72,7 +63,7 @@ courses:
     url: https://www.udemy.com/course/aws-interview-questions-answers/?couponCode=JAN2024
     objectives:
       - 
-    rating: 4.3
-    ratingCount: 43
-    students: 919
+    rating: 4.5
+    ratingCount: 209
+    students: 3,135
 ---

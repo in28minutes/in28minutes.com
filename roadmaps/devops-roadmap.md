@@ -40,7 +40,7 @@ courses:
     url: https://links.in28minutes.com/python
     rating: 4.6
     ratingCount: 322
-    students: 3013
+    students: 3,013
     thumbnail: https://img-c.udemycdn.com/course/480x270/5414974_e415.jpg
   - name: Learn DevOps - Docker, Kubernetes, Terraform and Azure DevOps
     description:
@@ -48,7 +48,7 @@ courses:
       - test
     url: https://www.udemy.com/course/devops-with-docker-kubernetes-and-azure-devops/?couponCode=JAN2024
     rating: 4.5
-    ratingCount: 8,683
-    students: 96,388
+    ratingCount: 13,033
+    students: 129,331
     thumbnail: https://img-c.udemycdn.com/course/480x270/2813427_cc60_2.jpg
 ---
