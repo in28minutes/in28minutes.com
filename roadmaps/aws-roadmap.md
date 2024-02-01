@@ -33,7 +33,7 @@ courses:
   - name: AWS Certified Cloud Practitioner - AWS Certification
     thumbnail: https://img-c.udemycdn.com/course/480x270/3545764_ad88.jpg
     description:
-    url: https://www.udemy.com/course/aws-certified-cloud-practitioner-step-by-step/?couponCode=JAN2024
+    url: https://links.in28minutes.com/ccp
     objectives:
       - 
     rating: 4.6
@@ -42,7 +42,7 @@ courses:
   - name: AWS Certified Solutions Architect Associate - SAA C03
     thumbnail: https://img-c.udemycdn.com/course/480x270/3082678_ffe8.jpg
     description:
-    url: https://www.udemy.com/course/aws-certified-solutions-architect-associate-step-by-step/?couponCode=JAN2024
+    url: https://links.in28minutes.com/saa
     objectives:
       - 
     rating: 4.6
@@ -51,7 +51,7 @@ courses:
   - name: AWS Certified Developer Associate - AWS Certification
     thumbnail: https://img-c.udemycdn.com/course/480x270/3594850_c2d3.jpg
     description:
-    url: https://www.udemy.com/course/aws-certified-developer-associate-step-by-step/?couponCode=JAN2024
+    url: https://www.udemy.com/course/aws-certified-developer-associate-step-by-step/?couponCode=FEB2024
     objectives:
       - 
     rating: 4.6

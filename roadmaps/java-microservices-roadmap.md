@@ -37,7 +37,7 @@ courses:
     description:
     objectives:
       - test
-    url: https://www.udemy.com/course/java-programming-tutorial-for-beginners/?couponCode=JAN2024
+    url: https://links.in28minutes.com/java
     rating: 4.5
     ratingCount: 37,372
     students: 221,009
@@ -46,7 +46,7 @@ courses:
     description:
     objectives:
       - test
-    url: https://www.udemy.com/course/spring-boot-and-spring-framework-tutorial-for-beginners/?couponCode=JAN2024
+    url: https://links.in28minutes.com/sb
     rating: 4.5
     ratingCount: 5,573
     students: 36,365
@@ -55,7 +55,7 @@ courses:
     description:
     objectives:
       - test
-    url: https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud/?couponCode=JAN2024
+    url: https://links.in28minutes.com/microservices
     rating: 4.5
     ratingCount: 45,996
     students: 226,108

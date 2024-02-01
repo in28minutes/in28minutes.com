@@ -33,7 +33,7 @@ courses:
     description:
     objectives:
       - Start your journey to become a Google Cloud Digital Leader
-    url: https://www.udemy.com/course/google-cloud-digital-leader-certification/?couponCode=JAN2024
+    url: https://links.in28minutes.com/get-started-google-cloud
     rating: 4.6
     ratingCount: 12,295
     students: 56,139
@@ -41,7 +41,7 @@ courses:
   - name: GCP Associate Cloud Engineer - Google Cloud Certification
     thumbnail: https://img-c.udemycdn.com/course/240x135/3995372_4064.jpg
     description:
-    url: https://www.udemy.com/course/google-cloud-certification-associate-cloud-engineer/?couponCode=JAN2024
+    url: https://links.in28minutes.com/ace
     objectives:
       - 
     rating: 4.6
@@ -50,7 +50,7 @@ courses:
   - name: Google Cloud Developer - GCP Professional Certification
     description:
     thumbnail: https://img-c.udemycdn.com/course/480x270/3827154_aecc_4.jpg
-    url: https://www.udemy.com/course/google-cloud-certified-professional-cloud-developer/?couponCode=JAN2024
+    url: https://links.in28minutes.com/ace
     rating: 4.6
     students: 17,326
     ratingCount: 1,863
@@ -58,7 +58,7 @@ courses:
       - 
   - name: GCP Professional Cloud Architect - Google Cloud Certification
     description:
-    url: https://www.udemy.com/course/google-cloud-professional-cloud-architect-certification/?couponCode=JAN2024
+    url: https://links.in28minutes.com/pca
     thumbnail: https://img-c.udemycdn.com/course/240x135/3995372_4064.jpg
     rating: 4.6
     ratingCount: 9,365
