@@ -7,11 +7,55 @@ categories:  azure
 permalink:  /azure-updates-markdown
 ---
 
+<style>
+
+.ud-blog-details-para {
+  background-color: #f8f9fa; /* Light grey background */
+  font-size: 200%;
+  border-left: 10px solid #007bff; /* Blue left border */
+  padding: 10px; /* Padding around the text */
+  margin-bottom: 1rem; /* Margin at the bottom */
+  display: inline-block; /* To keep it inline with other texts if necessary */
+}
+
+.instructions {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: auto;
+}
+
+.step {
+    margin-bottom: 20px;
+}
+
+.step p {
+    font-size: 120%;
+    line-height: 1.5;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-left: 5px solid #007bff;
+}
+
+img {
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+}
+
+</style>
+
 ## Connecting to a VM
 
-# Connecting to a Virtual Machine in Azure
-#### [Made by Ranga Rao Karanam with Scribe](https://scribehow.com/shared/Connecting_to_a_Virtual_Machine_in_Azure__gWL9X4yvQBqUoLA5eTNniQ)
+<div class="guide">
+    <div class="step">
+        <p> <span class="number">1.</span> Click "Go to resource" after the VM deployment is complete (OR directly go to the VM page by searching for it)</p>
+        <img src="https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2024-01-17/bbd9a5ca-895d-4645-a88c-593b562e3063/ascreenshot.jpeg" alt="Screenshot 1">
+    </div>
+    <!-- Repeat for other steps -->
+</div>
 
+## Connecting to a VM
 
 1\. Click "Go to resource" after the VM deployment is complete (OR directly go to the VM page by searching for it)
 
@@ -60,12 +104,13 @@ You do NOT need the SSH key to connect anymore!
 
 10\. Execute these commands: 
 
-*NOTE: use python3 instead of python*
+```
+# NOTE: use python3 instead of python
+whoami
 
-[[whoami]]
+python3 --version
 
-**[[python3]]**[[ --version]]
-
-[[hostname]]
+hostname
+```
 
 ![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2024-01-17/5c806d94-0b60-4405-abea-24f3b7606dc2/ascreenshot.jpeg?tl_px=186,720&br_px=1906,1682&force_format=png&width=1120.0&wat=1&wat_opacity=1&wat_gravity=northwest&wat_url=https://colony-recorder.s3.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=524,485)
