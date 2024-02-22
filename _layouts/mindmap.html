@@ -3,8 +3,10 @@ layout: default
 ---
 <style>
   svg.markmap {
-    width: 100%;
-    height: 100vh;
+      min-width: 100vw;
+      min-height: 80vh;
+    /*min-width: 100%;
+    min-height: 60vh;*/
   }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.15.2"></script>
@@ -15,46 +17,6 @@ layout: default
         padding-bottom: 2em;
     }
 
-    #content>p,
-    li {
-        line-height: 2em;
-        color: var(--body-color);
-    }
-
-    #content>p {
-        line-height: 2em;
-    }
-
-    #content>h2,
-    h3,
-    h4 {
-        margin-top: 2em;
-        font-weight: bold;
-        margin-bottom: 1em;
-        color: var(--heading-color);
-    }
-
-    div.highlight {
-        margin-top: 2em;
-        padding: 1em;
-        font-family: monospace !important;
-        margin-bottom: 2em;
-        padding-bottom: 0.25em;
-    }
-
-    pre.highlight {
-        margin-bottom: none !important;
-        padding-bottom: none !important;
-    }
-
-    #content>ul {
-        padding-left: 2em;
-        margin-bottom: 1em;
-    }
-
-    #content>ul>li {
-        list-style: disc;
-    }
 </style>
 <section class="ud-page-banner">
     <div class="container">
