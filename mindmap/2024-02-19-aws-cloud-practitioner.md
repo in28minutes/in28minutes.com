@@ -616,7 +616,7 @@ AWS is expected to pass the cost benefits to end users
 Think Auto Scaling groups..
 - **RightSizing**: Choose the optimal resources for your workload
 AWS: AWS Compute Optimizer, AWS Cost Explorer
-- **Thread Detection**: Detect threats ahead of time
+- **Threat Detection**: Detect threats ahead of time
 AWS: Amazon GuardDuty 
 
 </script>

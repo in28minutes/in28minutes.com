@@ -1,9 +1,9 @@
 ---
 layout:     post
-title:      What is Docker?
+title:      Types of Databases
 date:       2024-01-29 15:26:00
 summary:    It provides an overview of various database types, compares Recovery Time Objective (RTO) with Recovery Point Objective (RPO), and discusses concepts of data availability and durability.
-categories:  cloud, devops
+categories:  cloud, databases
 permalink:  /fundamentals-of-databases
 ---
 

@@ -1,9 +1,9 @@
 ---
 layout:     post
-title:      What is Docker?
+title:      Understanding Cost Management in Cloud
 date:       2024-01-29 15:26:00
 summary:    It involves understanding and optimizing expenditure through models like CapEx and OpEx, evaluating pricing models like consumption-based or fixed, and calculating the Total Cost of Ownership.
-categories:  cloud, devops
+categories:  cloud, costs
 permalink:  /cloud-cost-management
 ---
 
