@@ -1,0 +1,109 @@
+---
+layout: default
+---
+<style>
+  svg.markmap {
+    /*min-width: 100vw;*/
+    min-height: 80vh;
+    width: 100%; /* Adjust the width as needed */
+    height: auto; /* Adjust the height as needed */
+    border: 1px solid #aaa; /* Just for visualization */
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    overflow: auto; /* Adds scrollbars if the SVG is larger than the container */
+      /*
+      
+      height: 100%;
+        min-width: 100%;
+    min-height: 60vh;*/
+  }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.15.2"></script>
+
+<style>
+    /*g[data-depth="1"] > foreignObject > div {
+        font-weight: bold;
+    }*/
+
+    #content {
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+
+    #content>p,
+    li {
+        line-height: 2em;
+        color: var(--body-color);
+    }
+
+    #content>p {
+        line-height: 2em;
+    }
+
+    #content>h2,
+    h3,
+    h4 {
+        margin-top: 2em;
+        font-weight: bold;
+        margin-bottom: 1em;
+        color: var(--heading-color);
+    }
+
+    div.highlight {
+        margin-top: 2em;
+        padding: 1em;
+        font-family: monospace !important;
+        margin-bottom: 2em;
+        padding-bottom: 0.25em;
+    }
+
+    pre.highlight {
+        margin-bottom: none !important;
+        padding-bottom: none !important;
+    }
+
+    #content>ul {
+        padding-left: 2em;
+        margin-bottom: 1em;
+    }
+
+    #content>ul>li {
+        list-style: disc;
+    }
+</style>
+
+<section class="ud-page-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ud-banner-content">
+                    <h1>{{page.title}}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ud-blog-details">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-12">
+                <div id="content">
+                    {{content | markdownify}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include newsletter.html %}
+
+<script>
+    document.querySelectorAll('table').forEach(table => {
+        table.classList.add('table');
+    })
+    document.querySelectorAll('p').forEach(p => {
+        p.classList.add('ud-blog-details-para');
+    })
+</script>

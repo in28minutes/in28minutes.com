@@ -10,6 +10,23 @@ layout: page
       </p>
     </div>
   </div>
+
+  <div class="row row-cols-1 row-cols-md-2 mb-5 row-cols-lg-4">
+    {% for feature in page.features %}
+    <div class="col">
+      <div class="ud-single-feature wow fadeInUp" data-wow-delay=".1s">
+        <div class="ud-feature-icon">
+          <i class="lni {{feature.icon}}"></i>
+        </div>
+        <div class="ud-feature-content">
+          <h3 class="ud-feature-title">{{feature.name}}</h3>
+          <p>{{feature.description}}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
   <div class="row mb-5">
     <div class="col">
       <div class="ud-about-wrapper wow fadeInUp shadow" data-wow-delay=".2s">
@@ -72,33 +89,13 @@ layout: page
     {% endfor %}
   </div>
 
-  <div class="row py-5">
-    <div class="col">
-      <h3>Crafted For You With Love</h3>
-    </div>
-  </div>
 
-  <div class="row row-cols-1 row-cols-md-2 mb-5 row-cols-lg-4">
-    {% for feature in page.features %}
-    <div class="col">
-      <div class="ud-single-feature wow fadeInUp" data-wow-delay=".1s">
-        <div class="ud-feature-icon">
-          <i class="lni {{feature.icon}}"></i>
-        </div>
-        <div class="ud-feature-content">
-          <h3 class="ud-feature-title">{{feature.name}}</h3>
-          <p>{{feature.description}}</p>
-        </div>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
 
 
   {% include trustedby.html %}
   <div class="row py-5">
     <div class="col">
-      <h3>What Your Colleagues Are Saying</h3>
+      <h3>Learn and Grow in Your Career</h3>
     </div>
   </div>
   <div class="row row-cols-1 row-cols-lg-3 g-3">

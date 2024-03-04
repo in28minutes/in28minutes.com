@@ -4,18 +4,18 @@ title: Cloud Beginner Roadmap
 permalink: cloud-beginner-roadmap
 description: 
 features:
-  - name: Access on Mobile and TV
+  - name: Fastest Roadmap
     description: 
-    icon: lni-laptop-phone
+    icon: lni-helicopter
   - name: Lifetime Access
     description: 
     icon: lni-key
   - name: Certificate of Completion
     description: 
     icon: lni-certificate
-  - name: Free PDF Downloads
+  - name: Build Your Career
     description: 
-    icon: lni-download
+    icon: lni-infinite
 objectives:
   - Get started with AWS, Azure and Google Cloud
   - Go Hands-On with the 3 Popular Cloud Platforms
@@ -29,38 +29,29 @@ testimonials:
   - name: Learner
     comment: Trainer was very good at breaking down key points in terms that are easily understood.
 courses:
-  - name: Cloud Computing in a Weekend - Learn AWS
-    description:
-    objectives:
-      - 
-    url: https://www.udemy.com/course/cloud-computing-aws/?couponCode=JAN2024
-    rating: 4.6
-    ratingCount: 130
-    students: 2,418
-    thumbnail: https://img-c.udemycdn.com/course/480x270/4819470_509b_3.jpg
   - name: AWS Certified Cloud Practitioner - AWS Certification
     thumbnail: 
     description:
-    url: https://www.udemy.com/course/aws-certified-cloud-practitioner-step-by-step/?couponCode=JAN2024
+    url: https://links.in28minutes.com/ccp
     objectives:
       - 
     rating: 4.6
-    ratingCount: 2,420
-    students: 31,183
+    ratingCount: 7,000
+    students: 55,031
   - name: AZ-900 - Microsoft Azure Fundamentals in a Weekend
     description:
     objectives:
       - 
-    url: https://www.udemy.com/course/azure-certification-az-900-azure-fundamentals/?couponCode=JAN2024
+    url: https://links.in28minutes.com/az-900
     rating: 4.6
-    ratingCount: 15,346
-    students: 64,857
+    ratingCount: 32,311
+    students: 132,410
     thumbnail: https://img-c.udemycdn.com/course/480x270/4049392_dfe6.jpg
   - name: GCP for Beginners - Become a Google Cloud Digital Leader
     description:
     objectives:
       - Start your journey to become a Google Cloud Digital Leader
-    url: https://www.udemy.com/course/google-cloud-digital-leader-certification/?couponCode=JAN2024
+    url: https://links.in28minutes.com/get-started-google-cloud
     rating: 4.6
     ratingCount: 6,200
     students: 30,000

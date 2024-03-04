@@ -4,18 +4,18 @@ title: Google Cloud Roadmap
 permalink: google-cloud-roadmap
 description: 
 features:
-  - name: Access on Mobile and TV
+  - name: Fastest Roadmap
     description: 
-    icon: lni-laptop-phone
+    icon: lni-helicopter
   - name: Lifetime Access
     description: 
     icon: lni-key
   - name: Certificate of Completion
     description: 
     icon: lni-certificate
-  - name: Free PDF Downloads
+  - name: Build Your Career
     description: 
-    icon: lni-download
+    icon: lni-infinite
 objectives:
   - Get started with Google Cloud
   - Go Hands-On
@@ -33,36 +33,36 @@ courses:
     description:
     objectives:
       - Start your journey to become a Google Cloud Digital Leader
-    url: https://www.udemy.com/course/google-cloud-digital-leader-certification/?couponCode=JAN2024
+    url: https://links.in28minutes.com/get-started-google-cloud
     rating: 4.6
-    ratingCount: 6,200
-    students: 30,000
+    ratingCount: 12,295
+    students: 56,139
     thumbnail: https://img-c.udemycdn.com/course/240x135/3995372_4064.jpg
   - name: GCP Associate Cloud Engineer - Google Cloud Certification
     thumbnail: https://img-c.udemycdn.com/course/240x135/3995372_4064.jpg
     description:
-    url: https://www.udemy.com/course/google-cloud-certification-associate-cloud-engineer/?couponCode=JAN2024
+    url: https://links.in28minutes.com/ace
     objectives:
       - 
     rating: 4.6
-    ratingCount: 12,200
-    students: 65,688
+    ratingCount: 24,149
+    students: 122,478
   - name: Google Cloud Developer - GCP Professional Certification
     description:
     thumbnail: https://img-c.udemycdn.com/course/480x270/3827154_aecc_4.jpg
-    url: https://www.udemy.com/course/google-cloud-certified-professional-cloud-developer/?couponCode=JAN2024
+    url: https://links.in28minutes.com/ace
     rating: 4.6
-    students: 8,980
-    ratingCount: 859
+    students: 17,326
+    ratingCount: 1,863
     objectives:
       - 
   - name: GCP Professional Cloud Architect - Google Cloud Certification
     description:
-    url: https://www.udemy.com/course/google-cloud-professional-cloud-architect-certification/?couponCode=JAN2024
+    url: https://links.in28minutes.com/pca
     thumbnail: https://img-c.udemycdn.com/course/240x135/3995372_4064.jpg
     rating: 4.6
-    ratingCount: 5,184
-    students: 37,227
+    ratingCount: 9,365
+    students: 61,578
     objectives:
       - 
 ---

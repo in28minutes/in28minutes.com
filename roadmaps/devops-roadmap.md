@@ -4,18 +4,18 @@ title: DevOps Roadmap
 permalink: devops-roadmap
 description: 
 features:
-  - name: Access on Mobile and TV
+  - name: Fastest Roadmap
     description: 
-    icon: lni-laptop-phone
+    icon: lni-helicopter
   - name: Lifetime Access
     description: 
     icon: lni-key
   - name: Certificate of Completion
     description: 
     icon: lni-certificate
-  - name: Free PDF Downloads
+  - name: Build Your Career
     description: 
-    icon: lni-download
+    icon: lni-infinite
 objectives:
   - Learn Python Programming
   - Get Started with DevOps
@@ -40,15 +40,15 @@ courses:
     url: https://links.in28minutes.com/python
     rating: 4.6
     ratingCount: 322
-    students: 3013
+    students: 3,013
     thumbnail: https://img-c.udemycdn.com/course/480x270/5414974_e415.jpg
   - name: Learn DevOps - Docker, Kubernetes, Terraform and Azure DevOps
     description:
     objectives:
       - test
-    url: https://www.udemy.com/course/devops-with-docker-kubernetes-and-azure-devops/?couponCode=JAN2024
+    url: https://links.in28minutes.com/devops
     rating: 4.5
-    ratingCount: 8,683
-    students: 96,388
+    ratingCount: 13,033
+    students: 129,331
     thumbnail: https://img-c.udemycdn.com/course/480x270/2813427_cc60_2.jpg
 ---
