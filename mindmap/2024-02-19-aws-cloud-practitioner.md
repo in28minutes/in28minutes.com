@@ -398,17 +398,19 @@ markmap:
   colorFreezeLevel: 2
 ---
 - **AWS Billing & Cost Management**: Centralized dashboard
-Manage your AWS payment methods
-Pay your bills
+Manage your payment methods, Pay your bills
 - **Pricing Calculator**: Estimate cost of AWS resources
 - **AWS Budgets**: Set a Budget
 Get alerts from CloudWatch when you exceed the budget
 - **AWS Cost Explorer**: Visualize your AWS costs
-Get RightSizing Recommendations
+Get Right Sizing Recommendations
 Filter by Region, AZ, tags etc
 See future cost projection
-- **AWS Compute Optimizer**: AWS resource optimization recommendations
+- **AWS Compute Optimizer**: Resource optimization recommendations
 RightSizing for EC2, ECS, Lambda, EBS
+- **Free to use** but pay for resources provisioned
+AWS Management Console, AWS CloudFormation, AWS Organizations,...
+FREE: AWS Cost Explorer (UI), Identity & Access Management (IAM), ...
 - **Free to use** but pay for resources provisioned
 AWS Management Console, AWS CloudFormation, AWS Organizations,...
 FREE: AWS Cost Explorer (UI), Identity & Access Management (IAM), ...
@@ -560,7 +562,6 @@ Automates data synchronization tasks
 </div>
 
 
-
 ## Getting Help From AWS
 
 
@@ -673,5 +674,32 @@ Fully Managed by AWS
 Faster access for users in a specific location (think online gaming, live streaming)
 - **AWS Wavelength**: Use communications service providers 5G networks
 Build applications that deliver ultra-low latencies to mobile devices
+</script>
+</div>
+
+## Shared Responsibility Examples
+
+<div class="markmap">
+<script type="text/template">
+---
+markmap:
+  colorFreezeLevel: 2
+---
+- **AWS**: Security of the Cloud
+Physical security of data centers
+Hardware and network infrastructure
+Virtualization layer (HostOS)
+- **Customer**: Security in the Cloud
+Data Security (Encrypting data - rest & transit)
+Proper Configuration (IAM, Security Groups, ..)
+- **Example 1**: Amazon EC2 (IaaS)
+AWS: Physical security, hardware, network infra., virtualization (HostOS)
+Customer: Guest OS, Appl. Software, Security Group config, Data,..
+- **Example 2**: Amazon S3 (PaaS)
+AWS: Infrastructure, OS, networking, durability, availability
+Customer: Data & configuration - Encryption, IAM, ACLs, Lifecycle,..
+- **Example 3**: Amazon RDS (PaaS)
+AWS: Infrastructure, OS, networking, DB software installation, patching
+Customer: Data & configuration - Backup, Encryption, IAM, ..
 </script>
 </div>
