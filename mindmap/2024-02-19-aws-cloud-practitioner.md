@@ -99,8 +99,8 @@ Supports SMB protocols
 - **Amazon S3**: Serverless Object Storage
 Flexible: Standard (Frequently accessed data), Glacier (Archive data)
 Intelligent-Tiering (unknown access patterns)
-Create Low Latency Static Website with Amazon CloudFront
 Supports Versioning: Prevent Accidental Deletion
+Create Low Latency Static Website with Amazon CloudFront
 - **AWS Storage Gateway**: Hybrid Storage (on-premise + cloud)
 AWS Storage File Gateway (Hybrid file share)
 AWS Storage Tape Gateway (Tape backups)
@@ -118,17 +118,17 @@ markmap:
   colorFreezeLevel: 2
 ---
 
-- **Amazon RDS** - Managed Relational OLTP Databases 
+- **Amazon RDS**: Managed Relational OLTP Databases 
 MySQL, SQL Server, Oracle, DB2, MariaDB, PostgreSQL
-- **Amazon Aurora** - Global Relational Database with Serverless Option
+- **Amazon Aurora**: Global Relational Database with Serverless Option
 MySQL, PostGreSQL compatible
-- **Amazon DynamoDB** - Serverless NoSQL/Non Relational database
+- **Amazon DynamoDB**: Serverless NoSQL/Non Relational database
 Single-digit millisecond responses for million of TPS
-- **Amazon Neptune** - Graph Database
+- **Amazon Neptune**: Graph Database
 Store & navigate data with complex relationships
-- **Amazon Redshift** - Relational OLAP Database (Datawarehouse)
+- **Amazon Redshift**: Relational OLAP Database (Datawarehouse)
 Petabyte scale with a serverless option (Reduced Management)
-- **Amazon ElastiCache** - In memory database/cache
+- **Amazon ElastiCache**: In memory database/cache
 Option 1: Redis(persistent - leader boards)
 Option 2: Memcached (non-persistent - pure cache)
 </script>
@@ -179,10 +179,10 @@ What can they do (authorization)
 - **IAM roles**: Temporary identities without credentials
 - **IAM policies**: Define permissions
 Attach with IAM users, IAM groups & IAM roles
-- **AWS KMS**: Create keys & encrypt your data
-Integration with Storage, Database & other AWS services
 - **Amazon Cognito**: Web/Mobile App User Authentication & Authorization
 Supports SAML & Social Media Logins
+- **AWS KMS**: Create keys & encrypt your data
+Integration with Storage, Database & other AWS services
 
 
 </script>
@@ -327,15 +327,15 @@ Needs Limited/no-code experience
 - **Build complex models**: Amazon SageMaker
 Needs data scientists & team
 - **Pre-Built Models**: Use models pre-built by AWS
-- **Amazon Comprehend** - Analyze Unstructured Text
-- **Amazon Rekognition** - Search & Analyze Images & Videos
-- **Amazon Transcribe** - Powerful Speech Recognition
-- **Amazon Polly** - Turn Text into Lifelike Speech
-- **Amazon Translate** - Powerful Neural Machine Translation
-- **Amazon Personalize** - Add real-time recommendations to your apps
-- **Amazon Forecast** - Time-series forecasting service
-- **Amazon Lex** - Build Voice & Text Chatbots
-- **Amazon Bedrock** - Access Generative AI Foundation Models
+- **Amazon Comprehend**: Analyze Unstructured Text
+- **Amazon Rekognition**: Search & Analyze Images & Videos
+- **Amazon Transcribe**: Powerful Speech Recognition
+- **Amazon Polly**: Turn Text into Lifelike Speech
+- **Amazon Translate**: Powerful Neural Machine Translation
+- **Amazon Personalize**: Add real-time recommendations to your apps
+- **Amazon Forecast**: Time-series forecasting service
+- **Amazon Lex**: Build Voice & Text Chatbots
+- **Amazon Bedrock**: Access Generative AI Foundation Models
 </script>
 </div>
 
@@ -347,11 +347,8 @@ Needs data scientists & team
 markmap:
   colorFreezeLevel: 2
 ---
-- **AWS Artifact** - Get access to AWS security & compliance reports
-- **AWS Inspector** - Discover AWS workloads
-Supports Amazon EC2 instances, containers, & Lambda functions
-Scans for software vulnerabilities & unintended network exposure
-- **AWS Service Catalog** - Create & govern curated IaC templates
+- **AWS Artifact**: Get access to AWS security & compliance reports
+- **AWS Service Catalog**: Create & govern curated IaC templates
 - **AWS Market Place**: Third Party Applications
 - **AWS Trusted Advisor**: Get recommendations from AWS
 Cost optimization, Performance, Security
@@ -427,17 +424,20 @@ FREE: AWS Cost Explorer (UI), Identity & Access Management (IAM), ...
 markmap:
   colorFreezeLevel: 2
 ---
-- **AWS Security Hub**: Cloud security posture management (CSPM) service
+- **AWS Security Hub**: Cloud security posture mgmt (CSPM) service
 Automate security best practice checks
 Aggregate security alerts into a single place 
 Understand overall security posture across multiple AWS accounts
+- **AWS WAF**: Block SQL Injection + XSS
+Protect your web applications from OWASP Top 10 exploits
+Can be deployed on CloudFront, ALB, API Gateway, ..
+- **AWS Inspector**: Automated vulnerability mgmt
+Discover software vulnerabilities & unintended network exposure
+Discovers & scans EC2 instances, container images, & Lambda fns
 - **Amazon Macie**: Detect PII in S3
 Recognize & classify sensitive data
 - **AWS Shield**: Always-on DDoS protection
 Integrates with Route 53, CloudFront, EC2, ELB..
-- **AWS WAF**: Block SQL Injection + XSS
-Protect your web applications from OWASP Top 10 exploits
-Can be deployed on CloudFront, ALB, API Gateway, ..
 </script>
 </div>
 
@@ -460,8 +460,7 @@ Anticipate & learn from failure
 Apply security at all layers
 Protect data in transit & at rest
 Maintain traceability
-- **Reliability**
-Automatically recover from failure
+- **Reliability**: Automatically recover from failure
 Stop guessing capacity
 Manage change with automation (IaC)
 - **Performance efficiency**
@@ -519,7 +518,7 @@ markmap:
   Program & Project Mgmt, Cloud Financial Mgmt, Application Portfolio Mgmt
   Risk Mgmt, Data Curation, Data Governance
 - **Platform**
-  Platform Architecture, Provisioning & Orchestration, Modern Application Development
+  Architecture, Provisioning & Orchestration, Modern Appln Development
   Data Engineering, Data Architecture, CI/CD
 - **Security (CIA)**
   Identity & Access Mgmt, Infrastructure Protection, Security Governance
