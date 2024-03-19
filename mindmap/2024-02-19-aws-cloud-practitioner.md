@@ -7,6 +7,7 @@ categories:
 permalink:  /aws-cloud-practitioner-review
 ---
 
+
 ## AWS Cloud Advantages
 
 <div class="markmap">
