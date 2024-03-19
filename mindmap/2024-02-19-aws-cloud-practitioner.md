@@ -71,11 +71,12 @@ markmap:
 
 - **Spot Instances($)**: Lowest cost
 Interruptible, short-term cost-sensitive workloads
-- **Reserved Instances($$)**: Reserve EC2 instances for 1 year or 3 years
+- **Reserved Instances($$)**: Reserve EC2 instances 
+1 year or 3 year commitment
 - **Savings Plans($$$)**: 1 year or 3 years commitment 
 Flexibility: EC2 or AWS Fargate or Lambda
-- **On-Demand($$$$)**: Flexible, no commitment, for unpredictable workloads
-Always running for ONLY 1 week or 1 month or 3 months
+- **On-Demand($$$$)**: Flexible, for immediate workloads
+Always running for ONLY 1 week or 3 months
 - **Dedicated Hosts($$$$$)**: Your own dedicated server
 Useful for specific licensing & security needs
 </script>
@@ -147,20 +148,20 @@ markmap:
 
 - **Amazon VPC**: Virtual Network to secure resources
 - **Subnet**: Separate private & public resources
-- **Internet Gateway**: Allows Public Subnets to connect/accept traffic to/from internet
+- **Internet Gateway**: Allows Public Subnets to accept traffic to/from internet
 - **NAT Gateway**: Allow internet traffic from private subnets
 - **Security Group**: Control traffic at an instance level
 - **NACL**: Control traffic at Subnet level
 - **VPC Peering**: Connect one VPC with other VPCs
 - **VPC Flow Logs**: Enable logs to debug problems
 Monitor traffic In & Out of VPC
-- **AWS Direct Connect**: Dedicated, fast, private connection to on-premises
+- **AWS Direct Connect**: Dedicated, fast, private connection to on-prem
 - **AWS VPN**: Encrypted tunnel over internet to on-premises
 - **Amazon Route 53**: Highly Available Global DNS service
-- **Amazon CloudFront**: Distribute content (ex: S3 static website) from edge locations
-Users experience faster downloads & lower latency
-- **Global Accelerator**: Static IP routes users to closest healthy endpoint (EC2, ALB, etc.)
-Faster connections, higher availability for global users (Edge locations)
+- **Amazon CloudFront**: Distribute content from edge locations
+Users get lower latency (ex: S3 static website)
+- **Global Accelerator**: Static IP routes to closest endpoint (EC2, ELB,..)
+Faster connections for global users (Edge locations)
 </script>
 </div>
 
@@ -180,7 +181,7 @@ What can they do (authorization)
 - **IAM roles**: Temporary identities without credentials
 - **IAM policies**: Define permissions
 Attach with IAM users, IAM groups & IAM roles
-- **Amazon Cognito**: Web/Mobile App User Authentication & Authorization
+- **Amazon Cognito**: Web/Mobile App User Auth. & Authorization
 Supports SAML & Social Media Logins
 - **AWS KMS**: Create keys & encrypt your data
 Integration with Storage, Database & other AWS services
