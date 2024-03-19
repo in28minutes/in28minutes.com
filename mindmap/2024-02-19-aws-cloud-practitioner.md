@@ -223,21 +223,21 @@ markmap:
 markmap:
   colorFreezeLevel: 2
 ---
+- **Versioning and Source Control**: AWS CodeCommit (Git)
+- **CI/CD orchestration**: AWS CodePipeline
+  - **Build and Test Code**: AWS CodeBuild
+  - **Automate Deployment**: AWS CodeDeploy
+- **Observability - Tracing**: X-Ray
+- **Observability - Metrics & Alarms**: CloudWatch
+- **Observability - Logging**: CloudWatch
+- **IaC - AWS CloudFormation**: YAML/JSON based scripts
+Stack Set: Provision same resources in multiple regions
+- **IaC - AWS CDK**: IaC in your favorite programming language
+- **IaC - AWS SAM**: Easy provisioning & deployment of Serverless apps
 - **App Configuration - Secrets**: Secret Manager
 Flexible **Auto Rotation** + Costlier + **Integration with RDS, ..** +
 - **App Configuration - App Config + Secrets**: Parameter Store
 Secrets + Configuration + **Cost Effective**
-- **Observability - Tracing**: X-Ray
-- **Observability - Metrics & Alarms**: CloudWatch
-- **Observability - Logging**: CloudWatch
-- **Infrastructure As Code (IaC)**: Repeatable Resource Provisioning
-- **IaC - AWS CloudFormation**: YAML/JSON based scripts
-Do not worry about infrastructure
-Stack Set: Provision same resources in multiple regions
-- **IaC - AWS CDK**: Code IaC in your favorite programming language
-Uses AWS CloudFormation in background
-- **IaC - AWS SAM**: Easy provisioning & deployment of Serverless apps
-Uses AWS CloudFormation in background
 
 
 </script>
@@ -263,6 +263,7 @@ Best for: Users that prefer a GUI to interact with AWS
 - **AWS SDK**: Call AWS services from your code
 Libraries available for various programming languages
 Best for: Integrate AWS services into their apps
+- **IaC**: AWS CloudFormation, AWS CDK, AWS SAM
 </script>
 </div>
 
@@ -273,10 +274,10 @@ Best for: Integrate AWS services into their apps
 markmap:
   colorFreezeLevel: 2
 ---
-- **Amazon SNS**: Publish subscribe pattern
-Bulk notifications & Mobile push support (Email + SMS)
 - **Amazon SQS**: Push, Pull Messaging
 Decoupling microservices for scalability
+- **Amazon SNS**: Publish subscribe pattern
+Bulk notifications & Mobile push support (Email + SMS)
 - **Amazon EventBridge**: Build event-driven architectures
 React to events generated from AWS services, SaaS & custom apps
 EventBridge Scheduler provides scheduling services
@@ -304,8 +305,8 @@ markmap:
 Petabyte scale with a serverless option (Reduced Management)
 - **Amazon EMR (Elastic MapReduce)**: Big data framework service
 Big data using Spark, Hadoop
-- **AWS Glue**: ETL, Discover data
-Serverless data preparation & load service
+- **AWS Glue**: Discover, prepare, and integrate data at any scale
+Serverless data preparation & load service (ETL)
 - **Amazon Athena**: Run serverless SQL on Amazon S3 data
 Ad-hoc data querying without server setup
 - **Amazon QuickSight**: Visualization
@@ -323,21 +324,21 @@ Real-time application monitoring & log analysis
 markmap:
   colorFreezeLevel: 2
 ---
-- **Build simple models**: Amazon SageMaker Auto ML
+- **Build Simple Models**: Amazon SageMaker Auto ML
 Without needing data scientists
 Needs Limited/no-code experience
-- **Build complex models**: Amazon SageMaker
+- **Build Complex Models**: Amazon SageMaker
 Needs data scientists & team
-- **Pre-Built Models**: Use models pre-built by AWS
-- **Amazon Comprehend**: Analyze Unstructured Text
-- **Amazon Rekognition**: Search & Analyze Images & Videos
-- **Amazon Transcribe**: Powerful Speech Recognition
-- **Amazon Polly**: Turn Text into Lifelike Speech
-- **Amazon Translate**: Powerful Neural Machine Translation
-- **Amazon Personalize**: Add real-time recommendations to your apps
-- **Amazon Forecast**: Time-series forecasting service
-- **Amazon Lex**: Build Voice & Text Chatbots
-- **Amazon Bedrock**: Access Generative AI Foundation Models
+- **Pre-Built Models**
+  - **Amazon Comprehend**: Analyze Unstructured Text
+  - **Amazon Rekognition**: Search & Analyze Images & Videos
+  - **Amazon Transcribe**: Powerful Speech Recognition
+  - **Amazon Polly**: Turn Text into Lifelike Speech
+  - **Amazon Translate**: Powerful Neural Machine Translation
+  - **Amazon Personalize**: Add real-time recommendations to your apps
+  - **Amazon Forecast**: Time-series forecasting service
+  - **Amazon Lex**: Build Voice & Text Chatbots
+  - **Amazon Bedrock**: Access Generative AI Foundation Models
 </script>
 </div>
 
@@ -351,7 +352,7 @@ markmap:
 ---
 - **AWS Artifact**: Get access to AWS security & compliance reports
 - **AWS Service Catalog**: Create & govern curated IaC templates
-- **AWS Market Place**: Third Party Applications
+- **AWS Market Place**: Deploy Third Party Applications Quickly
 - **AWS Trusted Advisor**: Get recommendations from AWS
 Cost optimization, Performance, Security
 Fault tolerance (resiliency), Service limits, Operational Excellence
@@ -410,9 +411,6 @@ Filter by Region, AZ, tags etc
 See future cost projection
 - **AWS Compute Optimizer**: Resource optimization recommendations
 RightSizing for EC2, ECS, Lambda, EBS
-- **Free to use** but pay for resources provisioned
-AWS Management Console, AWS CloudFormation, AWS Organizations,...
-FREE: AWS Cost Explorer (UI), Identity & Access Management (IAM), ...
 - **Free to use** but pay for resources provisioned
 AWS Management Console, AWS CloudFormation, AWS Organizations,...
 FREE: AWS Cost Explorer (UI), Identity & Access Management (IAM), ...
