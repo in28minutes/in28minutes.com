@@ -444,7 +444,7 @@ Integrates with Route 53, CloudFront, EC2, ELB..
 </div>
 
 
-## AWS Well-Architected Framework - Pillars & Design Principles
+## AWS Well-Architected Framework - Pillars
 
 <div class="markmap">
 <script type="text/template">
@@ -454,25 +454,45 @@ markmap:
   initialExpandLevel: 1
 ---
 
-- **Operational excellence**
-Use managed services, Perform operations as code
+- **Operational excellence**: Ability to support development
+Run workloads effectively
+Gain insight into operations and continuously improve
+- **Security**: Ability to protect data, systems, & assets 
+- **Reliability**: Ability of a workload to perform its intended function
+Correctly and Consistently
+- **Performance efficiency**: Ability to use computing resources efficiently
+Maintain that efficiency as demand changes and technologies evolve
+- **Cost optimization**: Ability to run systems at the lowest price point
+- **Sustainability**: Meet needs without impacting future generations
+</script>
+</div>
+
+
+## AWS Well-Architected Framework - Design Principles
+
+<div class="markmap">
+<script type="text/template">
+---
+markmap:
+  colorFreezeLevel: 2
+  initialExpandLevel: 1
+---
+
+- **Operational excellence**: Use managed services
+Perform operations as code
 Frequent, small, reversible changes
 Anticipate & learn from failure
-- **Security**
-Apply security at all layers
+- **Security**: Apply security at all layers
 Protect data in transit & at rest
 Maintain traceability
 - **Reliability**: Automatically recover from failure
-Stop guessing capacity
-Manage change with automation (IaC)
-- **Performance efficiency**
-Go global in minutes
-Use serverless architectures
-- **Cost optimization**
-Implement Cloud Financial Management
+Scale horizontally, Stop guessing capacity
+Manage change with automation
+- **Performance efficiency**: Go global in minutes
+Experiment more often, Use serverless architectures
+- **Cost optimization**: Implement Cloud Financial Management
 Analyze & attribute expenditure
-- **Sustainability**
-Understand your impact, Establish sustainability goals
+- **Sustainability**: Understand your impact, Establish goals
 Maximize utilization, Reduce the downstream impact
 </script>
 </div>
@@ -499,8 +519,33 @@ Continuously optimize your cloud environment
 </script>
 </div>
 
+## AWS CAF Perspectives
 
-## AWS CAF Perspectives & Capabilities
+<div class="markmap">
+<script type="text/template">
+---
+markmap:
+  colorFreezeLevel: 2
+---
+- **Business**: Ensure that your cloud investments accelerates:
+your digital transformation ambitions and business outcomes
+- **People**: Bridge between technology and business
+Evolve to a culture of continuous growth, learning
+Change becomes business-as-normal
+- **Governance**: Orchestrate your cloud initiatives 
+Goal: Maximizing organizational benefits
+Goal: Minimizing transformation-related risks
+- **Platform**: Build an enterprise-grade cloud platform
+Modernize existing workloads
+Implement cloud-native solutions
+- **Security**: Achieve CIA for data and workloads
+Confidentiality, Integrity and Availability
+- **Operations**: Deliver cloud services that meet business needs
+</script>
+</div>
+
+
+## AWS CAF Capabilities
 
 <div class="markmap">
 <script type="text/template">
@@ -510,26 +555,20 @@ markmap:
   initialExpandLevel: 1
 ---
 
-- **Business**
-  Strategy Mgmt, Product Mgmt, Portfolio Mgmt
+- **Business**: Strategy Mgmt, Product Mgmt, Portfolio Mgmt
   Innovation Mgmt, Data Monetization, Strategic Partnership
-- **People**
-  Organizational Alignment, Organization Design
+- **People**: Organizational Alignment, Organization Design
   Culture Evolution, Cloud Fluency
-- **Governance**
-  Program & Project Mgmt, Cloud Financial Mgmt, Application Portfolio Mgmt
-  Risk Mgmt, Data Curation, Data Governance
-- **Platform**
-  Architecture, Provisioning & Orchestration, Modern Appln Development
-  Data Engineering, Data Architecture, CI/CD
-- **Security (CIA)**
-  Identity & Access Mgmt, Infrastructure Protection, Security Governance
-  Vulnerability Mgmt, Incident Response, Application Security
-  Threat Detection, Data Protection, Security Assurance
-- **Operations**
-  Event Mgmt (AIOps), Incident & Problem Mgmt, Configuration Mgmt
-  Application Mgmt, Patch Mgmt, Availability & Continuity Mgmt
-  Observability, Change & Release Mgmt
+- **Governance**: Program & Project Mgmt, Cloud Financial Mgmt, 
+Application Portfolio Mgmt, Risk Mgmt, Data Curation, Data Governance
+- **Platform**: Architecture, Provisioning & Orchestration
+Modern Appln Development, Data Engineering, Data Architecture, CI/CD
+- **Security (CIA)**: Identity & Access Mgmt, Infrastructure Protection
+Vulnerability Mgmt, Incident Response, Application Security
+Threat Detection, Data Protection, Security Assurance
+- **Operations**: Event Mgmt (AIOps), Incident & Problem Mgmt
+Configuration Mgmt, Application Mgmt, Patch Mgmt, 
+Availability & Continuity Mgmt, Observability, Change & Release Mgmt
 </script>
 </div>
 
@@ -544,13 +583,14 @@ markmap:
 
 - **AWS Migration Hub**: Streamlines Migration Oversight
 Central hub for tracking migration progress
-- **Application Discovery Service**: In-depth Infrastructure Analysis
+- **Application Discovery Service**: During initial analysis and planning
 Collect on-premise infrastructure data
-- **AWS Migration Evaluator**: Financial & Technical Baseline Assessment
-Assesses current on-premises resources to optimize for AWS
+- **AWS Migration Evaluator**: Focus on financial and technical feasibility
+Understand the implications, costs, and technical considerations of migration
+Identify the right AWS services and configurations (right-sizing) for your needs
 - **Database Migration Service (DMS)**: Seamless Database Transition
 Ensures minimal downtime for critical database workloads
-- **Snowmobile**: Securely transfers exabytes of data 
+- **Snowmobile**: Securely transfers petabytes and exabytes of data 
 Recommended for >10 Petabytes
 - **Snowball Edge**: Enhanced Data Transfer & Edge Computing
 Offers offline data transfer & local computing capabilities
@@ -584,9 +624,8 @@ Get help for monitoring, patch, backup, & cost optimization
 **Basic (FREE)**: AWS Trusted Advisor Basic + AWS Health + Docs
 **Developer(PAID)**: Business hours email support
 **Business(PAID)**: 24/7 phone, web, & chat support
-**Enterprise(PAID)**: Lots of additional features
-AWS Managed Services(PAID) +
-Technical Account Managers for proactive guidance +
+**Enterprise(PAID)**: Lots of additional features:
+AWS Managed Services(PAID) + TAM for proactive guidance +
 Consultative reviews & guidance based on your apps
 </script>
 </div>
@@ -607,13 +646,11 @@ Multiple Instances, Multi AZ, Multi Region
 - **Disaster Recovery**: Plan to recover from outages 
 Minimize downtime & data loss
 EC2 - Have Copies of AMI in Different Regions, EBS - Take Snapshots
-S3 - Enable Versioning, RDS - Enable Automatic Backups
 - **Durability**: Ensure you do NOT lose data
 Multiple Copies, Multi AZ, Multi Region
 - **Economies of Scale**: Advantages of managing millions of servers
 AWS is expected to pass the cost benefits to end users
 - **Elasticity**: Scale resources up or down quickly based on demand
-Think Auto Scaling groups..
 - **RightSizing**: Choose the optimal resources for your workload
 AWS: AWS Compute Optimizer, AWS Cost Explorer
 - **Threat Detection**: Detect threats ahead of time
@@ -693,13 +730,15 @@ Virtualization layer (HostOS)
 Data Security (Encrypting data - rest & transit)
 Proper Configuration (IAM, Security Groups, ..)
 - **Example 1**: Amazon EC2 (IaaS)
-AWS: Physical security, hardware, network infra., virtualization (HostOS)
-Customer: Guest OS, Appl. Software, Security Group config, Data,..
+**AWS:** Physical security, hardware, network infra., virtualization (HostOS)
+**Customer:** Guest OS, Appl. Software, Security Group config, Data,..
 - **Example 2**: Amazon S3 (PaaS)
-AWS: Infrastructure, OS, networking, durability, availability
-Customer: Data & configuration - Encryption, IAM, ACLs, Lifecycle,..
+**AWS:** Infrastructure, OS, networking, durability, availability
+**Customer:** Data & configuration - Encryption, IAM, ACLs, Lifecycle,..
 - **Example 3**: Amazon RDS (PaaS)
-AWS: Infrastructure, OS, networking, DB software installation, patching
-Customer: Data & configuration - Backup, Encryption, IAM, ..
+**AWS:** Infrastructure, OS, networking, DB software installation, patching
+**Customer:** Data & configuration - Backup, Encryption, IAM, ..
 </script>
 </div>
+
+&nbsp;&nbsp;&nbsp;
