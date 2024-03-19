@@ -1,6 +1,6 @@
 ---
 layout:     mindmap
-title:      AWS Cloud Practitioner Review - with Mindmaps
+title:      AWS Cloud Practitioner Review Cheat Sheet
 date:       2024-01-13 15:26:00
 summary:    AWS Elastic Block Store Mindmap
 categories:  
