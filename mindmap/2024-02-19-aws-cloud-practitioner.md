@@ -1,11 +1,12 @@
 ---
 layout:     mindmap
-title:      AWS Cloud Practitioner Review - with Mindmaps
+title:      AWS Cloud Practitioner Review Cheat Sheet
 date:       2024-01-13 15:26:00
 summary:    AWS Elastic Block Store Mindmap
 categories:  
 permalink:  /aws-cloud-practitioner-review
 ---
+
 
 ## AWS Cloud Advantages
 
@@ -70,11 +71,12 @@ markmap:
 
 - **Spot Instances($)**: Lowest cost
 Interruptible, short-term cost-sensitive workloads
-- **Reserved Instances($$)**: Reserve EC2 instances for 1 year or 3 years
+- **Reserved Instances($$)**: Reserve EC2 instances 
+1 year or 3 year commitment
 - **Savings Plans($$$)**: 1 year or 3 years commitment 
 Flexibility: EC2 or AWS Fargate or Lambda
-- **On-Demand($$$$)**: Flexible, no commitment, for unpredictable workloads
-Always running for ONLY 1 week or 1 month or 3 months
+- **On-Demand($$$$)**: Flexible, for immediate workloads
+Always running for ONLY 1 week or 3 months
 - **Dedicated Hosts($$$$$)**: Your own dedicated server
 Useful for specific licensing & security needs
 </script>
@@ -146,20 +148,20 @@ markmap:
 
 - **Amazon VPC**: Virtual Network to secure resources
 - **Subnet**: Separate private & public resources
-- **Internet Gateway**: Allows Public Subnets to connect/accept traffic to/from internet
+- **Internet Gateway**: Allows Public Subnets to accept traffic to/from internet
 - **NAT Gateway**: Allow internet traffic from private subnets
 - **Security Group**: Control traffic at an instance level
 - **NACL**: Control traffic at Subnet level
 - **VPC Peering**: Connect one VPC with other VPCs
 - **VPC Flow Logs**: Enable logs to debug problems
 Monitor traffic In & Out of VPC
-- **AWS Direct Connect**: Dedicated, fast, private connection to on-premises
+- **AWS Direct Connect**: Dedicated, fast, private connection to on-prem
 - **AWS VPN**: Encrypted tunnel over internet to on-premises
 - **Amazon Route 53**: Highly Available Global DNS service
-- **Amazon CloudFront**: Distribute content (ex: S3 static website) from edge locations
-Users experience faster downloads & lower latency
-- **Global Accelerator**: Static IP routes users to closest healthy endpoint (EC2, ALB, etc.)
-Faster connections, higher availability for global users (Edge locations)
+- **Amazon CloudFront**: Distribute content from edge locations
+Users get lower latency (ex: S3 static website)
+- **Global Accelerator**: Static IP routes to closest endpoint (EC2, ELB,..)
+Faster connections for global users (Edge locations)
 </script>
 </div>
 
@@ -179,7 +181,7 @@ What can they do (authorization)
 - **IAM roles**: Temporary identities without credentials
 - **IAM policies**: Define permissions
 Attach with IAM users, IAM groups & IAM roles
-- **Amazon Cognito**: Web/Mobile App User Authentication & Authorization
+- **Amazon Cognito**: Web/Mobile App User Auth. & Authorization
 Supports SAML & Social Media Logins
 - **AWS KMS**: Create keys & encrypt your data
 Integration with Storage, Database & other AWS services
@@ -221,21 +223,21 @@ markmap:
 markmap:
   colorFreezeLevel: 2
 ---
+- **Versioning and Source Control**: AWS CodeCommit (Git)
+- **CI/CD orchestration**: AWS CodePipeline
+  - **Build and Test Code**: AWS CodeBuild
+  - **Automate Deployment**: AWS CodeDeploy
+- **Observability - Tracing**: X-Ray
+- **Observability - Metrics & Alarms**: CloudWatch
+- **Observability - Logging**: CloudWatch
+- **IaC - AWS CloudFormation**: YAML/JSON based scripts
+Stack Set: Provision same resources in multiple regions
+- **IaC - AWS CDK**: IaC in your favorite programming language
+- **IaC - AWS SAM**: Easy provisioning & deployment of Serverless apps
 - **App Configuration - Secrets**: Secret Manager
 Flexible **Auto Rotation** + Costlier + **Integration with RDS, ..** +
 - **App Configuration - App Config + Secrets**: Parameter Store
 Secrets + Configuration + **Cost Effective**
-- **Observability - Tracing**: X-Ray
-- **Observability - Metrics & Alarms**: CloudWatch
-- **Observability - Logging**: CloudWatch
-- **Infrastructure As Code (IaC)**: Repeatable Resource Provisioning
-- **IaC - AWS CloudFormation**: YAML/JSON based scripts
-Do not worry about infrastructure
-Stack Set: Provision same resources in multiple regions
-- **IaC - AWS CDK**: Code IaC in your favorite programming language
-Uses AWS CloudFormation in background
-- **IaC - AWS SAM**: Easy provisioning & deployment of Serverless apps
-Uses AWS CloudFormation in background
 
 
 </script>
@@ -261,6 +263,7 @@ Best for: Users that prefer a GUI to interact with AWS
 - **AWS SDK**: Call AWS services from your code
 Libraries available for various programming languages
 Best for: Integrate AWS services into their apps
+- **IaC**: AWS CloudFormation, AWS CDK, AWS SAM
 </script>
 </div>
 
@@ -271,10 +274,10 @@ Best for: Integrate AWS services into their apps
 markmap:
   colorFreezeLevel: 2
 ---
-- **Amazon SNS**: Publish subscribe pattern
-Bulk notifications & Mobile push support (Email + SMS)
 - **Amazon SQS**: Push, Pull Messaging
 Decoupling microservices for scalability
+- **Amazon SNS**: Publish subscribe pattern
+Bulk notifications & Mobile push support (Email + SMS)
 - **Amazon EventBridge**: Build event-driven architectures
 React to events generated from AWS services, SaaS & custom apps
 EventBridge Scheduler provides scheduling services
@@ -302,8 +305,8 @@ markmap:
 Petabyte scale with a serverless option (Reduced Management)
 - **Amazon EMR (Elastic MapReduce)**: Big data framework service
 Big data using Spark, Hadoop
-- **AWS Glue**: ETL, Discover data
-Serverless data preparation & load service
+- **AWS Glue**: Discover, prepare, and integrate data at any scale
+Serverless data preparation & load service (ETL)
 - **Amazon Athena**: Run serverless SQL on Amazon S3 data
 Ad-hoc data querying without server setup
 - **Amazon QuickSight**: Visualization
@@ -321,21 +324,21 @@ Real-time application monitoring & log analysis
 markmap:
   colorFreezeLevel: 2
 ---
-- **Build simple models**: Amazon SageMaker Auto ML
+- **Build Simple Models**: Amazon SageMaker Auto ML
 Without needing data scientists
 Needs Limited/no-code experience
-- **Build complex models**: Amazon SageMaker
+- **Build Complex Models**: Amazon SageMaker
 Needs data scientists & team
-- **Pre-Built Models**: Use models pre-built by AWS
-- **Amazon Comprehend**: Analyze Unstructured Text
-- **Amazon Rekognition**: Search & Analyze Images & Videos
-- **Amazon Transcribe**: Powerful Speech Recognition
-- **Amazon Polly**: Turn Text into Lifelike Speech
-- **Amazon Translate**: Powerful Neural Machine Translation
-- **Amazon Personalize**: Add real-time recommendations to your apps
-- **Amazon Forecast**: Time-series forecasting service
-- **Amazon Lex**: Build Voice & Text Chatbots
-- **Amazon Bedrock**: Access Generative AI Foundation Models
+- **Pre-Built Models**
+  - **Amazon Comprehend**: Analyze Unstructured Text
+  - **Amazon Rekognition**: Search & Analyze Images & Videos
+  - **Amazon Transcribe**: Powerful Speech Recognition
+  - **Amazon Polly**: Turn Text into Lifelike Speech
+  - **Amazon Translate**: Powerful Neural Machine Translation
+  - **Amazon Personalize**: Add real-time recommendations to your apps
+  - **Amazon Forecast**: Time-series forecasting service
+  - **Amazon Lex**: Build Voice & Text Chatbots
+  - **Amazon Bedrock**: Access Generative AI Foundation Models
 </script>
 </div>
 
@@ -349,7 +352,7 @@ markmap:
 ---
 - **AWS Artifact**: Get access to AWS security & compliance reports
 - **AWS Service Catalog**: Create & govern curated IaC templates
-- **AWS Market Place**: Third Party Applications
+- **AWS Market Place**: Deploy Third Party Applications Quickly
 - **AWS Trusted Advisor**: Get recommendations from AWS
 Cost optimization, Performance, Security
 Fault tolerance (resiliency), Service limits, Operational Excellence
@@ -411,9 +414,6 @@ RightSizing for EC2, ECS, Lambda, EBS
 - **Free to use** but pay for resources provisioned
 AWS Management Console, AWS CloudFormation, AWS Organizations,...
 FREE: AWS Cost Explorer (UI), Identity & Access Management (IAM), ...
-- **Free to use** but pay for resources provisioned
-AWS Management Console, AWS CloudFormation, AWS Organizations,...
-FREE: AWS Cost Explorer (UI), Identity & Access Management (IAM), ...
 
 </script>
 </div>
@@ -444,7 +444,7 @@ Integrates with Route 53, CloudFront, EC2, ELB..
 </div>
 
 
-## AWS Well-Architected Framework - Pillars & Design Principles
+## AWS Well-Architected Framework - Pillars
 
 <div class="markmap">
 <script type="text/template">
@@ -454,25 +454,45 @@ markmap:
   initialExpandLevel: 1
 ---
 
-- **Operational excellence**
-Use managed services, Perform operations as code
+- **Operational excellence**: Ability to support development
+Run workloads effectively
+Gain insight into operations and continuously improve
+- **Security**: Ability to protect data, systems, & assets 
+- **Reliability**: Ability of a workload to perform its intended function
+Correctly and Consistently
+- **Performance efficiency**: Ability to use computing resources efficiently
+Maintain that efficiency as demand changes and technologies evolve
+- **Cost optimization**: Ability to run systems at the lowest price point
+- **Sustainability**: Meet needs without impacting future generations
+</script>
+</div>
+
+
+## AWS Well-Architected Framework - Design Principles
+
+<div class="markmap">
+<script type="text/template">
+---
+markmap:
+  colorFreezeLevel: 2
+  initialExpandLevel: 1
+---
+
+- **Operational excellence**: Use managed services
+Perform operations as code
 Frequent, small, reversible changes
 Anticipate & learn from failure
-- **Security**
-Apply security at all layers
+- **Security**: Apply security at all layers
 Protect data in transit & at rest
 Maintain traceability
 - **Reliability**: Automatically recover from failure
-Stop guessing capacity
-Manage change with automation (IaC)
-- **Performance efficiency**
-Go global in minutes
-Use serverless architectures
-- **Cost optimization**
-Implement Cloud Financial Management
+Scale horizontally, Stop guessing capacity
+Manage change with automation
+- **Performance efficiency**: Go global in minutes
+Experiment more often, Use serverless architectures
+- **Cost optimization**: Implement Cloud Financial Management
 Analyze & attribute expenditure
-- **Sustainability**
-Understand your impact, Establish sustainability goals
+- **Sustainability**: Understand your impact, Establish goals
 Maximize utilization, Reduce the downstream impact
 </script>
 </div>
@@ -499,8 +519,33 @@ Continuously optimize your cloud environment
 </script>
 </div>
 
+## AWS CAF Perspectives
 
-## AWS CAF Perspectives & Capabilities
+<div class="markmap">
+<script type="text/template">
+---
+markmap:
+  colorFreezeLevel: 2
+---
+- **Business**: Ensure that your cloud investments accelerates:
+your digital transformation ambitions and business outcomes
+- **People**: Bridge between technology and business
+Evolve to a culture of continuous growth, learning
+Change becomes business-as-normal
+- **Governance**: Orchestrate your cloud initiatives 
+Goal: Maximizing organizational benefits
+Goal: Minimizing transformation-related risks
+- **Platform**: Build an enterprise-grade cloud platform
+Modernize existing workloads
+Implement cloud-native solutions
+- **Security**: Achieve CIA for data and workloads
+Confidentiality, Integrity and Availability
+- **Operations**: Deliver cloud services that meet business needs
+</script>
+</div>
+
+
+## AWS CAF Capabilities
 
 <div class="markmap">
 <script type="text/template">
@@ -510,26 +555,20 @@ markmap:
   initialExpandLevel: 1
 ---
 
-- **Business**
-  Strategy Mgmt, Product Mgmt, Portfolio Mgmt
+- **Business**: Strategy Mgmt, Product Mgmt, Portfolio Mgmt
   Innovation Mgmt, Data Monetization, Strategic Partnership
-- **People**
-  Organizational Alignment, Organization Design
+- **People**: Organizational Alignment, Organization Design
   Culture Evolution, Cloud Fluency
-- **Governance**
-  Program & Project Mgmt, Cloud Financial Mgmt, Application Portfolio Mgmt
-  Risk Mgmt, Data Curation, Data Governance
-- **Platform**
-  Architecture, Provisioning & Orchestration, Modern Appln Development
-  Data Engineering, Data Architecture, CI/CD
-- **Security (CIA)**
-  Identity & Access Mgmt, Infrastructure Protection, Security Governance
-  Vulnerability Mgmt, Incident Response, Application Security
-  Threat Detection, Data Protection, Security Assurance
-- **Operations**
-  Event Mgmt (AIOps), Incident & Problem Mgmt, Configuration Mgmt
-  Application Mgmt, Patch Mgmt, Availability & Continuity Mgmt
-  Observability, Change & Release Mgmt
+- **Governance**: Program & Project Mgmt, Cloud Financial Mgmt, 
+Application Portfolio Mgmt, Risk Mgmt, Data Curation, Data Governance
+- **Platform**: Architecture, Provisioning & Orchestration
+Modern Appln Development, Data Engineering, Data Architecture, CI/CD
+- **Security (CIA)**: Identity & Access Mgmt, Infrastructure Protection
+Vulnerability Mgmt, Incident Response, Application Security
+Threat Detection, Data Protection, Security Assurance
+- **Operations**: Event Mgmt (AIOps), Incident & Problem Mgmt
+Configuration Mgmt, Application Mgmt, Patch Mgmt, 
+Availability & Continuity Mgmt, Observability, Change & Release Mgmt
 </script>
 </div>
 
@@ -544,13 +583,14 @@ markmap:
 
 - **AWS Migration Hub**: Streamlines Migration Oversight
 Central hub for tracking migration progress
-- **Application Discovery Service**: In-depth Infrastructure Analysis
+- **Application Discovery Service**: During initial analysis and planning
 Collect on-premise infrastructure data
-- **AWS Migration Evaluator**: Financial & Technical Baseline Assessment
-Assesses current on-premises resources to optimize for AWS
+- **AWS Migration Evaluator**: Focus on financial and technical feasibility
+Understand the implications, costs, and technical considerations of migration
+Identify the right AWS services and configurations (right-sizing) for your needs
 - **Database Migration Service (DMS)**: Seamless Database Transition
 Ensures minimal downtime for critical database workloads
-- **Snowmobile**: Securely transfers exabytes of data 
+- **Snowmobile**: Securely transfers petabytes and exabytes of data 
 Recommended for >10 Petabytes
 - **Snowball Edge**: Enhanced Data Transfer & Edge Computing
 Offers offline data transfer & local computing capabilities
@@ -584,9 +624,8 @@ Get help for monitoring, patch, backup, & cost optimization
 **Basic (FREE)**: AWS Trusted Advisor Basic + AWS Health + Docs
 **Developer(PAID)**: Business hours email support
 **Business(PAID)**: 24/7 phone, web, & chat support
-**Enterprise(PAID)**: Lots of additional features
-AWS Managed Services(PAID) +
-Technical Account Managers for proactive guidance +
+**Enterprise(PAID)**: Lots of additional features:
+AWS Managed Services(PAID) + TAM for proactive guidance +
 Consultative reviews & guidance based on your apps
 </script>
 </div>
@@ -607,13 +646,11 @@ Multiple Instances, Multi AZ, Multi Region
 - **Disaster Recovery**: Plan to recover from outages 
 Minimize downtime & data loss
 EC2 - Have Copies of AMI in Different Regions, EBS - Take Snapshots
-S3 - Enable Versioning, RDS - Enable Automatic Backups
 - **Durability**: Ensure you do NOT lose data
 Multiple Copies, Multi AZ, Multi Region
 - **Economies of Scale**: Advantages of managing millions of servers
 AWS is expected to pass the cost benefits to end users
 - **Elasticity**: Scale resources up or down quickly based on demand
-Think Auto Scaling groups..
 - **RightSizing**: Choose the optimal resources for your workload
 AWS: AWS Compute Optimizer, AWS Cost Explorer
 - **Threat Detection**: Detect threats ahead of time
@@ -693,13 +730,15 @@ Virtualization layer (HostOS)
 Data Security (Encrypting data - rest & transit)
 Proper Configuration (IAM, Security Groups, ..)
 - **Example 1**: Amazon EC2 (IaaS)
-AWS: Physical security, hardware, network infra., virtualization (HostOS)
-Customer: Guest OS, Appl. Software, Security Group config, Data,..
+**AWS:** Physical security, hardware, network infra., virtualization (HostOS)
+**Customer:** Guest OS, Appl. Software, Security Group config, Data,..
 - **Example 2**: Amazon S3 (PaaS)
-AWS: Infrastructure, OS, networking, durability, availability
-Customer: Data & configuration - Encryption, IAM, ACLs, Lifecycle,..
+**AWS:** Infrastructure, OS, networking, durability, availability
+**Customer:** Data & configuration - Encryption, IAM, ACLs, Lifecycle,..
 - **Example 3**: Amazon RDS (PaaS)
-AWS: Infrastructure, OS, networking, DB software installation, patching
-Customer: Data & configuration - Backup, Encryption, IAM, ..
+**AWS:** Infrastructure, OS, networking, DB software installation, patching
+**Customer:** Data & configuration - Backup, Encryption, IAM, ..
 </script>
 </div>
+
+&nbsp;&nbsp;&nbsp;
