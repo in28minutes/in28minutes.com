@@ -282,4 +282,4 @@ permalink: /aws-bookshelf
 
 - [Exploring AWS Step Functions](https://scribehow.com/shared/Exploring_AWS_Step_Functions__ZR9fYUp_QM-Jd6psrin_yQ)
 
-_If any link is not accessible or if you need changes to the documentation, please reach out to our [channel](https://discord.com/invite/your-discord-channel) on Discord._
+_If any link is not accessible or if you need changes to the documentation, please reach out to our [#help-general](https://discord.com/channels/1172073095222272100/1174995539406897182) on Discord._

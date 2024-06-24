@@ -121,4 +121,4 @@ permalink: /azure-bookshelf
 
 - [Getting Ready: Azure Certification (AZ-900): Azure Fundamentals](https://scribehow.com/shared/Getting_Ready__Azure_Certification__AZ_900__Azure_Fundamentals__b1Mw5_9FS8KtmNZHyxSGRg)
 
-_If any link is not accessible or if you need changes to the documentation, please reach out to our [channel](https://discord.com/invite/your-discord-channel) on Discord._
+_If any link is not accessible or if you need changes to the documentation, please reach out to our [#help-general](https://discord.com/channels/1172073095222272100/1174995539406897182) on Discord._
