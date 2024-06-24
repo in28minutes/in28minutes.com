@@ -18,6 +18,7 @@ permalink: /aws-bookshelf
 - [Understanding IAM AWS Managed and Customer Managed Policies](https://scribehow.com/shared/Understanding_IAM_AWS_Managed_and_Customer_Managed_Policies__bzo0UpqnTba8eG9qkP0g0g)
 - [Authentication with IAM: A Review](https://scribehow.com/shared/Authentication_with_IAM__A_Review__cgww82IlRMG36FO-4HtHZg)
 - [Playing with IAM Users, Groups, and Policies](https://scribehow.com/shared/Playing_with_IAM_Users_Groups_and_Policies__UmhlE_kzTcOkLwc4PqECKw)
+- [Creating an Operations IAM User](https://scribehow.com/shared/Creating_an_Operations_IAM_User__5JyMzA1rRUmvp81UmVh3gA)
 
 ## EC2 Instances
 
@@ -30,9 +31,6 @@ permalink: /aws-bookshelf
 - [Understanding Elastic IP Addresses](https://scribehow.com/shared/Understanding_Elastic_IP_Addresses__pi2X4zNcRj-6qVB6PCOktw)
 - [Choosing Availability Zone for EC2 Instance](https://scribehow.com/shared/Choosing_Availability_Zone_for_EC2_Instance__AcsOo9DWTUW_X8zozunJyg)
 - [Creating Launch Templates for EC2 Instances](https://scribehow.com/shared/Creating_Launch_Templates_for_EC2_instances__cPATKkwbTkSqsAvJNxhlLA)
-- [Creating Customized AMI for EC2 Instance - Part 1](https://scribehow.com/shared/Creating_Customized_AMI_for_EC2_instance__Part_1__m6V5UUj0S_yApdVC1MEKzw)
-- [Creating Customized AMI for EC2 Instance - Part 2](https://scribehow.com/shared/Creating_Customized_AMI_for_EC2_instance__Part_2__QJgM98SgRlqWzKLPi70u0w)
-- [Exploring Amazon Machine Image](https://scribehow.com/shared/Exploring_Amazon_Machine_Image__qLqIc-cwTsGgD3TzHFEKmg)
 - [Exploring Tenancy Options in EC2](https://scribehow.com/shared/Exploring_Tenancy_Options_in_EC2__Q-kKOFU8Q4e7shr2UOLBWQ)
 - [Exploring EC2 Placement Groups](https://scribehow.com/shared/Exploring_EC2_Placement_Groups__dWhN8PzrTHOUVehu-1tD4g)
 - [Exploring Elastic Network Interface - Hands On](https://scribehow.com/shared/Exploring_Elastic_Network_Interface__Hands_On__308_Obt9StiM-d1l1kAfvQ)
@@ -201,6 +199,8 @@ permalink: /aws-bookshelf
 ## AMI
 
 - [Exploring Amazon Machine Image](https://scribehow.com/shared/Exploring_Amazon_Machine_Image__qLqIc-cwTsGgD3TzHFEKmg)
+- [Creating Customized AMI for EC2 Instance - Part 1](https://scribehow.com/shared/Creating_Customized_AMI_for_EC2_instance__Part_1__m6V5UUj0S_yApdVC1MEKzw)
+- [Creating Customized AMI for EC2 Instance - Part 2](https://scribehow.com/shared/Creating_Customized_AMI_for_EC2_instance__Part_2__QJgM98SgRlqWzKLPi70u0w)
 
 ## CloudTrail
 

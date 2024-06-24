@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Aure Tutorials
+title: Azure Tutorials
 date: 2024-06-24 12:10:00
 summary: Making azure learning easy
 categories: azure
