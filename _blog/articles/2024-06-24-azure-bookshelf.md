@@ -16,16 +16,18 @@ permalink: /azure-bookshelf
 ## Virtual Machines
 
 - [Creating your first Virtual Machine in Azure](https://scribehow.com/shared/Creating_your_first_Virtual_Machine_in_Azure__m7sJfxD7SKOuonRH8SNW2A)
-- [Connecting to Azure Virtual Machine and Running Commands](https://scribehow.com/shared/Connecting_to_Azure_Virtual_Machine_and_Running_Commands__DvsluSAeSQugjPfDBr0rrA)
-- [Understanding Azure VMs: Key Concepts, Image, Size, and Disks](https://scribehow.com/shared/Understanding_Azure_VMs__Key_Concepts__Image_Size_and_Disks__kC9VWTEXT3WtFNUQzoVBPg)
+- [Connecting to Azure Virtual Machine and Running Commands](https://scribehow.com/shared/Connecting_to_Azure_Virtual_Machine_and_Running_Commands__5zVHZKfeTpS6u2HMrp6B-g)
+- [Understanding Azure VMs: Key Concepts, Image, Size, and Disks](https://scribehow.com/shared/Understanding_Azure_VMs__Key_Concepts__Image_Size_and_Disks__UPQBn8gHTiCdL9DSo7so3Q)
 - [Installing nginx on Azure Virtual Machine](https://scribehow.com/shared/Installing_nginx_on_Azure_Virtual_Machine__FEFq0hMaRdu6mOD57Y9tlw)
 - [Simplifying Installing Software on Azure Virtual Machine: Cloud Init](https://scribehow.com/shared/Simplifying_Installing_Software_on_Azure_Virtual_Machine__Cloud_Init__CKWRrSuuQiajUK7mZpEiXw)
 - [Increasing Availability for Azure VMs: Availability Sets and Zones](https://scribehow.com/shared/Increasing_Availability_for_Azure_VMs__Availability_Sets_and_Zones__29Eyo-3mQeK9jZOzYQun4A)
 - [Using Virtual Machine Scale Sets to Create VMs in Multiple AZs](https://scribehow.com/shared/Using_Virtual_Machine_Scale_Sets_to_create_VMs_in_Multiple_AZs__-1WJxfCQTwyU7sGc7o9uLA)
-- [Exploring Scaling and Load Balancing with VM Scale Sets](https://scribehow.com/shared/Exploring_Scaling_and_Load_Balancing_with_VM_Scale_Sets__1WmhU5iLQV-yaVYD0MzHRg)
+- [01 - Exploring Scaling and Load Balancing with VM Scale Sets](https://scribehow.com/shared/01__Exploring_Scaling_and_Load_Balancing_with_VM_Scale_Sets__YqMLr3E1QLiQyZZz9_OFxQ)
+- [02 - Exploring Scaling and Load Balancing with VM Scale Sets](https://scribehow.com/shared/Exploring_Scaling_and_Load_Balancing_with_VM_Scale_Sets__1WmhU5iLQV-yaVYD0MzHRg)
 - [Exploring Azure VMs: Static IP, Monitoring, and Reducing Costs](https://scribehow.com/shared/Exploring_Azure_VMs__Static_IP_Monitoring_and_Reducing_Costs__EKkUCZxmQECjyY3BCVulQw)
 - [Designing Good Solutions with Azure VMs](https://scribehow.com/shared/Designing_Good_Solutions_with_Azure_VMs__rK1DKgYrSUyVnLx4HdAZlQ)
 - [Exploring Azure Virtual Machine Scenarios](https://scribehow.com/shared/Exploring_Azure_Virtual_Machine__Scenarios__mO_FSTtdRNi3qer2EMuuUg)
+- [Deleting Scale Set and Creating a Second VM](https://scribehow.com/shared/Time_to_Clean_up__Deleting_Scale_Set_and_Creating_Second_VM_again__tObLcVfASH-NXw_HbVWHfg)
 
 ## Azure App Services
 
