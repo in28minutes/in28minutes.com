@@ -13,6 +13,8 @@ products:
     url: /roadmaps
   - name: Flashcards
     url: /flashcards-list
+  - name: Bookshelf
+    url: /bookshelf-list
 
 # Articles
 articles:
