@@ -7,7 +7,7 @@ topics:
     url: /aws-bookshelf
     description:
     color: '#9aacd5'
-  - name: Azure coourse scribes
+  - name: Azure course scribes
     url: /azure-bookshelf
     description:
     color: '#9aacd5'
