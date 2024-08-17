@@ -3,11 +3,11 @@ layout: flashcards
 title: Bookshelf for in28minutes Cloud Courses
 subtitle: Reflect, Reengage, and Reskill
 topics:
-  - name: AWS scribes
+  - name: AWS course scribes
     url: /aws-bookshelf
     description:
     color: '#9aacd5'
-  - name: Azure scribes
+  - name: Azure coourse scribes
     url: /azure-bookshelf
     description:
     color: '#9aacd5'
