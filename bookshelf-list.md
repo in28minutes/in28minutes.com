@@ -1,5 +1,5 @@
 ---
-layout: bookshelf
+layout: flashcards
 title: Bookshelf for in28minutes Cloud Courses
 subtitle: Reflect, Reengage, and Reskill
 topics:
