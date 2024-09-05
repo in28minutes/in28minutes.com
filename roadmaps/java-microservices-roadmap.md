@@ -47,7 +47,7 @@ courses:
     objectives:
       - test
     url: https://links.in28minutes.com/sb
-    rating: 4.5
+    rating: 4.6
     ratingCount: 5,573
     students: 36,365
     thumbnail: https://img-c.udemycdn.com/course/480x270/4993276_3452.jpg
