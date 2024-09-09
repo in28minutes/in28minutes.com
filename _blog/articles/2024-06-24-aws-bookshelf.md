@@ -89,10 +89,7 @@ permalink: /aws-bookshelf
 ## S3
 
 - [Creating an S3 Bucket and Exploring the UI](https://scribehow.com/shared/Creating_an_S3_Bucket_and_Exploring_the_UI__0TFMdpbkQvS6jOisdkQjeA)
-- [Understanding S3: Objects, Buckets, and Key-Value Pairs](https://scribehow.com/shared/Understanding_S3**Objects_Buckets_and_Key_Value_Pairs**rE1C8p-eQlqBp10AbmpjzQ)
-- [How S3 Versioning Works: Deep Dive and Hands-On](https://scribehow.com/shared/How_S3_Versioning_Works__Deep_Dive_and_Hands_On__uzPEzOlzSaK8_s8MXHdAmg)
-- [Working with S3 Encryption](https://scribehow.com/shared/Working_with_S3_Encryption__MCgNQmKiTfC5SwpZBxmhgQ)
-- [Hosting Static Website in S3](https://scribehow.com/shared/Hosting_Static_Website_in_S3__aI1hLU-4Rt-FRrxZ0QOZWg)
+- [Understanding S3: Objects, Buckets, and Key-Value Pairs](https://scribehow.com/shared/Understanding_S3__Objects_Buckets_and_Key_Value_Pairs__x1GtUtZKS9axATcFzF1hTQ)
 - [Creating a Public Website with S3](https://scribehow.com/shared/Creating_a_Public_Website_with_S3__VYqpxEKzQdOsAo8AoInkow)
 - [Exploring S3 Features using Scenarios](https://scribehow.com/shared/Exploring_S3_Features_using_Scenarios__OGxH_M1uRXS6NRqsjq3UOQ)
 - [Playing with S3 Prefixes](https://scribehow.com/shared/Playing_with_S3_Prefixes__2AmCLELGQVCt3EFXap4W2w)
@@ -114,17 +111,10 @@ permalink: /aws-bookshelf
 
 ## CloudFront
 
-- [Exploring CloudFront and the Dashboard](https://scribehow.com/shared/Exploring_CloudFront_and_the_Dashboard__4PCpV6roTn69G2VPO8jM5A)
-- [Creating CloudFront Distributions](https://scribehow.com/shared/Creating_CloudFront_Distributions__jElSG5WhTuSsfO78LPSZnA)
-- [Quick Tour of Lambda@Edge](https://scribehow.com/shared/Quick_Tour_of_LambdaEdge__MRPTf11sRpuFoa5l3zD-Qg)
-- [Playing with CloudFront Signed URLs](https://scribehow.com/shared/Playing_with_CloudFront_Signed_URLs__5XWuuvcwTNO1HXWoBJUD7g)
 - [Creating a CloudFront Distribution](https://scribehow.com/shared/Creating_a_CloudFront_Distribution__8DvHo7plQ0a5TgeaKQ_u6A)
 
 ## Route 53
 
-- [Getting started with Route 53](https://scribehow.com/shared/Getting_started_with_Route_53__xxkbQLoLR8m7SKyAM7P-0w)
-- [Registering a Domain with Route 53](https://scribehow.com/shared/Registering_a_Domain_with_Route_53__wGOF5lyWRl6ikBvszlS-kA)
-- [Creating Route 53 Alias Records for CloudFront Distribution](https://scribehow.com/shared/Creating_Route_53_Alias_Records_for_CloudFront_Distribution__f34sGuawRWKe0AO8BdVt9w)
 - [Exploring Route 53 Routing Policies (1)](https://scribehow.com/shared/Exploring_Route_53_Routing_Policies__1__0EGKSxH1T42uMVYtA3RovA)
 - [Exploring Route 53 Routing Policies (2)](https://scribehow.com/shared/Exploring_Route_53_Routing_Policies__2__THpWXW0dSXqExq2iNmXKaA)
 - [Exploring Route 53 Routing Policies (3)](https://scribehow.com/shared/Exploring_Route_53_Routing_Policies__3__VMk8UV9YTyqGHaBaNxS_Rw)
@@ -132,29 +122,20 @@ permalink: /aws-bookshelf
 
 ## Lambda
 
-- [Creating Your First Lambda Function](https://scribehow.com/shared/Creating_your_first_Lambda_function__kA6F3pZkRlW7BYJvAnJeiQ)
-- [Testing Your First Lambda Function](https://scribehow.com/shared/Testing_your_first_Lambda_function__eiND2lsXSWmzX3RkzdbjWA)
-- [Exploring the Power of Lambda Layers](https://scribehow.com/shared/Exploring_the_power_of_Lambda_layers__IqQpc7UQSWCgtlIs7u7xkA)
+- [Creating Your First Lambda Function](https://scribehow.com/shared/Creating_your_first_AWS_Lambda_Function__yiSoRke_T3q56oZpUcRduA)
 - [Exploring Lambda Functions: Monitoring and more](https://scribehow.com/shared/Exploring_Lambda_Functions__Monitoring_and_more__kwARer8ERkqkvd-kw14AOg)
 
 ## SQS
 
-- [Creating Your First SQS Queue](https://scribehow.com/shared/Creating_Your_First_SQS_Queue__NYyvnD3kR46lOEAJYmDpmQ)
-- [Sending and Receiving SQS Messages](https://scribehow.com/shared/Sending_and_Receiving_SQS_Messages__8ugFNm10R1yaxDlrHVN7pA)
 - [Sending and Receiving SQS Messages from an EC2 instance](https://scribehow.com/shared/Sending_and_Receiving_SQS_Messages_from_an_EC2_instance__CTEB3hR2QzC2MkCBNhHlXA)
 - [Creating an Amazon SQS Queue and Playing with Messages](https://scribehow.com/shared/Creating_an_Amazon_SQS_Queue_and_Playing_with_Messages__Afg04cVOSv6XTd2GV86IJA)
 
 ## SNS
 
-- [Creating SNS Topic and Sending Messages](https://scribehow.com/shared/Creating_SNS_Topic_and_Sending_Messages__hY7ELpQ-RVqSUnjExZ-R2Q)
 - [Creating an SNS Topic and Registering a Lambda to Subscribe](https://scribehow.com/shared/Creating_an_SNS_Topic_and_Registering_a_Lambda_to_Subscribe__alURWvWeReuDCX6Pdnv6tw)
 
 ## Amazon RDS
 
-- [Getting Started with Amazon RDS](https://scribehow.com/shared/Getting_Started_with_Amazon_RDS__M2z4JzTxRV2kSLopmhVZyQ)
-- [Creating a Read Replica for Your Database](https://scribehow.com/shared/Creating_a_Read_Replica_for_Your_Database__mf3cIVNhSwO-oa5OuDJ7og)
-- [Exploring Database Backups](https://scribehow.com/shared/Exploring_Database_Backups__sVGURWxcTSmW_-x8WW5QZQ)
-- [Creating DB Snapshots](https://scribehow.com/shared/Creating_DB_Snapshots__c-uw9pkLRH2sGSzYO80-0g)
 - [Exploring Options in Creating RDS Databases](https://scribehow.com/shared/Exploring_options_in_creating_RDS_Databases__JJZtE6SORpKyfMrLNUeVRg)
 - [Exploring Options on an Existing Your First RDS Database in AWS](https://scribehow.com/shared/Exploring_Options_on_an_Existing_Your_First_RDS_Database_in_AWS__0C3oeyMcQpKzK02Xd55w_Q)
 - [Exploring Other RDS Database Engines](https://scribehow.com/shared/Exploring_Other_RDS_Database_Engines__65VvupWHSQOvBWZtxOIfFQ)
