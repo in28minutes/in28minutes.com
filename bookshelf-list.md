@@ -11,4 +11,8 @@ topics:
     url: /azure-bookshelf
     description:
     color: '#9aacd5'
+  - name: GCP course scribes
+    url: /gcp-bookshelf
+    description:
+    color: '#9aacd5'
 ---
