@@ -1,7 +1,7 @@
 ---
 layout: post
-title: GCP Tutorials
-date: 2024-09-23 19:55:00
+title: Gcp Tutorials
+date: 2024-06-24 12:10:00
 summary: Making gcp learning easy
 categories: gcp
 permalink: /gcp-bookshelf
