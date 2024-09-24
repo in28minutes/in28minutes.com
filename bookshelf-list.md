@@ -11,7 +11,7 @@ topics:
     url: /azure-bookshelf
     description:
     color: '#9aacd5'
-  - name: Test link working
+  - name: Google Cloud course scribes
     url: /gcp-bookshelf
     description:
     color: '#9aacd5'
