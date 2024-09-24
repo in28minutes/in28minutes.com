@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Azure Tutorials
+title: Gcp Tutorials
 date: 2024-06-24 12:10:00
-summary: Making azure learning easy
-categories: azure
-permalink: /test-deployment
+summary: Making gcp learning easy
+categories: gcp
+permalink: /gcp-bookshelf
 ---
 
-# Azure Tutorials
+# Page is working!
 
-## Getting Started
+## Heading
 
 - [Test Link - Working](https://in28minutes.com)
 

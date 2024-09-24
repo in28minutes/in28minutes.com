@@ -12,7 +12,7 @@ topics:
     description:
     color: '#9aacd5'
   - name: Test link working
-    url: /test-deployment
+    url: /gcp-bookshelf
     description:
     color: '#9aacd5'
 ---
