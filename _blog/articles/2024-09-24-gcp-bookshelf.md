@@ -43,6 +43,7 @@ permalink: /gcp-bookshelf
 - [Creating a Load Balancer in GCP (Google Cloud Platform) V2](https://scribehow.com/shared/Creating_a_Load_Balancer_in_GCP__Google_Cloud_Platform_V2__QR0iu9a3SdO2sklIpexQLA)
 - [Exploring the Load Balancer in GCP (Google Cloud Platform)](https://scribehow.com/shared/Exploring_the_Load_Balancer_in_GCP__Google_Cloud_Platform__fbp7dTAER9GnKLDSBnQ2kQ)
 - [Choosing a Load Balancer in GCP (Google Cloud Platform) V2](https://scribehow.com/shared/Choosing_a_Load_Balancer_in_GCP__Google_Cloud_Platform_V2__Nw4cpQb-SxqL_Ff4-lmdfA)
+- [Creating a Regional Load Balancer in GCP - NEW](https://scribehow.com/shared/Creating_a_regional_load_balancer__NEW__GY3mJa6DTPaaQChjLlCalg)
 
 ## High Availability and Cost Optimization
 
