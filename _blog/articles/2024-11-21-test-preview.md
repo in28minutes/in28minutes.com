@@ -2,7 +2,7 @@
 layout: post
 title: Test Tutorials
 date: 2024-06-24 12:10:00
-summary: Making learning easy
+summary: Explore installation guides
 categories: test
 permalink: /test-bookshelf
 ---
