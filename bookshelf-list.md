@@ -15,4 +15,8 @@ topics:
     url: /gcp-bookshelf
     description:
     color: '#9aacd5'
+  - name: Installation scribes
+    url: /installation-bookshelf
+    description:
+    color: '#9aacd5'
 ---
