@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Installation Tutorials
-date: 2024-11-21 12:10:00
+date: 2024-06-24 12:10:00
 summary: Explore installation guides
 categories: installation
 permalink: /installation-bookshelf
