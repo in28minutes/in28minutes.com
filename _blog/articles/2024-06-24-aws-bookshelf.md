@@ -193,8 +193,8 @@ permalink: /aws-bookshelf
 
 ## Elastic Beanstalk
 
-- [Creating your first AWS Elastic Beanstalk environment with Python](https://scribehow.com/shared/Creating_your_first_AWS_Elastic_Beanstalk_environment_with_Python__RdVRs3N5Rci-pDIWzFpKLQ)
-- [Exploring AWS Elastic Beanstalk](https://scribehow.com/shared/Exploring_AWS_Elastic_Beanstalk__hE4_5jeOSUiYz2GJ0_LfZQ)
+- [Creating your first AWS Elastic Beanstalk environment with Python](https://scribehow.com/shared/Creating_your_first_AWS_Elastic_Beanstalk_environment_with_Python__New__-ucrDVt3Q6utie3JW6lG3Q)
+- [Exploring AWS Elastic Beanstalk](https://scribehow.com/shared/Exploring_AWS_Elastic_Beanstalk__New__nF5TkPuWTB-RcQTv_3Cqcw)
 - [Deleting AWS Elastic Beanstalk Application](https://scribehow.com/shared/Deleting_AWS_Elastic_Beanstalk_Application__8b6vNMtuSASLa0rEO0HFqg)
 
 ## API Gateway
