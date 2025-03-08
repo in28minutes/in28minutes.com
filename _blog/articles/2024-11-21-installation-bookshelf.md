@@ -20,5 +20,38 @@ permalink: /installation-bookshelf
 - [Using Latest Java Version with Latest Eclipse](https://scribehow.com/shared/Using_Latest_Java_Version_with_Latest_Eclipse__fmDX7k9aQzig0hTeIhoHBw)
 - [Installing IntelliJ IDEA in MacOS](https://scribehow.com/shared/Installing_IntelliJ_IDEA_in_MacOS__VOfb78eQQTeB0tFY9ENIhg)  
 - [Creating a New Java Project with IntelliJ IDEA](https://scribehow.com/shared/Creating_a_New_Java_Project_with_IntelliJ_IDEA__d85wiw7pRN2zB5Gm9Nw3Sg)
+- [Installing Java on MacOS](https://scribehow.com/shared/Installing_Java__MacOS__CbIpMLR6RJqL6S1DqfsuoA)
+- [Installing Java on Windows](https://scribehow.com/shared/Installing_Java__Windows__Hd7lIdy2Q9GVR8m0reFisg)
+- [Installing Java on Linux](https://scribehow.com/shared/Installing_Java__Linux__eA7MQ0JOSYihReeyfgNa3w)
+
+## Python Installation Guides
+
+- [Installing Python on MacOS](https://scribehow.com/shared/Installing_Python__MacOS__C_17tEUkTb6wKuqMiRPdhw)
+- [Installing Python on Windows](https://scribehow.com/shared/Installing_Python__Windows__Rmwi-uzuTfGt_RU5CDruZw)
+
+## DevOps Installation Guides
+
+- [Installing Docker on MacOS](https://scribehow.com/shared/Installing_Docker__MacOS__nskIJvtWSZOXAxbmSs3Rig)
+- [Installing Docker on Windows](https://scribehow.com/shared/Installing_Docker__Windows__zmMLSnaSRvei20hERVxPPQ)
+
+## Springboot & Microservices Installation Guides
+
+- [Installing RabbitMQ on MacOS](https://scribehow.com/shared/Installing_Rabbit_MQ__MacOS__Sr5zdWkDTmywQAU0zb1BZw)
+- [Installing RabbitMQ on Windows](https://scribehow.com/shared/Installing_Rabbit_MQ__Windows__FSQhxP9dRSu-yEzc-D9Hpw)
+
+## Version Control Installation Guides
+
+- [Installing Git on MacOS](https://scribehow.com/shared/Installing_Git__MacOS__ddQJJsB1QAqeN7A7u43uvw)
+- [Installing Git on Windows](https://scribehow.com/shared/Installing_Git__Windows__zKLkOZjxRCWDNS6tELJx7Q)
+
+## Node.js Installation Guides
+
+- [Installing Nodejs and npm on MacOS](https://scribehow.com/shared/Installing_nodejs_and_npm__MacOS__Ci74SCgKTHGzqIORvYYvFg)
+- [Installing Nodejs and npm on Windows](https://scribehow.com/shared/Installing_nodejs_and_npm__Windows__5N7jm-ENRciO1zs0w87Uig)
+
+## Visual Studio Code Installation Guides
+
+- [Installing Visual Studio Code on MacOS](https://scribehow.com/shared/Installing_Visual_Studio_Code__MacOS__Rutngw3KTaOSMdsHjnxiug)
+- [Installing Visual Studio Code on Windows](https://scribehow.com/shared/Installing_Visual_Studio_Code__Windows__R9XSUqQDRNORjNYYKqBe5w)
 
 _If any link is not accessible or if you need changes to the documentation, please reach out to our [#help-general](https://discord.com/channels/1172073095222272100/1174995539406897182) on Discord._
