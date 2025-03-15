@@ -28,6 +28,8 @@ permalink: /installation-bookshelf
 
 - [Installing Python on MacOS](https://scribehow.com/shared/Installing_Python__MacOS__C_17tEUkTb6wKuqMiRPdhw)
 - [Installing Python on Windows](https://scribehow.com/shared/Installing_Python__Windows__Rmwi-uzuTfGt_RU5CDruZw)
+- [Installing PyCharm on MacOS](https://scribehow.com/shared/Installing_PyCharm__MacOS__Ss_9j6z7RrCIyof4oF_IWQ)
+- [Installing PyCharm on Windows](https://scribehow.com/shared/Installing_PyCharm__Windows__rXWdXyGnRzeKFi8th8MSEQ)
 
 ## DevOps Installation Guides
 
