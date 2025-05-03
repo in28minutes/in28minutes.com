@@ -74,12 +74,14 @@ permalink: /azure-bookshelf
 - [Exploring Azure Firewall](https://scribehow.com/shared/Exploring_Azure_Firewall__w6iqFXMVR66a2D_DP2aeng)
 - [Understanding Network Security Groups (NSG)](https://scribehow.com/shared/Understanding_Network_Security_Groups__NSG__0lmin7JtTYO4C6Yl-e4HgA)
 - [Understanding Azure Private Link and Private Endpoint](https://scribehow.com/shared/Understanding_Azure_Private_Link_and_Private_Endpoint__bgVXpf27Ss6d_1pC5AF4Pg)
+- [Connecting Azure with on-premises - VPN and ExpressRoute](https://scribehow.com/shared/Connecting_Azure_with_on_premises__VPN_and_ExpressRoute__XaFJ5bkKS_mBihEQUyr9-Q)
 
 ## Security
 
 - [Getting Started with Microsoft Defender for Cloud](https://scribehow.com/shared/Getting_Started_with_Microsoft_Defender_for_Cloud__a4QVtxbhTHCY6kMCMkJI2Q)
 - [Storing Secrets in Azure: Azure Key Vault](https://scribehow.com/shared/Storing_Secrets_in_Azure__Azure_Key_Vault__vblsAd6ORcO3EZtIgG41gw)
 - [Playing with Azure Active Directory](https://scribehow.com/shared/Playing_with_Azure_Active_Directory__hOuSbt5FTueZ2fJ78jPw_w)
+- [Quick Tips - Microsoft Entra ID and Azure Subscriptions](https://scribehow.com/shared/Quick_Tips__Microsoft_Entra_ID_and_Azure_Subscriptions__1ycyi2ihT_aj7giltgHlnA)
 
 ## Monitoring and Compliance
 
