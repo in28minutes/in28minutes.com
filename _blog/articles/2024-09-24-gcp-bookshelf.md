@@ -25,6 +25,9 @@ permalink: /gcp-bookshelf
 - [SSHing into Linux VMs (Part 1)](https://scribehow.com/shared/SSHing_into_Linux_VMs__1__QE5IqwDDQx-hTPSqCHQK5Q)
 - [Executing Shutdown Script on a GCE VM](https://scribehow.com/shared/Executing_Shutdown_Script_on_a_GCE_VM__n59rbJfOSpGzaIqc8H4g_A)
 - [Troubleshooting VM Startup](https://scribehow.com/shared/Troubleshooting_VM_startup__uTBB_brKR4aIq_ay3fXRdw)
+- [Quick Review - Virtual Machines in Google Cloud Platform](https://scribehow.com/viewer/Quick_Review__Virtual_Machines_in_Google_Cloud_Platform__O2qbOTIZS8WwumH-edKBqg)
+- [Setting Default Region and Zone for Compute Engine](https://scribehow.com/viewer/Setting_Default_Region_and_Zone_for_Compute_Engine__Zrcnq2nbRGuHlFjyE2JVSQ)
+- [Playing with Instance Templates in Gcloud](https://scribehow.com/viewer/Playing_with_Instance_Templates_in_Gcloud__y4XbHjN-S9-kbjHdX5GKCw)
 
 ## IP Addresses
 
@@ -37,6 +40,7 @@ permalink: /gcp-bookshelf
 - [Creating Managed Instance Groups (MIG) V2](https://scribehow.com/shared/Creating_Managed_Instance_Groups_MIG_V2__mWRHPJ00SfeQJdH06V6cCQ)
 - [Playing with Managed Instance Groups (MIG)](https://scribehow.com/shared/Playing_with_Managed_Instance_Groups_MIG__SLIdTLX5RgWrMiFbtzesOg)
 - [Updating a Managed Instance Groups (MIG): Rolling Updates V2](https://scribehow.com/shared/Updating_a_Managed_Instance_Groups_MIG__Rolling_Updates_V2__SLBMzARvT_G2fkUYHYxO0w)
+- [Scenarios - Instance Groups](https://scribehow.com/viewer/Scenarios__Instance_Groups__DG-4AxZoShaxb2zDb2M_fA)
 
 ## Load Balancing
 
