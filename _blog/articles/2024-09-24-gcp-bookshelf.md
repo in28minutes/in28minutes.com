@@ -28,6 +28,7 @@ permalink: /gcp-bookshelf
 - [Quick Review - Virtual Machines in Google Cloud Platform](https://scribehow.com/viewer/Quick_Review__Virtual_Machines_in_Google_Cloud_Platform__O2qbOTIZS8WwumH-edKBqg)
 - [Setting Default Region and Zone for Compute Engine](https://scribehow.com/viewer/Setting_Default_Region_and_Zone_for_Compute_Engine__Zrcnq2nbRGuHlFjyE2JVSQ)
 - [Playing with Instance Templates in Gcloud](https://scribehow.com/viewer/Playing_with_Instance_Templates_in_Gcloud__y4XbHjN-S9-kbjHdX5GKCw)
+- [Creating VMs on Dedicated Host with Sole Tenant Nodes](https://scribehow.com/viewer/Creating_VMs_on_Dedicated_Host_with_Sole_Tenant_Nodes__DY_BNQJmRo6Pq4JwcoDSRA)
 
 ## IP Addresses
 
@@ -56,6 +57,7 @@ permalink: /gcp-bookshelf
 - [Exploring Committed Use Discounts in GCP (Google Cloud Platform)](https://scribehow.com/shared/Exploring_Committed_Use_Discounts_in_GCP__Google_Cloud_Platform__iFuzI7BXSuW1ecUh_NBIBg)
 - [Run Fault-Tolerant Non-Critical Workloads with Preemptible VMs](https://scribehow.com/shared/Run_Fault_Tolerant_Non_Critical_Workloads_with_Preemptible_VMs__rnqfzg_dRweUueBP7ENASw)
 - [Understanding Billing for Google Compute Engine (GCE VMs)](https://scribehow.com/shared/Understanding_Billing_for_Google_Compute_Engine__GCE_VMs__qE_rJ5xSR-G-leueIXdH8A)
+- [What is Cloud Sustainability?](https://scribehow.com/viewer/What_is_Cloud_Sustainability__ak22eMLWSOaUMBqTa37UJw)
 
 ## Google Cloud SDK (Gcloud)
 
@@ -89,6 +91,7 @@ permalink: /gcp-bookshelf
 ## Google Cloud Certification
 
 - [Get Ready: Google Cloud Professional Cloud Architect Certification](https://scribehow.com/shared/Get_Ready__Google_Cloud_Professional_Cloud_Architect_Certification__9GaedE_5Q8--QyC-gAQXWQ)
+- [Get Ready - Google Cloud - Cloud Digital Leader Certification](https://scribehow.com/viewer/Get_Ready__Google_Cloud__Cloud_Digital_Leader_Certification__xceqZX-nT8icSeuKXoDGOA)
 
 ## Google Cloud Functions
 
@@ -115,6 +118,9 @@ permalink: /gcp-bookshelf
 ## Google Cloud Pricing
 
 - [Getting Started with Google Cloud Pricing Calculator](https://scribehow.com/shared/Getting_Started_with_Google_Cloud_Pricing_Calculator__RWeVWWv5SWu-OgAps0-Jpg)
+- [GCP Cost Management](https://scribehow.com/viewer/GCP_Cost_Management__D-j7bXqFRtabRf-gfivRpQ)
+- [How is Cost Decided?](https://scribehow.com/viewer/How_is_Cost_Decided__tsBtzTBUSVmJPzBcarolLg)
+
 
 ## Event Handling
 
@@ -168,9 +174,11 @@ permalink: /gcp-bookshelf
 - [Understanding CIDR Blocks](https://scribehow.com/shared/Understanding_CIDR_Blocks__cd6bRS7GSHa6WlTOeKh8SQ)
 - [Creating VPCs and Subnets in GCP V2](https://scribehow.com/shared/Creating_VPCs_and_Subnets_in_GCP_V2__mbhLsuwsQ_Se4RK_VGQAiw)
 
-## Security (Firewall)
+## Security
 
 - [Understanding Firewall Rules & Best Practices](https://scribehow.com/shared/Understanding_Firewall_Rules_Best_Practices__7s9jL7_FQoar8OyA03l14Q)
+- [Exploring Google Cloud Trust Principles](https://scribehow.com/viewer/Exploring_Google_Cloud_Trust_Principles__ZE6IFmc9RSCkV15TRBdztQ)
+- [Important Security Related Services in Google Cloud](https://scribehow.com/viewer/Important_Security_Related_Services_in_Google_Cloud__CRJ7dmS8T_CUD5qAgiUGBA)
 
 ## Cloud Functions and Storage
 
@@ -230,5 +238,14 @@ permalink: /gcp-bookshelf
 
 - [Getting Started with Cloud DNS](https://scribehow.com/shared/Getting_Started_with_Cloud_DNS__1B5xbMMZT5WmL3DVV7mdhQ)
 - [Exploring Billing Accounts](https://scribehow.com/shared/Exploring_Billing_Accounts__D1GJsUYSTWO3rPC5EUhtvQ)
+
+## Containers
+
+- [Exploring Container Registry and Artifact Registry](https://scribehow.com/viewer/Exploring_Container_Registry_and_Artifact_Registry__WEqFLbKWSXi7cE8Z-gX5qg)
+
+## Machine Learning
+
+- [ML in Google Cloud - Pre Trained Models](https://scribehow.com/viewer/ML_in_Google_Cloud__Pre_Trained_Models__Sya7nWSFTb2mRuDPA7q6iQ)
+- [ML in Google Cloud - Custom Models](https://scribehow.com/viewer/ML_in_Google_Cloud__Custom_Models__LLw8fdEsTpSAL-aSIi96-Q)
 
 _If any link is not accessible or if you need changes to the documentation, please reach out to our [#help-general](https://discord.com/channels/1172073095222272100/1174995539406897182) on Discord._
