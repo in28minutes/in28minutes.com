@@ -97,7 +97,7 @@ permalink: /gcp-bookshelf
 
 - [Creating your first Google Cloud Functions V2](https://scribehow.com/shared/Creating_your_first_Google_Cloud_Functions_V2__AR4gZPNtSlqlTp02R8S9kw)
 - [Getting Started with Google Cloud Run V2](https://scribehow.com/shared/Getting_Started_with_Google_Cloud_Run_V2__YM7uXU6WQBCvxLeNOcCl3g)
-- [Playing with Cloud Functions (Gen 2)](https://scribehow.com/shared/Playing_with_Cloud_Functions__Gen_2__n8uLSogcRXCxSfeY5ZVtvg)
+- [Playing with Cloud Run Functions](https://scribehow.com/viewer/Playing_with_Cloud_Run_Functions__lxuQf8csSHiROjBOcYNF9Q)
 - [Exploring Cloud Functions: Scaling and Concurrency](https://scribehow.com/shared/Exploring_Cloud_Functions__Scaling_and_Concurrency__UIU0RsZlQLa_EsC2P7Zm2w)
 
 ## Cloud Key Management Service (KMS)
