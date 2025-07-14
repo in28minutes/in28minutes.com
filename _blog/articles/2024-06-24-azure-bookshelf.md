@@ -65,6 +65,8 @@ permalink: /azure-bookshelf
 - [Playing with Azure NoSQL Database (Azure Cosmos DB)](https://scribehow.com/shared/Playing_with_Azure_NoSQL_Database__Azure_Cosmos_DB__BpWLbC66RsOxh9JdXRdZ_Q)
 - [Exploring Azure In-Memory Database (Azure Cache for Redis)](https://scribehow.com/shared/Exploring_Azure_In_Memory_Database__Azure_Cache_for_Redis__Tawb7dMKSgWYMRBFAgisww)
 - [Deleting Database Resource Groups](https://scribehow.com/shared/Deleting_Database_Resource_Groups__ZaRAw0JEQzSr9KKLv8tQ9w)
+- [Azure Machine Learning - Delete Resource Group](https://scribehow.com/viewer/Azure_Machine_Learning__Delete_Resource_Group__lupddz3hQ4GvrtlvMA6zNA)
+
 
 ## Networking
 
@@ -107,6 +109,15 @@ permalink: /azure-bookshelf
 ## Custom Solutions
 
 - [Implementing Custom Solutions with Azure Marketplace](https://scribehow.com/shared/Implementing_Custom_Solutions_with_Azure_Marketplace__FqCtTywjQYy5-70XQrqMPg)
+- [Creating Azure AI Services Resource](https://scribehow.com/viewer/Creating_Azure_AI_Services_Resource__mjJswXmwSraI2yDL0ooy3Q)
+- [Exploring Azure AI Foundry](https://scribehow.com/viewer/Exploring_Azure_AI_Foundry__Sx019OedRB6i9Eh2rcgfDw)
+- [Exploring Azure AI Foundry: Creating Hub and Project](https://scribehow.com/viewer/Exploring_Azure_AI_Foundry__Creating_Hub_and_Project__VIf2tVybTYCeZ6AOuinV4g)
+- [Azure AI Foundry Model Catalog](https://scribehow.com/viewer/Azure_AI_Foundry_model_catalog__NHTUTmQUTBqlQgxJmnI_4w)
+- [Deploying OpenAI GPT Model using Azure AI Foundry](https://scribehow.com/viewer/Deploying_OpenAI_GPT_Model_using_Azure_AI_Foundry__nm_SV_oGSYC0E_46UfvRbw)
+- [Deploying OpenAI Dalle Model using Azure AI Foundry](https://scribehow.com/viewer/Deploying_OpenAI_Dalle_Model_using_Azure_AI_Foundry__i6RQw8fZQ5uFbFr_9ITylA)
+- [Playing with Azure AI Vision](https://scribehow.com/viewer/Playing_with_Azure_AI_Vision__is25O87sRI27E0AuJMDurw)
+- [Exploring Azure AI Document Intelligence - Demo](https://scribehow.com/viewer/Exploring_Azure_AI_Document_Intelligence__Demo__Fw1IJoULS2ShRlLBl3esBw)
+- [Exploring Azure AI Language - Text Analytics API](https://scribehow.com/viewer/Exploring_Azure_AI_Language__Text_Analytics_API__ad_3V2yzQ-Wdui_ln_Ssiw)
 
 ## Migration
 
@@ -121,8 +132,26 @@ permalink: /azure-bookshelf
 
 - [Introduction to Azure Arc](https://scribehow.com/shared/Introduction_to_Azure_Arc__40e5i5GUSP6k6FqgJiQpDg)
 
+## Azure Machine Learning
+
+- [Getting Started with Azure Machine Learning](https://scribehow.com/viewer/Getting_Started_with_Azure_Machine_Learning__vJwa1BJjREOJkaRm9iIQ-w)
+- [Automated Machine Learning - Dataset and Compute](https://scribehow.com/viewer/Automated_Machine_Learning__Dataset_and_Compute__7i9CwjoOTAeJLe4DjsbWAA)
+- [Setting up Automated ML Training](https://scribehow.com/viewer/Setting_up_Automated_ML_Training__wdW9LoAQQR2-mjwgnmsVVA)
+- [Exploring Automated ML Training](https://scribehow.com/viewer/Exploring_Automated_ML_Training__3EwGJMLMTYSJ4hVvwnZMsQ)
+- [Creating Azure Machine Learning Pipeline](https://scribehow.com/viewer/Creating_Azure_Machine_Learning_Pipeline__fx5Ai4fzQbypi3O7sqxsig)
+- [Model Evaluation - Regression Models](https://scribehow.com/viewer/Model_Evaluation__Regression_Models__wV-rj7Q0R4Ggo0RXi1ayjQ)
+- [Building ML Models - Custom Vision (1)](https://scribehow.com/viewer/Building_ML_Models__Custom_Vision__1__eCgS_0x2RASKUgkkCqZCJg)
+- [Building ML Models - Custom Vision (2)](https://scribehow.com/viewer/Building_ML_Models__Custom_Vision__2__8MutKra6TZKpA3jDNtiItw)
+
+## ChatGPT and Generative AI
+
+- [Playing with ChatGPT - Getting Started](https://scribehow.com/viewer/Playing_with_ChatGPT__Getting_Started__lUtwnxe1Sweu8nGLaeoQ3A)
+- [Playing with ChatGPT - Coding, Learning and Design](https://scribehow.com/viewer/Playing_with_ChatGPT__Coding_Learning_and_Design__S1f7XmeZTOWwpMeSpthk1A)
+- [Playing with ChatGPT - Exploring Technology](https://scribehow.com/viewer/Playing_with_ChatGPT__Exploring_Technology__Bfc13Px9T6Oz9Mgyqlcutw)
+
 ## Azure Certification
 
 - [Getting Ready: Azure Certification (AZ-900): Azure Fundamentals](https://scribehow.com/shared/Getting_Ready__Azure_Certification__AZ_900__Azure_Fundamentals__b1Mw5_9FS8KtmNZHyxSGRg)
+- [Azure AI Fundamentals - Get Ready](https://scribehow.com/viewer/Azure_AI_Fundamentals__Get_Ready__cvIeVsIaTne4CKEfzpiLhw)
 
 _If any link is not accessible or if you need changes to the documentation, please reach out to our [#help-general](https://discord.com/channels/1172073095222272100/1174995539406897182) on Discord._
