@@ -39,8 +39,8 @@ courses:
       - test
     url: https://links.in28minutes.com/java
     rating: 4.5
-    ratingCount: 37,372
-    students: 221,009
+    ratingCount: 50,884
+    students: 298,669
     thumbnail: https://img-c.udemycdn.com/course/480x270/1535678_0ce9_7.jpg
   - name: Master Spring Boot 3 & Spring Framework 6 with Java
     description:
@@ -48,8 +48,8 @@ courses:
       - test
     url: https://links.in28minutes.com/sb
     rating: 4.6
-    ratingCount: 5,573
-    students: 36,365
+    ratingCount: 10,411
+    students: 63,579
     thumbnail: https://img-c.udemycdn.com/course/480x270/4993276_3452.jpg
   - name: Master Microservices with Spring Boot and Spring Cloud
     description:
@@ -57,8 +57,8 @@ courses:
       - test
     url: https://links.in28minutes.com/microservices
     rating: 4.5
-    ratingCount: 45,996
-    students: 226,108
+    ratingCount: 56,776
+    students: 284,730
     thumbnail: https://img-c.udemycdn.com/course/480x270/1352468_3d97_8.jpg
 
 ---

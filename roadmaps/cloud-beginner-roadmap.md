@@ -36,16 +36,16 @@ courses:
     objectives:
       - 
     rating: 4.6
-    ratingCount: 7,000
-    students: 55,031
+    ratingCount: 11,339
+    students: 80,111
   - name: AZ-900 - Microsoft Azure Fundamentals in a Weekend
     description:
     objectives:
       - 
     url: https://links.in28minutes.com/az-900
     rating: 4.6
-    ratingCount: 32,311
-    students: 132,410
+    ratingCount: 43,601
+    students: 182,637
     thumbnail: https://img-c.udemycdn.com/course/480x270/4049392_dfe6.jpg
   - name: GCP for Beginners - Become a Google Cloud Digital Leader
     description:
@@ -53,7 +53,7 @@ courses:
       - Start your journey to become a Google Cloud Digital Leader
     url: https://links.in28minutes.com/get-started-google-cloud
     rating: 4.6
-    ratingCount: 6,200
-    students: 30,000
+    ratingCount: 16,025
+    students: 75,340
     thumbnail: https://img-c.udemycdn.com/course/240x135/3995372_4064.jpg
 ---
