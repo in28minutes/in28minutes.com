@@ -30,7 +30,7 @@ testimonials:
     comment: Trainer was very good at breaking down key points in terms that are easily understood.
 courses:
   - name: AWS Certified Cloud Practitioner - AWS Certification
-    thumbnail: 
+    thumbnail: https://img-c.udemycdn.com/course/750x422/3545764_ad88.jpg
     description:
     url: https://links.in28minutes.com/ccp
     objectives:
