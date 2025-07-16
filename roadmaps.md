@@ -35,5 +35,9 @@ roadmaps:
     url: /devops-roadmap
     description:
     image: /images/devops-roadmap.png
+  - name: Generative AI Roadmap
+    url: /generative-ai-roadmap
+    description:
+    image: /images/generative-ai-roadmap.png
 ---
 
