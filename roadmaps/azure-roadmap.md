@@ -35,8 +35,8 @@ courses:
       - 
     url: https://links.in28minutes.com/az-900
     rating: 4.6
-    ratingCount: 32,311
-    students: 132,410
+    ratingCount: 43,601
+    students: 182,637
     thumbnail: https://img-c.udemycdn.com/course/480x270/4049392_dfe6.jpg
   - name: DP-900 - Microsoft Azure Data Fundamentals in a Weekend
     thumbnail: https://img-c.udemycdn.com/course/480x270/4241488_e344.jpg
@@ -45,15 +45,15 @@ courses:
     objectives:
       - 
     rating: 4.6
-    students: 12,590
-    ratingCount: 2,438
+    students: 34,524
+    ratingCount: 6,942
   - name: AI-900 - Microsoft Azure AI Fundamentals in a Weekend
     description:
     thumbnail: https://img-c.udemycdn.com/course/480x270/4281666_dd91.jpg
     url: https://www.udemy.com/course/azure-ai-900-azure-ai-fundamentals/?couponCode=FEB2024
     rating: 4.5
-    students: 6,003
-    ratingCount: 1,226
+    students: 41,654
+    ratingCount: 8,281
     objectives:
       - 
 ---

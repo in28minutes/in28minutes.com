@@ -37,8 +37,8 @@ courses:
     objectives:
       - 
     rating: 4.6
-    ratingCount: 7,000
-    students: 55,031
+    ratingCount: 11,339
+    students: 80,111
   - name: AWS Certified Solutions Architect Associate - SAA C03
     thumbnail: https://img-c.udemycdn.com/course/480x270/3082678_ffe8.jpg
     description:
@@ -46,8 +46,8 @@ courses:
     objectives:
       - 
     rating: 4.6
-    ratingCount: 4,923
-    students: 55,024
+    ratingCount: 5,994
+    students: 62,018
   - name: AWS Certified Developer Associate - AWS Certification
     thumbnail: https://img-c.udemycdn.com/course/480x270/3594850_c2d3.jpg
     description:
@@ -55,8 +55,8 @@ courses:
     objectives:
       - 
     rating: 4.6
-    ratingCount: 1,716
-    students: 28,269
+    ratingCount: 4,478
+    students: 47,106
   - name: AWS Interview Guide - Review 50+ AWS Services in 5 Hours
     thumbnail: https://img-c.udemycdn.com/course/480x270/4782778_a323.jpg
     description:
@@ -64,6 +64,6 @@ courses:
     objectives:
       - 
     rating: 4.5
-    ratingCount: 209
-    students: 3,135
+    ratingCount: 439
+    students: 6,258
 ---

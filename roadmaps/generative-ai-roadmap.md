@@ -34,8 +34,8 @@ courses:
       - Master ChatGPT Prompts and the OpenAI API from Scratch.
     url: http://links.in28minutes.com/openai
     rating: 4.5
-    ratingCount: 3,443
-    students: 16,350
+    ratingCount: 3,449
+    students: 16,404
     thumbnail: https://img-c.udemycdn.com/course/750x422/5556112_0011_3.jpg
   - name: Become Generative AI Leader - Google Cloud Certification
     description:
@@ -43,7 +43,7 @@ courses:
       - Learn Generative AI with Google Cloud. Get Certified as a Generative AI Leader.
     url: https://links.in28minutes.com/google-cloud-gen-ai-leader
     rating: 4.6
-    ratingCount: 422
-    students: 2,770
+    ratingCount: 457
+    students: 2,880
     thumbnail: https://img-c.udemycdn.com/course/750x422/6642499_5835.jpg
 ---

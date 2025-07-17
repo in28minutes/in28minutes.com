@@ -33,7 +33,7 @@ courses:
       - test
     url: https://links.in28minutes.com/python
     rating: 4.6
-    ratingCount: 322
-    students: 3013
+    ratingCount: 1906
+    students: 12711
     thumbnail: https://img-c.udemycdn.com/course/480x270/5414974_e415.jpg
 ---

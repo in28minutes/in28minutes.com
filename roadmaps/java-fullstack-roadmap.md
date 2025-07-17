@@ -37,8 +37,8 @@ courses:
       - test
     url: https://links.in28minutes.com/java
     rating: 4.5
-    ratingCount: 41,700
-    students: 244,867
+    ratingCount: 50,884
+    students: 298,669
     thumbnail: https://img-c.udemycdn.com/course/480x270/1535678_0ce9_7.jpg
   - name: Master Spring Boot 3 & Spring Framework 6 with Java
     description:
@@ -46,8 +46,8 @@ courses:
       - test
     url: https://links.in28minutes.com/sb
     rating: 4.5
-    ratingCount: 5,573
-    students: 36,365
+    ratingCount: 10,411
+    students: 63,579
     thumbnail: https://img-c.udemycdn.com/course/480x270/4993276_3452.jpg
   - name: Go Java Full Stack with Spring Boot and Angular
     description:
@@ -55,8 +55,8 @@ courses:
       - test
     url: https://www.udemy.com/course/full-stack-application-development-with-spring-boot-and-angular/?couponCode=JAN2024
     rating: 4.5
-    ratingCount: 8011
-    students: 68,645
+    ratingCount: 10,879
+    students: 88,032
     thumbnail: https://img-c.udemycdn.com/course/480x270/2023728_2d6d_4.jpg
 
 ---

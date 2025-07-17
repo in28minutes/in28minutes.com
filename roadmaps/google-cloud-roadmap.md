@@ -35,8 +35,8 @@ courses:
       - Start your journey to become a Google Cloud Digital Leader
     url: https://links.in28minutes.com/get-started-google-cloud
     rating: 4.6
-    ratingCount: 12,295
-    students: 56,139
+    ratingCount: 16,025
+    students: 75,340
     thumbnail: https://img-c.udemycdn.com/course/240x135/3995372_4064.jpg
   - name: GCP Associate Cloud Engineer - Google Cloud Certification
     thumbnail: https://img-c.udemycdn.com/course/240x135/3995372_4064.jpg
@@ -45,15 +45,15 @@ courses:
     objectives:
       - 
     rating: 4.6
-    ratingCount: 24,149
-    students: 122,478
+    ratingCount: 33,124
+    students: 168,669
   - name: Google Cloud Developer - GCP Professional Certification
     description:
     thumbnail: https://img-c.udemycdn.com/course/480x270/3827154_aecc_4.jpg
     url: https://links.in28minutes.com/ace
     rating: 4.6
-    students: 17,326
-    ratingCount: 1,863
+    students: 168,669
+    ratingCount: 33,124
     objectives:
       - 
   - name: GCP Professional Cloud Architect - Google Cloud Certification
@@ -61,8 +61,8 @@ courses:
     url: https://links.in28minutes.com/pca
     thumbnail: https://img-c.udemycdn.com/course/240x135/3995372_4064.jpg
     rating: 4.6
-    ratingCount: 9,365
-    students: 61,578
+    ratingCount: 12,890
+    students: 83,114
     objectives:
       - 
 ---
