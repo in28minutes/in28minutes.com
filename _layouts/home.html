@@ -42,6 +42,43 @@ layout: default
 </section>
 <!-- ====== Hero End ====== -->
 
+<!-- ====== YouTube Section Start ====== -->
+<section class="ud-youtube">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-5">
+        <div class="ud-youtube-content wow fadeInUp" data-wow-delay=".15s">
+          <span class="tag">YouTube</span>
+          <h2 class="ud-youtube-title">{{ page.youtube.title }}</h2>
+          <p class="ud-youtube-desc">{{ page.youtube.description }}</p>
+
+          {% if page.youtube.cta %}
+          <a href="{{ page.youtube.cta.url }}" target="_blank" rel="nofollow noopener" class="ud-main-btn">
+            {{ page.youtube.cta.title }}
+          </a>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="ud-youtube-video wow fadeInUp" data-wow-delay=".25s">
+          <div class="ud-youtube-embed">
+            <iframe
+              src="https://www.youtube.com/embed/{{ page.youtube.video_id }}?rel=0&modestbranding=1"
+              title="YouTube video"
+              frameborder="0"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ====== YouTube Section End ====== -->
+
 <!-- ====== Features Start ====== -->
 <section id="features" class="ud-features">
     <div class="container">

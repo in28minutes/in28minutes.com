@@ -13,6 +13,15 @@ header:
     title: Join us on YouTube
     url: https://www.youtube.com/@in28minutes/shorts
 
+# Youtube
+youtube:
+  title: What do we do at in28minutes?
+  description: Learn how we help 1M+ learners become confident in programming, cloud, and DevOps.
+  video_id: "sBm3yMjoLYM"
+  cta:
+    title: Watch on YouTube
+    url: https://www.youtube.com/watch?v=sBm3yMjoLYM
+
 # Features
 features:
   title: Take the next step in your career
