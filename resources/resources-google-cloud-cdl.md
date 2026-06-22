@@ -3,10 +3,10 @@ layout: resources
 title: Google Cloud Digital Leader - Resources
 permalink: resources-google-cloud-cdl
 resources:
-  - title: Download PDF - Slides - Part 1
+  - title: Download Slides - Part 1
     description: Download the slides and have them ready.
     url: 'https://in28minutes.com/downloads/15-google-cloud-digital-leader/Course-Presentation-GoogleCloudDigitalLeader-v2.pdf'
-  - title: Download PDF - Slides - Part 2
+  - title: Download Slides - Part 2
     description: Download the slides and have them ready.
     url: 'https://in28minutes.com/downloads/15-google-cloud-digital-leader/Course-Presentation-GoogleCloudDigitalLeader.pdf'
   - title: Download Code Examples
