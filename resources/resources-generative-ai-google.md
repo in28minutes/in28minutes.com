@@ -5,7 +5,7 @@ permalink: resources-generative-ai-google
 resources:
   - title: Download PDF - Slides
     description: Download the slides and have them ready.
-    url: 'https://in28minutes.com/downloads/22-generative-ai-with-google/01-in28minutes-presentation-generative-ai-with-google.pdf'
+    url: 'https://in28minutes.com/downloads/22-generative-ai-with-google/01-in28minutes-presentation-generative-ai-with-google-v2.pdf'
   - title: Download Code Examples
     description: Download and have this ready. We will use the code examples during the course.
     url: 'https://in28minutes.com/downloads/22-generative-ai-with-google/downloads.zip'

@@ -5,7 +5,7 @@ permalink: resources-google-cloud-generative-ai-leader
 resources:
   - title: Download PDF - Slides
     description: Download the slides and have them ready. We will refer to the slides during the course.
-    url: 'https://in28minutes.com/downloads/25-google-cloud-generative-ai-leader/01-in28minutes-presentation-generative-ai-leader-google-cloud.pdf'
+    url: 'https://in28minutes.com/downloads/25-google-cloud-generative-ai-leader/01-in28minutes-presentation-generative-ai-leader-google-cloud-v2.pdf'
   - title: LinkedIn Newsletter
     description: Read in28minutes Newsletter. Published on LinkedIn.
     icon: lni-linkedin
