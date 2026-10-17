@@ -4,7 +4,7 @@ title: Gcp Tutorials
 date: 2024-06-24 12:10:00
 summary: Making gcp learning easy
 categories: gcp
-permalink: /gcp-bookshelf
+permalink: /gcp-bookshelf-old
 ---
 
 # GCP Tutorials
