@@ -4,7 +4,7 @@ title: Azure Tutorials
 date: 2024-06-24 12:10:00
 summary: Making azure learning easy
 categories: azure
-permalink: /azure-bookshelf
+permalink: /azure-bookshelf-deprecated
 ---
 
 # Azure Tutorials
